@@ -368,4 +368,230 @@
     /* border: 2px solid black; */
   }
   
+  /* --- Mobile & Tablet Responsive Adjustments --- */
+@media (max-width: 854px) {
+  .dentists-main-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+  
+  .dentists-main-section h2 {
+    margin-top: 15%;
+    font-size: 1.8rem;
+  }
+  
+  .dentists-main-section h3 {
+    font-size: 1.4rem;
+  }
+  
+  .dentists-main-container {
+    flex-direction: column !important;
+    height: auto;
+    gap: 2rem;
+  }
+  
+  .dentists-images-container {
+    width: 100% !important;
+    height: auto;
+  }
+  
+  .den-img {
+    width: 80% !important;
+    margin: 0 auto;
+    height: auto;
+  }
+  
+  .dentists-intro-container {
+    width: 100% !important;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .dentists-intro-container li {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Second section adjustments */
+  .dentists-clinic-main-section {
+    height: auto;
+    min-height: 90vh;
+    padding: 2rem 1rem;
+  }
+  
+  .dentists-clinic-main-container {
+    flex-direction: column !important;
+    height: auto;
+    gap: 2rem;
+  }
+  
+  .dentists-clinic-images-container {
+    width: 100% !important;
+    height: auto;
+    padding-top: 0;
+  }
+  
+  .dentists-clinic-intro-container {
+    width: 100% !important;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .dentists-clinic-second-main-section {
+    padding: 2rem 1rem;
+  }
+  
+  .dentists-clinic-second-main-container {
+    padding: 1rem;
+  }
+  
+  .dentists-clinic-second-main-container ul li {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .mission-content li {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .dentists-main-section h2 {
+    margin-top: 18%;
+    font-size: 1.6rem;
+  }
+  
+  .dentists-main-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .dentists-intro-container li {
+    font-size: 0.9rem;
+  }
+  
+  .dentists-clinic-second-main-container ul li {
+    font-size: 0.9rem;
+  }
+  
+  .mission-content li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .dentists-main-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .dentists-main-section h2 {
+    margin-top: 20%;
+    font-size: 1.4rem;
+  }
+  
+  .dentists-main-section h3 {
+    font-size: 1rem;
+  }
+  
+  .dentists-main-container {
+    gap: 1.5rem;
+  }
+  
+  .den-img {
+    width: 90% !important;
+  }
+  
+  .dentists-intro-container {
+    padding: 0.5rem;
+  }
+  
+  .dentists-intro-container li {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  
+  .dentists-clinic-main-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .dentists-clinic-main-container {
+    gap: 1.5rem;
+  }
+  
+  .dentists-clinic-intro-container {
+    padding: 0.5rem;
+  }
+  
+  .dentists-clinic-second-main-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .dentists-clinic-second-main-container {
+    padding: 0.5rem;
+  }
+  
+  .dentists-clinic-second-main-container ul li {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  
+  .mission-content li {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .dentists-main-section h2 {
+    margin-top: 22%;
+    font-size: 1.2rem;
+  }
+  
+  .dentists-main-section h3 {
+    font-size: 0.9rem;
+  }
+  
+  .dentists-intro-container li {
+    font-size: 0.7rem;
+    margin-top: 0.6rem;
+  }
+  
+  .dentists-clinic-second-main-container ul li {
+    font-size: 0.7rem;
+    margin-top: 0.6rem;
+  }
+  
+  .mission-content li {
+    font-size: 0.7rem;
+    margin-top: 0.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .dentists-main-section h2 {
+    margin-top: 25%;
+    font-size: 1.1rem;
+  }
+  
+  .dentists-main-section h3 {
+    font-size: 0.8rem;
+  }
+  
+  .dentists-intro-container li {
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+  }
+  
+  .dentists-clinic-second-main-container ul li {
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+  }
+  
+  .mission-content li {
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+  }
+}
+  
  

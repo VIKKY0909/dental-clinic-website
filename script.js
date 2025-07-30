@@ -10,46 +10,81 @@
 // }
 
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("✅ DOM Loaded, Script Running!");
+
+    // --- Mobile Navigation Toggle ---
     const menuIcon = document.getElementById("menu-icon");
     const navList = document.querySelector(".nav-list");
-    const icon = menuIcon.querySelector("i"); // Select the icon inside
+    const icon = menuIcon ? menuIcon.querySelector("i") : null;
 
-    menuIcon.addEventListener("click", function () {
-        navList.classList.toggle("active");
+    if (menuIcon && navList && icon) {
+        menuIcon.addEventListener("click", function (e) {
+            console.log("🍔 Menu icon clicked!");
+            navList.classList.toggle("active");
 
-        // Toggle icon between bars (☰) and cross (✖)
-        if (navList.classList.contains("active")) {
-            icon.classList.replace("fa-bars", "fa-times"); // Show cross
+            // Toggle icon between bars (☰) and cross (✖)
+            if (navList.classList.contains("active")) {
+                icon.classList.replace("fa-bars", "fa-times");
+                console.log("📱 Mobile menu opened");
+            } else {
+                icon.classList.replace("fa-times", "fa-bars");
+                console.log("📱 Mobile menu closed");
+            }
+            e.stopPropagation();
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+            if (navList.classList.contains("active") && 
+                !navList.contains(e.target) && 
+                e.target !== menuIcon && 
+                !menuIcon.contains(e.target)) {
+                navList.classList.remove("active");
+                icon.classList.replace("fa-times", "fa-bars");
+                console.log("📱 Mobile menu closed (outside click)");
+            }
+        });
+    } else {
+        console.warn("❌ Mobile navigation elements not found!");
+    }
+
+    // --- Active Link Highlighting ---
+    let currentPage = window.location.pathname.split("/").pop().toLowerCase();
+    console.log("📄 Current Page:", currentPage || "index.html");
+
+    let navLinks = document.querySelectorAll(".nav-list a");
+    console.log("🔗 Found", navLinks.length, "nav links.");
+
+    if (navLinks.length === 0) {
+        console.warn("❌ No navigation links found! Check your .nav-list selector.");
+    }
+
+    navLinks.forEach(link => {
+        let linkPage = link.getAttribute("href").toLowerCase();
+        console.log("🔍 Checking link:", linkPage);
+
+        if (currentPage === linkPage || (currentPage === "" && linkPage === "index.html")) {
+            console.log("✅ Match found:", linkPage); 
+            link.classList.add("active");
+            link.setAttribute('aria-current', 'page');
         } else {
-            icon.classList.replace("fa-times", "fa-bars"); // Show menu
+            link.classList.remove("active");
+            link.removeAttribute('aria-current');
         }
     });
-});
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("✅ DOM Loaded, Script Running!");
-
-  let currentPage = window.location.pathname.split("/").pop().toLowerCase();
-  console.log("📄 Current Page:", currentPage || "index.html"); // Show current page
-
-  let navLinks = document.querySelectorAll(".nav-list a");
-  console.log("🔗 Found", navLinks.length, "nav links."); // Log number of links
-
-  if (navLinks.length === 0) {
-      console.warn("❌ No navigation links found! Check your .nav-list selector.");
-  }
-
-  navLinks.forEach(link => {
-      let linkPage = link.getAttribute("href").toLowerCase();
-      console.log("🔍 Checking link:", linkPage); // Log each link being checked
-
-      if (currentPage === linkPage || (currentPage === "" && linkPage === "index.html")) {
-          console.log("✅ Match found:", linkPage); 
-          link.classList.add("active");
-      }
-  });
+    // --- Close mobile menu after navigation ---
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            if (window.innerWidth <= 854 && navList && navList.classList.contains("active")) {
+                navList.classList.remove("active");
+                if (icon) {
+                    icon.classList.replace("fa-times", "fa-bars");
+                }
+                console.log("📱 Mobile menu closed (navigation)");
+            }
+        });
+    });
 });
 
 
@@ -376,6 +411,116 @@ const swiperpeople = new Swiper('.people-slider-wrapper', {
 document.getElementById('work-with-us-form').addEventListener('submit', function(event) {
   event.preventDefault();
   alert('Form submitted successfully!');
+});
+
+
+
+
+
+// --- Navigation Refactor for Mobile, Dropdowns, and Accessibility ---
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const navList = document.querySelector(".nav-list");
+    const icon = menuIcon.querySelector("i");
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownMenu = dropdown ? dropdown.querySelector(".dropdown-menu") : null;
+    const dropdownLink = dropdown ? dropdown.querySelector("a") : null;
+    const navLinks = document.querySelectorAll(".nav-list a");
+
+    // --- Hamburger menu toggle ---
+    menuIcon.addEventListener("click", function (e) {
+        navList.classList.toggle("active");
+        if (navList.classList.contains("active")) {
+            icon.classList.replace("fa-bars", "fa-times");
+            // Trap focus inside nav for accessibility
+            navList.setAttribute('aria-expanded', 'true');
+        } else {
+            icon.classList.replace("fa-times", "fa-bars");
+            navList.setAttribute('aria-expanded', 'false');
+        }
+        e.stopPropagation();
+    });
+
+    // --- Close menu when clicking outside ---
+    document.addEventListener("click", function (e) {
+        if (navList.classList.contains("active") && !navList.contains(e.target) && e.target !== menuIcon && !menuIcon.contains(e.target)) {
+            navList.classList.remove("active");
+            icon.classList.replace("fa-times", "fa-bars");
+            navList.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // --- Close menu after navigation (mobile) ---
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            if (window.innerWidth <= 854 && navList.classList.contains("active")) {
+                navList.classList.remove("active");
+                icon.classList.replace("fa-times", "fa-bars");
+                navList.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    // --- Dropdown support for tap/click (mobile/tablet) ---
+    if (dropdown && dropdownLink && dropdownMenu) {
+        // Add ARIA attributes
+        dropdownLink.setAttribute('aria-haspopup', 'true');
+        dropdownLink.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('role', 'menu');
+        dropdownMenu.setAttribute('aria-label', 'Treatments submenu');
+
+        // Only enable on mobile/tablet
+        function isMobile() { return window.innerWidth <= 854; }
+        let dropdownOpen = false;
+
+        function closeDropdown() {
+            dropdownMenu.style.display = '';
+            dropdownLink.setAttribute('aria-expanded', 'false');
+            dropdownOpen = false;
+        }
+        function openDropdown() {
+            dropdownMenu.style.display = 'block';
+            dropdownLink.setAttribute('aria-expanded', 'true');
+            dropdownOpen = true;
+        }
+
+        dropdownLink.addEventListener('click', function (e) {
+            if (isMobile()) {
+                e.preventDefault();
+                if (dropdownOpen) {
+                    closeDropdown();
+                } else {
+                    openDropdown();
+                }
+            }
+        });
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (e) {
+            if (isMobile() && dropdownOpen && !dropdown.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+        // On resize, reset dropdown state
+        window.addEventListener('resize', function () {
+            if (!isMobile()) {
+                closeDropdown();
+            }
+        });
+    }
+
+    // --- Standardize active state highlighting ---
+    let currentPage = window.location.pathname.split("/").pop().toLowerCase();
+    navLinks.forEach(link => {
+        let linkPage = link.getAttribute("href").toLowerCase();
+        if (currentPage === linkPage || (currentPage === "" && linkPage === "index.html")) {
+            link.classList.add("active");
+            // For accessibility
+            link.setAttribute('aria-current', 'page');
+        } else {
+            link.classList.remove("active");
+            link.removeAttribute('aria-current');
+        }
+    });
 });
 
 

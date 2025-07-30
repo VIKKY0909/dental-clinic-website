@@ -449,3 +449,267 @@
 .swiper-pagination{
   margin-bottom: 15rem;
 }
+
+/* --- Mobile & Tablet Responsive Adjustments --- */
+@media (max-width: 854px) {
+  .patients-testimonials-section {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 8%;
+  }
+  
+  .patients-testimonials-wrapper {
+    height: auto;
+    min-height: 100vh;
+    top: 0;
+  }
+  
+  .patients-testimonials-header {
+    top: 10%;
+  }
+  
+  .patients-testimonials-header i {
+    font-size: 2rem;
+    margin-top: 5%;
+  }
+  
+  .patients-testimonials {
+    width: 90%;
+    height: auto;
+    min-height: 18rem;
+    top: 60%;
+  }
+  
+  .patients-testimonials-slide {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .slide-content {
+    padding: 1rem;
+  }
+  
+  .patients-slide-img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 1.2rem;
+  }
+  
+  .patients-slide-text p {
+    font-size: 0.9rem;
+  }
+  
+  /* YouTube videos section */
+  .you-tube-videos-main-section {
+    padding: 2rem 1rem;
+  }
+  
+  .video-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 200px;
+  }
+  
+  /* Image testimonials section */
+  .img-sec-testi {
+    padding: 2rem 1rem;
+  }
+  
+  .img-sec-testi .img-testi-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .swiper-slide {
+    padding: 1rem;
+  }
+  
+  .swiper-client-msg {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .client-data-details p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .patients-testimonials-header i {
+    font-size: 1.8rem;
+  }
+  
+  .patients-testimonials {
+    width: 95%;
+    top: 65%;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .patients-slide-text p {
+    font-size: 0.8rem;
+  }
+  
+  .img-sec-testi .img-testi-container h2 {
+    font-size: 1.6rem;
+  }
+  
+  .swiper-client-msg {
+    font-size: 0.8rem;
+  }
+  
+  .client-data-details p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .patients-testimonials-section {
+    padding-top: 10%;
+  }
+  
+  .patients-testimonials-header {
+    top: 8%;
+  }
+  
+  .patients-testimonials-header i {
+    font-size: 1.5rem;
+    margin-top: 3%;
+  }
+  
+  .patients-testimonials {
+    width: 98%;
+    top: 70%;
+    min-height: 16rem;
+  }
+  
+  .patients-testimonials-slide {
+    padding: 0.5rem;
+  }
+  
+  .slide-content {
+    padding: 0.5rem;
+  }
+  
+  .patients-slide-img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 1rem;
+  }
+  
+  .patients-slide-text p {
+    font-size: 0.7rem;
+  }
+  
+  .you-tube-videos-main-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .video-container iframe {
+    height: 150px;
+  }
+  
+  .img-sec-testi {
+    padding: 1rem 0.5rem;
+  }
+  
+  .img-sec-testi .img-testi-container h2 {
+    font-size: 1.4rem;
+  }
+  
+  .swiper-slide {
+    padding: 0.5rem;
+  }
+  
+  .swiper-client-msg {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .client-data-details p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .patients-testimonials-header i {
+    font-size: 1.3rem;
+  }
+  
+  .patients-testimonials {
+    top: 75%;
+    min-height: 14rem;
+  }
+  
+  .patients-slide-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 0.9rem;
+  }
+  
+  .patients-slide-text p {
+    font-size: 0.6rem;
+  }
+  
+  .img-sec-testi .img-testi-container h2 {
+    font-size: 1.2rem;
+  }
+  
+  .swiper-client-msg {
+    font-size: 0.6rem;
+  }
+  
+  .client-data-details p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .patients-testimonials-header i {
+    font-size: 1.1rem;
+  }
+  
+  .patients-testimonials {
+    top: 80%;
+    min-height: 12rem;
+  }
+  
+  .patients-slide-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 0.8rem;
+  }
+  
+  .patients-slide-text p {
+    font-size: 0.5rem;
+  }
+  
+  .img-sec-testi .img-testi-container h2 {
+    font-size: 1.1rem;
+  }
+  
+  .swiper-client-msg {
+    font-size: 0.5rem;
+  }
+  
+  .client-data-details p {
+    font-size: 0.5rem;
+  }
+}

@@ -1024,4 +1024,626 @@ body{
     /* border: 2px solid black; */
   }
   
+  /* --- Mobile & Tablet Responsive Adjustments --- */
+@media (max-width: 854px) {
+  .dental-implants-section {
+    height: auto;
+    min-height: 90vh;
+    margin-top: 8vh;
+  }
+  
+  .dental-implants-main-container {
+    height: auto;
+    min-height: 90vh;
+    margin-top: 5vh;
+    padding: 2rem 1rem;
+  }
+  
+  .dental-implants-wrapper {
+    height: auto;
+    min-height: 80vh;
+    top: 0;
+  }
+  
+  .dental-implants-text-part {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  
+  .dental-implants-heading {
+    width: 100%;
+    margin-top: 15%;
+  }
+  
+  .dental-implants-heading h3 {
+    font-size: 1.8rem !important;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .dental-implants-sub-heading {
+    width: 100%;
+    margin-top: 2%;
+  }
+  
+  .dental-implants-sub-heading p {
+    font-size: 1.1rem !important;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .dental-implants-text-part .contact-btn {
+    margin-left: 0;
+    margin-top: 3%;
+  }
+  
+  /* Second section adjustments */
+  .implants-second-section {
+    height: auto;
+    min-height: 80vh;
+  }
+  
+  .second-section-main-container {
+    height: auto;
+    min-height: 80vh;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+  
+  .image-part {
+    width: 100%;
+    height: auto;
+    order: 1;
+  }
+  
+  .image-part .img-dental-implant2 {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .text-part {
+    width: 100%;
+    height: auto;
+    order: 2;
+  }
+  
+  .second-section-heading h3 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
+  .second-section-sub-heading p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  /* Before/After section */
+  .bef-aft-dent-implants-section {
+    padding: 2rem 1rem;
+  }
+  
+  .dentalsmile-image-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .dentalsmile-before-container,
+  .dentalsmile-after-container {
+    width: 100%;
+    height: auto;
+  }
+  
+  .dentalsmile-b-img-sub-container,
+  .dentalsmile-a-img-sub-container {
+    height: 300px;
+  }
+  
+  /* Features section */
+  .features-section {
+    padding: 2rem 1rem;
+  }
+  
+  .features-section .immediate-implants-container,
+  .features-section .single-stage-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .imm-imp-img,
+  .sin-stg-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .immediate-implants-texts,
+  .single-stage-texts {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Basal section */
+  .basal-section {
+    padding: 2rem 1rem;
+  }
+  
+  .basal-main-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .basal-features {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .basal-image-sub-container {
+    width: 100%;
+    height: auto;
+  }
+  
+  .basal-text-sub-container {
+    width: 100%;
+  }
+  
+  /* Teeth replacement section */
+  .teeths-replacement-section {
+    padding: 2rem 1rem;
+  }
+  
+  .teeths-replacement-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .single-tooth-container,
+  .multiple-teeth-container,
+  .all-mouth-container {
+    width: 100%;
+  }
+  
+  /* Advantages section */
+  .dental-implants-advantages-section {
+    padding: 2rem 1rem;
+  }
+  
+  .dental-implants-advantages-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .advantages-dental-implants {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Paragraph section */
+  .dental-implants-paragraph-section {
+    padding: 2rem 1rem;
+  }
+  
+  .dental-implants-paragraph-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .dental-clinic-img-container {
+    width: 100%;
+    height: auto;
+  }
+  
+  .dental-clinic-text-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .dental-implants-heading h3 {
+    font-size: 1.6rem !important;
+  }
+  
+  .dental-implants-sub-heading p {
+    font-size: 1rem !important;
+  }
+  
+  .second-section-heading h3 {
+    font-size: 1.4rem;
+  }
+  
+  .second-section-sub-heading p {
+    font-size: 0.9rem;
+  }
+  
+  .dentalsmile-b-img-sub-container,
+  .dentalsmile-a-img-sub-container {
+    height: 250px;
+  }
+  
+  .immediate-implants-texts h4,
+  .single-stage-texts h4 {
+    font-size: 1.2rem;
+  }
+  
+  .immediate-implants-texts p,
+  .single-stage-texts p {
+    font-size: 0.9rem;
+  }
+  
+  .basal-features h3 {
+    font-size: 1.4rem;
+  }
+  
+  .basal-features p {
+    font-size: 0.9rem;
+  }
+  
+  .basal-texts li {
+    font-size: 0.9rem;
+  }
+  
+  .single-tooth-name h4,
+  .multiple-teeth-name h4,
+  .all-mouth-name h4 {
+    font-size: 1.2rem;
+  }
+  
+  .single-tooth-info p,
+  .multiple-teeth-info p,
+  .all-mouth-info p {
+    font-size: 0.9rem;
+  }
+  
+  .conventional-implants-section h2 {
+    font-size: 1.4rem;
+  }
+  
+  .conventional-texts-container p {
+    font-size: 0.9rem;
+  }
+  
+  .advantage-title {
+    font-size: 1.4rem;
+  }
+  
+  .advantage p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .dental-implants-section {
+    margin-top: 6vh;
+  }
+  
+  .dental-implants-main-container {
+    margin-top: 3vh;
+    padding: 1rem 0.5rem;
+  }
+  
+  .dental-implants-wrapper {
+    min-height: 70vh;
+  }
+  
+  .dental-implants-heading {
+    margin-top: 10%;
+  }
+  
+  .dental-implants-heading h3 {
+    font-size: 1.4rem !important;
+  }
+  
+  .dental-implants-sub-heading p {
+    font-size: 0.9rem !important;
+    padding: 0 0.5rem;
+  }
+  
+  .dental-implants-text-part .contact-btn {
+    height: 2.2rem;
+    width: 8rem;
+    font-size: 0.8rem;
+  }
+  
+  .second-section-main-container {
+    padding: 1rem 0.5rem;
+    gap: 1.5rem;
+  }
+  
+  .image-part .img-dental-implant2 {
+    width: 90%;
+  }
+  
+  .second-section-heading h3 {
+    font-size: 1.2rem;
+  }
+  
+  .second-section-sub-heading p {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+  }
+  
+  .bef-aft-dent-implants-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .dentalsmile-image-container {
+    gap: 1.5rem;
+  }
+  
+  .dentalsmile-b-img-sub-container,
+  .dentalsmile-a-img-sub-container {
+    height: 200px;
+  }
+  
+  .dentallabel {
+    font-size: 0.9rem;
+    padding: 3px 8px;
+  }
+  
+  .features-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .features-section .immediate-implants-container,
+  .features-section .single-stage-container {
+    gap: 1.5rem;
+  }
+  
+  .immediate-implants-texts h4,
+  .single-stage-texts h4 {
+    font-size: 1.1rem;
+  }
+  
+  .immediate-implants-texts p,
+  .single-stage-texts p {
+    font-size: 0.8rem;
+  }
+  
+  .basal-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .basal-main-container {
+    gap: 1.5rem;
+  }
+  
+  .basal-features h3 {
+    font-size: 1.2rem;
+  }
+  
+  .basal-features p {
+    font-size: 0.8rem;
+  }
+  
+  .basal-texts li {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  
+  .teeths-replacement-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .teeths-replacement-container {
+    gap: 1.5rem;
+  }
+  
+  .single-tooth-name h4,
+  .multiple-teeth-name h4,
+  .all-mouth-name h4 {
+    font-size: 1.1rem;
+  }
+  
+  .single-tooth-info p,
+  .multiple-teeth-info p,
+  .all-mouth-info p {
+    font-size: 0.8rem;
+  }
+  
+  .conventional-implants-section h2 {
+    font-size: 1.2rem;
+  }
+  
+  .conventional-texts-container p {
+    font-size: 0.8rem;
+  }
+  
+  .dental-implants-advantages-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .dental-implants-advantages-container {
+    gap: 1.5rem;
+  }
+  
+  .advantage-title {
+    font-size: 1.2rem;
+  }
+  
+  .advantage p {
+    font-size: 0.8rem;
+  }
+  
+  .dental-implants-paragraph-section {
+    padding: 1rem 0.5rem;
+  }
+  
+  .dental-implants-paragraph-container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .dental-implants-heading h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  .dental-implants-sub-heading p {
+    font-size: 0.8rem !important;
+  }
+  
+  .dental-implants-text-part .contact-btn {
+    height: 2rem;
+    width: 7rem;
+    font-size: 0.7rem;
+  }
+  
+  .second-section-heading h3 {
+    font-size: 1.1rem;
+  }
+  
+  .second-section-sub-heading p {
+    font-size: 0.7rem;
+  }
+  
+  .dentalsmile-b-img-sub-container,
+  .dentalsmile-a-img-sub-container {
+    height: 180px;
+  }
+  
+  .dentallabel {
+    font-size: 0.8rem;
+    padding: 2px 6px;
+  }
+  
+  .immediate-implants-texts h4,
+  .single-stage-texts h4 {
+    font-size: 1rem;
+  }
+  
+  .immediate-implants-texts p,
+  .single-stage-texts p {
+    font-size: 0.7rem;
+  }
+  
+  .basal-features h3 {
+    font-size: 1.1rem;
+  }
+  
+  .basal-features p {
+    font-size: 0.7rem;
+  }
+  
+  .basal-texts li {
+    font-size: 0.7rem;
+    margin-top: 0.6rem;
+  }
+  
+  .single-tooth-name h4,
+  .multiple-teeth-name h4,
+  .all-mouth-name h4 {
+    font-size: 1rem;
+  }
+  
+  .single-tooth-info p,
+  .multiple-teeth-info p,
+  .all-mouth-info p {
+    font-size: 0.7rem;
+  }
+  
+  .conventional-implants-section h2 {
+    font-size: 1.1rem;
+  }
+  
+  .conventional-texts-container p {
+    font-size: 0.7rem;
+  }
+  
+  .advantage-title {
+    font-size: 1.1rem;
+  }
+  
+  .advantage p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .dental-implants-heading h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  .dental-implants-sub-heading p {
+    font-size: 0.7rem !important;
+  }
+  
+  .dental-implants-text-part .contact-btn {
+    height: 1.8rem;
+    width: 6.5rem;
+    font-size: 0.6rem;
+  }
+  
+  .second-section-heading h3 {
+    font-size: 1rem;
+  }
+  
+  .second-section-sub-heading p {
+    font-size: 0.6rem;
+  }
+  
+  .dentalsmile-b-img-sub-container,
+  .dentalsmile-a-img-sub-container {
+    height: 160px;
+  }
+  
+  .dentallabel {
+    font-size: 0.7rem;
+    padding: 2px 5px;
+  }
+  
+  .immediate-implants-texts h4,
+  .single-stage-texts h4 {
+    font-size: 0.9rem;
+  }
+  
+  .immediate-implants-texts p,
+  .single-stage-texts p {
+    font-size: 0.6rem;
+  }
+  
+  .basal-features h3 {
+    font-size: 1rem;
+  }
+  
+  .basal-features p {
+    font-size: 0.6rem;
+  }
+  
+  .basal-texts li {
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+  }
+  
+  .single-tooth-name h4,
+  .multiple-teeth-name h4,
+  .all-mouth-name h4 {
+    font-size: 0.9rem;
+  }
+  
+  .single-tooth-info p,
+  .multiple-teeth-info p,
+  .all-mouth-info p {
+    font-size: 0.6rem;
+  }
+  
+  .conventional-implants-section h2 {
+    font-size: 1rem;
+  }
+  
+  .conventional-texts-container p {
+    font-size: 0.6rem;
+  }
+  
+  .advantage-title {
+    font-size: 1rem;
+  }
+  
+  .advantage p {
+    font-size: 0.6rem;
+  }
+}
  

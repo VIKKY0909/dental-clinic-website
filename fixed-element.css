@@ -49,4 +49,113 @@
   #contact-btn:hover button{
     color: white;
   }
+
+/* --- Responsive Fixed Elements --- */
+@media (max-width: 854px) {
+  .phn-no {
+    margin-left: 85%;
+    margin-top: 10%;
+    height: 4vh;
+    padding: 0 10px;
+    font-size: 0.9rem;
+  }
+  
+  .whatsapp-no {
+    margin-left: 90%;
+    margin-top: 45%;
+    height: 3vh;
+  }
+  
+  .whatsapp-no a {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .phn-no {
+    margin-left: 80%;
+    margin-top: 12%;
+    height: 3.5vh;
+    padding: 0 8px;
+    font-size: 0.8rem;
+  }
+  
+  .whatsapp-no {
+    margin-left: 85%;
+    margin-top: 47%;
+    height: 2.5vh;
+  }
+  
+  .whatsapp-no a {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .phn-no {
+    margin-left: 75%;
+    margin-top: 15%;
+    height: 3vh;
+    padding: 0 6px;
+    font-size: 0.7rem;
+  }
+  
+  .whatsapp-no {
+    margin-left: 80%;
+    margin-top: 50%;
+    height: 2vh;
+  }
+  
+  .whatsapp-no a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .phn-no {
+    margin-left: 70%;
+    margin-top: 18%;
+    height: 2.5vh;
+    padding: 0 4px;
+    font-size: 0.6rem;
+  }
+  
+  .whatsapp-no {
+    margin-left: 75%;
+    margin-top: 52%;
+    height: 1.8vh;
+  }
+  
+  .whatsapp-no a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .phn-no {
+    margin-left: 65%;
+    margin-top: 20%;
+    height: 2vh;
+    padding: 0 3px;
+    font-size: 0.5rem;
+  }
+  
+  .whatsapp-no {
+    margin-left: 70%;
+    margin-top: 55%;
+    height: 1.5vh;
+  }
+  
+  .whatsapp-no a {
+    font-size: 1rem;
+  }
+}
+
+/* Hide fixed elements on very small screens to prevent overlap */
+@media (max-width: 300px) {
+  .phn-no,
+  .whatsapp-no {
+    display: none;
+  }
+}
   

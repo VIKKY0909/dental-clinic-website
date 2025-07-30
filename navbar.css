@@ -108,7 +108,7 @@
   .dropdown-menu {
     position: absolute;
     top: 40px;
-    left: -50%;
+    left: -30%;
     background: black;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px 0;
@@ -169,7 +169,8 @@
     font-size: 24px;
     color: white;
     cursor: pointer;
-  
+    z-index: 1001;
+    position: relative;
   }
   
   .menu-icon::before,
@@ -287,7 +288,7 @@
   
       /* Show Menu Icon */
       .menu-icon {
-        display: block;
+        display: block !important;
         font-size: 24px;
         color: white;
         cursor: pointer;
@@ -296,6 +297,7 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: 1001;
+        pointer-events: auto;
     }
   
   
@@ -435,7 +437,7 @@
         display: none;
         background: black;
         box-shadow: none;
-        width: 120vw;
+        width: 180vw;
         height: 30vh;
         margin-top: -25%;
         margin-left: 10vw;
@@ -786,4 +788,53 @@ color: white;
 font-weight: 700;
 font-size: 1rem;
 }
+}
+
+/* Accessibility: Focus states for navigation */
+.nav-list a:focus, .nav-list a:focus-visible {
+  outline: 2px solid #d4a373;
+  outline-offset: 2px;
+  background: rgba(212,163,115,0.15);
+  color: #d4a373;
+  z-index: 2;
+}
+
+.dropdown-menu li a:focus, .dropdown-menu li a:focus-visible {
+  outline: 2px solid #d4a373;
+  outline-offset: 2px;
+  background: rgba(212,163,115,0.15);
+  color: #d4a373;
+  z-index: 2;
+}
+
+/* Keyboard accessibility: show dropdown on focus within */
+.dropdown:focus-within .dropdown-menu,
+.dropdown:focus-within > a[aria-haspopup="true"] + .dropdown-menu {
+  display: block !important;
+}
+
+/* Ensure dropdown menu is above overlay */
+.dropdown-menu {
+  z-index: 2000;
+}
+
+/* --- Mobile Navigation Z-Index Fixes --- */
+@media (max-width: 854px) {
+  .navbar ul {
+    z-index: 1000;
+  }
+  .nav-list.active {
+    display: flex !important;
+    z-index: 1000;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    z-index: 1000;
+  }
+  .nav-list.active {
+    display: flex !important;
+    z-index: 1000;
+  }
 }
