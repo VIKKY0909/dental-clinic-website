@@ -77,14 +77,88 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.forEach(link => {
         link.addEventListener("click", function () {
             if (window.innerWidth <= 854 && navList && navList.classList.contains("active")) {
-                navList.classList.remove("active");
-                if (icon) {
-                    icon.classList.replace("fa-times", "fa-bars");
+                // Don't close immediately for dropdown links to allow dropdown to work
+                if (!link.closest('.dropdown')) {
+                    navList.classList.remove("active");
+                    if (icon) {
+                        icon.classList.replace("fa-times", "fa-bars");
+                    }
+                    console.log("📱 Mobile menu closed (navigation)");
                 }
-                console.log("📱 Mobile menu closed (navigation)");
             }
         });
     });
+
+    // --- Dropdown support for tap/click (mobile/tablet) ---
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownMenu = dropdown ? dropdown.querySelector(".dropdown-menu") : null;
+    const dropdownLink = dropdown ? dropdown.querySelector("a") : null;
+
+    if (dropdown && dropdownLink && dropdownMenu) {
+        // Add ARIA attributes
+        dropdownLink.setAttribute('aria-haspopup', 'true');
+        dropdownLink.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('role', 'menu');
+        dropdownMenu.setAttribute('aria-label', 'Treatments submenu');
+
+        // Only enable on mobile/tablet
+        function isMobile() { return window.innerWidth <= 854; }
+        let dropdownOpen = false;
+
+        function closeDropdown() {
+            dropdownMenu.style.display = '';
+            dropdownLink.setAttribute('aria-expanded', 'false');
+            dropdownOpen = false;
+        }
+        function openDropdown() {
+            dropdownMenu.style.display = 'block';
+            dropdownLink.setAttribute('aria-expanded', 'true');
+            dropdownOpen = true;
+        }
+
+        dropdownLink.addEventListener('click', function (e) {
+            if (isMobile()) {
+                e.preventDefault();
+                e.stopPropagation(); // Prevent event from bubbling up
+                if (dropdownOpen) {
+                    closeDropdown();
+                } else {
+                    openDropdown();
+                }
+            }
+        });
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (e) {
+            if (isMobile() && dropdownOpen && !dropdown.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+
+        // Prevent clicks inside dropdown from closing mobile menu
+        dropdownMenu.addEventListener('click', function (e) {
+            e.stopPropagation(); // Prevent event from bubbling up to document
+            
+            // If a dropdown menu item is clicked, close the mobile menu after a short delay
+            if (e.target.tagName === 'A' && e.target.closest('.dropdown-menu')) {
+                setTimeout(() => {
+                    if (navList && navList.classList.contains("active")) {
+                        navList.classList.remove("active");
+                        if (icon) {
+                            icon.classList.replace("fa-times", "fa-bars");
+                        }
+                        closeDropdown();
+                        console.log("📱 Mobile menu closed (dropdown item clicked)");
+                    }
+                }, 100);
+            }
+        });
+        // On resize, reset dropdown state
+        window.addEventListener('resize', function () {
+            if (!isMobile()) {
+                closeDropdown();
+            }
+        });
+    }
 });
 
 
@@ -417,111 +491,7 @@ document.getElementById('work-with-us-form').addEventListener('submit', function
 
 
 
-// --- Navigation Refactor for Mobile, Dropdowns, and Accessibility ---
-document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.getElementById("menu-icon");
-    const navList = document.querySelector(".nav-list");
-    const icon = menuIcon.querySelector("i");
-    const dropdown = document.querySelector(".dropdown");
-    const dropdownMenu = dropdown ? dropdown.querySelector(".dropdown-menu") : null;
-    const dropdownLink = dropdown ? dropdown.querySelector("a") : null;
-    const navLinks = document.querySelectorAll(".nav-list a");
 
-    // --- Hamburger menu toggle ---
-    menuIcon.addEventListener("click", function (e) {
-        navList.classList.toggle("active");
-        if (navList.classList.contains("active")) {
-            icon.classList.replace("fa-bars", "fa-times");
-            // Trap focus inside nav for accessibility
-            navList.setAttribute('aria-expanded', 'true');
-        } else {
-            icon.classList.replace("fa-times", "fa-bars");
-            navList.setAttribute('aria-expanded', 'false');
-        }
-        e.stopPropagation();
-    });
-
-    // --- Close menu when clicking outside ---
-    document.addEventListener("click", function (e) {
-        if (navList.classList.contains("active") && !navList.contains(e.target) && e.target !== menuIcon && !menuIcon.contains(e.target)) {
-            navList.classList.remove("active");
-            icon.classList.replace("fa-times", "fa-bars");
-            navList.setAttribute('aria-expanded', 'false');
-        }
-    });
-
-    // --- Close menu after navigation (mobile) ---
-    navLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            if (window.innerWidth <= 854 && navList.classList.contains("active")) {
-                navList.classList.remove("active");
-                icon.classList.replace("fa-times", "fa-bars");
-                navList.setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
-
-    // --- Dropdown support for tap/click (mobile/tablet) ---
-    if (dropdown && dropdownLink && dropdownMenu) {
-        // Add ARIA attributes
-        dropdownLink.setAttribute('aria-haspopup', 'true');
-        dropdownLink.setAttribute('aria-expanded', 'false');
-        dropdownMenu.setAttribute('role', 'menu');
-        dropdownMenu.setAttribute('aria-label', 'Treatments submenu');
-
-        // Only enable on mobile/tablet
-        function isMobile() { return window.innerWidth <= 854; }
-        let dropdownOpen = false;
-
-        function closeDropdown() {
-            dropdownMenu.style.display = '';
-            dropdownLink.setAttribute('aria-expanded', 'false');
-            dropdownOpen = false;
-        }
-        function openDropdown() {
-            dropdownMenu.style.display = 'block';
-            dropdownLink.setAttribute('aria-expanded', 'true');
-            dropdownOpen = true;
-        }
-
-        dropdownLink.addEventListener('click', function (e) {
-            if (isMobile()) {
-                e.preventDefault();
-                if (dropdownOpen) {
-                    closeDropdown();
-                } else {
-                    openDropdown();
-                }
-            }
-        });
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function (e) {
-            if (isMobile() && dropdownOpen && !dropdown.contains(e.target)) {
-                closeDropdown();
-            }
-        });
-        // On resize, reset dropdown state
-        window.addEventListener('resize', function () {
-            if (!isMobile()) {
-                closeDropdown();
-            }
-        });
-    }
-
-    // --- Standardize active state highlighting ---
-    let currentPage = window.location.pathname.split("/").pop().toLowerCase();
-    navLinks.forEach(link => {
-        let linkPage = link.getAttribute("href").toLowerCase();
-        if (currentPage === linkPage || (currentPage === "" && linkPage === "index.html")) {
-            link.classList.add("active");
-            // For accessibility
-            link.setAttribute('aria-current', 'page');
-        } else {
-            link.classList.remove("active");
-            link.removeAttribute('aria-current');
-        }
-    });
-});
 
 
 

@@ -80,7 +80,8 @@
     display: flex;
     /* justify-content: space-between; */
     /* border: 2px solid orangered; */
-    transition: all 0.8s  cubic-bezier(1, 0, 0, 1);
+    transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+    transform: translateX(0);
   }
 
   #ravichandran, #kunaldasgupta{
@@ -227,33 +228,43 @@
     color: rgb(102, 74, 8);
   }
   
+  .testimonials-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    pointer-events: none;
+    z-index: 20;
+  }
+  
   .testimonials-controls i{
     width: 3rem;
     height: 3rem;
-    background-color: white;
-    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.8;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    color: #444;
-    position: absolute;
-    top: 52%;
-    transform: translateY(-50%);
+    color: #333;
     cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: auto;
   }
   
   .testimonials-controls i:hover{
-    opacity: 0.2;
-  }
-  
-  .testimonials-controls i:nth-child(1){
-    left: 15%;
-  }
-  
-  .testimonials-controls i:nth-child(2){
-    right: 15%;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   }
   
   
@@ -450,18 +461,594 @@
   margin-bottom: 15rem;
 }
 
-/* --- Mobile & Tablet Responsive Adjustments --- */
-@media (max-width: 854px) {
+/* --- Comprehensive Responsive Design --- */
+
+/* Large Desktop (1200px+) */
+@media (max-width: 1200px) {
+  .patients-testimonials {
+    width: 70%;
+  }
+  
+  .slide-content {
+    padding: 0 4rem;
+  }
+  
+  .patients-slide-img {
+    width: 13rem;
+    height: 12rem;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 1.8rem;
+  }
+  
+  .patients-slide-text p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Medium Desktop (1024px - 1199px) */
+@media (max-width: 1199px) {
+  .patients-testimonials {
+    width: 75%;
+  }
+  
+  .slide-content {
+    padding: 0 3.5rem;
+  }
+  
+  .patients-slide-img {
+    width: 12rem;
+    height: 11rem;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 1.7rem;
+  }
+  
+  .patients-slide-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Small Desktop (854px - 1023px) */
+@media (max-width: 1023px) {
+  .patients-testimonials {
+    width: 80%;
+  }
+  
+  .slide-content {
+    padding: 0 3rem;
+  }
+  
+  .patients-slide-img {
+    width: 11rem;
+    height: 10rem;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 1.6rem;
+  }
+  
+  .patients-slide-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Complete Mobile-First Redesign --- */
+
+/* Mobile-First Approach - Start with Mobile */
+@media (max-width: 768px) {
+  /* Top Testimonials Section - Mobile Redesign */
   .patients-testimonials-section {
     height: auto;
-    min-height: 100vh;
-    padding-top: 8%;
+    min-height: 80vh;
+    padding: 1rem;
+    background-color: #ebe3da;
   }
   
   .patients-testimonials-wrapper {
     height: auto;
-    min-height: 100vh;
+    min-height: 80vh;
     top: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(StockCake-Dental\ Clinic\ Interior_1735830181.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .patients-testimonials-header {
+    position: relative;
+    top: 0;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .patients-testimonials-header i {
+    font-size: 2rem;
+    color: rgb(255,220,62);
+    margin: 0 0.3rem;
+  }
+  
+  .patients-testimonials {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    transform: none;
+    padding: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .patients-testimonials-slide {
+    width: 100%;
+    padding: 0.25rem;
+  }
+  
+  .slide-content {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    min-height: auto;
+    position: relative;
+    top: 0;
+    transform: none;
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+  
+  .patients-slide-img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .patients-slide-img img,
+  .patients-slide-img video,
+  .patients-slide-img iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .patients-slide-text {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .patients-slide-text p {
+    font-size: 0.9rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .patients-slide-text .patients-destination {
+    font-size: 1rem;
+    color: #8B4513;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Enhanced Navigation Controls */
+  .testimonials-controls {
+    position: relative;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    pointer-events: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .testimonials-controls i {
+    position: static;
+    transform: none;
+    font-size: 1.2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 1;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  .testimonials-controls i:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Remove slide background for mobile */
+  .slide-bg {
+    display: none;
+  }
+  
+  /* YouTube Videos Section - Mobile Redesign */
+  .you-tube-videos-main-section {
+    padding: 2rem 1rem;
+    height: auto;
+    min-height: auto;
+    background-color: #ebe3da;
+  }
+  
+  .video-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagination {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .pagination button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Textual Testimonials Section - Mobile Redesign */
+  .img-sec-testi {
+    padding: 2rem 1rem;
+    height: auto;
+    min-height: auto;
+    background-color: #c7c0b9;
+  }
+  
+  .img-sec-testi .img-testi-container h2 {
+    font-size: 1.8rem;
+    padding: 1rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: auto;
+  }
+  
+  .swiper-slide {
+    padding: 1rem;
+    height: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .swiper-client-msg {
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .swiper-client-msg p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.1rem;
+    line-height: 1.6;
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .swiper-client-msg::before {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1rem solid transparent;
+    border-top-color: rgba(255, 255, 255, 0.95);
+  }
+  
+  .swiper-client-msg p::before {
+    content: "\f10d";
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    font-size: 2rem;
+    font-family: "Font Awesome 6 free";
+    font-weight: 900;
+    color: rgb(78, 53, 11);
+  }
+  
+  .swiper-client-msg p::after {
+    content: "\f10e";
+    position: absolute;
+    bottom: -0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    font-family: "Font Awesome 6 free";
+    font-weight: 900;
+    color: rgb(78, 53, 11);
+  }
+  
+  .swiper-client-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .client-data-details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .client-data-details p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .client-data-details img {
+    height: 30px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 0.3rem;
+  }
+  
+  .swiper-pagination {
+    margin: 2rem 0;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #007BFF;
+    opacity: 0.5;
+    margin: 0 0.3rem;
+  }
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #0056b3;
+  }
+  
+  /* Additional Mobile Enhancements */
+  .patients-testimonials-slider {
+    touch-action: pan-y pinch-zoom;
+  }
+  
+  .slide-content {
+    touch-action: manipulation;
+  }
+  
+  /* Improve touch targets */
+  .testimonials-controls i {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .pagination button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Better mobile spacing */
+  .patients-testimonials-section {
+    scroll-margin-top: 2rem;
+  }
+  
+  .you-tube-videos-main-section {
+    scroll-margin-top: 2rem;
+  }
+  
+  .img-sec-testi {
+    scroll-margin-top: 2rem;
+  }
+}
+
+/* Mobile (700px - 767px) */
+@media (max-width: 767px) {
+  .patients-testimonials-section {
+    height: 100vh;
+    padding-top: 8%;
+  }
+  
+  .patients-testimonials-wrapper {
+    height: 100vh;
+    top: -10%;
+  }
+  
+  .patients-testimonials-header {
+    top: 12%;
+  }
+  
+  .patients-testimonials-header i {
+    font-size: 2rem;
+    margin-top: 8%;
+  }
+  
+  .patients-testimonials {
+    width: 90%;
+    height: 18rem;
+    top: 55%;
+  }
+  
+  .patients-testimonials-slide {
+    padding: 0.5rem;
+  }
+  
+  .slide-content {
+    padding: 0 2rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .patients-slide-img {
+    width: 10rem;
+    height: 9rem;
+    margin: 0;
+  }
+  
+  .patients-slide-text {
+    width: 70%;
+    margin-left: 4%;
+    text-align: left;
+  }
+  
+  .patients-slide-text h3 {
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .patients-slide-text p {
+    font-size: 0.95rem;
+    color: #222;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .patients-slide-text .patients-destination {
+    font-size: 1rem;
+    color: #8B4513;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* YouTube videos section */
+  .you-tube-videos-main-section {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .video-container {
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  .video-container iframe {
+    height: 180px;
+  }
+  
+  .pagination button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin: 0 3px;
+  }
+  
+  /* Image testimonials section */
+  .img-sec-testi {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .img-sec-testi .img-testi-container h2 {
+    font-size: 1.6rem;
+    padding: 1.5rem 0.5rem 1rem;
+  }
+  
+  .swiper-slide {
+    padding: 0.5rem;
+    height: auto;
+    min-height: 50vh;
+  }
+  
+  .swiper-client-msg {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .client-data-details p {
+    font-size: 0.85rem;
+  }
+  
+  /* Testimonials controls */
+  .testimonials-controls i {
+    font-size: 1.3rem;
+    padding: 0.4rem;
+  }
+}
+
+/* Small Mobile (500px - 699px) */
+@media (max-width: 699px) {
+  .patients-testimonials-section {
+    height: 100vh;
+    padding-top: 10%;
+  }
+  
+  .patients-testimonials-wrapper {
+    height: 100vh;
+    top: -10%;
   }
   
   .patients-testimonials-header {
@@ -469,111 +1056,128 @@
   }
   
   .patients-testimonials-header i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 5%;
   }
   
   .patients-testimonials {
-    width: 90%;
-    height: auto;
-    min-height: 18rem;
+    width: 95%;
+    height: 16rem;
     top: 60%;
   }
   
   .patients-testimonials-slide {
-    width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   
   .slide-content {
-    padding: 1rem;
+    padding: 0 1.5rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
   }
   
   .patients-slide-img {
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: 7rem;
+    margin: 0;
+  }
+  
+  .patients-slide-text {
+    width: 70%;
+    margin-left: 4%;
+    text-align: left;
   }
   
   .patients-slide-text h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
   }
   
   .patients-slide-text p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    color: #222;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .patients-slide-text .patients-destination {
+    font-size: 1rem;
+    color: #8B4513;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
   }
   
   /* YouTube videos section */
   .you-tube-videos-main-section {
-    padding: 2rem 1rem;
+    padding: 1.5rem 0.5rem;
   }
   
   .video-container {
-    flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 0.5rem;
   }
   
   .video-container iframe {
-    width: 100%;
-    height: 200px;
+    height: 180px;
+  }
+  
+  .pagination button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin: 0 3px;
   }
   
   /* Image testimonials section */
   .img-sec-testi {
-    padding: 2rem 1rem;
-  }
-  
-  .img-sec-testi .img-testi-container h2 {
-    font-size: 1.8rem;
-  }
-  
-  .swiper-slide {
-    padding: 1rem;
-  }
-  
-  .swiper-client-msg {
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .client-data-details p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .patients-testimonials-header i {
-    font-size: 1.8rem;
-  }
-  
-  .patients-testimonials {
-    width: 95%;
-    top: 65%;
-  }
-  
-  .patients-slide-text h3 {
-    font-size: 1.1rem;
-  }
-  
-  .patients-slide-text p {
-    font-size: 0.8rem;
+    padding: 1.5rem 0.5rem;
   }
   
   .img-sec-testi .img-testi-container h2 {
     font-size: 1.6rem;
+    padding: 1.5rem 0.5rem 1rem;
+  }
+  
+  .swiper-slide {
+    padding: 0.5rem;
+    height: auto;
+    min-height: 50vh;
   }
   
   .swiper-client-msg {
-    font-size: 0.8rem;
+    padding: 0.5rem;
+    font-size: 0.85rem;
   }
   
   .client-data-details p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Testimonials controls */
+  .testimonials-controls i {
+    font-size: 1.3rem;
+    padding: 0.4rem;
   }
 }
 
+/* Extra Small Mobile (500px and below) */
 @media (max-width: 500px) {
   .patients-testimonials-section {
-    padding-top: 10%;
+    height: 100vh;
+    padding-top: 12%;
+  }
+  
+  .patients-testimonials-wrapper {
+    height: 100vh;
+    top: -10%;
   }
   
   .patients-testimonials-header {
@@ -587,8 +1191,8 @@
   
   .patients-testimonials {
     width: 98%;
-    top: 70%;
-    min-height: 16rem;
+    height: 14rem;
+    top: 65%;
   }
   
   .patients-testimonials-slide {
@@ -596,32 +1200,80 @@
   }
   
   .slide-content {
-    padding: 0.5rem;
+    padding: 0 1rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
   }
   
   .patients-slide-img {
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 5rem;
+    margin: 0;
+  }
+  
+  .patients-slide-text {
+    width: 70%;
+    margin-left: 4%;
+    text-align: left;
   }
   
   .patients-slide-text h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
   }
   
   .patients-slide-text p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    color: #222;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .patients-slide-text .patients-destination {
+    font-size: 0.95rem;
+    color: #8B4513;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
   }
   
   .you-tube-videos-main-section {
     padding: 1rem 0.5rem;
+    height: auto;
+    min-height: 70vh;
+  }
+  
+  .video-container {
+    gap: 1rem;
+    padding: 0.5rem;
   }
   
   .video-container iframe {
     height: 150px;
   }
   
+  .pagination {
+    margin: 0.5rem;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    margin: 0 2px;
+  }
+  
   .img-sec-testi {
     padding: 1rem 0.5rem;
+    height: auto;
+    min-height: 70vh;
   }
   
   .img-sec-testi .img-testi-container h2 {
@@ -643,34 +1295,138 @@
 }
 
 @media (max-width: 400px) {
+  .patients-testimonials-section {
+    height: 100vh;
+    padding-top: 15%;
+  }
+  
+  .patients-testimonials-wrapper {
+    height: 100vh;
+    top: -10%;
+  }
+  
+  .patients-testimonials-header {
+    top: 5%;
+  }
+  
   .patients-testimonials-header i {
     font-size: 1.3rem;
+    margin-top: 2%;
   }
   
   .patients-testimonials {
-    top: 75%;
-    min-height: 14rem;
+    width: 98%;
+    height: 12rem;
+    top: 70%;
+  }
+  
+  .slide-content {
+    padding: 0 0.8rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
   }
   
   .patients-slide-img {
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 4rem;
+    margin: 0;
+  }
+  
+  .patients-slide-text {
+    width: 70%;
+    margin-left: 4%;
+    text-align: left;
   }
   
   .patients-slide-text h3 {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    color: #111;
+    margin-bottom: 0.4rem;
   }
   
   .patients-slide-text p {
-    font-size: 0.6rem;
+    font-size: 0.85rem;
+    color: rgb(30, 40, 50);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+  
+  .patients-slide-text .patients-destination {
+    font-size: 0.9rem;
+    color: rgb(102, 74, 8);
+    font-weight: 500;
+  }
+  
+  /* YouTube videos section */
+  .you-tube-videos-main-section {
+    padding: 0.5rem;
+    height: auto;
+    min-height: 60vh;
+  }
+  
+  .video-container {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .video-container iframe {
+    height: 140px;
+  }
+  
+  .pagination button {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    margin: 0 1px;
+  }
+  
+  /* Image testimonials section */
+  .img-sec-testi {
+    padding: 0.5rem;
+    height: auto;
+    min-height: 60vh;
   }
   
   .img-sec-testi .img-testi-container h2 {
     font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  
+  .swiper-slide {
+    padding: 0.5rem;
+    height: auto;
+    min-height: 40vh;
   }
   
   .swiper-client-msg {
     font-size: 0.6rem;
+    padding: 0.5rem;
+  }
+  
+  .client-data-details p {
+    font-size: 0.6rem;
+  }
+  
+  /* Testimonials controls */
+  .testimonials-controls i {
+    font-size: 1.2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.8;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .testimonials-controls i:nth-child(1) {
+    left: 3%;
+  }
+  
+  .testimonials-controls i:nth-child(2) {
+    right: 3%;
   }
   
   .client-data-details p {
@@ -679,37 +1435,124 @@
 }
 
 @media (max-width: 360px) {
+  .patients-testimonials-section {
+    height: 100vh;
+    padding-top: 18%;
+  }
+  
+  .patients-testimonials-wrapper {
+    height: 100vh;
+    top: -10%;
+  }
+  
+  .patients-testimonials-header {
+    top: 3%;
+  }
+  
   .patients-testimonials-header i {
     font-size: 1.1rem;
+    margin-top: 1%;
   }
   
   .patients-testimonials {
-    top: 80%;
-    min-height: 12rem;
+    width: 98%;
+    height: 10rem;
+    top: 75%;
+  }
+  
+  .slide-content {
+    padding: 0 0.6rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
   }
   
   .patients-slide-img {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 3rem;
+    margin: 0;
+  }
+  
+  .patients-slide-text {
+    width: 70%;
+    margin-left: 4%;
+    text-align: left;
   }
   
   .patients-slide-text h3 {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    color: #111;
+    margin-bottom: 0.3rem;
   }
   
   .patients-slide-text p {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
+    color: rgb(30, 40, 50);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  .patients-slide-text .patients-destination {
+    font-size: 0.85rem;
+    color: rgb(102, 74, 8);
+    font-weight: 500;
+  }
+  
+  /* YouTube videos section */
+  .you-tube-videos-main-section {
+    padding: 0.5rem;
+    height: auto;
+    min-height: 50vh;
+  }
+  
+  .video-container {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .video-container iframe {
+    height: 120px;
+  }
+  
+  .pagination button {
+    padding: 3px 6px;
+    font-size: 0.65rem;
+    margin: 0 1px;
+  }
+  
+  /* Image testimonials section */
+  .img-sec-testi {
+    padding: 0.5rem;
+    height: auto;
+    min-height: 50vh;
   }
   
   .img-sec-testi .img-testi-container h2 {
     font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+  
+  .swiper-slide {
+    padding: 0.5rem;
+    height: auto;
+    min-height: 35vh;
   }
   
   .swiper-client-msg {
     font-size: 0.5rem;
+    padding: 0.5rem;
   }
   
   .client-data-details p {
     font-size: 0.5rem;
+  }
+  
+  /* Testimonials controls */
+  .testimonials-controls i {
+    font-size: 0.9rem;
+    padding: 0.2rem;
   }
 }

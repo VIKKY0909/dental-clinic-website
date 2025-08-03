@@ -21,15 +21,105 @@ const rightArrow = document.querySelector(".testimonials-controls i:nth-child(2)
 
 let slideIndex = 0;
 
+// Check if elements exist before proceeding
+if (!patientSlider || !leftArrow || !rightArrow || patientSlides.length === 0) {
+  console.warn("Patient testimonials slider elements not found");
+  return;
+}
+
+// Responsive slide movement based on screen size
+function getSlideMovement() {
+  // Always use -100% for full slide movement to show one slide at a time
+  return -100;
+}
+
+// Initialize slider position
+function initializeSlider() {
+  const movement = getSlideMovement();
+  patientSlider.style.transform = `translateX(${slideIndex * movement}%)`;
+}
+
+// Update slider position
+function updateSliderPosition() {
+  const movement = getSlideMovement();
+  const transformValue = `${slideIndex * movement}%`;
+  patientSlider.style.transform = `translateX(${transformValue})`;
+  console.log(`Slide ${slideIndex + 1}/${patientSlides.length}, Transform: ${transformValue}`);
+  
+  // Update navigation button states
+  const leftArrow = document.querySelector(".testimonials-controls i:nth-child(1)");
+  const rightArrow = document.querySelector(".testimonials-controls i:nth-child(2)");
+  
+  if (leftArrow) {
+    leftArrow.style.opacity = slideIndex === 0 ? "0.5" : "1";
+    leftArrow.style.pointerEvents = slideIndex === 0 ? "none" : "auto";
+  }
+  
+  if (rightArrow) {
+    rightArrow.style.opacity = slideIndex === patientSlides.length - 1 ? "0.5" : "1";
+    rightArrow.style.pointerEvents = slideIndex === patientSlides.length - 1 ? "none" : "auto";
+  }
+}
+
 leftArrow.addEventListener("click", () => {
-  slideIndex = slideIndex > 0? slideIndex - 1:0;
-  patientSlider.style.transform = `translateX(${slideIndex * -5}%)`;
+  slideIndex = slideIndex > 0 ? slideIndex - 1 : 0;
+  updateSliderPosition();
 });
 
 rightArrow.addEventListener("click", () => {
-  slideIndex = slideIndex < patientSlides.length -1? slideIndex + 1:patientSlides.length-1;
-  patientSlider.style.transform = `translateX(${slideIndex * -5}%)`;
+  slideIndex = slideIndex < patientSlides.length - 1 ? slideIndex + 1 : patientSlides.length - 1;
+  updateSliderPosition();
 });
+
+// Handle window resize for responsive behavior
+window.addEventListener('resize', () => {
+  updateSliderPosition();
+});
+
+// Add keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') {
+    e.preventDefault();
+    slideIndex = slideIndex > 0 ? slideIndex - 1 : 0;
+    updateSliderPosition();
+  } else if (e.key === 'ArrowRight') {
+    e.preventDefault();
+    slideIndex = slideIndex < patientSlides.length - 1 ? slideIndex + 1 : patientSlides.length - 1;
+    updateSliderPosition();
+  }
+});
+
+// Add touch/swipe support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+patientSlider.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+patientSlider.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const swipeThreshold = 50;
+  const diff = touchStartX - touchEndX;
+  
+  if (Math.abs(diff) > swipeThreshold) {
+    if (diff > 0) {
+      // Swipe left - next slide
+      slideIndex = slideIndex < patientSlides.length - 1 ? slideIndex + 1 : patientSlides.length - 1;
+    } else {
+      // Swipe right - previous slide
+      slideIndex = slideIndex > 0 ? slideIndex - 1 : 0;
+    }
+    updateSliderPosition();
+  }
+}
+
+// Initialize the slider
+initializeSlider();
 
 });
 
@@ -104,11 +194,29 @@ const videos = {
 function changePage(pageNumber) {
   const container = document.getElementById('videoContainer');
   container.innerHTML = '';
+  
+  // Responsive video layout based on screen size
+  const isMobile = window.innerWidth <= 854;
+  const isSmallMobile = window.innerWidth <= 500;
+  
   videos[pageNumber].forEach(videoUrl => {
       const iframe = document.createElement('iframe');
       iframe.src = videoUrl;
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
       iframe.allowFullscreen = true;
+      
+      // Add responsive classes
+      if (isSmallMobile) {
+          iframe.style.width = '100%';
+          iframe.style.height = '150px';
+      } else if (isMobile) {
+          iframe.style.width = '100%';
+          iframe.style.height = '200px';
+      } else {
+          iframe.style.width = '300px';
+          iframe.style.height = '200px';
+      }
+      
       container.appendChild(iframe);
   });
 
@@ -127,6 +235,30 @@ function changePage(pageNumber) {
 // Initialize with the first page
 changePage(1);
 
+// Handle window resize for video container
+window.addEventListener('resize', () => {
+  // Re-apply responsive video sizing when window is resized
+  const container = document.getElementById('videoContainer');
+  if (container && container.children.length > 0) {
+    const iframes = container.querySelectorAll('iframe');
+    const isMobile = window.innerWidth <= 854;
+    const isSmallMobile = window.innerWidth <= 500;
+    
+    iframes.forEach(iframe => {
+      if (isSmallMobile) {
+        iframe.style.width = '100%';
+        iframe.style.height = '150px';
+      } else if (isMobile) {
+        iframe.style.width = '100%';
+        iframe.style.height = '200px';
+      } else {
+        iframe.style.width = '300px';
+        iframe.style.height = '200px';
+      }
+    });
+  }
+});
+
 
 
   // -----------------------------------------------------------------textual testimonial--------------------------------------------------
@@ -135,14 +267,30 @@ changePage(1);
 
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 30,
+  slidesPerView: 1, // Always show 1 slide at a time
+  spaceBetween: 20,
   autoplay:{
-    delay: 3000,
+    delay: 4000,
     disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    dynamicBullets: true,
   },
+  // Mobile-first responsive breakpoints
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    }
+  }
 });

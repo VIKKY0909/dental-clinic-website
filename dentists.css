@@ -186,11 +186,25 @@
   }
   
   
+  .clinic-images-list .dental-clinic-images-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
   .clinic-images-list .dental-clinic-images-content img{
     height: 100%;
     width: 100%;
-    object-fit: cover; 
-    /* border: 8px solid black; */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .clinic-images-list .dental-clinic-images-content img.active{
+    opacity: 1;
   }
   
   @media (max-width:1060px) {
@@ -364,8 +378,11 @@
     width: 15px;
     height: 15px;
     opacity: 1;
-    margin-bottom: 5%;
-    /* border: 2px solid black; */
+    background-color: #333;
+  }
+  
+  .people-main-section .swiper-pagination-bullet-active{
+    background-color: #666;
   }
   
   /* --- Mobile & Tablet Responsive Adjustments --- */

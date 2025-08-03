@@ -5,22 +5,633 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kadali Dental Care</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- linking swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <!-- linking google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Sweet+Gothic&display=swap" rel="stylesheet">
-    <!-- linking boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="dentists.css">
-    <link rel="stylesheet" href="fixed-element.css">
+    
+    <!-- <link rel="stylesheet" href="dentists.css"> -->
+
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Styles */
+        /* header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        } */
+
+        /* .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #8B4513, #A0522D);
+            border-radius: 50%;
+        } */
+
+        /* .clinic-centers p {
+            font-size: 0.9rem;
+            color: #666;
+        } */
+
+        /* .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        } */
+
+        /* .nav-list a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-list a:hover,
+        .nav-list a.active {
+            color: #8B4513;
+        } */
+
+        /* .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            padding: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f5f5f5;
+            color: #8B4513;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        } */
+
+        /* Fixed Elements */
+        /* #contact-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        .phn-no {
+            background: linear-gradient(45deg, #8B4513, #A0522D);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .phn-no:hover {
+            transform: translateY(-2px);
+        } */
+
+        .whatsapp-no {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        .whatsapp-no a {
+            color: #25D366;
+            font-size: 3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-no a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Main Sections */
+        .dentists-main-section {
+            min-height: 100vh;
+            width: 100%;
+            background-color: #ebe3da;
+            padding: 120px 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .dentists-main-section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .dentists-main-section h3 {
+            text-align: center;
+            font-size: 1.7rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.1rem;
+            font-weight: 500;
+            margin-bottom: 3rem;
+        }
+
+        .dentists-main-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .dentists-images-container,
+        .dentists-intro-container {
+            flex: 1;
+        }
+
+        .den-img {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .den-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .dentists-intro-container ul {
+            list-style: none;
+        }
+
+        .dentists-intro-container li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.1rem;
+            line-height: 1.6;
+        }
+
+        .dentists-intro-container li span {
+            font-weight: 700;
+            color: #8B4513;
+        }
+
+        /* Second Section */
+        .dentists-clinic-main-section {
+            min-height: 90vh;
+            width: 100%;
+            background-color: #ebe3da;
+            padding: 3rem 2rem;
+        }
+
+        .dentists-clinic-main-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .dentists-clinic-images-container,
+        .dentists-clinic-intro-container {
+            flex: 1;
+        }
+
+        .den-clinic-img {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .dental-images-list {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .clinic-images-list {
+            width: 100%;
+            height: 100%;
+        }
+
+        .dental-clinic-images-content {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+
+        .dental-clinic-images-content img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .dentists-clinic-intro-container li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.1rem;
+            line-height: 1.8;
+        }
+
+        .dentists-clinic-intro-container li span {
+            font-weight: 700;
+            color: #8B4513;
+        }
+
+        /* Third Section */
+        .dentists-clinic-second-main-section {
+            min-height: 100vh;
+            width: 100%;
+            background-color: #ebe3da;
+            padding: 3rem 2rem;
+        }
+
+        .dentists-clinic-second-main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .dentists-clinic-second-main-container ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .dentists-clinic-second-main-container ul li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.1rem;
+            line-height: 1.8;
+        }
+
+        .dentists-clinic-second-main-container h2 {
+            font-size: 1.7rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.1rem;
+            font-weight: 500;
+            margin: 2rem 0 1rem;
+            color: #8B4513;
+        }
+
+        .places-of-clinic {
+            margin-bottom: 2rem;
+        }
+
+        .proff-assc {
+            margin-bottom: 0.5rem;
+        }
+
+        .proff-assc li {
+            font-size: 1.1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.1rem;
+        }
+
+        .mission-containers {
+            margin-top: 1rem;
+        }
+
+        .mission-content {
+            margin-bottom: 0.5rem;
+        }
+
+        .mission-content li {
+            font-size: 1.1rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 0.1rem;
+        }
+
+        /* People Section */
+        .people-main-section {
+            width: 100%;
+            min-height: 70vh;
+            background-color: #c0b9b2;
+            padding: 3rem 0;
+        }
+
+        .people-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .people-images {
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+            border: 10px solid #f9f2e8;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+            opacity: 1;
+        }
+
+        /* Footer */
+        /* footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+        }
+
+        .last-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .first-footer-section,
+        .second-footer-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .first-footer-section p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #add1 {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        #address {
+            line-height: 1.6;
+        }
+
+        #address span {
+            font-weight: bold;
+            color: #8B4513;
+        } */
+
+        /* Mobile Navigation */
+        /* @media (max-width: 854px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-list {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                gap: 1rem;
+            }
+
+            .nav-list.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: #f5f5f5;
+                margin-top: 0.5rem;
+                border-radius: 5px;
+                display: none;
+            } */
+
+            /* Responsive Design */
+            .dentists-main-section {
+                padding: 100px 1rem 2rem;
+            }
+
+            .dentists-main-section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .dentists-main-section h3 {
+                font-size: 1.4rem;
+                margin-bottom: 2rem;
+            }
+
+            .dentists-main-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .dentists-intro-container li {
+                font-size: 1rem;
+            }
+
+            .dentists-clinic-main-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .dentists-clinic-intro-container li {
+                font-size: 1rem;
+            }
+
+            .dentists-clinic-second-main-container ul li {
+                font-size: 1rem;
+            }
+
+            .mission-content li {
+                font-size: 1rem;
+            }
+
+            .people-images {
+                width: 280px;
+                height: 200px;
+            }
+
+            .last-container {
+                flex-direction: column;
+            }
+        
+
+        @media (max-width: 600px) {
+            .dentists-main-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .dentists-main-section h3 {
+                font-size: 1.2rem;
+            }
+
+            .dentists-intro-container li {
+                font-size: 0.9rem;
+            }
+
+            .dentists-clinic-intro-container li {
+                font-size: 0.9rem;
+            }
+
+            .dentists-clinic-second-main-container ul li {
+                font-size: 0.9rem;
+            }
+
+            .mission-content li {
+                font-size: 0.9rem;
+            }
+
+            .people-images {
+                width: 250px;
+                height: 180px;
+            }
+
+            .phn-no {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .whatsapp-no a {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .dentists-main-section {
+                padding: 90px 0.5rem 1rem;
+            }
+
+            .dentists-main-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .dentists-main-section h3 {
+                font-size: 1rem;
+            }
+
+            .dentists-intro-container li {
+                font-size: 0.8rem;
+            }
+
+            .dentists-clinic-intro-container li {
+                font-size: 0.8rem;
+            }
+
+            .dentists-clinic-second-main-container ul li {
+                font-size: 0.8rem;
+            }
+
+            .mission-content li {
+                font-size: 0.8rem;
+            }
+
+            .people-images {
+                width: 220px;
+                height: 160px;
+            }
+        }
+    </style>
+    
 </head>
 <body>
 
-    <!-- --------------------------------------------navbar----------------------------------------------------------------------------------- -->
+    <!-- Navigation -->
     <header>
         <nav class="navbar">
-            <!-- Logo Section -->
             <div class="nav-logo">
                 <div class="logo"></div>
                 <div class="clinic-centers">
@@ -28,19 +639,15 @@
                 </div>
             </div>  
     
-            <!-- Menu Icon for Mobile -->
             <div class="menu-icon" id="menu-icon">
                 <i class="fa fa-bars"></i>
             </div>
 
-    
-            <!-- Navigation Links -->
             <ul class="nav-list" id="nav-list">
                 <li class="contents"><a href="index.html">Home</a></li>
                 <li class="contents"><a href="Dentists.html">Team</a></li>
                 <li class="contents dropdown">
                     <a href="#" id="treatments-link">Treatments</a>
-                    <!-- Dropdown Menu -->
                     <ul class="dropdown-menu">
                         <li><a href="Dental-Implants.html">Dental Implants</a></li>
                         <li><a href="Smile-Makeover.html">Smile Makeover</a></li>
@@ -50,7 +657,6 @@
                         <li><a href="Orthodontic-Braces.html">Braces & Aligners</a></li>
                         <li><a href="Gum-Treatment.html">Gum Treatment</a></li>
                         <li><a href="General-Dentistry.html">General Dentistry</a></li>
-
                     </ul>
                 </li>
                 <li class="contents"><a href="Testimonials.html">Testimonials</a></li>
@@ -60,22 +666,28 @@
                 <li class="contents"><a href="Services.html">Services</a></li>
                 <li class="contents"><a href="contact-us.html">Contact</a></li>
             </ul>
-            
         </nav>
     </header>
 
-    <a href="tel:+919819201882" id="contact-btn"><button class="phn-no" id="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button> </a>
-  <div class="whatsapp-no"><a href="https://wa.me/919819201882"><i class="fa-brands fa-square-whatsapp"></i></a></div>
+    <a href="tel:+919819201882" id="contact-btn">
+        <button class="phn-no" id="phn-no">
+            <i class="fa-solid fa-phone-volume"></i> 981-920-1882
+        </button>
+    </a>
+    <div class="whatsapp-no">
+        <a href="https://wa.me/919819201882">
+            <i class="fa-brands fa-square-whatsapp"></i>
+        </a>
+    </div>
 
-    <!-- ------------------------------------------------------------------1st page------------------------------------------------------------- -->
-
+    <!-- Main Content -->
     <section class="dentists-main-section">
         <h2>The Dentists</h2>
         <h3>Cosmetic Dentist Mumbai, India</h3>
         <div class="dentists-main-container">
             <div class="dentists-images-container">
                 <div class="den-img">
-                    <img src="Dr_Saurabh_and_Shalaka_Kadali_-_Copy.jpg" alt="">
+                    <img src="Dr_Saurabh_and_Shalaka_Kadali_-_Copy.jpg" alt="Dr Saurabh and Dr Shalaka Kadali">
                 </div>
             </div>
             <div class="dentists-intro-container">
@@ -84,7 +696,7 @@
                 <li>Dentists to numerous Television and Film Personalities</li>
                 <li>Masters Degree (MDS) in <span>Restorative, Esthetic Dentistry and Endodontics.</span></li>
                 <li>Member (AACD)<span> American Academy of Cosmetic Dentistry</span></li>
-                <li>Undergone Extensive Traning in Advanced Endodontics and Esthetic Dentistry (Eastman Dental Institute) in UK.</li>
+                <li>Undergone Extensive Training in Advanced Endodontics and Esthetic Dentistry (Eastman Dental Institute) in UK.</li>
                 <li>Ex-faculty in Dept of<span> Conservative Dentistry and Endodontics D.Y. Patil Dental College.</span></li>
                 <li>Fellows in Implant Dentistry</li>
                 <li>Conduct Hands-On Workshops in Endodontics and Aesthetics </li>
@@ -94,14 +706,12 @@
         </div>
     </section>
 
-    <!-- -------------------------------------------------------------------------2nd page---------------------------------------------------------------- -->
-
     <section class="dentists-clinic-main-section">
         <div class="dentists-clinic-main-container">
             <div class="dentists-clinic-intro-container">
                <ul>
                 <li>Kadali dental has <span>2 dental centres</span> in Mumbai with the necessary support staff and visiting specialists as and when required. This is optimum for us to provide the standard of care and service we aspire to, while still keeping the personal touch.</li>
-                <li>Drs Shalaka and Saurabh Kadali have built a reputation for excellent standards in dental care and the sheer number of patients who have traveled internationally to experience their skill and expertise testify to this fact. They believe in the principle of<span> ‘Minimally Invasive Dentistry’</span> which reflects how the dentists can provide the highest level of service to the teeth with the least invasiveness.</li>
+                <li>Drs Shalaka and Saurabh Kadali have built a reputation for excellent standards in dental care and the sheer number of patients who have traveled internationally to experience their skill and expertise testify to this fact. They believe in the principle of<span> 'Minimally Invasive Dentistry'</span> which reflects how the dentists can provide the highest level of service to the teeth with the least invasiveness.</li>
                 <li>The doctors graduated from <span>NAIR HOSPITAL DENTAL COLLEGE</span> Mumbai which is one of the best institution not just in India but the whole of Asia. Dr Saurabh has obtained his Master's degree (MDS), as <span>Specialist in Endodontic</span> and <span>Aesthetic Dentistry </span>and is a <span>Certified Implantologist.</span> Dr Shalaka is a <span>Certified Implantologist</span> and <span>Aesthetic Dentist.</span></li>
               </ul>
             </div>
@@ -110,14 +720,14 @@
                     <div class="dental-images-list">
                         <div class="clinic-images-list">
                           <div class="dental-clinic-images-content">
-                            <img src="IMG_9632.jpg" alt="" class="cli-den-img">
-                            <img src="IMG_9637.jpeg" alt="" class="cli-den-img">
-                            <img src="IMG_9627.jpeg" alt="" class="cli-den-img">
-                            <img src="IMG_9633.jpeg" alt="" class="cli-den-img">
-                            <img src="IMG_9636.jpeg" alt="" class="cli-den-img">
-                            <img src="IMG_9638.jpeg" alt="" class="cli-den-img">
-                           <img src="IMG_9642.jpeg" alt="" class="cli-den-img">
-                            <img src="IMG_9639-zoom.jpeg" alt="" class="cli-den-img">
+                            <img src="assets/IMG_9632.jpg" alt="Clinic Image 1" class="cli-den-img">
+                            <img src="assets/IMG_9637.jpeg" alt="Clinic Image 2" class="cli-den-img">
+                            <img src="assets/IMG_9627.jpeg" alt="Clinic Image 3" class="cli-den-img">
+                            <img src="assets/IMG_9633.jpeg" alt="Clinic Image 4" class="cli-den-img">
+                            <img src="assets/IMG_9636.jpeg" alt="Clinic Image 5" class="cli-den-img">
+                            <img src="assets/IMG_9638.jpeg" alt="Clinic Image 6" class="cli-den-img">
+                            <img src="assets/IMG_9642.jpeg" alt="Clinic Image 7" class="cli-den-img">
+                            <img src="assets/IMG_9639-zoom.jpeg" alt="Clinic Image 8" class="cli-den-img">
                           </div>
                         </div>
                       </div>
@@ -126,14 +736,12 @@
         </div>
     </section>
 
-    <!-- ---------------------------------------------------------------------------------------3rd-------------------------------------------------------------------------------------------------------------------------------------------- -->
-
     <section class="dentists-clinic-second-main-section">
         <div class="dentists-clinic-second-main-container">
             <ul>
                 <li>They commenced practicing in India shortly thereafter by designing, building and running their dental practice in Mumbai.</li>
-                <li>The doctors’ goal has been to develop a comprehensive restorative practice to help people have and keep beautiful smiles. Excellent oral hygiene is an integral part of dental success and forms the foundation of any treatment in their practice. It is their priority to stay up to date technically and technologically with constant continuing education to ensure that their patients receive the best possible dental care available.</li>
-                <li>Along with personalised care from both Doctors , we have an entire team with the correct specialist training for your dental procedures.</li>
+                <li>The doctors' goal has been to develop a comprehensive restorative practice to help people have and keep beautiful smiles. Excellent oral hygiene is an integral part of dental success and forms the foundation of any treatment in their practice. It is their priority to stay up to date technically and technologically with constant continuing education to ensure that their patients receive the best possible dental care available.</li>
+                <li>Along with personalised care from both Doctors, we have an entire team with the correct specialist training for your dental procedures.</li>
                 <li>This means your dental implants are placed by an <b>Implantologist</b>, your dental crowns and dental veneers by a <b>Cosmetic dentist / Prosthodontist</b>, your impacted third molars are extracted by a <b>Maxillo Facial Surgeon</b>, and your gum surgeries by <b>Periodontist</b>, and your root canal is done by a <b>Endodontist.</b></li>
             </ul>
             <h2>Our Professional associations include:</h2>
@@ -150,43 +758,39 @@
                 <div class="mission-content"><li>We believe in a healthy work environment that fosters continuous improvement for us to better serve you.</li></div>
             </div>
         </div>
-
     </section>
 
-
-    <!-- ----------------------------------------------------------------------------dentists-client------------------------------------------------------------------------------ -->
-
     <section class="people-main-section">
-        <div class="people-content">  <!--details-section-content == section-content-->
-          <div class="people-slider-container swiper"> <!--details-slider-container == slider-container-->
-              <div class="people-slider-wrapper">  <!--details-slider-wrapper == slider-wrapper-->
-                  <ul class="people-list swiper-wrapper"> <!--celebrity-list = testimonial-list-->
+        <div class="people-content">
+          <div class="people-slider-container swiper">
+              <div class="people-slider-wrapper">
+                  <ul class="people-list swiper-wrapper">
                       <li class="people-item swiper-slide">
-                          <img src="img13.png" alt="" class="people-images"> <!--celeb-img == user img-->
+                          <img src="img13.png" alt="Happy Patient" class="people-images">
                       </li>  
                       <li class="people-item swiper-slide">
-                          <img src="Dental_Treatment-at-Kadali-Dental-300x225.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
+                          <img src="Dental_Treatment-at-Kadali-Dental-300x225.jpg" alt="Happy Patient" class="people-images">
                       </li>  
                       <li class="people-item swiper-slide">
-                          <img src="img14.png" alt="" class="people-images"> <!--celeb-img == user img-->
+                          <img src="img14.png" alt="Happy Patient" class="people-images">
                       </li>  
                       <li class="people-item swiper-slide">
-                          <img src="Kadali_Dental_Satisfied_patients-300x169.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
+                          <img src="Kadali_Dental_Satisfied_patients-300x169.jpg" alt="Happy Patient" class="people-images">
                       </li>  
                       <li class="people-item swiper-slide">
-                          <img src="Patients_review_of_Kadali_Dental-300x169.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
+                          <img src="Patients_review_of_Kadali_Dental-300x169.jpg" alt="Happy Patient" class="people-images">
                       </li>  
                       <li class="people-item swiper-slide">
-                          <img src="Dental_Patient-300x169.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
+                          <img src="Dental_Patient-300x169.jpg" alt="Happy Patient" class="people-images">
                       </li>  
                       <li class="people-item swiper-slide">
-                          <img src="Cosmetic-Dentistry-Happy-Patient.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
+                          <img src="Cosmetic-Dentistry-Happy-Patient.jpg" alt="Happy Patient" class="people-images">
                       </li>  
                       <li class="people-item swiper-slide">
-                          <img src="Picture_with_a_patient-e1517107400187-300x221.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
+                          <img src="Picture_with_a_patient-e1517107400187-300x221.jpg" alt="Happy Patient" class="people-images">
                       </li>  
                       <li class="people-item swiper-slide">
-                          <img src="Picture_with_happy_patient-300x225.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
+                          <img src="Picture_with_happy_patient-300x225.jpg" alt="Happy Patient" class="people-images">
                       </li> 
                   </ul>
                   <div class="swiper-pagination"></div>
@@ -197,29 +801,229 @@
       </div>
   </section>
 
-    <!-- -----------------------------------------------------------------------------------footer - contact-------------------------------------------------------- -->
  <footer>
     <div class="last-container">
         <div class="first-footer-section">
             <p><i class="fa-regular fa-envelope"></i> info@kadalidental.com</p>
             <p><i class="fa-solid fa-phone-volume"></i> +91 981 920 1882</p>
-            <!-- <p><i class="fa-solid fa-car-side"></i> Free Pick-up</p> -->
         </div>
         <div class="second-footer-section">
-            <p id="add1">Home  | Facilities At The Clinic   | Our Team   | Cosmetic Dentistry   | Tooth Whitening   | Dental Implants   | Before & Afters   | Dental Tourism   | Frequently Asked Questions   | Sitemap <br>
+                <p id="add1">Home | Facilities At The Clinic | Our Team | Cosmetic Dentistry | Tooth Whitening | Dental Implants | Before & Afters | Dental Tourism | Frequently Asked Questions | Sitemap <br>
                 © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India.</p>
             <p id="address"><span>Kadali Dental</span> <br>
-
                 Address: 40/102, 1st Floor, Sargam Society, Mhada Complex, Oshiwara Link Road Andheri West, Mumbai, Maharashtra 400102, India <br>
                 Phone: +91 22 2635 9490
             </p>
         </div>
     </div>
     </footer>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="dentists.js"></script>
     
+    <script>
+        // Mobile Navigation Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.getElementById("menu-icon");
+            const navList = document.querySelector(".nav-list");
+            const icon = menuIcon ? menuIcon.querySelector("i") : null;
+
+            if (menuIcon && navList && icon) {
+                menuIcon.addEventListener("click", function (e) {
+                    navList.classList.toggle("active");
+
+                    if (navList.classList.contains("active")) {
+                        icon.classList.replace("fa-bars", "fa-times");
+                    } else {
+                        icon.classList.replace("fa-times", "fa-bars");
+                    }
+                    e.stopPropagation();
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener("click", function (e) {
+                    if (navList.classList.contains("active") && 
+                        !navList.contains(e.target) && 
+                        e.target !== menuIcon && 
+                        !menuIcon.contains(e.target)) {
+                        navList.classList.remove("active");
+                        icon.classList.replace("fa-times", "fa-bars");
+                    }
+                });
+            }
+
+            // Active Link Highlighting
+            let currentPage = window.location.pathname.split("/").pop().toLowerCase();
+            let navLinks = document.querySelectorAll(".nav-list a");
+
+            navLinks.forEach(link => {
+                let linkPage = link.getAttribute("href").toLowerCase();
+                if (currentPage === linkPage || (currentPage === "" && linkPage === "index.html")) {
+                    link.classList.add("active");
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.classList.remove("active");
+                    link.removeAttribute('aria-current');
+                }
+            });
+
+            // Close mobile menu after navigation
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    if (window.innerWidth <= 854 && navList && navList.classList.contains("active")) {
+                        navList.classList.remove("active");
+                        if (icon) {
+                            icon.classList.replace("fa-times", "fa-bars");
+                        }
+                    }
+                });
+            });
+
+            // Dropdown functionality for mobile
+            const dropdown = document.querySelector(".dropdown");
+            const dropdownMenu = dropdown ? dropdown.querySelector(".dropdown-menu") : null;
+            const dropdownLink = dropdown ? dropdown.querySelector("a") : null;
+
+            if (dropdown && dropdownLink && dropdownMenu) {
+                dropdownLink.setAttribute('aria-haspopup', 'true');
+                dropdownLink.setAttribute('aria-expanded', 'false');
+                dropdownMenu.setAttribute('role', 'menu');
+                dropdownMenu.setAttribute('aria-label', 'Treatments submenu');
+
+                function isMobile() { return window.innerWidth <= 854; }
+                let dropdownOpen = false;
+
+                function closeDropdown() {
+                    dropdownMenu.style.display = '';
+                    dropdownLink.setAttribute('aria-expanded', 'false');
+                    dropdownOpen = false;
+                }
+                
+                function openDropdown() {
+                    dropdownMenu.style.display = 'block';
+                    dropdownLink.setAttribute('aria-expanded', 'true');
+                    dropdownOpen = true;
+                }
+
+                dropdownLink.addEventListener('click', function (e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        if (dropdownOpen) {
+                            closeDropdown();
+                        } else {
+                            openDropdown();
+                        }
+                    }
+                });
+
+                document.addEventListener('click', function (e) {
+                    if (isMobile() && dropdownOpen && !dropdown.contains(e.target)) {
+                        closeDropdown();
+                    }
+                });
+
+                window.addEventListener('resize', function () {
+                    if (!isMobile()) {
+                        closeDropdown();
+                    }
+                });
+            }
+        });
+
+        // Initialize Swiper for People Section
+        const swiperpeople = new Swiper('.people-slider-container', {
+            loop: true,
+            grabCursor: true,
+            spaceBetween: 25,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                },
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('header');
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                navbar.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.dentists-intro-container li, .dentists-clinic-intro-container li, .mission-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+    <script src="dentists.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
