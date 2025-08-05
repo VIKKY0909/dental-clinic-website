@@ -1,1411 +1,510 @@
 /* =================================================================faq==================================================== */
 
-/* --------------------------------------------------------------------1------------------------------------------------------- */
+/* Common styles for all FAQ sections */
+.faq-1st-section,
+.faq-2nd-section,
+.faq-3rd-section,
+.faq-4th-section,
+.faq-5th-section,
+.faq-6th-section,
+.faq-7th-section,
+.faq-8th-section,
+.faq-9th-section {
+  min-height: 70vh;
+  width: 100%;
+  border: 2px solid transparent;
+  background-color: #ebe3da;
+  padding: clamp(20px, 4vw, 40px);
+}
 
-.faq-1st-section{
-    height: 180vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .faq-1st-section h2{
-    text-align: center;
-    font-size: 2.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 8%;
-  }
-  
-  .faq-1st-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .faq-1st-section .faq-1st-container{
-    height: 68vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  #faq-1st-container{
-    margin-top: 4%;
-  }
-  
-  .faq-1st-section .faq-1st-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-  }
-  
-  .faq-1st-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .faq-1st-img-sub-container{
-    height: 55vh;
-    margin-top: 10.5vh;
-    width: 80%;
-    margin-left: 10%;
-    /* border: 2px solid green; */
-  }
-  
-  .faq-1st-img-sub-container .faq-1st-sample{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .faq-1st-text-container{
-    width: 45%;
-    height: 80%;
-    /* border: 2px solid green; */
-    padding-top: -1%;
-  }
-  
-  .faq-1st-accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 60%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 2%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .faq-1st-accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
-  }
-  
-  .faq-1st-accordion-item:last-child {
-    border-bottom: none;
-  }
-  
-  .faq-1st-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
-  }
-  
-  .faq-1st-accordion-header:hover {
-    background-color: #6e6b69;
-  }
-  
-  .faq-1st-accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
-  }
-  
-  .faq-1st-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-  }
-  
-  .faq-1st-accordion-content.open {
-    max-height: 500px; 
-    padding: 15px 20px;
-    display: block;
-  }
-  
-  .faq-1st-accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
-  }
-  
-  .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
-  }
-  
-  /* ----------------------------------------------------------------------------------------------2---------------------------------------------------- */
-  
-  .faq-2nd-section{
-    height: 110vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .faq-2nd-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .faq-2nd-section .faq-2nd-container{
-    height: 68vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  #faq-2nd-container{
-    margin-top: 4%;
-  }
-  
-  .faq-2nd-section .faq-2nd-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-  }
-  
-  .faq-2nd-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .faq-2nd-img-sub-container{
-    height: 60vh;
-    margin-top: 20%;
-    width: 70%;
-    margin-left: 10%;
-    /* border: 2px solid green; */
-  }
-  
-  .faq-2nd-img-sub-container .faq-2nd-sample{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .faq-2nd-text-container{
-    width: 45%;
-    height: 80%;
-    /* border: 2px solid black; */
-    padding-top: -1%;
-  }
-  
-  .faq-2nd-accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 60%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 2%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .faq-1st-accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
-  }
-  
-  .faq-1st-accordion-item:last-child {
-    border-bottom: none;
-  }
-  
-  .faq-1st-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
-  }
-  
-  .faq-1st-accordion-header:hover {
-    background-color: #6e6b69;
-  }
-  
-  .faq-1st-accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
-  }
-  
-  .faq-1st-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-  }
-  
-  .faq-1st-accordion-content.open {
-    max-height: 500px; 
-    padding: 15px 20px;
-    display: block;
-  }
-  
-  .faq-1st-accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
-  }
-  
-  .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
-  }
-  
-  /* -------------------------------------------------------------------------------------3-------------------------------------------------------------------------- */
-  
-  .faq-3rd-section{
-    height: 80vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .faq-3rd-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .faq-3rd-section .faq-3rd-container{
-    height: 68vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  #faq-3rd-container{
-    margin-top: 4%;
-  }
-  
-  .faq-3rd-section .faq-3rd-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-  }
-  
-  .faq-3rd-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .faq-3rd-img-sub-container{
-    height: 45vh;
-    margin-top: 1vh;
-    width: 70%;
-    margin-left: 15%;
-    /* border: 2px solid green; */
-  }
-  
-  .faq-3rd-img-sub-container .faq-3rd-sample{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .faq-3rd-text-container{
-    width: 45%;
-    height: 60%;
-    margin-top: -17%;
-    /* border: 2px solid green; */
-    padding-top: 5%;
-  }
-  
-  .faq-3rd-accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 60%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 2%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .faq-1st-accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
-  }
-  
-  .faq-1st-accordion-item:last-child {
-    border-bottom: none;
-  }
-  
-  .faq-1st-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
-  }
-  
-  .faq-1st-accordion-header:hover {
-    background-color: #6e6b69;
-  }
-  
-  .faq-1st-accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
-  }
-  
-  .faq-1st-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-  }
-  
-  .faq-1st-accordion-content.open {
-    max-height: 500px; 
-    padding: 15px 20px;
-    display: block;
-  }
-  
-  .faq-1st-accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
-  }
-  
-  .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
-  }
-  
-  /* ----------------------------------------------------------------------------4----------------------------------------------------------------------- */
-  
-  .faq-4th-section{
-    height: 80vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .faq-4th-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .faq-4th-section .faq-4th-container{
-    height: 68vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  #faq-4th-container{
-    margin-top: 4%;
-  }
-  
-  .faq-4th-section .faq-4th-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-  }
-  
-  .faq-4th-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .faq-4th-img-sub-container{
-    height: 50vh;
-    margin-top: 10%;
-    width: 70%;
-    margin-left: 10%;
-    /* border: 2px solid green; */
-  }
-  
-  .faq-4th-img-sub-container .faq-4th-sample{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .faq-4th-text-container{
-    width: 45%;
-    height: 80%;
-    /* border: 2px solid black; */
-    padding-top: -1%;
-  }
-  
-  .faq-4th-accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 55%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 10%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .faq-1st-accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
-  }
-  
-  .faq-1st-accordion-item:last-child {
-    border-bottom: none;
-  }
-  
-  .faq-1st-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
-  }
-  
-  .faq-1st-accordion-header:hover {
-    background-color: #6e6b69;
-  }
-  
-  .faq-1st-accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
-  }
-  
-  .faq-1st-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-  }
-  
-  .faq-1st-accordion-content.open {
-    max-height: 500px; 
-    padding: 15px 20px;
-    display: block;
-  }
-  
-  .faq-1st-accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
-  }
-  
-  .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
-  }
-  
-  /* -------------------------------------------------------------------------------------------5-------------------------------------------------------------- */
-  
-  .faq-5th-section{
-    height: 70vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .faq-5th-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .faq-5th-section .faq-5th-container{
-    height: 68vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  #faq-5th-container{
-    margin-top: 4%;
-  }
-  
-  .faq-5th-section .faq-5th-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-  }
-  
-  .faq-5th-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .faq-5th-img-sub-container{
-    height: 45vh;
-    margin-top: 1vh;
-    width: 70%;
-    margin-left: 15%;
-    /* border: 2px solid green; */
-  }
-  
-  .faq-5th-img-sub-container .faq-5th-sample{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .faq-5th-text-container{
-    width: 45%;
-    height: 60%;
-    margin-top: -17%;
-    /* border: 2px solid green; */
-    padding-top: 5%;
-  }
-  
-  .faq-5th-accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 60%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 2%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .faq-1st-accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
-  }
-  
-  .faq-1st-accordion-item:last-child {
-    border-bottom: none;
-  }
-  
-  .faq-1st-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
-  }
-  
-  .faq-1st-accordion-header:hover {
-    background-color: #6e6b69;
-  }
-  
-  .faq-1st-accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
-  }
-  
-  .faq-1st-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-  }
-  
-  .faq-1st-accordion-content.open {
-    max-height: 500px; 
-    padding: 15px 20px;
-    display: block;
-  }
-  
-  .faq-1st-accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
-  }
-  
-  .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
-  }
-  
-  /* ---------------------------------------------------------------------------------------------6------------------------------------------------------------------ */
-  
-  .faq-6th-section{
-    height: 75vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .faq-6th-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .faq-6th-section .faq-6th-container{
-    height: 68vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  #faq-6th-container{
-    margin-top: 4%;
-  }
-  
-  .faq-6th-section .faq-6th-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-  }
-  
-  .faq-6th-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .faq-6th-img-sub-container{
-    height: 50vh;
-    margin-top: 7%;
-    width: 70%;
-    margin-left: 10%;
-    /* border: 2px solid green; */
-  }
-  
-  .faq-6th-img-sub-container .faq-6th-sample{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .faq-6th-text-container{
-    width: 45%;
-    height: 80%;
-    /* border: 2px solid black; */
-    padding-top: -1%;
-  }
-  
-  .faq-6th-accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 45%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 10%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .faq-1st-accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
-  }
-  
-  .faq-1st-accordion-item:last-child {
-    border-bottom: none;
-  }
-  
-  .faq-1st-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
-  }
-  
-  .faq-1st-accordion-header:hover {
-    background-color: #6e6b69;
-  }
-  
-  .faq-1st-accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
-  }
-  
-  .faq-1st-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-  }
-  
-  .faq-1st-accordion-content.open {
-    max-height: 500px; 
-    padding: 15px 20px;
-    display: block;
-  }
-  
-  .faq-1st-accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
-  }
-  
-  .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
-  }
-  
-  /* -----------------------------------------------------------------------------------7--------------------------------------------------------------------------------- */
-  
-  .faq-7th-section{
-    height: 70vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .faq-7th-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .faq-7th-section .faq-7th-container{
-    height: 68vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  #faq-7th-container{
-    margin-top: 4%;
-  }
-  
-  .faq-7th-section .faq-7th-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-  }
-  
-  .faq-7th-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .faq-7th-img-sub-container{
-    height: 30vh;
-    margin-top: 5vh;
-    width: 95%;
-    margin-left: 1%;
-    /* border: 2px solid green; */
-  }
-  
-  .faq-7th-img-sub-container .faq-7th-sample{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .faq-7th-text-container{
-    width: 45%;
-    height: 60%;
-    margin-top: -17%;
-    /* border: 2px solid green; */
-    padding-top: 5%;
-  }
-  
-  .faq-7th-accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 60%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 2%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .faq-1st-accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
-  }
-  
-  .faq-1st-accordion-item:last-child {
-    border-bottom: none;
-  }
-  
-  .faq-1st-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
-  }
-  
-  .faq-1st-accordion-header:hover {
-    background-color: #6e6b69;
-  }
-  
-  .faq-1st-accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
-  }
-  
-  .faq-1st-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-  }
-  
-  .faq-1st-accordion-content.open {
-    max-height: 500px; 
-    padding: 15px 20px;
-    display: block;
-  }
-  
-  .faq-1st-accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
-  }
-  
-  .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
-  }
-  
-  /* -------------------------------------------------------------------------------------8------------------------------------------------------ */
-  
-  .faq-8th-section{
-    height: 80vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .faq-8th-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .faq-8th-section .faq-8th-container{
-    height: 68vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  #faq-8th-container{
-    margin-top: 4%;
-  }
-  
-  .faq-8th-section .faq-8th-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-  }
-  
-  .faq-8th-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .faq-8th-img-sub-container{
-    height: 50vh;
-    margin-top: 9%;
-    width: 70%;
-    margin-left: 10%;
-    /* border: 2px solid green; */
-  }
-  
-  .faq-8th-img-sub-container .faq-8th-sample{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .faq-8th-text-container{
-    width: 45%;
-    height: 80%;
-    /* border: 2px solid black; */
-    padding-top: -1%;
-  }
-  
-  .faq-8th-accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 45%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 5%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .faq-1st-accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
-  }
-  
-  .faq-1st-accordion-item:last-child {
-    border-bottom: none;
-  }
-  
-  .faq-1st-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
-  }
-  
-  .faq-1st-accordion-header:hover {
-    background-color: #6e6b69;
-  }
-  
-  .faq-1st-accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
-  }
-  
-  .faq-1st-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-  }
-  
-  .faq-1st-accordion-content.open {
-    max-height: 500px; 
-    padding: 15px 20px;
-    display: block;
-  }
-  
-  .faq-1st-accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
-  }
-  
-  .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
-  }
-  
-  /* -----------------------------------------------------------------------------------------------9-------------------------------------------------------------- */
-  
-  .faq-9th-section{
-    height: 88vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .faq-9th-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .faq-9th-section .faq-9th-container{
-    height: 68vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  #faq-9th-container{
-    margin-top: 4%;
-  }
-  
-  .faq-9th-section .faq-9th-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-  }
-  
-  .faq-9th-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .faq-9th-img-sub-container{
-    height: 50vh;
-    margin-top: 5vh;
-    width: 75%;
-    margin-left: 12%;
-    /* border: 2px solid green; */
-  }
-  
-  .faq-9th-img-sub-container .faq-9th-sample{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .faq-9th-text-container{
-    width: 45%;
-    height: 60%;
-    margin-top: -17%;
-    /* border: 2px solid green; */
-    padding-top: 0%;
-  }
-  
+.faq-1st-section {
+  min-height: 180vh;
+}
+
+.faq-2nd-section {
+  min-height: 110vh;
+}
+
+.faq-9th-section {
+  min-height: 88vh;
+}
+
+/* Common heading styles */
+.faq-1st-section h2,
+.faq-1st-section h3,
+.faq-2nd-section h3,
+.faq-3rd-section h3,
+.faq-4th-section h3,
+.faq-5th-section h3,
+.faq-6th-section h3,
+.faq-7th-section h3,
+.faq-8th-section h3,
+.faq-9th-section h3 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  margin-top: clamp(1%, 2%, 2%);
+}
+
+.faq-1st-section h2 {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  margin-top: clamp(4%, 8%, 8%);
+}
+
+.faq-1st-section h3,
+.faq-2nd-section h3,
+.faq-3rd-section h3,
+.faq-4th-section h3,
+.faq-5th-section h3,
+.faq-6th-section h3,
+.faq-7th-section h3,
+.faq-8th-section h3,
+.faq-9th-section h3 {
+  font-size: clamp(1.4rem, 3vw, 1.7rem);
+}
+
+/* Common container styles */
+.faq-1st-container,
+.faq-2nd-container,
+.faq-3rd-container,
+.faq-4th-container,
+.faq-5th-container,
+.faq-6th-container,
+.faq-7th-container,
+.faq-8th-container,
+.faq-9th-container {
+  min-height: 68vh;
+  width: 100%;
+  margin-top: clamp(2%, 4%, 4%);
+}
+
+/* Common paragraph container styles */
+.faq-1st-paragraph-container,
+.faq-2nd-paragraph-container,
+.faq-3rd-paragraph-container,
+.faq-4th-paragraph-container,
+.faq-5th-paragraph-container,
+.faq-6th-paragraph-container,
+.faq-7th-paragraph-container,
+.faq-8th-paragraph-container,
+.faq-9th-paragraph-container {
+  min-height: 70vh;
+  width: 100%;
+  margin-top: clamp(0.5vh, 1vh, 1vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2%, 5%, 5%);
+  flex-wrap: wrap;
+}
+
+/* Common image container styles */
+.faq-1st-img-container,
+.faq-2nd-img-container,
+.faq-3rd-img-container,
+.faq-4th-img-container,
+.faq-5th-img-container,
+.faq-6th-img-container,
+.faq-7th-img-container,
+.faq-8th-img-container,
+.faq-9th-img-container {
+  width: clamp(300px, 50%, 50%);
+  min-height: 400px;
+  flex-shrink: 0;
+}
+
+/* Common image sub-container styles */
+.faq-1st-img-sub-container,
+.faq-2nd-img-sub-container,
+.faq-3rd-img-sub-container,
+.faq-4th-img-sub-container,
+.faq-5th-img-sub-container,
+.faq-6th-img-sub-container,
+.faq-7th-img-sub-container,
+.faq-8th-img-sub-container,
+.faq-9th-img-sub-container {
+  height: clamp(300px, 45vh, 55vh);
+  width: clamp(280px, 70%, 80%);
+  margin-left: clamp(5%, 10%, 15%);
+  margin-top: clamp(5%, 10%, 10%);
+}
+
+/* Specific adjustments for certain sections */
+.faq-2nd-img-sub-container {
+  height: clamp(350px, 60vh, 60vh);
+  margin-top: clamp(10%, 20%, 20%);
+}
+
+.faq-7th-img-sub-container {
+  height: clamp(200px, 30vh, 30vh);
+  width: clamp(300px, 95%, 95%);
+  margin-left: clamp(1%, 1%, 1%);
+  margin-top: clamp(2%, 5vh, 5vh);
+}
+
+/* Common image styles */
+.faq-1st-sample,
+.faq-2nd-sample,
+.faq-3rd-sample,
+.faq-4th-sample,
+.faq-5th-sample,
+.faq-6th-sample,
+.faq-7th-sample,
+.faq-8th-sample,
+.faq-9th-sample {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Common text container styles */
+.faq-1st-text-container,
+.faq-2nd-text-container,
+.faq-3rd-text-container,
+.faq-4th-text-container,
+.faq-5th-text-container,
+.faq-6th-text-container,
+.faq-7th-text-container,
+.faq-8th-text-container,
+.faq-9th-text-container {
+  width: clamp(300px, 45%, 45%);
+  min-height: 400px;
+  flex-shrink: 0;
+  padding-top: clamp(0%, 2%, 5%);
+}
+
+/* Specific adjustments for certain text containers */
+.faq-3rd-text-container,
+.faq-5th-text-container,
+.faq-7th-text-container {
+  margin-top: clamp(-10%, -17%, -17%);
+}
+
+.faq-9th-text-container {
+  padding-top: 0%;
+  margin-top: clamp(-10%, -17%, -17%);
+}
+
+/* Common accordion styles */
+.faq-1st-accordion,
+.faq-2nd-accordion,
+.faq-3rd-accordion,
+.faq-4th-accordion,
+.faq-5th-accordion,
+.faq-6th-accordion,
+.faq-7th-accordion,
+.faq-8th-accordion,
+.faq-9th-accordion {
+  max-width: 700px;
+  margin: clamp(20px, 5vh, 50px) auto;
+  padding: clamp(5px, 1vw, 10px);
+  min-height: 40%;
+  background-color: #ebe3da;
+  border-radius: 8px;
+  margin-top: clamp(1%, 2%, 10%);
+  margin-right: 0%;
+}
+
+/* Specific accordion height adjustments */
+.faq-1st-accordion,
+.faq-2nd-accordion,
+.faq-3rd-accordion,
+.faq-5th-accordion,
+.faq-7th-accordion,
+.faq-9th-accordion {
+  min-height: 60%;
+}
+
+.faq-4th-accordion {
+  min-height: 55%;
+}
+
+.faq-6th-accordion,
+.faq-8th-accordion {
+  min-height: 45%;
+}
+
+/* Common accordion item styles */
+.faq-1st-accordion-item {
+  margin-bottom: clamp(3%, 5%, 5%);
+}
+
+.faq-1st-accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* Common accordion header styles */
+.faq-1st-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(10px, 2vw, 15px);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: clamp(1rem, 2vw, 1.2em);
+  margin-right: clamp(-5%, -3%, -3%);
+  border: 2px solid transparent;
+  background-color: #dad3cd;
+  border-radius: 4px;
+}
+
+.faq-1st-accordion-header:hover {
+  background-color: #6e6b69;
+}
+
+.faq-1st-accordion-header span {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  letter-spacing: 0.1rem;
+  font-weight: lighter;
+}
+
+/* Common accordion content styles */
+.faq-1st-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 clamp(10px, 3vw, 20px);
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  color: #555;
+  line-height: clamp(1.4, 2vh, 1.6);
+  background-color: #ebe3da;
+  z-index: 1000;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-1st-accordion-content.open {
+  max-height: clamp(300px, 50vh, 500px);
+  padding: clamp(10px, 2vh, 15px) clamp(10px, 3vw, 20px);
+  display: block;
+}
+
+.faq-1st-accordion-content p {
+  margin: clamp(5px, 1vh, 10px) 0;
+  color: black;
+  letter-spacing: 0.1rem;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: clamp(1rem, 2vw, 1.2em);
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  margin-right: clamp(1%, 3%, 3%);
+}
+
+.toggle-btn:focus {
+  outline: none;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  
+  .faq-1st-section,
+  .faq-2nd-section,
+  .faq-3rd-section,
+  .faq-4th-section,
+  .faq-5th-section,
+  .faq-6th-section,
+  .faq-7th-section,
+  .faq-8th-section,
+  .faq-9th-section {
+    min-height: auto;
+    padding: clamp(15px, 4vw, 25px);
+  }
+  
+  .faq-1st-paragraph-container,
+  .faq-2nd-paragraph-container,
+  .faq-3rd-paragraph-container,
+  .faq-4th-paragraph-container,
+  .faq-5th-paragraph-container,
+  .faq-6th-paragraph-container,
+  .faq-7th-paragraph-container,
+  .faq-8th-paragraph-container,
+  .faq-9th-paragraph-container {
+    flex-direction: column;
+    min-height: auto;
+    gap: clamp(15px, 4vw, 25px);
+  }
+  
+  .faq-1st-img-container,
+  .faq-2nd-img-container,
+  .faq-3rd-img-container,
+  .faq-4th-img-container,
+  .faq-5th-img-container,
+  .faq-6th-img-container,
+  .faq-7th-img-container,
+  .faq-8th-img-container,
+  .faq-9th-img-container {
+    width: clamp(280px, 90%, 400px);
+    min-height: auto;
+    order: 1;
+  }
+  
+  .faq-1st-img-sub-container,
+  .faq-2nd-img-sub-container,
+  .faq-3rd-img-sub-container,
+  .faq-4th-img-sub-container,
+  .faq-5th-img-sub-container,
+  .faq-6th-img-sub-container,
+  .faq-7th-img-sub-container,
+  .faq-8th-img-sub-container,
+  .faq-9th-img-sub-container {
+    width: clamp(260px, 85%, 85%);
+    height: clamp(200px, 30vh, 350px);
+    margin-left: clamp(7.5%, 7.5%, 7.5%);
+    margin-top: clamp(2%, 5%, 5%);
+  }
+  
+  .faq-1st-text-container,
+  .faq-2nd-text-container,
+  .faq-3rd-text-container,
+  .faq-4th-text-container,
+  .faq-5th-text-container,
+  .faq-6th-text-container,
+  .faq-7th-text-container,
+  .faq-8th-text-container,
+  .faq-9th-text-container {
+    width: clamp(280px, 95%, 95%);
+    min-height: auto;
+    order: 2;
+    margin-top: 0;
+    padding-top: clamp(10px, 3vh, 20px);
+  }
+  
+  .faq-1st-accordion,
+  .faq-2nd-accordion,
+  .faq-3rd-accordion,
+  .faq-4th-accordion,
+  .faq-5th-accordion,
+  .faq-6th-accordion,
+  .faq-7th-accordion,
+  .faq-8th-accordion,
   .faq-9th-accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 60%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 2%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .faq-1st-accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
-  }
-  
-  .faq-1st-accordion-item:last-child {
-    border-bottom: none;
+    max-width: 100%;
+    margin: clamp(10px, 3vh, 20px) 0;
+    padding: clamp(5px, 2vw, 10px);
+    min-height: auto;
   }
   
   .faq-1st-accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
+    padding: clamp(8px, 2vw, 12px);
+    margin-right: 0;
+    flex-wrap: wrap;
   }
   
-  .faq-1st-accordion-header:hover {
-    background-color: #6e6b69;
-  }
-  
-  .faq-1st-accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
+  .faq-1st-accordion-header span {
+    flex: 1;
+    margin-right: clamp(5px, 2vw, 10px);
   }
   
   .faq-1st-accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 clamp(8px, 2vw, 15px);
   }
   
   .faq-1st-accordion-content.open {
-    max-height: 500px; 
-    padding: 15px 20px;
-    display: block;
-  }
-  
-  .faq-1st-accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
+    padding: clamp(8px, 2vh, 12px) clamp(8px, 2vw, 15px);
   }
   
   .toggle-btn {
-    background: none;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  
+  .faq-1st-section,
+  .faq-2nd-section,
+  .faq-3rd-section,
+  .faq-4th-section,
+  .faq-5th-section,
+  .faq-6th-section,
+  .faq-7th-section,
+  .faq-8th-section,
+  .faq-9th-section {
+    padding: clamp(25px, 3vw, 35px);
   }
   
-  .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
+  .faq-1st-img-container,
+  .faq-2nd-img-container,
+  .faq-3rd-img-container,
+  .faq-4th-img-container,
+  .faq-5th-img-container,
+  .faq-6th-img-container,
+  .faq-7th-img-container,
+  .faq-8th-img-container,
+  .faq-9th-img-container {
+    width: clamp(320px, 48%, 48%);
   }
   
+  .faq-1st-text-container,
+  .faq-2nd-text-container,
+  .faq-3rd-text-container,
+  .faq-4th-text-container,
+  .faq-5th-text-container,
+  .faq-6th-text-container,
+  .faq-7th-text-container,
+  .faq-8th-text-container,
+  .faq-9th-text-container {
+    width: clamp(350px, 47%, 47%);
+  }
   
+  .faq-1st-img-sub-container,
+  .faq-2nd-img-sub-container,
+  .faq-3rd-img-sub-container,
+  .faq-4th-img-sub-container,
+  .faq-5th-img-sub-container,
+  .faq-6th-img-sub-container,
+  .faq-8th-img-sub-container,
+  .faq-9th-img-sub-container {
+    width: clamp(300px, 75%, 75%);
+    height: clamp(280px, 40vh, 50vh);
+  }
+  
+  .faq-7th-img-sub-container {
+    width: clamp(320px, 90%, 90%);
+    height: clamp(220px, 28vh, 30vh);
+  }
+}
+
+/* Large Desktop Styles */
+@media screen and (min-width: 1400px) {
+  
+  .faq-1st-section h2 {
+    font-size: 2.4rem;
+  }
+  
+  .faq-1st-section h3,
+  .faq-2nd-section h3,
+  .faq-3rd-section h3,
+  .faq-4th-section h3,
+  .faq-5th-section h3,
+  .faq-6th-section h3,
+  .faq-7th-section h3,
+  .faq-8th-section h3,
+  .faq-9th-section h3 {
+    font-size: 1.8rem;
+  }
+  
+  .faq-1st-accordion-header {
+    font-size: 1.3em;
+  }
+  
+  .faq-1st-accordion-header span {
+    font-size: 1.2rem;
+  }
+  
+  .faq-1st-accordion-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  .toggle-btn {
+    font-size: 1.3em;
+  }
+}

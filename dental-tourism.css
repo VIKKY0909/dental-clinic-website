@@ -10,6 +10,7 @@
     padding: 20px 0;
     display: flex;
     flex-direction: column;
+    
     align-items: center;
   }
   
@@ -76,7 +77,7 @@
   
   .dental-tourism-images-container .dental-tourism-images-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     width: 100%;
   }
@@ -154,6 +155,29 @@
   .people-main-section .swiper-pagination-bullet-active{
     background-color: #8b4513;
   }
+  
+  /* Swiper navigation buttons */
+  .people-main-section .swiper-button-next,
+  .people-main-section .swiper-button-prev {
+    color: #8b4513;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .people-main-section .swiper-button-next:hover,
+  .people-main-section .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+  }
+  
+  .people-main-section .swiper-button-next::after,
+  .people-main-section .swiper-button-prev::after {
+    font-size: 18px;
+    font-weight: bold;
+  }
 
 /* =========================================================== RESPONSIVE DESIGN ========================================== */
 
@@ -175,8 +199,13 @@
     font-size: 1.3rem;
   }
   
+  .dental-tourism-images-container .dental-tourism-images-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
   .dental-tourism-images-container .tourism-places-img {
-    height: 250px;
+    height: 100%;
+    width: 80vh;
   }
   
   .people-main-section .people-item .people-images {
@@ -203,8 +232,13 @@
     font-size: 1.2rem;
   }
   
+  .dental-tourism-images-container .dental-tourism-images-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
   .dental-tourism-images-container .tourism-places-img {
-    height: 220px;
+    height: 100%;
+    width: 80vh;
   }
 }
 
@@ -227,11 +261,12 @@
   }
   
   .dental-tourism-images-container .dental-tourism-images-content {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .dental-tourism-images-container .tourism-places-img {
-    height: 200px;
+    height: 100%;
+    width: 75vh;
   }
   
   .people-main-section .people-item .people-images {
@@ -265,7 +300,8 @@
   }
   
   .dental-tourism-images-container .tourism-places-img {
-    height: 180px;
+    height: 100%;
+    width: 80vh;
   }
   
   .people-main-section .people-slider-wrapper {
@@ -316,7 +352,8 @@
   }
   
   .dental-tourism-images-container .tourism-places-img {
-    height: 150px;
+    height: 100%;
+    width: 80vh;
   }
   
   .people-main-section {
@@ -436,7 +473,7 @@
   }
   
   .dental-tourism-images-container .tourism-places-img {
-    height: 120px;
+    height: fit-content;
   }
   
   .people-main-section {

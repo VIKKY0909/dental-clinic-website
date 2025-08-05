@@ -19,6 +19,7 @@ function initializeClinicSlider() {
   console.log('Found', clinicImages.length, 'clinic images');
   
   // Hide all images initially
+  
   clinicImages.forEach(img => {
     img.style.opacity = '0';
     img.style.display = 'block';
@@ -32,7 +33,7 @@ function initializeClinicSlider() {
   }
   
   // Start auto slide
-automaticSlide();
+  automaticSlide();
 }
 
 function automaticSlide() {
@@ -101,20 +102,17 @@ const swiperpeople = new Swiper('.people-slider-wrapper', {
       disableOnInteraction: false,
     },
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
     dynamicBullets: true,
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  //responsive breakpoints
   breakpoints: {
     0: {
         slidesPerView: 1,

@@ -167,7 +167,7 @@
 
         .whatsapp-no a {
             color: #25D366;
-            font-size: 3rem;
+            font-size: clamp(2rem, 4vw, 3rem);
             transition: transform 0.3s ease;
         }
 
@@ -180,7 +180,7 @@
             min-height: 100vh;
             width: 100%;
             background-color: #ebe3da;
-            padding: 120px 2rem 2rem;
+            padding: clamp(80px, 10vw, 120px) clamp(1rem, 4vw, 2rem) clamp(1rem, 3vw, 2rem);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -188,26 +188,26 @@
 
         .dentists-main-section h2 {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             letter-spacing: 0.1rem;
             font-weight: 500;
-            margin-bottom: 1rem;
+            margin-bottom: clamp(0.5rem, 2vw, 1rem);
         }
 
         .dentists-main-section h3 {
             text-align: center;
-            font-size: 1.7rem;
+            font-size: clamp(1.2rem, 3vw, 1.7rem);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             letter-spacing: 0.1rem;
             font-weight: 500;
-            margin-bottom: 3rem;
+            margin-bottom: clamp(1.5rem, 4vw, 3rem);
         }
 
         .dentists-main-container {
             display: flex;
             align-items: center;
-            gap: 3rem;
+            gap: clamp(1.5rem, 4vw, 3rem);
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -237,8 +237,8 @@
         }
 
         .dentists-intro-container li {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            margin-bottom: clamp(0.5rem, 2vw, 1rem);
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             letter-spacing: 0.1rem;
             line-height: 1.6;
@@ -254,13 +254,13 @@
             min-height: 90vh;
             width: 100%;
             background-color: #ebe3da;
-            padding: 3rem 2rem;
+            padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
         }
 
         .dentists-clinic-main-container {
             display: flex;
             align-items: center;
-            gap: 3rem;
+            gap: clamp(1.5rem, 4vw, 3rem);
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -278,7 +278,7 @@
 
         .dental-images-list {
             width: 100%;
-            height: 300px;
+            height: clamp(200px, 40vw, 300px);
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -296,7 +296,7 @@
 
         .dental-clinic-images-content img {
             width: 100%;
-            height: 300px;
+            height: clamp(200px, 40vw, 300px);
             object-fit: cover;
             flex-shrink: 0;
         }
@@ -307,8 +307,8 @@
         }
 
         .dentists-clinic-intro-container li {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            margin-bottom: clamp(0.5rem, 2vw, 1rem);
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             letter-spacing: 0.1rem;
             line-height: 1.8;
@@ -324,7 +324,7 @@
             min-height: 100vh;
             width: 100%;
             background-color: #ebe3da;
-            padding: 3rem 2rem;
+            padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
         }
 
         .dentists-clinic-second-main-container {
@@ -334,28 +334,28 @@
 
         .dentists-clinic-second-main-container ul {
             list-style: none;
-            margin-bottom: 2rem;
+            margin-bottom: clamp(1rem, 3vw, 2rem);
         }
 
         .dentists-clinic-second-main-container ul li {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            margin-bottom: clamp(0.5rem, 2vw, 1rem);
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             letter-spacing: 0.1rem;
             line-height: 1.8;
         }
 
         .dentists-clinic-second-main-container h2 {
-            font-size: 1.7rem;
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             letter-spacing: 0.1rem;
             font-weight: 500;
-            margin: 2rem 0 1rem;
+            margin: clamp(1rem, 3vw, 2rem) 0 clamp(0.5rem, 2vw, 1rem);
             color: #8B4513;
         }
 
         .places-of-clinic {
-            margin-bottom: 2rem;
+            margin-bottom: clamp(1rem, 3vw, 2rem);
         }
 
         .proff-assc {
@@ -363,13 +363,13 @@
         }
 
         .proff-assc li {
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             letter-spacing: 0.1rem;
         }
 
         .mission-containers {
-            margin-top: 1rem;
+            margin-top: clamp(0.5rem, 2vw, 1rem);
         }
 
         .mission-content {
@@ -377,7 +377,7 @@
         }
 
         .mission-content li {
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             letter-spacing: 0.1rem;
         }
@@ -387,7 +387,7 @@
             width: 100%;
             min-height: 70vh;
             background-color: #c0b9b2;
-            padding: 3rem 0;
+            padding: clamp(2rem, 5vw, 3rem) 0;
         }
 
         .people-item {
@@ -395,21 +395,21 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 2rem;
+            padding: clamp(1rem, 3vw, 2rem);
         }
 
         .people-images {
-            width: 350px;
-            height: 250px;
+            width: clamp(250px, 60vw, 350px);
+            height: clamp(180px, 40vw, 250px);
             object-fit: cover;
-            border: 10px solid #f9f2e8;
+            border: clamp(5px, 1.5vw, 10px) solid #f9f2e8;
             border-radius: 10px;
-            margin-bottom: 1rem;
+            margin-bottom: clamp(0.5rem, 2vw, 1rem);
         }
 
         .swiper-pagination-bullet {
-            width: 15px;
-            height: 15px;
+            width: clamp(10px, 2vw, 15px);
+            height: clamp(10px, 2vw, 15px);
             opacity: 1;
         }
 
@@ -499,129 +499,124 @@
                 display: none;
             } */
 
-            /* Responsive Design */
-            .dentists-main-section {
-                padding: 100px 1rem 2rem;
-            }
-
-            .dentists-main-section h2 {
-                font-size: 1.8rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .dentists-main-section h3 {
-                font-size: 1.4rem;
-                margin-bottom: 2rem;
-            }
-
-            .dentists-main-container {
-                flex-direction: column;
-                gap: 2rem;
-            }
-
-            .dentists-intro-container li {
-                font-size: 1rem;
-            }
-
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .dentists-main-container,
             .dentists-clinic-main-container {
                 flex-direction: column;
-                gap: 2rem;
+                gap: clamp(1.5rem, 4vw, 2rem);
             }
 
-            .dentists-clinic-intro-container li {
-                font-size: 1rem;
+            .dentists-main-section {
+                padding: clamp(80px, 10vw, 100px) clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.5rem);
             }
 
-            .dentists-clinic-second-main-container ul li {
-                font-size: 1rem;
+            .dentists-clinic-main-section {
+                padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
             }
 
-            .mission-content li {
-                font-size: 1rem;
-            }
-
-            .people-images {
-                width: 280px;
-                height: 200px;
-            }
-
-            .last-container {
-                flex-direction: column;
-            }
-        
-
-        @media (max-width: 600px) {
-            .dentists-main-section h2 {
-                font-size: 1.5rem;
-            }
-
-            .dentists-main-section h3 {
-                font-size: 1.2rem;
-            }
-
-            .dentists-intro-container li {
-                font-size: 0.9rem;
-            }
-
-            .dentists-clinic-intro-container li {
-                font-size: 0.9rem;
-            }
-
-            .dentists-clinic-second-main-container ul li {
-                font-size: 0.9rem;
-            }
-
-            .mission-content li {
-                font-size: 0.9rem;
-            }
-
-            .people-images {
-                width: 250px;
-                height: 180px;
-            }
-
-            .phn-no {
-                padding: 10px 15px;
-                font-size: 0.9rem;
-            }
-
-            .whatsapp-no a {
-                font-size: 2.5rem;
+            .dentists-clinic-second-main-section {
+                padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
             }
         }
 
-        @media (max-width: 400px) {
-            .dentists-main-section {
-                padding: 90px 0.5rem 1rem;
-            }
-
+        @media (max-width: 768px) {
             .dentists-main-section h2 {
-                font-size: 1.3rem;
+                font-size: clamp(1.3rem, 5vw, 1.8rem);
             }
 
             .dentists-main-section h3 {
-                font-size: 1rem;
+                font-size: clamp(1rem, 4vw, 1.4rem);
             }
 
-            .dentists-intro-container li {
-                font-size: 0.8rem;
-            }
-
-            .dentists-clinic-intro-container li {
-                font-size: 0.8rem;
-            }
-
-            .dentists-clinic-second-main-container ul li {
-                font-size: 0.8rem;
-            }
-
+            .dentists-intro-container li,
+            .dentists-clinic-intro-container li,
+            .dentists-clinic-second-main-container ul li,
             .mission-content li {
-                font-size: 0.8rem;
+                font-size: clamp(0.85rem, 3vw, 1rem);
+            }
+
+            .dentists-clinic-second-main-container h2 {
+                font-size: clamp(1.1rem, 4vw, 1.4rem);
             }
 
             .people-images {
-                width: 220px;
-                height: 160px;
+                width: clamp(200px, 70vw, 280px);
+                height: clamp(140px, 50vw, 200px);
+            }
+
+            .whatsapp-no {
+                bottom: 70px;
+                right: 15px;
+            }
+
+            .whatsapp-no a {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dentists-main-section {
+                padding: clamp(70px, 8vw, 90px) clamp(0.5rem, 2vw, 1rem) clamp(0.5rem, 2vw, 1rem);
+            }
+
+            .dentists-main-section h2 {
+                font-size: clamp(1.1rem, 6vw, 1.5rem);
+            }
+
+            .dentists-main-section h3 {
+                font-size: clamp(0.9rem, 5vw, 1.2rem);
+            }
+
+            .dentists-intro-container li,
+            .dentists-clinic-intro-container li,
+            .dentists-clinic-second-main-container ul li,
+            .mission-content li {
+                font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+            }
+
+            .dentists-clinic-second-main-container h2 {
+                font-size: clamp(1rem, 5vw, 1.2rem);
+            }
+
+            .people-images {
+                width: clamp(180px, 80vw, 250px);
+                height: clamp(130px, 60vw, 180px);
+            }
+
+            .whatsapp-no {
+                bottom: 60px;
+                right: 10px;
+            }
+
+            .whatsapp-no a {
+                font-size: clamp(1.5rem, 8vw, 2rem);
+            }
+        }
+
+        @media (max-width: 320px) {
+            .dentists-main-section {
+                padding: clamp(60px, 6vw, 80px) clamp(0.3rem, 1.5vw, 0.5rem) clamp(0.3rem, 1.5vw, 0.5rem);
+            }
+
+            .dentists-main-section h2 {
+                font-size: clamp(1rem, 7vw, 1.3rem);
+            }
+
+            .dentists-main-section h3 {
+                font-size: clamp(0.8rem, 6vw, 1.1rem);
+            }
+
+            .dentists-intro-container li,
+            .dentists-clinic-intro-container li,
+            .dentists-clinic-second-main-container ul li,
+            .mission-content li {
+                font-size: clamp(0.75rem, 4vw, 0.85rem);
+            }
+
+            .people-images {
+                width: clamp(160px, 85vw, 220px);
+                height: clamp(120px, 65vw, 160px);
             }
         }
     </style>
@@ -819,6 +814,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
     <script src="dentists.js"></script>
     
     <script>
@@ -931,38 +927,38 @@
         });
 
         // Initialize Swiper for People Section
-        const swiperpeople = new Swiper('.people-slider-container', {
-            loop: true,
-            grabCursor: true,
-            spaceBetween: 25,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
+        // const swiperpeople = new Swiper('.people-slider-container', {
+        //     loop: true,
+        //     grabCursor: true,
+        //     spaceBetween: 25,
+        //     autoplay: {
+        //         delay: 3000,
+        //         disableOnInteraction: false,
+        //     },
 
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true,
-            },
+        //     pagination: {
+        //         el: '.swiper-pagination',
+        //         clickable: true,
+        //         dynamicBullets: true,
+        //     },
 
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+        //     navigation: {
+        //         nextEl: '.swiper-button-next',
+        //         prevEl: '.swiper-button-prev',
+        //     },
 
-            breakpoints: {
-                0: {
-                    slidesPerView: 1
-                },
-                768: {
-                    slidesPerView: 2
-                },
-                1024: {
-                    slidesPerView: 3
-                },
-            }
-        });
+        //     breakpoints: {
+        //         0: {
+        //             slidesPerView: 1
+        //         },
+        //         768: {
+        //             slidesPerView: 2
+        //         },
+        //         1024: {
+        //             slidesPerView: 3
+        //         },
+        //     }
+        // });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1023,7 +1019,5 @@
             observer.observe(el);
         });
     </script>
-    <script src="dentists.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

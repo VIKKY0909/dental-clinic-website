@@ -9,95 +9,82 @@ body{
 /* ----------------------------------------------------------------------------------------------------wrapperpage-------------------------------------------------------------- */
 
 .smile-makeover-section{
-    height: 90vh;
+    min-height: 90vh;
     width: 100%;
-    margin-top: 7vh;
-    /* border: 2px solid transparent; */
-    background-color:  #c0b9b2;
-  }
+    margin-top: clamp(50px, 6vw, 7vh);
+    background-color: #c0b9b2;
+}
   
-  .smile-makeover-main-container{
-    height: 100vh;
+.smile-makeover-main-container{
+    min-height: 100vh;
     width: 100%;
-    /* border: 2px solid blue; */
-    background-color:  #c0b9b2;
-    margin-top: 7vh;
+    background-color: #c0b9b2;
+    margin-top: clamp(50px, 6vw, 7vh);
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .smile-makeover-text-part{
+.smile-makeover-text-part{
     height: 100%;
-    width: 60%;
-    /* border: 2px solid blueviolet; */
-  }
+    width: clamp(300px, 60%, 60%);
+}
   
-  .smile-makeover-text-part .sm-text-bg{
-    height: 60vh;
-    width: 70%;
+.smile-makeover-text-part .sm-text-bg{
+    height: clamp(300px, 60vh, 60vh);
+    width: clamp(250px, 70%, 70%);
     border: 2px solid transparent;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), center no-repeat;
-    /* background: linear-gradient(rgba(6, 79, 205, 0.7), rgba(5, 85, 198, 0.2)), center no-repeat; */
-    margin-top: 20%;
-    margin-left: 5%;
+    margin-top: clamp(10%, 20%, 20%);
+    margin-left: clamp(2%, 5%, 5%);
     padding-top: -10%;
-  }
+}
   
-  .smile-makeover-wrapper{
+.smile-makeover-wrapper{
     width: 100%;
     height: 100vh;
-    top:-10%;
+    top: -10%;
     background: linear-gradient(rgba(0,0,0, 0.2), rgba(0,0,0,0.1)), url(pic-2-sm.jpeg) center no-repeat;
     background-size: cover;
-    /* box-shadow: 0.1rem 5rem rgba(0, 0, 0, 0.6); */
     position: relative;
-  }
+}
   
-  .smile-makeover-text-part .smile-makeover-heading{
+.smile-makeover-text-part .smile-makeover-heading{
     height: 10%;
     width: 100%;
-    /* border: 2px solid red; */
-    margin-top: 8%;
-    /* margin-left: -30%; */
-  }
+    margin-top: clamp(5%, 8%, 8%);
+}
   
-  .smile-makeover-heading h3{
-    font-size: 2rem !important;
+.smile-makeover-heading h3{
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
     font-weight: normal;
-    margin-left: 5%;
+    margin-left: clamp(2%, 5%, 5%);
     color: white;
     font-weight: 500;
-    /* text-align: center; */
-    /* font-family: 'playfair display', serif; */
-    /* font-family: 'sweeth-gothic', sans-serif; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-  }
+}
   
-  .smile-makeover-text-part .smile-makeover-sub-heading{
-    /* border: 2px solid rgb(189, 11, 71); */
+.smile-makeover-text-part .smile-makeover-sub-heading{
     height: 55%;
     width: 100%;
-    margin-top: 2%;
-  }
+    margin-top: clamp(1%, 2%, 2%);
+}
   
-  .smile-makeover-sub-heading p{
-    font-size: 1.2rem !important;
-    /* font-family: 'sweeth-gothic', sans-serif; */
+.smile-makeover-sub-heading p{
+    font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
     font-family: 'SangBleu Kingdom Light, Georgia', serif;
     letter-spacing: 0.12rem;
     color: white;
     font-weight: 500;
-    width: 90%;
-    margin-left: 5%;
-  }
+    width: clamp(80%, 90%, 90%);
+    margin-left: clamp(2%, 5%, 5%);
+}
 
-  .smile-makeover-text-part .contact-btn{
-    margin-top: -20% ;
-    height: 2.5rem;
-    width: 9.5rem;
-    /* border-radius: 20px; */
+.smile-makeover-text-part .contact-btn{
+    margin-top: clamp(-25%, -20%, -20%);
+    height: clamp(2rem, 4vw, 2.5rem);
+    width: clamp(7rem, 15vw, 9.5rem);
     border: 1px solid white;
     background-color: white;
     margin-left: 5%;
@@ -111,715 +98,350 @@ body{
   }
 
   .smile-makeover-text-part .contact-btn:hover{
-    background-color: black;
-    cursor: pointer;
-    border: 2px solid transparent;
-  }
-  
-  .smile-makeover-text-part a:hover button{
-    color: white;
-  } 
-  
-  
-  /* ------------------------------------------------------------1st section----------------------------------------------------- */
-  
-  
-  .before-after-pics-section{
-    height: 115vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .before-after-pics-container{
-    height: 85vh;
-    width: 100%;
-    margin-top: 15vh;
-    border: 2px solid transparent;
-  }
-  
-  .before-after-pics-sub-container{
-    height: 110vh;
-    width: 100%;
-    margin-top: 7vh;
-    /* border: 2px solid blueviolet; */
-    /* display: flex;
-    justify-content: center;
-    text-align: center; */
-  }
-  
-  .smile-text-container{
-    height: 20vh;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
-  
-  .smile-text-container h2{
-    /* border: 2px solid black; */
-    width: 80%;
-    font-size: 1.7rem;
-    margin-left: 5%;
-    letter-spacing: 0.1rem;
-    /* margin-top: 15%; */
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  .smile-text-container p{
-    /* border: 2px solid black; */
-    width: 90%;
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    margin-left: 5%;
-    text-align: left;
-    margin-top: 3%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .smile-image-container{
-    height: 60vh;
-    width: 80%;
-    margin-left: 8%;
-    margin-top: 13%;
-    /* gap: 1%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid black; */
-  }
-  
-  .smile-before-container, .smile-after-container{
-    /* height: 53vh;
-    width: 28%; */
-    position: relative;
-      /* border: 10px solid blue;  */
-      /* padding: 10px; */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 320px; /* Adjust as needed */
-      height: 420px; /* Adjust as needed */
     background-color: transparent;
-    margin-right: 10px;
-    border-radius: 20px;
-    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); */
-    /* border: 2px solid black; */
-  }
-  
-  .smile-before-container .smile-b-img-sub-container{
-    height: 60vh;
-    width: 100%;
-    margin-left: 0%;
-    margin-top: 5%;
-    /* transform: translate(-50%,-50%); */
-    border: 5px solid black;
-    overflow: hidden;
-    border-radius: 20px;
-  }
-  
-  .smile-after-container .smile-a-img-sub-container{
-    height: 60vh;
-    width: 100%;
-    margin-left: 15%;
-    margin-top: 5%;
-    overflow: hidden;
-    border: 5px solid black;
-    border-radius: 20px;
-  }
-  
-  
-  .smile-b-img-sub-container .smile-before-images-content img{
-    height: auto;
-    width: 100%;
-    object-fit: cover; 
-    /* border: 2px solid blue; */
-  }
-  
-  .smile-a-img-sub-container .smile-after-images-content img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover; 
-  }
-  
-  .label {
-    position: absolute;
-    bottom: -20px; /* Adjusted to place inside the border */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    padding: 5px 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
     color: white;
-    border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.2);
+    transition: all 0.3s ease;
   }
-  
-  
-  @media(max-width: 1286px){
+
+  .smile-makeover-text-part a:hover button{
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+/* ==============================================================================-Before After Section-=========================================================================== */
+
+.before-after-pics-section{
+  min-height: auto;
+  width: 100%;
+  background-color: #f8f6f3;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+  overflow-x: hidden;
+}
+
+.before-after-pics-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.before-after-pics-sub-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.smile-text-container{
+  text-align: center;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.smile-text-container h2{
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  color: #333;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 600;
+}
+
+.smile-text-container p{
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-family: 'SangBleu Kingdom Light, Georgia', serif;
+  letter-spacing: 0.05rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.smile-image-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(1rem, 3vw, 2rem);
+  width: 100%;
+  position: relative;
+}
+
+.smile-before-container, .smile-after-container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.smile-before-container .smile-b-img-sub-container{
+  width: 100%;
+  height: clamp(300px, 50vh, 500px);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.smile-after-container .smile-a-img-sub-container{
+  width: 100%;
+  height: clamp(300px, 50vh, 500px);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* ==============================================================================-Slideshow Images-=========================================================================== */
+
+.smile-b-img-sub-container .smile-before-images-content,
+.smile-a-img-sub-container .smile-after-images-content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.smile-b-img-sub-container .smile-before-images-content img,
+.smile-a-img-sub-container .smile-after-images-content img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  border-radius: 10px;
+}
+
+.smile-b-img-sub-container .smile-before-images-content img.active,
+.smile-a-img-sub-container .smile-after-images-content img.active{
+  opacity: 1;
+}
+
+.label {
+  background: linear-gradient(135deg, #c0b9b2, #a89f95);
+  color: white;
+  padding: clamp(0.5rem, 1.5vw, 1rem) clamp(1rem, 2.5vw, 2rem);
+  border-radius: 25px;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin-top: clamp(0.5rem, 1.5vw, 1rem);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  font-family: 'SangBleu Kingdom Light, Georgia', serif;
+}
+
+/* ==============================================================================-Responsive Design-=========================================================================== */
+
+@media(max-width: 1286px){
   .smile-image-container{
-    /* border: 2px solid black; */
-    width: 70%;
-    margin-left: 15%;
+    gap: clamp(1rem, 2vw, 1.5rem);
   }
-  
+
   .smile-before-container, .smile-after-container{
-    height: 53vh;
-    width: 30%;
-    /* background-color: transparent;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); */
-    /* border: 2px solid black; */
+    flex: 1;
   }
-  
+
   .smile-before-container .smile-b-img-sub-container{
-    height: 50vh;
-    width: 115%;
-    margin-left: -10%;
-    /* margin-left: 21%;
-    margin-top: 5%; */
-    /* transform: translate(-50%,-50%); */
-    /* border: 2px solid blue; */
-    overflow: hidden;
+    height: clamp(280px, 45vh, 450px);
   }
-  
+
   .smile-after-container .smile-a-img-sub-container{
-    height: 50vh;
-    width: 115%;
-    margin-left: 10%;
-    /* margin-left: 1%;
-    margin-top: 5%; */
-    overflow: hidden;
-    /* border: 2px solid blue; */
+    height: clamp(280px, 45vh, 450px);
   }
-  
-  .smile-before-container .before-text{
-    /* height: 5.8vh; */
-    width: 115%;
-    margin-left: -11%;
-    /* border: 2px solid red; */
-    text-align: center;
-    background-color: black;
+}
+
+@media (max-width:1060px){
+  .before-after-pics-section{
+    padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 1.5rem);
   }
-  
-  .smile-after-container .after-text{
-    /* height: 5.8vh; */
-    width: 128%;
-    margin-left: 3%;
-    /* border: 2px solid red; */
-    text-align: center;
-    background-color: black;
+
+  .before-after-pics-container{
+    max-width: 100%;
   }
-  
+
+  .before-after-pics-sub-container{
+    gap: clamp(1.5rem, 3vw, 2rem);
   }
-  
-  @media (max-width:1060px){
-  
-    .before-after-pics-section{
-      height: 140vh;
-      width: 100%;
-      /* border: 2px solid blue; */
-      background-color: #ebe3da;
-    }
-    
-    .before-after-pics-container{
-      height: 120vh;
-      width: 100%;
-      margin-top: 10vh;
-      /* border: 2px solid green; */
-    }
-    
-    .before-after-pics-sub-container{
-      height: 110vh;
-      width: 100%;
-      margin-top: 7vh;
-      /* border: 2px solid blueviolet; */
-    }
-    .smile-image-container{
-      height: 80vh;
-      width: 80%;
-      margin-left: 8%;
-      margin-top: 25%;
-      /* border: 2px solid black; */
-    }
-  
-    .smile-before-container, .smile-after-container{
-      position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 300px; /* Adjust as needed */
-        height: 450px; /* Adjust as needed */
-      background-color: transparent;
-      margin-right: 10px;
-      border-radius: 20px;
-      /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); */
-      /* border: 2px solid black; */
-    }
-  
-    .smile-before-container .smile-b-img-sub-container{
-      height: 65vh;
-      width: 100%;
-    }
-    
-    .smile-after-container .smile-a-img-sub-container{
-      height: 65vh;
-      width: 100%;
-    }
-  
-    .label {
-      position: absolute;
-      bottom: 17px; /* Adjusted to place inside the border */
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: black;
-      padding: 5px 15px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: white;
-      border: 2px solid black;
-      border-radius: 5px;
-      box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.2);
-    }
-    
-    
+
+  .smile-image-container{
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2rem);
   }
-  
-  @media (max-width:1000px){
-    .before-after-pics-section{
-      height: 120vh;
-      /* width: 100%;
-      border: 2px solid transparent;
-      background-color:  #cdc8c3; */
-    }
-  
-    .before-after-pics-sub-container{
-      height: 95vh;
-      width: 95%;
-      margin-left: 5%;
-      margin-top: 1vh;
-      /* border: 2px solid blueviolet; */
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      gap: 10%;
-    }
-  
-    .smile-text-container{
-      height: 95vh;
-      width: 30%;
-      margin-right: 5%;
-      /* border: 2px solid rgb(183, 10, 39); */
-    }
-  
-    .smile-text-container h2{
-    /* border: 2px solid black; */
-    width: 110%;
-    font-size: 1.2rem;
-    margin-right: 10%;
-    margin-top: 18%;
-    text-align: left;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-  
-    .smile-text-container p{
-      /* border: 2px solid black; */
-      width: 110%;
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-      line-height: 1.5rem;
-      margin-right: 8%;
-      text-align: left;
-      margin-top: 8%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-  
-    .smile-image-container{
-      height: 95vh;
-      width: 65%;
-      /* border: 2px solid black; */
-      margin-right: 5%;
-    }  
-  
-    .carousel-container {
-      max-width: 100%;
-      height: 65vh;
-      margin: 10px auto;
-      background: #cdc8c3;
-      padding: 20px;
-      border-radius: 10px;
-      /* border: 2px solid brown; */
-      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    }
-  
-    h2 {
-      font-size: 1.6rem;
-      font-weight: normal;
-      margin-bottom: 20px;
-      letter-spacing: 0.1rem;
-      /* font-family: 'Sweet Gothic', sans-serif; */
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-    
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      height: 45vh;
-      /* border: 2px solid blue; */
-    }
-  
-    .before-image, .after-image {
-      width: 50%;
-      height: 45vh;
-      background-size: cover;
-    }
-    
-  
+
+  .smile-before-container, .smile-after-container{
+    width: 100%;
   }
-  
-  @media (max-width:780px){
-    .before-after-pics-section{
-      height: 160vh;
-      /* width: 100%;
-      border: 2px solid transparent;*/
-      background-color:  #cdc8c3; 
-    }
-  
-    .before-after-pics-sub-container{
-      height: 140vh;
-      width: 95%;
-      margin-left: 2.5%;
-      margin-top: 1vh;
-      /* border: 2px solid blueviolet; */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      gap: 10%;
-    }
-  
-    .smile-text-container{
-      height: 50vh;
-      width: 80%;
-      /* margin-right: 5%; */
-      margin-top: -40%;
-      /* border: 2px solid rgb(183, 10, 39); */
-    }
-  
-    .smile-text-container h2{
-    /* border: 2px solid black; */
-    width: 110%;
-    font-size: 1.7rem;
-    margin-right: 10%;
-    margin-top: 18%;
-    text-align: left;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-  
-    .smile-text-container p{
-      /* border: 2px solid black; */
-      width: 110%;
-      font-size: 1.1rem;
-      letter-spacing: 0.1em;
-      line-height: 1.5rem;
-      margin-right: 8%;
-      text-align: left;
-      margin-top: 8%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-  
-    .smile-image-container{
-      height: 60vh;
-      width: 95%;
-      margin-top: -5%;
-      /* border: 2px solid black; */
-      /* margin-right: 5%; */
-    }  
-  
-    .carousel-container {
-      max-width: 100%;
-      height: 65vh;
-      margin: 10px auto;
-      background: #cdc8c3;
-      padding: 20px;
-      border-radius: 10px;
-      /* border: 2px solid brown; */
-      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    }
-  
-    h2 {
-      font-size: 1.6rem;
-      font-weight: normal;
-      margin-bottom: 20px;
-      letter-spacing: 0.1rem;
-      /* font-family: 'Sweet Gothic', sans-serif; */
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-    
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      height: 45vh;
-      /* border: 2px solid blue; */
-    }
-  
-    .before-image, .after-image {
-      width: 50%;
-      height: 45vh;
-      background-size: cover;
-    }
-    
-  
+
+  .smile-before-container .smile-b-img-sub-container{
+    height: clamp(250px, 40vh, 400px);
   }
-  
-  @media (max-width:500px){
-    .before-after-pics-section{
-      height: 160vh;
-      /* width: 100%;
-      border: 2px solid transparent;*/
-      background-color:  #ebe3da; 
-    }
-  
-    .before-after-pics-sub-container{
-      height: 140vh;
-      width: 95%;
-      margin-left: 2.5%;
-      margin-top: 1vh;
-      /* border: 2px solid blueviolet; */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      gap: 10%;
-    }
-  
-    .smile-text-container{
-      height: 50vh;
-      width: 80%;
-      /* margin-right: 5%; */
-      margin-top: -40%;
-      /* border: 2px solid rgb(183, 10, 39); */
-    }
-  
-    .smile-text-container h2{
-    /* border: 2px solid black; */
-    width: 110%;
-    font-size: 1.4rem;
-    margin-right: 10%;
-    margin-top: 18%;
-    text-align: left;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-  
-    .smile-text-container p{
-      /* border: 2px solid black; */
-      width: 110%;
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-      line-height: 1.5rem;
-      margin-right: 8%;
-      text-align: left;
-      margin-top: 8%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-  
-    .smile-image-container{
-      height: 60vh;
-      width: 95%;
-      margin-top: -2%;
-      /* border: 2px solid black; */
-      /* margin-right: 5%; */
-    }  
-  
-    .carousel-container {
-      max-width: 100%;
-      height: 65vh;
-      margin: 10px auto;
-      background: #ebe3da;
-      padding: 20px;
-      border-radius: 10px;
-      /* border: 2px solid brown; */
-      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    }
-  
-    h2 {
-      font-size: 1.6rem;
-      font-weight: normal;
-      margin-bottom: 20px;
-      letter-spacing: 0.1rem;
-      /* font-family: 'Sweet Gothic', sans-serif; */
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-    
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      height: 40vh;
-      /* border: 2px solid blue; */
-    }
-  
-    .before-image, .after-image {
-      width: 50%;
-      height: 40vh;
-      background-size: cover;
-    }
-  
-    button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      /* background: #000; */
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    
-    button:focus {
-      outline: none;
-    }
-    
-    .prev {
-      left: 10px;
-      z-index: 10;
-    }
-    
-    .next {
-      right: 10px;
-    }
-    
+
+  .smile-after-container .smile-a-img-sub-container{
+    height: clamp(250px, 40vh, 400px);
   }
-  
-  @media (max-width:362px){
-    .before-after-pics-section{
-      height: 160vh;
-      width: 100%;
-      /* border: 2px solid black; */
-      background-color:  #ebe3da; 
-    }
-  
-    .before-after-pics-sub-container{
-      height: 120vh;
-      width: 95%;
-      margin-left: 2.5%;
-      margin-top: 10vh;
-      /* border: 2px solid blueviolet; */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      gap: 10%;
-    }
-  
-    .smile-text-container{
-      width: 80%;
-      /* margin-right: 5%; */
-      margin-top: -5%;
-      /* border: 2px solid rgb(183, 10, 39); */
-    }
-  
-    .smile-text-container h2{
-    /* border: 2px solid black; */
-    width: 110%;
-    font-size: 1.3rem;
-    margin-right: 10%;
-    margin-top: 18%;
-    text-align: left;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-  
-    .smile-text-container p{
-      /* border: 2px solid black; */
-      width: 110%;
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-      line-height: 1.5rem;
-      margin-right: 8%;
-      text-align: left;
-      margin-top: 8%;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-  
-    .smile-image-container{
-      height: 60vh;
-      width: 99%;
-      margin-top: 45%;
-      margin-left: -3%;
-      /* border: 2px solid black; */
-      /* margin-right: 5%; */
-    }  
-  
-    .carousel-container {
-      max-width: 100%;
-      height: 50vh;
-      margin-top: -10%;
-      /* margin: 0px auto; */
-      background: #ebe3da;
-      padding: 20px;
-      border-radius: 10px;
-      /* border: 2px solid brown; */
-      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    }
-  
-    h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
-      margin-bottom: 20px;
-      margin-left: 2%;
-      letter-spacing: 0.1rem;
-      /* font-family: 'Sweet Gothic', sans-serif; */
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-    
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      height: 30vh;
-      width: 100%;
-      /* border: 2px solid blue; */
-    }
-  
-    .before-image, .after-image {
-      width: 55%;
-      height: 30vh;
-      background-size: cover;
-    }
-  
-    button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      /* background: #000; */
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    
-    button:focus {
-      outline: none;
-    }
-    
-    .prev {
-      left: 10px;
-      z-index: 10;
-    }
-    
-    .next {
-      right: 10px;
-    }
-    
+
+  .label {
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    padding: clamp(0.4rem, 1.2vw, 0.8rem) clamp(0.8rem, 2vw, 1.5rem);
   }
-  
-  /* -----------------------------------------------------smile-makeover----------------------------------------------------------- */
+}
+
+@media (max-width:1000px){
+  .before-after-pics-section{
+    padding: clamp(1rem, 3vw, 2rem) clamp(0.8rem, 2.5vw, 1rem);
+  }
+
+  .before-after-pics-sub-container{
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+  }
+
+  .smile-text-container{
+    margin-bottom: clamp(0.8rem, 2vw, 1rem);
+  }
+
+  .smile-text-container h2{
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .smile-text-container p{
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.5;
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .smile-image-container{
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+  }
+
+  .smile-before-container .smile-b-img-sub-container,
+  .smile-after-container .smile-a-img-sub-container{
+    height: clamp(220px, 35vh, 350px);
+  }
+}
+
+@media (max-width:780px){
+  .before-after-pics-section{
+    padding: clamp(0.8rem, 2.5vw, 1.5rem) clamp(0.5rem, 2vw, 0.8rem);
+  }
+
+  .before-after-pics-sub-container{
+    gap: clamp(0.8rem, 2vw, 1rem);
+  }
+
+  .smile-text-container{
+    margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
+  }
+
+  .smile-text-container h2{
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    margin-bottom: clamp(0.5rem, 1.2vw, 0.8rem);
+  }
+
+  .smile-text-container p{
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.4;
+    margin-bottom: clamp(0.5rem, 1.2vw, 0.8rem);
+  }
+
+  .smile-image-container{
+    gap: clamp(0.8rem, 2vw, 1rem);
+  }
+
+  .smile-before-container .smile-b-img-sub-container,
+  .smile-after-container .smile-a-img-sub-container{
+    height: clamp(200px, 30vh, 300px);
+  }
+
+  .label {
+    font-size: clamp(0.75rem, 1.6vw, 0.9rem);
+    padding: clamp(0.3rem, 1vw, 0.6rem) clamp(0.6rem, 1.5vw, 1.2rem);
+  }
+}
+
+@media (max-width:500px){
+  .before-after-pics-section{
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(0.3rem, 1.5vw, 0.5rem);
+  }
+
+  .before-after-pics-sub-container{
+    gap: clamp(0.5rem, 1.5vw, 0.8rem);
+  }
+
+  .smile-text-container{
+    margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
+  }
+
+  .smile-text-container h2{
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
+  }
+
+  .smile-text-container p{
+    font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+    line-height: 1.3;
+    margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
+  }
+
+  .smile-image-container{
+    gap: clamp(0.5rem, 1.5vw, 0.8rem);
+  }
+
+  .smile-before-container .smile-b-img-sub-container,
+  .smile-after-container .smile-a-img-sub-container{
+    height: clamp(180px, 25vh, 250px);
+  }
+
+  .label {
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+    padding: clamp(0.25rem, 0.8vw, 0.5rem) clamp(0.5rem, 1.2vw, 1rem);
+  }
+}
+
+@media (max-width:362px){
+  .before-after-pics-section{
+    padding: clamp(0.3rem, 1.5vw, 0.8rem) clamp(0.2rem, 1vw, 0.3rem);
+  }
+
+  .before-after-pics-sub-container{
+    gap: clamp(0.3rem, 1vw, 0.5rem);
+  }
+
+  .smile-text-container{
+    margin-bottom: clamp(0.2rem, 0.8vw, 0.3rem);
+  }
+
+  .smile-text-container h2{
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    margin-bottom: clamp(0.2rem, 0.8vw, 0.3rem);
+  }
+
+  .smile-text-container p{
+    font-size: clamp(0.75rem, 1.4vw, 0.85rem);
+    line-height: 1.2;
+    margin-bottom: clamp(0.2rem, 0.8vw, 0.3rem);
+  }
+
+  .smile-image-container{
+    gap: clamp(0.3rem, 1vw, 0.5rem);
+  }
+
+  .smile-before-container .smile-b-img-sub-container,
+  .smile-after-container .smile-a-img-sub-container{
+    height: clamp(160px, 22vh, 220px);
+  }
+
+  .label {
+    font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+    padding: clamp(0.2rem, 0.6vw, 0.4rem) clamp(0.4rem, 1vw, 0.8rem);
+  }
+}
+
+/* -----------------------------------------------------smile-makeover----------------------------------------------------------- */
   
   .smile-makeover-testimonials-section{
     height: 90vh;

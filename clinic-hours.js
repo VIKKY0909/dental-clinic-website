@@ -1,6 +1,6 @@
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM loaded, initializing teeth whitening page');
+  console.log('DOM loaded, initializing clinic hours page');
   
   // Initialize people slider if Swiper is available
   if (typeof Swiper !== 'undefined') {
@@ -66,4 +66,4 @@ const swiperpeople = new Swiper('.people-slider-wrapper', {
     },
   }
 });
-}
+} 

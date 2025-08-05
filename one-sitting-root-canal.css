@@ -8,96 +8,82 @@ body{
 /* ----------------------------------------------------------------------------*---------------------------------------------------------------------------------------------- */
 
 .root-canal-main-section{
-    height: 90vh;
+    min-height: 90vh;
     width: 100%;
-    margin-top: 7vh;
-    /* border: 2px solid transparent; */
-    background-color:  #c0b9b2;
-  }
+    margin-top: clamp(50px, 6vw, 7vh);
+    background-color: #c0b9b2;
+}
   
-  .root-canal-subsection{
-    height: 100vh;
+.root-canal-subsection{
+    min-height: 100vh;
     width: 100%;
-    /* border: 2px solid blue; */
-    background-color:  #c0b9b2;
-    margin-top: 7vh;
+    background-color: #c0b9b2;
+    margin-top: clamp(50px, 6vw, 7vh);
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .root-canal-subsection-text-part{
+.root-canal-subsection-text-part{
     height: 100%;
-    width: 60%;
-    /* border: 2px solid blueviolet; */
-  }
+    width: clamp(300px, 60%, 60%);
+}
   
-  .root-canal-subsection-text-part .root-canal-bg{
-    height: 60vh;
-    width: 70%;
+.root-canal-subsection-text-part .root-canal-bg{
+    height: clamp(300px, 60vh, 60vh);
+    width: clamp(250px, 70%, 70%);
     border: 2px solid transparent;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), center no-repeat;
-    /* background: linear-gradient(rgba(6, 79, 205, 0.7), rgba(5, 85, 198, 0.2)), center no-repeat; */
-    margin-top: 20%;
-    margin-left: 5%;
+    margin-top: clamp(10%, 20%, 20%);
+    margin-left: clamp(2%, 5%, 5%);
     padding-top: -10%;
-  }
+}
   
-  .root-canal-wrapper{
+.root-canal-wrapper{
     width: 100%;
     height: 100vh;
-    top:-8%;
+    top: -8%;
     background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0,0.7)), url(root-canal-bg.jpg) center no-repeat;
     background-size: cover;
-    /* box-shadow: 0.1rem 5rem rgba(0, 0, 0, 0.6); */
     position: relative;
-  }
+}
   
-  .root-canal-subsection-text-part .root-canal-title{
+.root-canal-subsection-text-part .root-canal-title{
     height: 10%;
     width: 100%;
-    /* border: 2px solid red; */
-    margin-top: 8%;
-    /* margin-left: -30%; */
-  }
+    margin-top: clamp(5%, 8%, 8%);
+}
   
-  .root-canal-title h3{
-    font-size: 2rem !important;
+.root-canal-title h3{
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
     font-weight: normal;
-    margin-left: 5%;
+    margin-left: clamp(2%, 5%, 5%);
     color: white;
     font-weight: 500;
-    /* text-align: center; */
-    /* font-family: 'playfair display', serif; */
-    /* font-family: 'sweeth-gothic', sans-serif; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-  }
+}
   
-  .root-canal-subsection-text-part .root-canal-sub-title{
-    /* border: 2px solid rgb(189, 11, 71); */
+.root-canal-subsection-text-part .root-canal-sub-title{
     height: 55%;
     width: 100%;
-    margin-top: 2%;
-  }
+    margin-top: clamp(1%, 2%, 2%);
+}
   
-  .root-canal-sub-title p{
-    font-size: 1.2rem !important;
-    /* font-family: 'sweeth-gothic', sans-serif; */
+.root-canal-sub-title p{
+    font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
     font-family: 'SangBleu Kingdom Light, Georgia', serif;
     letter-spacing: 0.12rem;
     color: white;
     font-weight: 500;
-    width: 90%;
-    margin-left: 5%;
-  }
+    width: clamp(80%, 90%, 90%);
+    margin-left: clamp(2%, 5%, 5%);
+}
 
-
-  .root-canal-subsection-text-part .contact-btn{
-    margin-top: -20% ;
-    height: 2.5rem;
-    width: 9.5rem;
-    /* border-radius: 20px; */
+.root-canal-subsection-text-part .contact-btn{
+    margin-top: clamp(-25%, -20%, -20%);
+    height: clamp(2rem, 4vw, 2.5rem);
+    width: clamp(7rem, 15vw, 9.5rem);
     border: 1px solid white;
     background-color: white;
     margin-left: 5%;
@@ -112,281 +98,577 @@ body{
 
   .root-canal-subsection-text-part .contact-btn:hover{
     background-color: black;
-    cursor: pointer;
-    border: 2px solid transparent;
-  }
-  
-  .root-canal-subsection-text-part a:hover button{
     color: white;
-  } 
-  
-  
-  
-  /*----------------------------------------------------------------------------------------1------------------------------------------------------------------------  */
-  
-  .One-sitting-Root-Canal-section{
-    height: 100vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
+    transition: all 0.3s ease;
   }
-  
-  .One-sitting-Root-Canal-section h2{
-    text-align: center;
-    font-size: 2.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 8%;
+
+  .root-canal-subsection-text-part a:hover button{
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease;
   }
-  
-  .One-sitting-Root-Canal-section h3{
-    text-align: center;
-    font-size: 1.7rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 2%;
-  }
-  
-  .One-sitting-Root-Canal-section .One-sitting-Root-Canal-container{
-    /* border : 2px solid black; */
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .One-sitting-Root-Canal-container .One-sitting-Root-Canal-image-container{
-    /* border : 2px solid blue; */
-    height: 100%;
-    width: 50%;
-  }
-  
-  .One-sitting-Root-Canal-image-container .root-canal-sub-container{
-    height: 50vh;
-    width: 80%;
-    /* border : 2px solid blue; */
-    margin-left: 10%;
-    margin-top: 10%;
-  }
-  
-  .root-canal-sub-container img{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .One-sitting-Root-Canal-container .One-sitting-Root-Canal-intro-container{
-    /* border : 2px solid magenta; */
-    height: 100%;
-    width: 50%;
-  }
-  
-  .One-sitting-Root-Canal-intro-container ul{
-    margin-top: 12%;
-    width: 90%;
-    margin-left: 5%;
-    line-height: 2rem;
-  }
-  
-  .One-sitting-Root-Canal-intro-container ul li{
-    font-size: 1.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-  }
-  
-  .One-sitting-Root-Canal-intro-container ul li span{
-    font-weight: 700;
-  }
-  
-  /* ----------------------------------------------------------------------------------------------2nd------------------------------------------------------------- */
-  
-  .One-sitting-Root-Canal-second-section{
-    height: 130vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-  }
-  
-  .One-sitting-Root-Canal-second-section .One-sitting-Root-Canal-paragraph-content{
-    height: 10vh;
-    width: 90%;
-    margin-left: 5%;
-    /* border: 2px solid black; */
-  }
-  
-  .One-sitting-Root-Canal-paragraph-content p{
-    font-size: 1.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-  }
-  
-  .One-sitting-Root-Canal-second-section .One-sitting-Root-Canal-section-procedure-img{
-    height: 50vh;
-    width: 60%;
-    margin-left: 20%;
-    /* border: 2px solid blue; */
-  }
-  
-  .One-sitting-Root-Canal-section-procedure-img img{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  }
-  
-  .One-sitting-Root-Canal-second-section h2{
-    text-align: center;
-    font-size: 2.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 8%;
-  }
-  
-  .One-sitting-Root-Canal-second-section .One-sitting-Root-Canal-benefits-content{
-    height: 30vh;
-    width: 90%;
-    margin-left: 5%;
-    /* border: 2px solid black; */
-    display: grid;
-    padding-top: 5%;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: repeat(1, auto); 
-  }
-  
-  .One-sitting-Root-Canal-benefits-content .One-sitting-Root-Canal-benefit{
-    height: 30vh;
-    width: 100%;
-    margin-top: 2%;
-  }
-  
-  .One-sitting-Root-Canal-benefit .root-canal-list{
-    /* border : 2px solid blue; */
-    margin-top: 3%;
-  }
-  
-  .root-canal-list li{
-    font-size: 1.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    /* text-align: left; */
-  }
-  
-  /* ------------------------------------------------------------------------------------dentist-client------------------------------------ */
-  
-  .people-main-section{
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; */
-    /* background-color: #BEB2A6; */
-    background-color:  #c0b9b2;
-    border: 2px solid transparent;
-  }
-  
-  
-  .people-main-section .people-slider-wrapper{
-    overflow: hidden;
-    margin: 0 60x 50px;
-  }
-  
-  
-  .people-main-section .people-item {
-    display: flex;
-    /* padding: 35px; */
-    padding-top: 15px;
-    padding-bottom: 50px;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4%;
-    /* border: 2px solid black; */
-  }
-  
-  .people-main-section .people-item .people-images{
-    width: 350px;
-    height: 250px;
-    background-size: cover;
-    /* border-radius: 50%; */
-    margin-bottom: 50px;
-    border: 10px solid #f9f2e8;
-  }
-  
-  .people-main-section .swiper-pagination-bullet{
-    width: 15px;
-    height: 15px;
-    opacity: 1;
-    margin-bottom: 5%;
-    /* border: 2px solid black; */
-  }
-  
- /* -------------------------------------------------------------------- */
-  
- .root-canal-video-container{
-  height: 70vh;
+
+/* ==============================================================================-First Section-=========================================================================== */
+
+.One-sitting-Root-Canal-section{
+  min-height: auto;
   width: 100%;
-  background: #cac3bb;
-  /* border: 2px solid red; */
-  /* padding-top: 5%; */
+  background-color: #f8f6f3;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+  overflow-x: hidden;
+}
+
+.One-sitting-Root-Canal-section h2{
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  font-weight: 600;
+}
+
+.One-sitting-Root-Canal-section h3{
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-family: 'SangBleu Kingdom Light, Georgia', serif;
+  letter-spacing: 0.05rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+}
+
+.One-sitting-Root-Canal-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: flex-start;
+}
+
+.One-sitting-Root-Canal-image-container{
+  flex: 1;
+  max-width: 500px;
+}
+
+.One-sitting-Root-Canal-image-container .root-canal-sub-container{
+  width: 100%;
+  height: clamp(300px, 40vh, 400px);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.root-canal-sub-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.One-sitting-Root-Canal-intro-container{
+  flex: 1;
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.One-sitting-Root-Canal-intro-container ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.One-sitting-Root-Canal-intro-container ul li{
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-family: 'SangBleu Kingdom Light, Georgia', serif;
+  letter-spacing: 0.05rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+  padding-left: clamp(1.5rem, 3vw, 2rem);
+  position: relative;
+}
+
+.One-sitting-Root-Canal-intro-container ul li::before{
+  content: "•";
+  color: #c0b9b2;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.One-sitting-Root-Canal-intro-container ul li span{
+  color: #c0b9b2;
+  font-weight: 600;
+}
+
+/* ==============================================================================-Second Section-=========================================================================== */
+
+.One-sitting-Root-Canal-second-section{
+  min-height: auto;
+  width: 100%;
+  background-color: #fff;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+  overflow-x: hidden;
+}
+
+.One-sitting-Root-Canal-second-section .One-sitting-Root-Canal-paragraph-content{
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.One-sitting-Root-Canal-paragraph-content p{
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-family: 'SangBleu Kingdom Light, Georgia', serif;
+  letter-spacing: 0.05rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.One-sitting-Root-Canal-second-section .One-sitting-Root-Canal-section-procedure-img{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.One-sitting-Root-Canal-section-procedure-img img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.One-sitting-Root-Canal-second-section h2{
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+}
+
+.One-sitting-Root-Canal-second-section .One-sitting-Root-Canal-benefits-content{
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.One-sitting-Root-Canal-benefits-content .One-sitting-Root-Canal-benefit{
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  max-width: 600px;
+  width: 100%;
+}
+
+.One-sitting-Root-Canal-benefit .root-canal-list{
+  background: linear-gradient(135deg, #f8f6f3, #e8e4e0);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #c0b9b2;
+}
+
+.root-canal-list li{
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-family: 'SangBleu Kingdom Light, Georgia', serif;
+  letter-spacing: 0.05rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  list-style: none;
+}
+
+/* ==============================================================================-Video Section-=========================================================================== */
+
+.root-canal-video-container{
+  min-height: auto;
+  width: 100%;
+  background-color: #f8f6f3;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+  overflow-x: hidden;
 }
 
 .root-canal-video-container .root-canal-client-info{
-  /* border: 2px solid blue; */
-  width: 40%;
-  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
 }
 
 .root-canal-client-info .root-canal-client-box{
-  height: 28vh;
-  width: 100%;
-  background:#95928f ;
-  border-radius: 20px;
-  margin-top: 19vh;
+  background: linear-gradient(135deg, #c0b9b2, #a89f95);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  text-align: center;
 }
 
 .root-canal-client-box p{
-  width: 90%;
-  margin-left: 5%;
-  font-size: 1rem;
-  text-align: center;
-  margin-top: 2vh;
-  letter-spacing: 0.1rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-family: 'SangBleu Kingdom Light, Georgia', serif;
+  letter-spacing: 0.05rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-style: italic;
 }
 
 .root-canal-client-box h5{
-  text-align: end;
-  margin-right: 5%;
-  margin-top: 3%;
-  font-size: 1.2rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   letter-spacing: 0.1rem;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+}
+
+.root-canal-client-box .left-quote,
+.root-canal-client-box .right-quote{
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.root-canal-client-box .left-quote{
+  top: clamp(0.5rem, 1vw, 1rem);
+  left: clamp(0.5rem, 1vw, 1rem);
 }
 
 .root-canal-client-box .right-quote{
-  text-align: end;
-  margin-top: 2%;
-}
-.root-canal-client-box i{
-  font-size: 2.5rem;
-  color: rgb(79, 56, 56);
+  bottom: clamp(0.5rem, 1vw, 1rem);
+  right: clamp(0.5rem, 1vw, 1rem);
 }
 
 .root-canal-video-container .root-canal-client-video{
-  /* border: 2px solid blue; */
-  width: 30%;
-  height: 50vh;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .root-canal-client-video iframe{
-  height: 100%;
   width: 100%;
+  height: clamp(250px, 40vh, 350px);
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================================================================-People Section-=========================================================================== */
+
+.people-main-section{
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background-color: #c0b9b2;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  overflow-x: hidden;
+}
+
+.people-main-section .people-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.people-main-section .people-slider-wrapper{
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.people-main-section .people-item {
+  display: flex;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(1rem, 2vw, 2rem);
+}
+
+.people-main-section .people-item .people-images{
+  width: clamp(250px, 80%, 350px);
+  height: clamp(180px, 25vh, 250px);
   object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  border: 8px solid #f9f2e8;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.people-main-section .swiper-pagination-bullet{
+  width: clamp(10px, 2vw, 15px);
+  height: clamp(10px, 2vw, 15px);
+  opacity: 1;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  background-color: #a89f95;
+}
+
+.people-main-section .swiper-pagination-bullet-active{
+  background-color: #333;
+}
+
+/* ==============================================================================-Responsive Design-=========================================================================== */
+
+@media(max-width: 1286px){
+  .One-sitting-Root-Canal-container{
+    gap: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .One-sitting-Root-Canal-image-container .root-canal-sub-container{
+    height: clamp(280px, 35vh, 350px);
+  }
+
+  .root-canal-video-container{
+    gap: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .root-canal-client-video iframe{
+    height: clamp(220px, 35vh, 300px);
+  }
+}
+
+@media (max-width:1060px){
+  .One-sitting-Root-Canal-container{
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  .One-sitting-Root-Canal-image-container{
+    max-width: 100%;
+  }
+
+  .One-sitting-Root-Canal-image-container .root-canal-sub-container{
+    height: clamp(250px, 30vh, 300px);
+  }
+
+  .root-canal-video-container{
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  .root-canal-video-container .root-canal-client-info{
+    max-width: 100%;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .root-canal-client-video iframe{
+    height: clamp(200px, 30vh, 250px);
+  }
+}
+
+@media (max-width:1000px){
+  .One-sitting-Root-Canal-section,
+  .One-sitting-Root-Canal-second-section,
+  .root-canal-video-container{
+    padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .One-sitting-Root-Canal-section h2,
+  .One-sitting-Root-Canal-second-section h2{
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .One-sitting-Root-Canal-section h3{
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .One-sitting-Root-Canal-intro-container ul li{
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.5;
+    margin-bottom: clamp(0.6rem, 1.2vw, 0.8rem);
+  }
+
+  .One-sitting-Root-Canal-paragraph-content p{
+    font-size: clamp(1rem, 2.2vw, 1.1rem);
+    line-height: 1.5;
+  }
+
+  .root-canal-list li{
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.4;
+  }
+}
+
+@media (max-width:780px){
+  .One-sitting-Root-Canal-section,
+  .One-sitting-Root-Canal-second-section,
+  .root-canal-video-container{
+    padding: clamp(1rem, 3vw, 2rem) clamp(0.8rem, 2.5vw, 1rem);
+  }
+
+  .One-sitting-Root-Canal-section h2,
+  .One-sitting-Root-Canal-second-section h2{
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .One-sitting-Root-Canal-section h3{
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .One-sitting-Root-Canal-image-container .root-canal-sub-container{
+    height: clamp(200px, 25vh, 250px);
+  }
+
+  .One-sitting-Root-Canal-intro-container ul li{
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.4;
+    margin-bottom: clamp(0.5rem, 1vw, 0.7rem);
+    padding-left: clamp(1.2rem, 2.5vw, 1.5rem);
+  }
+
+  .One-sitting-Root-Canal-paragraph-content p{
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.4;
+  }
+
+  .root-canal-list li{
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.3;
+  }
+
+  .root-canal-client-box p{
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.4;
+  }
+
+  .root-canal-client-box h5{
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  }
+
+  .root-canal-client-video iframe{
+    height: clamp(180px, 25vh, 220px);
+  }
+}
+
+@media (max-width:500px){
+  .One-sitting-Root-Canal-section,
+  .One-sitting-Root-Canal-second-section,
+  .root-canal-video-container{
+    padding: clamp(0.8rem, 2.5vw, 1.5rem) clamp(0.5rem, 2vw, 0.8rem);
+  }
+
+  .One-sitting-Root-Canal-section h2,
+  .One-sitting-Root-Canal-second-section h2{
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    margin-bottom: clamp(0.5rem, 1vw, 0.8rem);
+  }
+
+  .One-sitting-Root-Canal-section h3{
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .One-sitting-Root-Canal-image-container .root-canal-sub-container{
+    height: clamp(180px, 22vh, 220px);
+  }
+
+  .One-sitting-Root-Canal-intro-container ul li{
+    font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+    line-height: 1.3;
+    margin-bottom: clamp(0.4rem, 0.8vw, 0.6rem);
+    padding-left: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .One-sitting-Root-Canal-paragraph-content p{
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.3;
+  }
+
+  .root-canal-list li{
+    font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+    line-height: 1.2;
+  }
+
+  .root-canal-client-box p{
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.3;
+  }
+
+  .root-canal-client-box h5{
+    font-size: clamp(0.75rem, 1.6vw, 0.85rem);
+  }
+
+  .root-canal-client-video iframe{
+    height: clamp(160px, 20vh, 200px);
+  }
+
+  .people-main-section .people-item .people-images{
+    width: clamp(200px, 70%, 250px);
+    height: clamp(150px, 20vh, 180px);
+  }
+}
+
+@media (max-width:362px){
+  .One-sitting-Root-Canal-section,
+  .One-sitting-Root-Canal-second-section,
+  .root-canal-video-container{
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(0.3rem, 1.5vw, 0.5rem);
+  }
+
+  .One-sitting-Root-Canal-section h2,
+  .One-sitting-Root-Canal-second-section h2{
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    margin-bottom: clamp(0.3rem, 0.8vw, 0.5rem);
+  }
+
+  .One-sitting-Root-Canal-section h3{
+    font-size: clamp(0.75rem, 1.6vw, 0.9rem);
+    margin-bottom: clamp(0.5rem, 1vw, 0.8rem);
+  }
+
+  .One-sitting-Root-Canal-image-container .root-canal-sub-container{
+    height: clamp(160px, 20vh, 200px);
+  }
+
+  .One-sitting-Root-Canal-intro-container ul li{
+    font-size: clamp(0.75rem, 1.4vw, 0.85rem);
+    line-height: 1.2;
+    margin-bottom: clamp(0.3rem, 0.6vw, 0.5rem);
+    padding-left: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .One-sitting-Root-Canal-paragraph-content p{
+    font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+    line-height: 1.2;
+  }
+
+  .root-canal-list li{
+    font-size: clamp(0.75rem, 1.4vw, 0.85rem);
+    line-height: 1.1;
+  }
+
+  .root-canal-client-box p{
+    font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+    line-height: 1.2;
+  }
+
+  .root-canal-client-box h5{
+    font-size: clamp(0.7rem, 1.4vw, 0.8rem);
+  }
+
+  .root-canal-client-video iframe{
+    height: clamp(140px, 18vh, 180px);
+  }
+
+  .people-main-section .people-item .people-images{
+    width: clamp(180px, 65%, 220px);
+    height: clamp(130px, 18vh, 160px);
+  }
 }

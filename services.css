@@ -5,23 +5,23 @@ body{
   padding: 0;
 }
 
-
 /* -------------------------------------------------------------------------------------------1st page--------------------------------------------------------------- */
 
 .services-bg-img-section{
-    height: 90vh;
+    min-height: 100vh;
     width: 100%;
     margin-top: 10vh;
     border: 2px solid transparent;
     background-color: #ebe3da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .services-main-container{
-    height: 87.9vh;
+    min-height: 90vh;
     width: 100%;
-    /* border: 2px solid blue; */
-    background-color:  transparent;
-    margin-top: 5vh;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,202 +30,509 @@ body{
   .services-text-part{
     height: 100%;
     width: 60%;
-    /* border: 2px solid blueviolet; */
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   
   .services-wrapper{
-    width: 120%;
-    height: 100vh;
-    top:-10%;
-    margin-left: -1%;
-    background: linear-gradient(rgba(0,0,0.7), rgba(0,0,0,0.5)), url(StockCake-Modern\ dental\ office_1736228364.jpg) center no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(StockCake-Modern\ dental\ office_1736228364.jpg) center no-repeat;
     background-size: cover;
-    /* box-shadow: 0.1rem 5rem rgba(0, 0, 0, 0.6); */
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .services-text-part .services-heading{
-    height: 10%;
-    width: 150%;
-    /* border: 2px solid blue; */
-    margin-top: 25%;
-    
+    width: 100%;
+    margin-bottom: 2rem;
   }
   
   .services-heading h3{
-    font-size: 2.5rem;
-    font-weight: normal;
-    margin-left: 48%;
-    color: white;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 500;
-    /* text-align: center; */
-    /* font-family: 'playfair display', serif; */
-    /* font-family: 'sweeth-gothic', sans-serif; */
+    color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
+    text-align: center;
+    margin: 0;
   }
   
   .services-text-part .services-sub-heading{
-    /* border: 2px solid rgb(189, 11, 71); */
-    height: 10%;
-    width: 150%;
-    margin-top: 0%;
+    width: 100%;
+    margin-bottom: 3rem;
   }
   
   .services-sub-heading p{
-    font-size: 1.5rem;
-    /* font-family: 'sweeth-gothic', sans-serif; */
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
     font-family: 'SangBleu Kingdom Light, Georgia', serif;
     letter-spacing: 0.1rem;
-    margin-left: 15%;
     color: white;
     font-weight: 500;
     text-align: center;
+    margin: 0;
+    line-height: 1.4;
   }
 
   .services-text-part .contact-btn{
-    height: 2.5rem;
-    width: 9.5rem;
-    border: 1px solid white;
+    height: clamp(2.5rem, 6vw, 3.5rem);
+    width: clamp(9rem, 20vw, 12rem);
+    border: 2px solid white;
     background-color: white;
-    margin-left: 70%;
-    margin-top: 2%;
-  }
-
-  .services-text-part .contact-btn{
-    text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 0.2rem;
     color: black;
-  }
-
-  .services-text-part .contact-btn:hover{
-    background-color: black;
-    cursor: pointer;
-    border: 2px solid transparent;
-  }
-  
-  .services-text-part a:hover button{
-    color: white;
-  } 
-  
-  .services-text-part .contact-btn{
-    margin-top: 2%;
-    height: 3rem;
-    width: 10rem;
-    /* border-radius: 20px; */
-    border: 1px solid white;
-    background-color: white;
-    margin-left: 76%;
-  }
-  
-  .services-text-part .contact-btn a{
     text-decoration: none;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     letter-spacing: 0.2rem;
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
   }
   
   .services-text-part .contact-btn:hover{
     background-color: black;
-    cursor: pointer;
-    border: 2px solid transparent;
-  }
-  
-  .services-text-part .contact-btn:hover a{
     color: white;
-  }
-  
-  @media (max-width: 1286px){
-  .services-heading h3{
-    font-size: 2.8rem;
-    margin-top: 25%;
-  }
-  
-  .services-sub-heading p{
-    font-size: 1.8rem;
-    margin-top: 2%;
-  }
-  
-  .services-text-part .contact-btn{
-    margin-top: 5%;
-  }
+    cursor: pointer;
+    transform: scale(1.05);
   }
   
   /* --------------------------------------------------------------------------2nd -------------------------------------------------- */
   
   .services-first-page-section{
-    height: 280vh;
+    min-height: auto;
     width: 100%;
     border: 2px solid transparent;
     background-color: #ebe3da;
+    padding: 4rem 0;
   }
   
   .services-first-page-section h2{
     text-align: center;
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    margin-top: 5%;
+    margin-bottom: 3rem;
+    color: #333;
   }
   
   .services-first-page-section .services-first-page-sub-section{
-    height: 270vh;
-    width: 92%;
-    margin-top: 5vh;
-    margin-left: 4%;
-    /* border: 2px solid blue; */
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
-  grid-template-rows: repeat(5, auto); /* Six rows with automatic height */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
   }
   
   .services-first-page-sub-section .our-services-first-container{
-    height: 45vh;
-    width: 25vw;
-    /* border: 2px solid red; */
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .our-services-first-container:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
   
   .our-services-first-container .serv-img{
-    height: 30vh;
-    width: 80%;
-    margin-left: 10%;
+    height: 250px;
+    width: 100%;
+    max-width: 300px;
     border: 8px solid black;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
-    margin-top: 2%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
   }
   
   .serv-img img{
     height: 100%;
     width: 100%;
-    background-size: cover;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .our-services-first-container:hover .serv-img img{
+    transform: scale(1.05);
   }
   
   .our-services-first-container h4{
-    /* border: 2px solid black; */
     text-align: center;
-    margin-top: 3%;
-    margin-bottom: 4%;
-    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 500;
     letter-spacing: 0.1rem;
+    color: #333;
+    line-height: 1.3;
   }
   
   .our-services-first-container a{
-    /* border: 2px solid blue; */
     text-align: center;
-    margin-left: 37%;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 500;
-    color: blue;
-    /* letter-spacing: 0.1rem; */
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
   }
   
   .our-services-first-container a:hover{
-    color: red;
+    color: #cc0000;
+    background-color: rgba(204, 0, 0, 0.1);
+  }
+
+/* =========================================================== RESPONSIVE DESIGN ========================================== */
+
+/* Large Desktop (1400px and above) */
+@media (min-width: 1400px) {
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .services-heading h3 {
+    font-size: 3.5rem;
+  }
+  
+  .services-sub-heading p {
+    font-size: 2rem;
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 280px;
+  }
+}
+
+/* Desktop (1200px - 1399px) */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .services-heading h3 {
+    font-size: 3rem;
+  }
+  
+  .services-sub-heading p {
+    font-size: 1.8rem;
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 260px;
+  }
+}
+
+/* Large Tablet (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+  }
+  
+  .services-heading h3 {
+    font-size: 2.5rem;
+  }
+  
+  .services-sub-heading p {
+    font-size: 1.6rem;
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 240px;
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .services-text-part {
+    width: 80%;
+  }
+  
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .services-heading h3 {
+    font-size: 2.2rem;
+  }
+  
+  .services-sub-heading p {
+    font-size: 1.4rem;
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 220px;
+  }
+  
+  .services-first-page-section {
+    padding: 3rem 0;
+  }
+}
+
+/* Large Mobile (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .services-bg-img-section {
+    margin-top: 8vh;
+  }
+  
+  .services-text-part {
+    width: 90%;
+  }
+  
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    width: 95%;
+  }
+  
+  .services-heading h3 {
+    font-size: 2rem;
+  }
+  
+  .services-sub-heading p {
+    font-size: 1.3rem;
+  }
+  
+  .our-services-first-container {
+    min-height: 350px;
+    padding: 1rem;
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 200px;
+  }
+  
+  .services-first-page-section {
+    padding: 2.5rem 0;
+  }
+}
+
+/* Mobile (480px - 575px) */
+@media (max-width: 575px) and (min-width: 480px) {
+  .services-bg-img-section {
+    margin-top: 6vh;
+  }
+  
+  .services-text-part {
+    width: 95%;
+  }
+  
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 95%;
+  }
+  
+  .services-heading h3 {
+    font-size: 1.8rem;
+  }
+  
+  .services-sub-heading p {
+    font-size: 1.2rem;
+  }
+  
+  .our-services-first-container {
+    min-height: 320px;
+    padding: 0.8rem;
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 180px;
+  }
+  
+  .services-first-page-section {
+    padding: 2rem 0;
+  }
+}
+
+/* Small Mobile (375px - 479px) */
+@media (max-width: 479px) and (min-width: 375px) {
+  .services-bg-img-section {
+    margin-top: 5vh;
+  }
+  
+  .services-text-part {
+    width: 95%;
+  }
+  
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 95%;
+  }
+  
+  .services-heading h3 {
+    font-size: 1.6rem;
+  }
+  
+  .services-sub-heading p {
+    font-size: 1.1rem;
+  }
+  
+  .our-services-first-container {
+    min-height: 300px;
+    padding: 0.8rem;
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 160px;
+  }
+  
+  .services-first-page-section {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Extra Small Mobile (320px - 374px) */
+@media (max-width: 374px) and (min-width: 320px) {
+  .services-bg-img-section {
+    margin-top: 4vh;
+  }
+  
+  .services-text-part {
+    width: 98%;
+  }
+  
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    width: 98%;
+  }
+  
+  .services-heading h3 {
+    font-size: 1.4rem;
+  }
+  
+  .services-sub-heading p {
+    font-size: 1rem;
+  }
+  
+  .our-services-first-container {
+    min-height: 280px;
+    padding: 0.6rem;
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 140px;
+  }
+  
+  .services-first-page-section {
+    padding: 1rem 0;
+  }
+}
+
+/* Very Small Mobile (below 320px) */
+@media (max-width: 319px) {
+  .services-bg-img-section {
+    margin-top: 3vh;
+  }
+  
+  .services-text-part {
+    width: 98%;
+  }
+  
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    width: 98%;
+  }
+  
+  .services-heading h3 {
+    font-size: 1.3rem;
+  }
+  
+  .services-sub-heading p {
+    font-size: 0.9rem;
+  }
+  
+  .our-services-first-container {
+    min-height: 260px;
+    padding: 0.5rem;
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 120px;
+  }
+  
+  .services-first-page-section {
+    padding: 0.8rem 0;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .services-bg-img-section {
+    min-height: 80vh;
+    margin-top: 5vh;
+  }
+  
+  .services-main-container {
+    min-height: 75vh;
+  }
+  
+  .services-first-page-section .services-first-page-sub-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .our-services-first-container .serv-img {
+    height: 120px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .serv-img img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print styles */
+@media print {
+  .services-bg-img-section {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .services-wrapper {
+    background: none !important;
+  }
+  
+  .services-heading h3,
+  .services-sub-heading p {
+    color: black !important;
+  }
+  
+  .services-first-page-section {
+    background-color: white !important;
+  }
+  
+  .our-services-first-container {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
   }
   
   

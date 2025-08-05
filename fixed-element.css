@@ -1,161 +1,46 @@
-.phn-no{
-    height: 5vh;
-    width: auto;
-    border: 3px solid blue;
-    padding: 0 15px;
-    margin-top: 8.5%;
-    position: absolute;
+/* ===========================================================
+   FIXED ELEMENTS STYLING
+   =========================================================== */
+
+/* Contact Button */
+#contact-btn {
     position: fixed;
-    background: blue;
-    z-index: 1000;
-    margin-left: 88%;
-  }
-  
-  .whatsapp-no{
-    height: 4vh;
-    width: auto;
-    /* border: 3px solid black; */
-    padding: 0 15px;
-    margin-top: 43.2%;
-    position: absolute;
-    position: fixed;
-    background: transparent;
-    z-index: 1000;
-    margin-left: 94%;
-  }
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
 
-  #contact-btn button{
-    text-decoration: none;
+.phn-no {
+    background: linear-gradient(45deg, #8B4513, #A0522D);
     color: white;
-    letter-spacing: 0.1rem;
-  }
-
-  .whatsapp-no a{
-    font-size: 3.5rem;
-    color: green;
-  }
-
-  
-  button:hover{
-    background: #000;
-    cursor: pointer;
-    border: 3px solid black;
-  }
-
-  .whatsapp-no:hover a{
-    color: black;
-  }
-  
-  #contact-btn:hover button{
-    color: white;
-  }
-
-/* --- Responsive Fixed Elements --- */
-@media (max-width: 854px) {
-  .phn-no {
-    margin-left: 85%;
-    margin-top: 10%;
-    height: 4vh;
-    padding: 0 10px;
-    font-size: 0.9rem;
-  }
-  
-  .whatsapp-no {
-    margin-left: 90%;
-    margin-top: 45%;
-    height: 3vh;
-  }
-  
-  .whatsapp-no a {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .phn-no {
-    margin-left: 80%;
-    margin-top: 12%;
-    height: 3.5vh;
-    padding: 0 8px;
-    font-size: 0.8rem;
-  }
-  
-  .whatsapp-no {
-    margin-left: 85%;
-    margin-top: 47%;
-    height: 2.5vh;
-  }
-  
-  .whatsapp-no a {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .phn-no {
-    margin-left: 75%;
-    margin-top: 15%;
-    height: 3vh;
-    padding: 0 6px;
-    font-size: 0.7rem;
-  }
-  
-  .whatsapp-no {
-    margin-left: 80%;
-    margin-top: 50%;
-    height: 2vh;
-  }
-  
-  .whatsapp-no a {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .phn-no {
-    margin-left: 70%;
-    margin-top: 18%;
-    height: 2.5vh;
-    padding: 0 4px;
-    font-size: 0.6rem;
-  }
-  
-  .whatsapp-no {
-    margin-left: 75%;
-    margin-top: 52%;
-    height: 1.8vh;
-  }
-  
-  .whatsapp-no a {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .phn-no {
-    margin-left: 65%;
-    margin-top: 20%;
-    height: 2vh;
-    padding: 0 3px;
-    font-size: 0.5rem;
-  }
-  
-  .whatsapp-no {
-    margin-left: 70%;
-    margin-top: 55%;
-    height: 1.5vh;
-  }
-  
-  .whatsapp-no a {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
     font-size: 1rem;
-  }
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-/* Hide fixed elements on very small screens to prevent overlap */
-@media (max-width: 300px) {
-  .phn-no,
-  .whatsapp-no {
-    display: none;
-  }
+.phn-no:hover {
+    transform: translateY(-2px);
+}
+
+/* WhatsApp Button */
+.whatsapp-no {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+}
+
+.whatsapp-no a {
+    color: #25D366;
+    font-size: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-no a:hover {
+    transform: scale(1.1);
 }
   

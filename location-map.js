@@ -1,37 +1,69 @@
-// function initMap() {
-//     var andheriLocation = {lat: 19.1397, lng: 72.8272}; // Andheri coordinates
-//     var southMumbaiLocation = {lat: 18.9601, lng: 72.8120}; // South Mumbai coordinates
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM loaded, initializing location map page');
+  
+  // Initialize people slider if Swiper is available
+  if (typeof Swiper !== 'undefined') {
+    initializePeopleSlider();
+  } else {
+    console.log('Swiper not available, waiting...');
+    // Wait a bit for Swiper to load
+    setTimeout(initializePeopleSlider, 1000);
+  }
+});
 
-//     // Andheri Map
-//     var andheriMap = new google.maps.Map(document.getElementById('andheri-map'), {
-//         zoom: 15,
-//         center: andheriLocation
-//     });
-//     new google.maps.Marker({
-//         position: andheriLocation,
-//         map: andheriMap,
-//         title: "Andheri Clinic"
-//     });
+function initializePeopleSlider() {
+  const peopleSlider = document.querySelector('.people-slider-wrapper');
+  if (!peopleSlider) {
+    console.log('People slider not found');
+    return;
+  }
+  
+  if (typeof Swiper === 'undefined') {
+    console.log('Swiper still not available');
+    return;
+  }
+  
+  console.log('Initializing people slider');
+  
+  // People Slider with Swiper
+const swiperpeople = new Swiper('.people-slider-wrapper', {
+  loop: true,
+    grabCursor: true,
+    spaceBetween: 25,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
 
-//     // South Mumbai Map
-//     var southMumbaiMap = new google.maps.Map(document.getElementById('south-mumbai-map'), {
-//         zoom: 15,
-//         center: southMumbaiLocation
-//     });
-//     new google.maps.Marker({
-//         position: southMumbaiLocation,
-//         map: southMumbaiMap,
-//         title: "South Mumbai Clinic"
-//     });
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
 
-//     // South Mumbai Map
-//     var colabaMap = new google.maps.Map(document.getElementById('colaba-map'), {
-//         zoom: 15,
-//         center: colabaLocation
-//     });
-//     new google.maps.Marker({
-//         position: colabaLocation,
-//         map: colabaMap,
-//         title: "Colaba Clinic"
-//     });
-// }
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+        spaceBetween: 15
+      },
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 20
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 25
+    },
+    1024: {
+        slidesPerView: 3,
+        spaceBetween: 25
+    },
+  }
+});
+}

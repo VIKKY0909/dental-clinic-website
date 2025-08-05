@@ -5,99 +5,85 @@ body{
   padding: 0;
 }
 
-
 /* ------------------------------------------------------------------------------------------1st page------------------------------------------------------------------------------------- */
 
-
 .general-dentistry-bg-img-section{
-    height: 90vh;
+    min-height: 90vh;
     width: 100%;
-    margin-top: 10vh;
-    border: 2px solid transparent;
+    margin-top: clamp(60px, 8vw, 10vh);
     background-color: #ebe3da;
-  }
+}
   
-  .general-dentistry-main-container{
-    height: 87.9vh;
+.general-dentistry-main-container{
+    min-height: 87.9vh;
     width: 100%;
-    /* border: 2px solid blue; */
-    background-color:  transparent;
-    margin-top: 5vh;
+    background-color: transparent;
+    margin-top: clamp(30px, 4vw, 5vh);
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .general-dentistry-text-part{
+.general-dentistry-text-part{
     height: 100%;
-    width: 60%;
-    /* border: 2px solid blueviolet; */
-  }
+    width: clamp(300px, 60%, 60%);
+}
   
-  .general-dentistry-wrapper{
-    width: 120%;
+.general-dentistry-wrapper{
+    width: clamp(100%, 120%, 120%);
     height: 100vh;
-    top:-10%;
-    margin-left: -1%;
+    top: -10%;
+    margin-left: clamp(-2%, -1%, -1%);
     background: linear-gradient(rgba(0,0,0.7), rgba(0,0,0,0.5)), url(StockCake-Dental\ Tools\ Prepared_1736105513.jpg) center no-repeat;
     background-size: cover;
-    /* box-shadow: 0.1rem 5rem rgba(0, 0, 0, 0.6); */
     position: relative;
-  }
+}
   
-  .general-dentistry-text-part .general-dentistry-heading{
+.general-dentistry-text-part .general-dentistry-heading{
     height: 10%;
-    width: 150%;
-    /* border: 2px solid blue; */
-    margin-top: 25%;
-    
-  }
+    width: clamp(200px, 150%, 150%);
+    margin-top: clamp(15%, 25%, 25%);
+}
   
-  .general-dentistry-heading h3{
-    font-size: 2rem !important;
+.general-dentistry-heading h3{
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
     font-weight: normal;
-    margin-left: 44%;
+    margin-left: clamp(20%, 44%, 44%);
     color: white;
     font-weight: 500;
-    /* text-align: center; */
-    /* font-family: 'playfair display', serif; */
-    /* font-family: 'sweeth-gothic', sans-serif; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-  }
+}
   
-  .general-dentistry-text-part .general-dentistry-sub-heading{
-    /* border: 2px solid rgb(189, 11, 71); */
+.general-dentistry-text-part .general-dentistry-sub-heading{
     height: 10%;
-    width: 150%;
-    margin-top: -3%;
-  }
+    width: clamp(200px, 150%, 150%);
+    margin-top: clamp(-5%, -3%, -3%);
+}
   
-  .general-dentistry-sub-heading p{
-    font-size: 1.3rem !important;
-    /* font-family: 'sweeth-gothic', sans-serif; */
+.general-dentistry-sub-heading p{
+    font-size: clamp(1rem, 2.5vw, 1.3rem) !important;
     font-family: 'SangBleu Kingdom Light, Georgia', serif;
     letter-spacing: 0.1rem;
-    margin-left: 20%;
+    margin-left: clamp(10%, 20%, 20%);
     color: white;
     font-weight: 500;
-  }
+}
 
-  .general-dentistry-text-part .contact-btn{
-    height: 2.5rem;
-    width: 9.5rem;
+.general-dentistry-text-part .contact-btn{
+    height: clamp(2rem, 4vw, 2.5rem);
+    width: clamp(7rem, 15vw, 9.5rem);
     border: 1px solid white;
     background-color: white;
-    margin-left: 70%;
-    margin-top: 2%;
-  }
-
-  .general-dentistry-text-part .contact-btn{
+    margin-left: clamp(40%, 70%, 70%);
+    margin-top: clamp(1%, 2%, 2%);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
     letter-spacing: 0.2rem;
     color: black;
-  }
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
   .general-dentistry-text-part .contact-btn:hover{
     background-color: black;

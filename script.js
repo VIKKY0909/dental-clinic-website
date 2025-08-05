@@ -1,14 +1,8 @@
-//toggle icon navbar
+// ===========================================================
+// NAVIGATION FUNCTIONALITY
+// ===========================================================
 
-// let menuIcon = document.querySelector('#menu-icon');
-// let navbar = document.querySelector('.nav-list');
-
-// menuIcon.onclick = () => {
-//   console.log(navbar); 
-//   menuIcon.classList.toggle('bx-x');
-//   navbar.classList.toggle('active'); 
-// }
-
+// Mobile Navigation Toggle
 document.addEventListener("DOMContentLoaded", function () {
     console.log("✅ DOM Loaded, Script Running!");
 
@@ -110,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             dropdownLink.setAttribute('aria-expanded', 'false');
             dropdownOpen = false;
         }
+        
         function openDropdown() {
             dropdownMenu.style.display = 'block';
             dropdownLink.setAttribute('aria-expanded', 'true');
@@ -127,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         });
+
         // Close dropdown when clicking outside
         document.addEventListener('click', function (e) {
             if (isMobile() && dropdownOpen && !dropdown.contains(e.target)) {
@@ -161,10 +157,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+ 
 
+ 
 
+ 
 
+ 
 
+ 
 
 //for home page bg
 
@@ -479,12 +480,82 @@ const swiperpeople = new Swiper('.people-slider-wrapper', {
 
 
 
+ 
+
+ 
 
 // for work with us 
 
 document.getElementById('work-with-us-form').addEventListener('submit', function(event) {
   event.preventDefault();
   alert('Form submitted successfully!');
+});
+
+// ===========================================================
+// ADDITIONAL FUNCTIONALITY
+// ===========================================================
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Add scroll effect to navbar
+let lastScrollTop = 0;
+const navbar = document.querySelector('header');
+
+if (navbar) {
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up
+            navbar.style.transform = 'translateY(0)';
+        }
+        lastScrollTop = scrollTop;
+    });
+}
+
+// Add loading animation
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.dentists-intro-container li, .dentists-clinic-intro-container li, .mission-content, .service-item, .treatment-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
 });
 
 

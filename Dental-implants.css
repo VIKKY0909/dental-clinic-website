@@ -5,906 +5,1015 @@ body{
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
 
 /* ==============================================================================-1st-page-=========================================================================== */
 
 .dental-implants-section{
-    height: 90vh;
-    width: 100%;
-    margin-top: 9vh;
-    /* border: 2px solid transparent; */
-    background-color:  #c0b9b2;
-  }
-  
-  .dental-implants-main-container{
-    height: 100vh;
-    width: 100%;
-    /* border: 2px solid blue; */
-    background-color:  #c0b9b2;
-    margin-top: 7vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .dental-implants-text-part{
-    height: 100%;
-    width: 60%;
-    /* border: 2px solid blueviolet; */
-  }
-  
-  .dental-implants-wrapper{
-    width: 100%;
-    height: 100vh;
-    top:-10%;
-    background: linear-gradient(rgba(0,0,0.7), rgba(0,0,0,0.5)), url(StockCake-Luxurious\ Dental\ Suite_1735882846.jpg) center no-repeat;
-    background-size: cover;
-    /* box-shadow: 0.1rem 5rem rgba(0, 0, 0, 0.6); */
-    position: relative;
-  }
-  
-  
-  .dental-implants-text-part .dental-implants-heading{
-    height: 10%;
-    width: 150%;
-    /* border: 2px solid blue; */
-    margin-top: 25%;
-    
-  }
-  
-  .dental-implants-heading h3{
-    font-size: 2rem !important;
-    font-weight: normal;
-    margin-left: 44%;
-    color: white;
-    font-weight: 500;
-    /* text-align: center; */
-    /* font-family: 'playfair display', serif; */
-    /* font-family: 'sweeth-gothic', sans-serif; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-  }
-  
-  .dental-implants-text-part .dental-implants-sub-heading{
-    /* border: 2px solid rgb(189, 11, 71); */
-    height: 10%;
-    width: 150%;
-    margin-top: 0%;
-  }
-  
-  .dental-implants-sub-heading p{
-    font-size: 1.3rem !important;
-    /* font-family: 'sweeth-gothic', sans-serif; */
-    font-family: 'SangBleu Kingdom Light, Georgia', serif;
-    letter-spacing: 0.1rem;
-    margin-left: 30%;
-    color: white;
-    font-weight: 500;
+  min-height: 90vh;
+  width: 100%;
+  margin-top: 0;
+  background-color: #c0b9b2;
+  overflow-x: hidden;
+}
+
+.dental-implants-main-container{
+  min-height: 90vh;
+  width: 100%;
+  margin-top: 0;
+  background-color: #c0b9b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dental-implants-text-part{
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.dental-implants-wrapper{
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(StockCake-Luxurious\ Dental\ Suite_1735882846.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dental-implants-text-part .dental-implants-heading{
+  width: 100%;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.dental-implants-heading h3{
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 500;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dental-implants-text-part .dental-implants-sub-heading{
+  width: 100%;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.dental-implants-sub-heading p{
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-family: 'SangBleu Kingdom Light, Georgia', serif;
+  letter-spacing: 0.1rem;
+  color: white;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dental-implants-text-part a{
+  text-decoration: none;
+}
+.dental-implants-text-part .contact-btn{
+  height: clamp(2.5rem, 6vw, 3.5rem);
+  width: clamp(8rem, 20vw, 12rem);
+  border: 2px solid white;
+  background-color: white;
+  color: #333;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dental-implants-text-part .contact-btn:hover {
+  background-color: transparent;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ==============================================================================-responsive-design-=========================================================================== */
+
+@media (max-width: 1024px) {
+  .dental-implants-section {
+    min-height: 80vh;
   }
 
-  .dental-implants-text-part .contact-btn{
-    height: 2.5rem;
-    width: 9.5rem;
-    border: 1px solid white;
-    background-color: white;
-    margin-left: 70%;
-    margin-top: 2%;
+  .dental-implants-main-container {
+    min-height: 80vh;
   }
 
-  .dental-implants-text-part .contact-btn{
-    text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 0.2rem;
-    color: black;
+  .dental-implants-wrapper {
+    height: 80vh;
   }
 
-  .dental-implants-text-part .contact-btn:hover{
-    background-color: black;
-    cursor: pointer;
-    border: 2px solid transparent;
+  .dental-implants-text-part {
+    padding: 0 clamp(1.5rem, 5vw, 2.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .dental-implants-section {
+    min-height: 70vh;
+    margin-top: 0;
+  }
+
+  .dental-implants-main-container {
+    min-height: 70vh;
+    margin-top: 0;
+  }
+
+  .dental-implants-wrapper {
+    height: 70vh;
+  }
+
+  .dental-implants-text-part {
+    width: 100%;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+  }
+
+  .dental-implants-heading {
+    width: 100%;
+    margin-bottom: clamp(0.8rem, 2.5vw, 1.5rem);
   }
   
-  .dental-implants-text-part a:hover button{
-    color: white;
-  } 
+  .dental-implants-heading h3 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    text-align: center;
+    margin: 0;
+  }
   
- 
+  .dental-implants-sub-heading {
+    width: 100%;
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .dental-implants-sub-heading p {
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    text-align: center;
+    margin: 0;
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
+  }
+
+  .dental-implants-text-part .contact-btn {
+    width: clamp(7rem, 25vw, 10rem);
+    height: clamp(2.2rem, 7vw, 3rem);
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
+
+  .whatsapp-no {
+    bottom: 70px;
+    right: 15px;
+  }
+
+  .whatsapp-no a {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .dental-implants-section {
+    min-height: 60vh;
+    margin-top: 0;
+  }
   
+  .dental-implants-main-container {
+    min-height: 60vh;
+    margin-top: 0;
+  }
   
-  /* ===========================================================================2nd page=============================================================================== */
+  .dental-implants-wrapper {
+    height: 60vh;
+  }
+  
+  .dental-implants-text-part {
+    padding: 0 clamp(0.8rem, 3vw, 1.5rem);
+  }
+
+  .dental-implants-heading {
+    margin-bottom: clamp(0.6rem, 2vw, 1rem);
+  }
+  
+  .dental-implants-heading h3 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+    text-align: center;
+    margin: 0;
+  }
+  
+  .dental-implants-sub-heading {
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .dental-implants-sub-heading p {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+    text-align: center;
+    margin: 0;
+    padding: 0 clamp(0.3rem, 1.5vw, 0.8rem);
+  }
+  
+  .dental-implants-text-part .contact-btn {
+    width: clamp(6rem, 30vw, 8rem);
+    height: clamp(2rem, 8vw, 2.5rem);
+    font-size: clamp(0.7rem, 3.5vw, 0.9rem);
+  }
+
+  .whatsapp-no {
+    bottom: 60px;
+    right: 10px;
+  }
+
+  .whatsapp-no a {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+}
+
+@media (max-width: 320px) {
+  .dental-implants-section {
+    min-height: 55vh;
+    margin-top: 0;
+  }
+  
+  .dental-implants-main-container {
+    min-height: 55vh;
+    margin-top: 0;
+  }
+  
+  .dental-implants-wrapper {
+    height: 55vh;
+  }
+
+  .dental-implants-heading h3 {
+    font-size: clamp(1.3rem, 9vw, 1.8rem);
+    text-align: center;
+    margin: 0;
+  }
+  
+  .dental-implants-sub-heading p {
+    font-size: clamp(0.8rem, 4.5vw, 1rem);
+    text-align: center;
+    margin: 0;
+  }
+  
+  .dental-implants-text-part .contact-btn {
+    width: clamp(5rem, 35vw, 7rem);
+    height: clamp(1.8rem, 10vw, 2.2rem);
+    font-size: clamp(0.6rem, 4vw, 0.8rem);
+  }
+}
+
+/* ==============================================================================-2nd-page-=========================================================================== */
   
   .implants-second-section{
-    height: 80vh;
+    min-height: 90vh;
     width: 100%;
-    /* border: 2px solid red; */
-    /* background-color:  #eae2d9; */
+    background-color: #ebe3da;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   }
   
   .second-section-main-container{
-    height: 80vh;
-    width: 100%;
-    /* border: 2px solid black; */
-    background-color:  #ebe3da;
-    /* margin-top: 11vh; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .image-part{
-    height: 100%;
-    width: 45%;
-    /* border: 2px solid blueviolet; */
+    flex: 1;
   }
   
   .image-part .img-dental-implant2{
-    height: 58%;
-    width: 65%;
-    margin-top: 20%;
-    margin-left: 14%;
-    background-size: cover;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
   
   .text-part{
-    height: 100%;
-    width: 50%;
-    /* border: 2px solid blueviolet; */
+    flex: 1;
   }
   
   .text-part .second-section-heading{
-    height: 8%;
-    width: 90%;
-    /* border: 2px solid blue; */
-    margin-top: 20%;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
   }
   
   .text-part .second-section-heading h3{
-    /* font-size: 2rem;
-    font-weight: normal;
-    margin-left: 4%; */
-    /* text-align: center; */
-    /* font-family: 'playfair display', serif; */
-    /* font-family: 'sweeth-gothic', sans-serif; */
-    /* font-family: 'SangBleu Kingdom Light, Georgia', serif;
-    letter-spacing: 0.1rem; */
-    font-size: 2rem;
-    font-weight: normal;
-    font-family: 'Sweet Gothic', sans-serif;
-    text-align: start;
-    margin-left: 2%;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
+    font-weight: 500;
+    color: #8B4513;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
   }
   
   .text-part .second-section-sub-heading{
-    /* border: 2px solid rgb(189, 11, 71); */
-    height: 50%;
-    width: 100%;
-    margin-top: 2%;
+    line-height: 1.8;
   }
   
   .text-part .second-section-sub-heading p{
-    /* margin-top: 4%; */
-    margin-left: 3%;
-    margin-right: 3%;
-    font-size: 1rem;
-    font-weight: normal;
-    /* text-align: end; */
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
   }
   
-  
-  /* -----------------------------------------------------------------------------------------------2.5---------------------------------------------------------------------------------- */
+/* ==============================================================================-2.5-page-=========================================================================== */
   
   .bef-aft-dent-implants-section{
-    height: 70vh;
+    min-height: 90vh;
     width: 100%;
     background-color: #ebe3da;
-    border: 2px solid transparent;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   }
   
   .dentalsmile-image-container{
-    height: 60vh;
-    width: 80%;
-    margin-left: 8%;
-    margin-top: 5%;
-    /* gap: 1%; */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid black; */
+    gap: clamp(1rem, 3vw, 2rem);
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
   }
   
   .dentalsmile-before-container, .dentalsmile-after-container{
-    /* height: 53vh;
-    width: 28%; */
-    position: relative;
-      /* border: 10px solid blue;  */
-      /* padding: 10px; */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 320px; /* Adjust as needed */
-      height: 420px; /* Adjust as needed */
-    background-color: transparent;
-    margin-right: 10px;
-    border-radius: 20px;
-    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); */
-    /* border: 2px solid black; */
+    flex: 1;
+    min-width: clamp(300px, 45%, 45%);
+    background-color: white;
+    border-radius: 10px;
+    padding: clamp(1rem, 3vw, 2rem);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
   .dentalsmile-before-container .dentalsmile-b-img-sub-container{
-    height: 58vh;
     width: 100%;
-    margin-left: 0%;
-    margin-top: 0%;
-    /* transform: translate(-50%,-50%); */
-    border: 5px solid black;
+    height: clamp(200px, 40vw, 300px);
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 10px;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
   }
   
   .dentalsmile-after-container .dentalsmile-a-img-sub-container{
-    height: 58vh;
     width: 100%;
-    margin-left: 15%;
-    margin-top: 0%;
+    height: clamp(200px, 40vw, 300px);
     overflow: hidden;
-    border: 5px solid black;
-    border-radius: 20px;
+    border-radius: 10px;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+}
+  
+  .dentalsmile-b-img-sub-container .dentalsmile-before-images-content{
+      position: relative;
+      width: 100%;
+      height: clamp(200px, 40vw, 300px);
   }
   
+  .dentalsmile-a-img-sub-container .dentalsmile-after-images-content{
+      position: relative;
+      width: 100%;
+      height: clamp(200px, 40vw, 300px);
+  }
   
   .dentalsmile-b-img-sub-container .dentalsmile-before-images-content img{
-    height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
     width: 100%;
+      height: 100%;
     object-fit: cover; 
-    /* border: 2px solid blue; */
+      display: none;
+      transition: opacity 0.5s ease;
   }
   
   .dentalsmile-a-img-sub-container .dentalsmile-after-images-content img{
-    height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
     width: 100%;
+      height: 100%;
     object-fit: cover; 
+      display: none;
+      transition: opacity 0.5s ease;
+  }
+  
+  /* Show first image by default */
+  .dentalsmile-b-img-sub-container .dentalsmile-before-images-content img:first-child,
+  .dentalsmile-a-img-sub-container .dentalsmile-after-images-content img:first-child{
+      display: block;
   }
   
   .dentallabel {
-    position: absolute;
-    bottom: -20px; /* Adjusted to place inside the border */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    padding: 5px 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    border: 2px solid black;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.2);
-  }
-  
-  /* ----------------------------------------------------------------------------------------------------2.9------------------------------------------------------------------------------ */
-  
+    text-align: center;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    color: #8B4513;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* ==============================================================================-3rd-page-=========================================================================== */
   
   .dental-makeover-testimonials-section{
-    height: 90vh;
+    min-height: 70vh;
     width: 100%;
-    padding-top: 10%;
-    background-color: #ebe3da;
+    background-color: #c0b9b2;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   }
   
   .dental-makeover-testimonials-container{
-    padding: 50px 0 100px;
-    /* border: 2px solid black; */
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .dental-makeover-testimonials-container .dentalmakeover-section-title{
     text-align: center;
-    /* border: 2px solid black; */
-    padding-left: 5%;
-    font-size: 2rem;
-    font-weight: normal;
-    letter-spacing: 0.1rem;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    color: #8B4513;
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
   }
   
   .dental-makeover-testimonials-container .makeover-dentaltestimonial{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 15px;
-    padding-bottom: 50px;
-    text-align: center;
-    /* border: 2px solid blue; */
-    margin-top: 2%;
+    background-color: white;
+    border-radius: 10px;
+    padding: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
   .dental-makeover-testimonials-container .makeover-dentaltestimonial p{
-    line-height: 25px;
-    /* border: 2px solid blueviolet; */
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    line-height: 1.6;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
   }
   
   .dental-makeover-testimonials-container .makeover-dentaltestimonial .dentaluser-video{
-    width: 300px; /* Set the width of the video */
-    height: 300px; /* Set the height of the video */
-    overflow: hidden; /* Hide the edges outside the circle */
-    object-fit: cover; /* Ensure the video fills the circle */
-    /* border: 5px solid #000; */
-    margin-bottom: 50px;
-    /* border: 2px solid yellow; */
+    width: 100%;
+    max-width: 400px;
+    height: clamp(200px, 40vw, 250px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
   }
   
   .dental-makeover-testimonials-container .makeover-dentaltestimonial .dentaluser-video:hover{
-    cursor: pointer;
-  
-  }
-  
-  
-  
-  /* ----------------------------------------------------------------------------------------------3-------------------------------------------------------------------------- */
-  
-  /* Section Styling */
+    transform: scale(1.05);
+}
+
+/* Swiper container styling */
+.makeover-slider-dentalcontainer,
+.basal-slider-container,
+.people-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.makeover-dentalslider-wrapper,
+.basal-slider-wrapper,
+.people-slider-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.makeover-dentaltestimonials-list,
+.basal-testimonials-list,
+.people-list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.makeover-dentaltestimonial,
+.basal-testimonials,
+.people-item {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==============================================================================-4th-page-=========================================================================== */
+
   .features-section {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* gap: 20px; */
-    height: 80vh;
-    /* padding: 50px 5%; */
-    /* border: 2px solid blue; */
+    min-height: 90vh;
+    width: 100%;
     background-color: #ebe3da;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   }
   
   .features-section h3{
-    width: 90%;
-    font-size: 1.7rem;
-    margin-left: 5%;
+    text-align: center;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #8B4513;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
   }
   
   .features-section .immediate-implants-container, .features-section .single-stage-container,
-  .features-section .conventional-container, .features-section .all-on-4-6-container{
-    height: 70vh;
-    width: 100%;
-    /* border: 2px solid red; */
-    /* margin-top: 2%; */
+.features-section .all-on-4-6-container{
     display: flex;
+    gap: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: clamp(2rem, 5vw, 3rem);
     align-items: center;
-    justify-content: center;
-  }
+    flex-wrap: wrap;
+}
   
-  .immediate-implants-container .imm-imp-img,
-  .conventional-container .con-con-img{
-    height: 50vh;
-    width: 35%;
-    margin-top: 2%;
-    margin-left: 2%;
-    /* border: 2px solid blue; */
+.imm-imp-img,
+.sin-stg-img,
+.all-on-4-6-img{
+    flex: 1;
+    min-width: clamp(250px, 40%, 40%);
   }
   
   .imm-imp-img img,
-  .con-con-img img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  .immediate-implants-container .immediate-implants-texts,
-  .conventional-container .con-con-texts{
-    height: 40vh;
-    width: 50%;
-    margin-left: 5%;
-    /* border: 2px solid blue; */
-    padding-top: 10%;
-  }
-  
-  .immediate-implants-texts h4,
-  .conventional-container h4{
-    font-size: 2rem;
-    text-align: end;
-    font-weight: normal;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    margin-top: 2.5%;
-  }
-  
-  .immediate-implants-texts p,
-  .con-con-texts p{
-    font-size: 1.2rem;
-    text-align: end;
-    font-weight: normal;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    margin-top: 2.5%;
-  }
-  
-  
-  /* ***************************************** */
-  
-  .single-stage-container .sin-stg-img,
-  .all-on-4-6-container .all-on-4-6-img{
-    height: 50vh;
-    width: 35%;
-    margin-top: 2%;
-    /* margin-left: 2%; */
-    /* border: 2px solid blue; */
-  }
-  
   .sin-stg-img img,
   .all-on-4-6-img img{
-    height: 100%;
     width: 100%;
-    object-fit: cover;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
   
+.immediate-implants-container .immediate-implants-texts,
   .single-stage-container .single-stage-texts,
   .all-on-4-6-container .all-on-4-6-texts{
-    height: 40vh;
-    width: 60%;
-    margin-left: 0%;
-    /* border: 2px solid blue; */
-    padding-top: 5%;
-  }
+    flex: 1;
+    min-width: clamp(250px, 50%, 50%);
+}
   
+.immediate-implants-texts h4,
   .single-stage-texts h4,
   .all-on-4-6-texts h4{
-    font-size: 2rem;
-    text-align: left;
-    font-weight: normal;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-    margin-top: 2.5%;
-    margin-left: 5%;
+    font-weight: 500;
+    color: #8B4513;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
   }
   
+.immediate-implants-texts p,
   .single-stage-texts p,
   .all-on-4-6-texts p{
-    font-size: 1.2rem;
-    text-align: start;
-    font-weight: normal;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-    width: 80%;
-    margin-top: 2.5%;
-    margin-left: 5%;
+    line-height: 1.6;
+    color: #333;
   }
   
-  
-  /* ============================================================================basal-section========================================================================== */
-  
+/* ==============================================================================-5th-page-=========================================================================== */
   
   .basal-section{
-    height: 135vh;
+    min-height: auto;
     width: 100%;
-    background-color: #ebe3da;
-    border: 12px solid transparent;
-  }
-  
-  .basal-section .basal-main-container{
-    height: 125vh;
-    width: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .basal-main-container .basal-features{
-    /* border: 2px solid greenyellow; */
-    height: 25vh;
-    width: 100%;
-    margin-top: 3%;
-  }
-  
-  .basal-features h3{
-    width: 90%;
-    font-size: 1.7rem;
-    margin-left: 5%;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  .basal-features p{
-    width: 90%;
-    font-size: 1.2rem;
-    margin-left: 5.5%;
-    margin-top: 2%;
-    letter-spacing: 0.1rem;
-    line-height: 1.7rem;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  .basal-main-container .basal-image-sub-container{
-    height: 50vh;
-    width: 80%;
-    /* border: 2px solid black; */
-    margin-top: 3%;
-    margin-left: 12vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    grid-template-rows: auto auto; /* Four rows */
-  }
-  
-  .basal-image-sub-container img{
-    height: 100%;
-    width: 25vw;
-    /* border: 2px solid black; */
-  }
-  
-  
-  .basal-image-sub-container #third-basal-img{
-    margin-left: 30%;
-  }
-  
-  .basal-image-sub-container #fourth-basal-img{
-    margin-left: -1%;
-  }
-  
-  /* ********************************************************** */
-  
-  
-  .basal-main-container .basal-text-sub-container{
-    height: 28vh;
-    width: 100%;
-    /* border: 2px solid red; */
-    margin-top: 5%;
-  }
-  
-  .basal-text-sub-container .basal-texts{
-    height: 25vh;
-    width: 100%;
-    /* border: 2px solid blue; */
-  }
-  
-  .basal-texts li{
-    /* border: 2px solid black; */
-    width: 90%;
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    margin-left: 5%;
-    text-align: left;
-    margin-top: 1%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  } 
-  
-  /* -------------------------------------------------------------------------------basal-video-testimonials----------------------------------------------------------- */
+    background-color: #c0b9b2;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+    overflow-x: hidden;
+}
+
+.basal-section .basal-main-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.basal-main-container .basal-features{
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.basal-features h3{
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.basal-features p{
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+.basal-main-container .basal-image-sub-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.basal-image-sub-container img{
+  width: 100%;
+  height: clamp(200px, 35vw, 300px);
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.basal-image-sub-container img:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.basal-image-sub-container #third-basal-img{
+  grid-column: 1;
+}
+
+.basal-image-sub-container #fourth-basal-img{
+  grid-column: 2;
+}
+
+.basal-main-container .basal-text-sub-container{
+  background-color: white;
+  border-radius: 15px;
+  padding: clamp(2rem, 5vw, 3rem);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.basal-main-container .basal-text-sub-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.basal-text-sub-container .basal-texts{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.basal-texts li{
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+  padding-left: clamp(1.5rem, 4vw, 2rem);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.basal-texts li:last-child {
+  margin-bottom: 0;
+}
+
+.basal-texts li:hover {
+  color: #8B4513;
+}
+
+.basal-texts li::before {
+  content: "✓";
+  color: #8B4513;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.basal-texts li:hover::before {
+  transform: scale(1.2);
+}
+
+/* ==============================================================================-6th-page-=========================================================================== */
   
   .basal-video-testimonials{
-    height: 85vh;
+    min-height: 70vh;
     width: 100%;
-    background-color:#ebe3da;
+    background-color: #ebe3da;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   }
   
   .basal-video-testimonials .basal-section-title{
-    font-size: 2.3rem;
     text-align: center;
-    font-weight: normal;
-    padding-top: 1%;
-    color: black;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* border: 2px solid blueviolet; */
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    color: #8B4513;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
   }
   
-  /* testimonial-styling */
-  
   .basal-video-testimonials .basal-testimonials{
-    display: flex;
-    /* padding: 35px; */
-    padding-top: 15px;
-    padding-bottom: 50px;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4%;
-    /* border: 2px solid black; */
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .basal-video-testimonials .basal-section-content .basal-slider-container{
-    width: 100%;
-      height: auto;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
   }
   
   .basal-video-testimonials .basal-section-content .basal-slider-container .basal-slider-wrapper .basal-testimonials-list{
-    display: flex;  /* Ensures horizontal sliding */
-      flex-wrap: nowrap;
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
   }
   
   .basal-video-testimonials .basal-testimonials iframe{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 50px;
-    /* border: 10px solid #D8D2C9; */
-    /* box-shadow: 5px 5px 5px 5px rgb(61, 44, 44); */
-    /* border-radius: 50%; */
+    width: 100%;
+    height: clamp(200px, 40vw, 250px);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
   .basal-video-testimonials .basal-swiper-pagination-bullet{
-    width: 15px;
-    height: 15px;
-    opacity: 1;
-    margin-bottom: 5%;
-    /* border: 2px solid black; */
-  }
-  
-  /* -----------------------------------------------------------------------------------------------------------teeths-replacement---------------------------------------- */
+    width: clamp(10px, 2vw, 15px);
+    height: clamp(10px, 2vw, 15px);
+    background-color: #8B4513;
+    border-radius: 50%;
+    margin: 0 clamp(0.25rem, 1vw, 0.5rem);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* ==============================================================================-7th-page-=========================================================================== */
   
   .teeths-replacement-section{
-    height: 85vh;
+    min-height: 90vh;
     width: 100%;
-    background-color: #ebe3da;
+    background-color: #c0b9b2;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   }
   
   .teeths-replacement-container{
-    height: 100%;
-    width: 100%;
-    /* border: 2px solid black; */
-    padding-top: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 30%, 30%), 1fr));
+    gap: clamp(1.5rem, 4vw, 2rem);
+    max-width: 1200px;
+    margin: 0 auto;
+}
   
-  .teeths-replacement-container .single-tooth-container{
-    height: 90%;
-    width: 35%;
-    /* border: 2px solid blue; */
-  }
-  
-  .teeths-replacement-container .multiple-teeth-container{
-    height: 90%;
-    width: 35%;
-    /* border: 2px solid blue; */
-  }
-  
+.teeths-replacement-container .single-tooth-container,
+.teeths-replacement-container .multiple-teeth-container,
   .teeths-replacement-container .all-mouth-container{
-    height: 90%;
-    width: 35%;
-    /* border: 2px solid blue; */
+    background-color: white;
+    border-radius: 10px;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
   
   .single-tooth-img, .multiple-teeth-img, .all-mouth-img{
-    height: 60%;
-    width: 80%;
-    /* border: 2px solid red; */
-    margin-left: 10%;
-  
+    width: 100%;
+    height: clamp(150px, 30vw, 200px);
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
   }
   
   .single-tooth-container .single-tooth-img .one-tooth-img,
-  .multiple-teeth-container .multiple-teeth-img .more-teeth-img,
-  .all-mouth-container .all-mouth-img .all-teeth-image{
-    height: 85%;
-    width: 85%;
-    background-size: cover;
-    /* border: 2px solid blue; */
-  
+.multiple-teeth-container .multiple-teeth-img .multiple-teeth-img,
+.all-mouth-container .all-mouth-img .all-mouth-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
   .single-tooth-name, .multiple-teeth-name, .all-mouth-name{
-    height: 10%;
-    width: 100%;
-    margin-top: 5%;
-    /* border: 2px solid blueviolet; */
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
   }
   
   .single-tooth-container .single-tooth-name h4,
   .multiple-teeth-container .multiple-teeth-name h4,
   .all-mouth-container .all-mouth-name h4{
-    font-size: 1.3rem;
-    text-align: center;
-    font-weight: normal;
+    font-size: clamp(1.1rem, 2.8vw, 1.3rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
+    font-weight: 500;
+    color: #8B4513;
   }
   
   .single-tooth-info, .multiple-teeth-info, .all-mouth-info{
-    height: 20%;
-    width: 80%;
-    /* margin-top: 5%; */
-    margin-left: 10%;
-    /* border: 2px solid rgb(248, 47, 255); */
+    line-height: 1.6;
   }
   
   .single-tooth-container .single-tooth-info p,
   .multiple-teeth-container .multiple-teeth-info p,
   .all-mouth-container .all-mouth-info p{
-    font-size: 1rem;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-    text-align: center;
-    font-weight: normal;
+    line-height: 1.6;
+    color: #333;
   }
   
-  /* <!-- -------------------------------------------------------------------------------------conven-teeth --> */
+/* ==============================================================================-8th-page-=========================================================================== */
   
   .conventional-implants-section{
-    height: 100vh;
+    min-height: 90vh;
     width: 100%;
     background-color: #ebe3da;
-    border: 2px solid transparent;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   }
   
   .conventional-implants-section h2{
-    width: 80%;
-    font-size: 2rem;
-    margin-left: 5%;
+    text-align: center;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    margin-top: 4%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #8B4513;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
   }
   
   .conventional-implants-section .conventional-texts-container{
-    height: auto;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 2%;
+    max-width: 800px;
+    margin: 0 auto clamp(2rem, 5vw, 3rem);
   }
   
   .conventional-implants-section .conventional-texts-container p{
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    text-align: left;
-    margin-top: 1%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
   }
   
   .conventional-implants-section .conventional-imgs-container{
-    height: 50vh;
-    width: 80%;
-    /* border: 2px solid blue; */
-    margin-top: 5%;
-    margin-left: 25vw;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    grid-template-rows: auto auto; /* Four rows */
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 20%, 20%), 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .conventional-imgs-container img{
-    height: 20vh;
-    width: 20vw;
+    width: 100%;
+    height: clamp(150px, 25vw, 200px);
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
   .conventional-imgs-container #conventional-img-1{
-    margin-left: 12%;
+    grid-column: span 2;
   }
   
   .conventional-imgs-container #conventional-img-2{
-    margin-left: -36%;
+    grid-column: span 2;
   }
   
   .conventional-imgs-container #conventional-img-3{
-    height: 28vh;
-    margin-left: 12%;
+    grid-column: span 2;
   }
   
   .conventional-imgs-container #conventional-img-4{
-    height: 28vh;
-    margin-left: -36%;
+    grid-column: span 2;
   }
   
-  /* -----------------------------------------------------------------advantages--------------------------------------------------------- */
+/* ==============================================================================-9th-page-=========================================================================== */
   
   .dental-implants-advantages-section{
-    height: 60vh;
+    min-height: 90vh;
     width: 100%;
-    background-color: #ebe3da ;
-    /* border: 2px solid brown; */
+    background-color: #c0b9b2;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   }
   
   .dental-implants-advantages-container{
-    height: 60vh;
-    width: 100%;
-    /* margin-top: 10vh; */
-    background-color: #ebe3da ;
-    /* border: 2px solid brown; */
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .advantage-title {
-    /* background: #f7f7f7; */
-    padding: 50px 20px;
-    margin-left: 1%;
+    text-align: center;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: normal;
-    font-size: 1.7rem;
     letter-spacing: 0.1rem;
+    font-weight: 500;
+    color: #8B4513;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
   }
   
   .advantages-dental-implants {
     display: grid;
-      grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-      grid-template-rows: auto auto auto auto; /* Four rows */
-      /* gap: 10px; Optional: Space between the cells */
-    gap: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 30%, 30%), 1fr));
+    gap: clamp(1.5rem, 4vw, 2rem);
   }
   
   .advantage {
-    border-radius: 5px;
-    padding: 15px;
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    background-color: white;
+    border-radius: 10px;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
   .advantage p{
-    letter-spacing: 0.1rem;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
-    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    line-height: 1.6;
+    color: #333;
   }
   
-  
-  /* -------------------------------------------------------------------------------------paragraph-section-------------------------------------------------------------------------------------------------------- */
+/* ==============================================================================-10th-page-=========================================================================== */
   
   .dental-implants-paragraph-section{
-    height: 110vh;
+    min-height: 90vh;
     width: 100%;
-    background-color: #ebe3da ;
-    border: 2px solid transparent;
+    background-color: #ebe3da;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
   }
   
   .dental-implants-paragraph-section .dental-implants-paragraph-container{
-    height: 105vh;
-    width: 100%;
-    margin-top: .5vh;
-    /* border: 2px solid brown; */
     display: flex;
+    gap: clamp(2rem, 5vw, 3rem);
+    max-width: 1200px;
+    margin: 0 auto;
     align-items: center;
-    justify-content: center;
-    gap: 5%;
+    flex-wrap: wrap;
   }
   
   .dental-clinic-img-container{
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid blue; */
+    flex: 1;
+    min-width: clamp(250px, 40%, 40%);
   }
   
   .dental-clinic-img-sub-container{
-    height: 80vh;
-    margin-top: 7.5vh;
-    width: 70%;
-    margin-left: 15%;
-    /* border: 2px solid green; */
+    width: 100%;
+    height: clamp(300px, 50vw, 400px);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
   
   .dental-clinic-img-sub-container .dentist-sample{
-    height: 100%;
     width: 100%;
-    background-size: cover;
+    height: 100%;
+    object-fit: cover;
   }
   
   .dental-clinic-text-container{
-    width: 45%;
-    height: 80%;
-    /* border: 2px solid green; */
-    padding-top: 10%;
-  }
+    flex: 1;
+    min-width: clamp(250px, 50%, 50%);
+}
+
+/* ==============================================================================-accordion-=========================================================================== */
   
   .accordion {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 10px;
-    height: 60%;
-    background-color: #ebe3da ;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    /* border: 2px solid blue; */
-    margin-top: 2%;
-    margin-right: 0%;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    background-color: white;
+    border-radius: 10px;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
   .accordion-item {
-     /* border-bottom: 1px solid #ddd; */
-     /* border: 2px solid black; */
-     margin-bottom: 5%;
-     /* padding: 3%; */
-     /* height: 15%; */
-     /* gap: 10%;  */
+    border-bottom: 1px solid #eee;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
   }
   
   .accordion-item:last-child {
@@ -912,738 +1021,1122 @@ body{
   }
   
   .accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: clamp(0.75rem, 2vw, 1rem);
     cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-right: -3%;
-    border: 2px solid transparent;
-    background-color: #dad3cd;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    color: #8B4513;
+    transition: background-color 0.3s ease;
   }
   
   .accordion-header:hover {
-    background-color: #6e6b69;
+    background-color: #f5f5f5;
   }
   
   .accordion-header span{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.3rem;
-    letter-spacing: 0.1rem;
-    font-weight: lighter;
+    float: right;
+    transition: transform 0.3s ease;
   }
   
   .accordion-content {
     max-height: 0;
     overflow: hidden;
-    padding: 0 20px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: #ebe3da;
-    z-index: 1000;
-    transition: max-height 0.4s ease, padding 0.4s ease;
+    transition: max-height 0.3s ease;
+    padding: 0 clamp(0.75rem, 2vw, 1rem);
   }
   
   .accordion-content.open {
-    max-height: 500px; /* Ensure it's enough to fit your content */
-    padding: 15px 20px;
-    display: block;
+    max-height: 500px;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(0.75rem, 2vw, 1rem);
   }
   
   .accordion-content p {
-    margin: 10px 0;
-    color: black;
-    letter-spacing: 0.1rem;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    line-height: 1.6;
+    color: #333;
   }
   
   .toggle-btn {
     background: none;
     border: none;
-    font-size: 1.2em;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     cursor: pointer;
-    outline: none;
-    font-weight: bold;
-    margin-right: 3%;
+    color: #8B4513;
+    transition: transform 0.3s ease;
   }
   
   .toggle-btn:focus {
-    /* outline: 2px solid #aaa; */
+    outline: none;
   }
   
-   /* ------------------------------------------------------------------------------------dentist-client------------------------------------ */
+/* ==============================================================================-people-section-=========================================================================== */
   
    .people-main-section{
-    position: relative;
+    min-height: auto;
     width: 100%;
-    height: 70vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; */
-    /* background-color: #BEB2A6; */
-    background-color:  #c0b9b2;
-    border: 2px solid transparent;
-  }
+    background-color: #f8f6f3;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+    overflow-x: hidden;
+}
   
+  .people-main-section .people-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
   
   .people-main-section .people-slider-wrapper{
-    overflow: hidden;
-    margin: 0 60x 50px;
+    position: relative;
+    padding: 0 clamp(4rem, 10vw, 6rem);
   }
   
-  
   .people-main-section .people-item {
-    display: flex;
-    /* padding: 35px; */
-    padding-top: 15px;
-    padding-bottom: 50px;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4%;
-    /* border: 2px solid black; */
+    padding: clamp(1rem, 3vw, 1.5rem);
+    height: auto;
   }
   
   .people-main-section .people-item .people-images{
-    width: 350px;
-    height: 250px;
-    background-size: cover;
-    /* border-radius: 50%; */
-    margin-bottom: 50px;
-    border: 10px solid #f9f2e8;
+    width: 100%;
+    height: clamp(200px, 35vw, 300px);
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .people-main-section .people-item .people-images:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
   }
   
   .people-main-section .swiper-pagination-bullet{
-    width: 15px;
-    height: 15px;
+    width: clamp(0.8rem, 2.5vw, 1rem);
+    height: clamp(0.8rem, 2.5vw, 1rem);
+    background-color: rgba(139, 69, 19, 0.5);
     opacity: 1;
-    margin-bottom: 5%;
-    /* border: 2px solid black; */
+    transition: all 0.3s ease;
   }
   
-  /* --- Mobile & Tablet Responsive Adjustments --- */
-@media (max-width: 854px) {
-  .dental-implants-section {
-    height: auto;
-    min-height: 90vh;
-    margin-top: 8vh;
+  /* Enhanced Swiper Navigation - Fixed Positioning */
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: clamp(3rem, 8vw, 4rem);
+    height: clamp(3rem, 8vw, 4rem);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    color: #8B4513;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(139, 69, 19, 0.1);
   }
   
-  .dental-implants-main-container {
-    height: auto;
-    min-height: 90vh;
-    margin-top: 5vh;
-    padding: 2rem 1rem;
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(139, 69, 19, 0.3);
   }
   
-  .dental-implants-wrapper {
-    height: auto;
-    min-height: 80vh;
-    top: 0;
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: bold;
   }
   
-  .dental-implants-text-part {
-    width: 100%;
-    height: auto;
+  .swiper-pagination-bullet {
+    width: clamp(0.8rem, 2.5vw, 1rem);
+    height: clamp(0.8rem, 2.5vw, 1rem);
+    background-color: rgba(139, 69, 19, 0.5);
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #8B4513;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  /* ==============================================================================-responsive-design-=========================================================================== */
+  
+  @media (max-width: 1024px) {
+    .people-main-section .people-slider-wrapper {
+      padding: 0 clamp(3.5rem, 8vw, 5rem);
+    }
+  
+    .people-main-section .people-item .people-images {
+      height: clamp(180px, 30vw, 250px);
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: clamp(2.8rem, 7vw, 3.5rem);
+      height: clamp(2.8rem, 7vw, 3.5rem);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .people-main-section .people-slider-wrapper {
+      padding: 0 clamp(3rem, 6vw, 4rem);
+    }
+  
+    .people-main-section .people-item {
+      padding: clamp(0.8rem, 2.5vw, 1rem);
+    }
+  
+    .people-main-section .people-item .people-images {
+      height: clamp(150px, 40vw, 200px);
+    }
+  
+    /* Enhanced Swiper navigation for mobile */
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: clamp(2.5rem, 12vw, 3.5rem);
+      height: clamp(2.5rem, 12vw, 3.5rem);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: clamp(0.9rem, 4vw, 1.1rem);
+    }
+  
+    .whatsapp-no {
+      bottom: 70px;
+      right: 15px;
+    }
+  
+    .whatsapp-no a {
+      font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .people-main-section {
+      padding: clamp(1.5rem, 4vw, 2rem) clamp(0.5rem, 2vw, 1rem);
+    }
+  
+    .people-main-section .people-slider-wrapper {
+      padding: 0 clamp(2.5rem, 5vw, 3rem);
+    }
+  
+    .people-main-section .people-item {
+      padding: clamp(0.5rem, 2vw, 0.8rem);
+    }
+  
+    .people-main-section .people-item .people-images {
+      height: clamp(120px, 50vw, 160px);
+      border-radius: 10px;
+    }
+  
+    .whatsapp-no {
+      bottom: 60px;
+      right: 10px;
+    }
+  
+    .whatsapp-no a {
+      font-size: clamp(1.5rem, 8vw, 2rem);
+    }
+  
+    /* Swiper navigation adjustments for small mobile */
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: clamp(2rem, 15vw, 3rem);
+      height: clamp(2rem, 15vw, 3rem);
+    }
+  
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: clamp(0.8rem, 5vw, 1rem);
+    }
+  
+    .people-item .people-images {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .people-main-section .people-slider-wrapper {
+      padding: 0 clamp(2rem, 4vw, 2.5rem);
+    }
+  
+    .people-main-section .people-item .people-images {
+      height: clamp(100px, 60vw, 130px);
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: clamp(1.8rem, 18vw, 2.5rem);
+      height: clamp(1.8rem, 18vw, 2.5rem);
+    }
+  
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: clamp(0.7rem, 6vw, 0.9rem);
+    }
+  }
+  
+  /* ==============================================================================-Features Section Enhanced-=========================================================================== */
+
+.features-section {
+  min-height: 60vh;
+  width: 100%;
+  background-color: #f8f6f3;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+}
+
+.features-section h3{
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-section .immediate-implants-container, 
+.features-section .single-stage-container,
+.features-section .all-on-4-6-container{
+  max-width: 1200px;
+  margin: 0 auto clamp(3rem, 8vw, 4rem) auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 3rem);
+  background-color: white;
+  border-radius: 15px;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-section .immediate-implants-container:hover,
+.features-section .single-stage-container:hover,
+.features-section .all-on-4-6-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.imm-imp-img,
+.sin-stg-img,
+.all-on-4-6-img {
+  flex: 1;
+  min-width: 0;
+}
+
+.imm-imp-img img,
+.sin-stg-img img,
+.all-on-4-6-img img {
+  width: 100%;
+  height: clamp(150px, 25vw, 200px);
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.imm-imp-img img:hover,
+.sin-stg-img img:hover,
+.all-on-4-6-img img:hover {
+  transform: scale(1.05);
+}
+
+.immediate-implants-container .immediate-implants-texts,
+.single-stage-container .single-stage-texts,
+.all-on-4-6-container .all-on-4-6-texts {
+  flex: 1;
+  min-width: 0;
+}
+
+.immediate-implants-texts h4,
+.single-stage-texts h4,
+.all-on-4-6-texts h4 {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.4;
+}
+
+.immediate-implants-texts p,
+.single-stage-texts p,
+.all-on-4-6-texts p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ==============================================================================-Advantages Section Enhanced-=========================================================================== */
+
+.dental-implants-advantages-section{
+  min-height: 70vh;
+  width: 100%;
+  background-color: #c0b9b2;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+}
+
+.dental-implants-advantages-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advantage-title {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.advantage-title p {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  line-height: 1.4;
+}
+
+.advantages-dental-implants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 45%, 45%), 1fr));
+  gap: clamp(1.5rem, 4vw, 2rem);
+}
+
+.advantage {
+  background-color: white;
+  border-radius: 15px;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.advantage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.advantage h2 {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.4;
+}
+
+.advantage p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ==============================================================================-Testimonials Section Enhanced-=========================================================================== */
+
+.dental-makeover-testimonials-section{
+  min-height: 70vh;
+  width: 100%;
+  background-color: #ebe3da;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+}
+
+.dental-makeover-testimonials-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dental-makeover-testimonials-container .dentalmakeover-section-title{
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.makeover-dentalsection-content {
+  position: relative;
+}
+
+.makeover-slider-dentalcontainer {
+  position: relative;
+  padding: 0 clamp(3rem, 8vw, 4rem);
+}
+
+.makeover-dentaltestimonial {
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.dental-makeover-testimonials-container .makeover-dentaltestimonial .dentaluser-video {
+  width: 100%;
+  height: clamp(200px, 40vw, 300px);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dental-makeover-testimonials-container .makeover-dentaltestimonial .dentaluser-video:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================================================================-Teeth Replacement Section Enhanced-=========================================================================== */
+
+.teeths-replacement-section{
+  min-height: auto;
+  width: 100%;
+  background-color: #f8f6f3;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  overflow-x: hidden;
+}
+
+.teeths-replacement-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 30%, 30%), 1fr));
+  gap: clamp(1.5rem, 4vw, 2rem);
+  width: 100%;
+}
+
+.teeths-replacement-container .single-tooth-container,
+.teeths-replacement-container .multiple-teeth-container,
+.teeths-replacement-container .all-mouth-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.teeths-replacement-container .single-tooth-container:hover,
+.teeths-replacement-container .multiple-teeth-container:hover,
+.teeths-replacement-container .all-mouth-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.single-tooth-img, .multiple-teeth-img, .all-mouth-img{
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+}
+
+.single-tooth-container .single-tooth-img .one-tooth-img,
+.multiple-teeth-container .multiple-teeth-img .more-teeth-img,
+.all-mouth-container .all-mouth-img .all-teeth-image {
+  width: 100%;
+  height: clamp(120px, 25vw, 180px);
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.single-tooth-container .single-tooth-img .one-tooth-img:hover,
+.multiple-teeth-container .multiple-teeth-img .more-teeth-img:hover,
+.all-mouth-container .all-mouth-img .all-teeth-image:hover {
+  transform: scale(1.05);
+}
+
+.single-tooth-name, .multiple-teeth-name, .all-mouth-name{
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.single-tooth-container .single-tooth-name h4,
+.multiple-teeth-container .multiple-teeth-name h4,
+.all-mouth-container .all-mouth-name h4 {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.single-tooth-info, .multiple-teeth-info, .all-mouth-info{
+  width: 100%;
+}
+
+.single-tooth-container .single-tooth-info p,
+.multiple-teeth-container .multiple-teeth-info p,
+.all-mouth-container .all-mouth-info p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+/* ==============================================================================-Features Section Enhanced-=========================================================================== */
+
+.features-section {
+  min-height: auto;
+  width: 100%;
+  background-color: #f8f6f3;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  overflow-x: hidden;
+}
+
+.features-section h3{
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+.features-section .immediate-implants-container, 
+.features-section .single-stage-container,
+.features-section .conventional-container,
+.features-section .all-on-4-6-container {
+  max-width: 1200px;
+  margin: 0 auto clamp(3rem, 8vw, 4rem) auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 3rem);
+  background-color: white;
+  border-radius: 15px;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.features-section .immediate-implants-container:hover,
+.features-section .single-stage-container:hover,
+.features-section .conventional-container:hover,
+.features-section .all-on-4-6-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.imm-imp-img,
+.sin-stg-img,
+.con-con-img,
+.all-on-4-6-img {
+  flex: 1;
+  min-width: 0;
+}
+
+.imm-imp-img img,
+.sin-stg-img img,
+.con-con-img img,
+.all-on-4-6-img img {
+  width: 100%;
+  height: clamp(120px, 25vw, 180px);
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.imm-imp-img img:hover,
+.sin-stg-img img:hover,
+.con-con-img img:hover,
+.all-on-4-6-img img:hover {
+  transform: scale(1.05);
+}
+
+.immediate-implants-container .immediate-implants-texts,
+.single-stage-container .single-stage-texts,
+.conventional-container .con-con-texts,
+.all-on-4-6-container .all-on-4-6-texts {
+  flex: 1;
+  min-width: 0;
+}
+
+.immediate-implants-texts h4,
+.single-stage-texts h4,
+.con-con-texts h4,
+.all-on-4-6-texts h4 {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.4;
+}
+
+.immediate-implants-texts p,
+.single-stage-texts p,
+.con-con-texts p,
+.all-on-4-6-texts p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ==============================================================================-Advantages Section Enhanced-=========================================================================== */
+
+.dental-implants-advantages-section{
+  min-height: auto;
+  width: 100%;
+  background-color: #c0b9b2;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  overflow-x: hidden;
+}
+
+.dental-implants-advantages-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.advantage-title {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.advantage-title p {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  line-height: 1.4;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+.advantages-dental-implants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 45%, 45%), 1fr));
+  gap: clamp(1.5rem, 4vw, 2rem);
+  width: 100%;
+}
+
+.advantage {
+  background-color: white;
+  border-radius: 15px;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.advantage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.advantage h2 {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.4;
+}
+
+.advantage p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+/* ==============================================================================-Testimonials Section Enhanced-=========================================================================== */
+
+.dental-makeover-testimonials-section{
+  min-height: 70vh;
+  width: 100%;
+  background-color: #ebe3da;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+}
+
+.dental-makeover-testimonials-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dental-makeover-testimonials-container .dentalmakeover-section-title{
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.makeover-dentalsection-content {
+  position: relative;
+}
+
+.makeover-slider-dentalcontainer {
+  position: relative;
+  padding: 0 clamp(3rem, 8vw, 4rem);
+}
+
+.makeover-dentaltestimonial {
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.dental-makeover-testimonials-container .makeover-dentaltestimonial .dentaluser-video {
+  width: 100%;
+  height: clamp(200px, 40vw, 300px);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dental-makeover-testimonials-container .makeover-dentaltestimonial .dentaluser-video:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================================================================-responsive-design-=========================================================================== */
+
+@media (max-width: 1024px) {
+  .second-section-main-container,
+  .dental-implants-paragraph-container {
+    flex-direction: column;
+    gap: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .features-section .immediate-implants-container,
+  .features-section .single-stage-container,
+  .features-section .conventional-container,
+  .features-section .all-on-4-6-container {
+    flex-direction: column;
     text-align: center;
   }
-  
+
+  .basal-image-sub-container {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1rem, 3vw, 1.5rem);
+    max-width: 700px;
+  }
+
+  .basal-image-sub-container img {
+    height: clamp(180px, 30vw, 250px);
+  }
+
+  .basal-main-container .basal-text-sub-container {
+    max-width: 700px;
+    padding: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .basal-image-sub-container #third-basal-img,
+  .basal-image-sub-container #fourth-basal-img {
+    grid-column: span 1;
+  }
+
+  .conventional-imgs-container {
+    grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 45%, 45%), 1fr));
+  }
+
+  .conventional-imgs-container #conventional-img-1,
+  .conventional-imgs-container #conventional-img-2,
+  .conventional-imgs-container #conventional-img-3,
+  .conventional-imgs-container #conventional-img-4 {
+    grid-column: span 1;
+  }
+
+  .advantages-dental-implants {
+    grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 45%, 45%), 1fr));
+  }
+
+  .teeths-replacement-container {
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 45%, 45%), 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dental-implants-text-part {
+    width: clamp(280px, 80%, 80%);
+  }
+
   .dental-implants-heading {
     width: 100%;
-    margin-top: 15%;
+    margin-top: clamp(10%, 20%, 20%);
   }
   
   .dental-implants-heading h3 {
-    font-size: 1.8rem !important;
     margin-left: 0;
     text-align: center;
   }
   
   .dental-implants-sub-heading {
     width: 100%;
-    margin-top: 2%;
   }
-  
+
   .dental-implants-sub-heading p {
-    font-size: 1.1rem !important;
     margin-left: 0;
     text-align: center;
-    padding: 0 1rem;
   }
-  
+
   .dental-implants-text-part .contact-btn {
-    margin-left: 0;
-    margin-top: 3%;
-  }
-  
-  /* Second section adjustments */
-  .implants-second-section {
-    height: auto;
-    min-height: 80vh;
-  }
-  
-  .second-section-main-container {
-    height: auto;
-    min-height: 80vh;
-    flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 2rem;
-  }
-  
-  .image-part {
-    width: 100%;
-    height: auto;
-    order: 1;
-  }
-  
-  .image-part .img-dental-implant2 {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  .text-part {
-    width: 100%;
-    height: auto;
-    order: 2;
-  }
-  
-  .second-section-heading h3 {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-  
-  .second-section-sub-heading p {
-    font-size: 1rem;
-    text-align: center;
-    padding: 0 1rem;
-  }
-  
-  /* Before/After section */
-  .bef-aft-dent-implants-section {
-    padding: 2rem 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
   
   .dentalsmile-image-container {
     flex-direction: column;
-    gap: 2rem;
   }
   
   .dentalsmile-before-container,
   .dentalsmile-after-container {
-    width: 100%;
-    height: auto;
-  }
-  
-  .dentalsmile-b-img-sub-container,
-  .dentalsmile-a-img-sub-container {
-    height: 300px;
-  }
-  
-  /* Features section */
-  .features-section {
-    padding: 2rem 1rem;
-  }
-  
-  .features-section .immediate-implants-container,
-  .features-section .single-stage-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .imm-imp-img,
-  .sin-stg-img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .immediate-implants-texts,
-  .single-stage-texts {
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Basal section */
-  .basal-section {
-    padding: 2rem 1rem;
-  }
-  
-  .basal-main-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .basal-features {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .basal-image-sub-container {
-    width: 100%;
-    height: auto;
-  }
-  
-  .basal-text-sub-container {
-    width: 100%;
-  }
-  
-  /* Teeth replacement section */
-  .teeths-replacement-section {
-    padding: 2rem 1rem;
+    min-width: 100%;
   }
   
   .teeths-replacement-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .single-tooth-container,
-  .multiple-teeth-container,
-  .all-mouth-container {
-    width: 100%;
-  }
-  
-  /* Advantages section */
-  .dental-implants-advantages-section {
-    padding: 2rem 1rem;
-  }
-  
-  .dental-implants-advantages-container {
-    flex-direction: column;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 3vw, 1.5rem);
   }
   
   .advantages-dental-implants {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: clamp(1rem, 3vw, 1.5rem);
   }
-  
-  /* Paragraph section */
-  .dental-implants-paragraph-section {
-    padding: 2rem 1rem;
+
+  /* Enhanced Swiper navigation for mobile */
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: clamp(2.5rem, 12vw, 3.5rem);
+    height: clamp(2.5rem, 12vw, 3.5rem);
+    top: 50%;
+    transform: translateY(-50%);
   }
-  
-  .dental-implants-paragraph-container {
-    flex-direction: column;
-    gap: 2rem;
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: clamp(1rem, 4vw, 1.2rem);
   }
-  
-  .dental-clinic-img-container {
+
+  /* Slider responsive adjustments */
+  .makeover-dentaltestimonial,
+  .basal-testimonials,
+  .people-item {
+    padding: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .dental-makeover-testimonials-container .makeover-dentaltestimonial .dentaluser-video,
+  .basal-video-testimonials .basal-testimonials iframe {
+    height: clamp(150px, 50vw, 200px);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .people-item .people-images {
     width: 100%;
     height: auto;
+    max-width: 100%;
   }
-  
-  .dental-clinic-text-container {
-    width: 100%;
+
+  .whatsapp-no {
+    bottom: 70px;
+    right: 15px;
+  }
+
+  .whatsapp-no a {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  /* Features section mobile adjustments */
+  .features-section .immediate-implants-container,
+  .features-section .single-stage-container,
+  .features-section .conventional-container,
+  .features-section .all-on-4-6-container {
+    padding: clamp(1rem, 3vw, 1.5rem);
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .imm-imp-img img,
+  .sin-stg-img img,
+  .con-con-img img,
+  .all-on-4-6-img img {
+    height: clamp(100px, 25vw, 120px);
+  }
+
+  /* Basal section mobile adjustments */
+  .basal-image-sub-container img {
+    height: clamp(100px, 25vw, 120px);
+  }
+
+  /* Teeth replacement mobile adjustments */
+  .single-tooth-container .single-tooth-img .one-tooth-img,
+  .multiple-teeth-container .multiple-teeth-img .more-teeth-img,
+  .all-mouth-container .all-mouth-img .all-teeth-image {
+    height: clamp(100px, 25vw, 120px);
   }
 }
 
-@media (max-width: 700px) {
-  .dental-implants-heading h3 {
-    font-size: 1.6rem !important;
-  }
-  
-  .dental-implants-sub-heading p {
-    font-size: 1rem !important;
-  }
-  
-  .second-section-heading h3 {
-    font-size: 1.4rem;
-  }
-  
-  .second-section-sub-heading p {
-    font-size: 0.9rem;
-  }
-  
-  .dentalsmile-b-img-sub-container,
-  .dentalsmile-a-img-sub-container {
-    height: 250px;
-  }
-  
-  .immediate-implants-texts h4,
-  .single-stage-texts h4 {
-    font-size: 1.2rem;
-  }
-  
-  .immediate-implants-texts p,
-  .single-stage-texts p {
-    font-size: 0.9rem;
-  }
-  
-  .basal-features h3 {
-    font-size: 1.4rem;
-  }
-  
-  .basal-features p {
-    font-size: 0.9rem;
-  }
-  
-  .basal-texts li {
-    font-size: 0.9rem;
-  }
-  
-  .single-tooth-name h4,
-  .multiple-teeth-name h4,
-  .all-mouth-name h4 {
-    font-size: 1.2rem;
-  }
-  
-  .single-tooth-info p,
-  .multiple-teeth-info p,
-  .all-mouth-info p {
-    font-size: 0.9rem;
-  }
-  
-  .conventional-implants-section h2 {
-    font-size: 1.4rem;
-  }
-  
-  .conventional-texts-container p {
-    font-size: 0.9rem;
-  }
-  
-  .advantage-title {
-    font-size: 1.4rem;
-  }
-  
-  .advantage p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   .dental-implants-section {
-    margin-top: 6vh;
+    min-height: 60vh;
+    margin-top: 0;
   }
   
   .dental-implants-main-container {
-    margin-top: 3vh;
-    padding: 1rem 0.5rem;
+    min-height: 60vh;
+    margin-top: 0;
   }
   
   .dental-implants-wrapper {
-    min-height: 70vh;
+    height: 60vh;
   }
   
+  .dental-implants-text-part {
+    padding: 0 clamp(0.8rem, 3vw, 1.5rem);
+  }
+
   .dental-implants-heading {
-    margin-top: 10%;
+    margin-bottom: clamp(0.6rem, 2vw, 1rem);
   }
   
   .dental-implants-heading h3 {
-    font-size: 1.4rem !important;
+    font-size: clamp(1.5rem, 8vw, 2rem);
+    text-align: center;
+    margin: 0;
   }
   
+  .dental-implants-sub-heading {
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  }
+
   .dental-implants-sub-heading p {
-    font-size: 0.9rem !important;
-    padding: 0 0.5rem;
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+    text-align: center;
+    margin: 0;
+    padding: 0 clamp(0.3rem, 1.5vw, 0.8rem);
   }
   
   .dental-implants-text-part .contact-btn {
-    height: 2.2rem;
-    width: 8rem;
-    font-size: 0.8rem;
+    width: clamp(6rem, 30vw, 8rem);
+    height: clamp(2rem, 8vw, 2.5rem);
+    font-size: clamp(0.7rem, 3.5vw, 0.9rem);
   }
-  
-  .second-section-main-container {
-    padding: 1rem 0.5rem;
-    gap: 1.5rem;
+
+  .whatsapp-no {
+    bottom: 60px;
+    right: 10px;
   }
-  
-  .image-part .img-dental-implant2 {
-    width: 90%;
-  }
-  
-  .second-section-heading h3 {
-    font-size: 1.2rem;
-  }
-  
-  .second-section-sub-heading p {
-    font-size: 0.8rem;
-    padding: 0 0.5rem;
-  }
-  
-  .bef-aft-dent-implants-section {
-    padding: 1rem 0.5rem;
-  }
-  
-  .dentalsmile-image-container {
-    gap: 1.5rem;
-  }
-  
-  .dentalsmile-b-img-sub-container,
-  .dentalsmile-a-img-sub-container {
-    height: 200px;
-  }
-  
-  .dentallabel {
-    font-size: 0.9rem;
-    padding: 3px 8px;
-  }
-  
-  .features-section {
-    padding: 1rem 0.5rem;
-  }
-  
-  .features-section .immediate-implants-container,
-  .features-section .single-stage-container {
-    gap: 1.5rem;
-  }
-  
-  .immediate-implants-texts h4,
-  .single-stage-texts h4 {
-    font-size: 1.1rem;
-  }
-  
-  .immediate-implants-texts p,
-  .single-stage-texts p {
-    font-size: 0.8rem;
-  }
-  
-  .basal-section {
-    padding: 1rem 0.5rem;
-  }
-  
-  .basal-main-container {
-    gap: 1.5rem;
-  }
-  
-  .basal-features h3 {
-    font-size: 1.2rem;
-  }
-  
-  .basal-features p {
-    font-size: 0.8rem;
-  }
-  
-  .basal-texts li {
-    font-size: 0.8rem;
-    margin-top: 0.8rem;
-  }
-  
-  .teeths-replacement-section {
-    padding: 1rem 0.5rem;
-  }
-  
-  .teeths-replacement-container {
-    gap: 1.5rem;
-  }
-  
-  .single-tooth-name h4,
-  .multiple-teeth-name h4,
-  .all-mouth-name h4 {
-    font-size: 1.1rem;
-  }
-  
-  .single-tooth-info p,
-  .multiple-teeth-info p,
-  .all-mouth-info p {
-    font-size: 0.8rem;
-  }
-  
-  .conventional-implants-section h2 {
-    font-size: 1.2rem;
-  }
-  
-  .conventional-texts-container p {
-    font-size: 0.8rem;
-  }
-  
-  .dental-implants-advantages-section {
-    padding: 1rem 0.5rem;
-  }
-  
-  .dental-implants-advantages-container {
-    gap: 1.5rem;
-  }
-  
-  .advantage-title {
-    font-size: 1.2rem;
-  }
-  
-  .advantage p {
-    font-size: 0.8rem;
-  }
-  
-  .dental-implants-paragraph-section {
-    padding: 1rem 0.5rem;
-  }
-  
-  .dental-implants-paragraph-container {
-    gap: 1.5rem;
+
+  .whatsapp-no a {
+    font-size: clamp(1.5rem, 8vw, 2rem);
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 320px) {
   .dental-implants-heading h3 {
-    font-size: 1.2rem !important;
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
   }
   
   .dental-implants-sub-heading p {
-    font-size: 0.8rem !important;
+        font-size: clamp(0.9rem, 4vw, 1rem);
   }
   
   .dental-implants-text-part .contact-btn {
-    height: 2rem;
-    width: 7rem;
-    font-size: 0.7rem;
+        width: clamp(5rem, 30vw, 6rem);
+        height: clamp(1.6rem, 8vw, 1.8rem);
+        font-size: clamp(0.6rem, 4vw, 0.7rem);
   }
   
   .second-section-heading h3 {
-    font-size: 1.1rem;
+        font-size: clamp(1.1rem, 5vw, 1.3rem);
   }
   
   .second-section-sub-heading p {
-    font-size: 0.7rem;
+        font-size: clamp(0.8rem, 4vw, 0.9rem);
   }
   
   .dentalsmile-b-img-sub-container,
   .dentalsmile-a-img-sub-container {
-    height: 180px;
+        height: clamp(120px, 60vw, 150px);
   }
   
   .dentallabel {
-    font-size: 0.8rem;
-    padding: 2px 6px;
+        font-size: clamp(0.9rem, 5vw, 1rem);
   }
   
   .immediate-implants-texts h4,
-  .single-stage-texts h4 {
-    font-size: 1rem;
+    .single-stage-texts h4,
+    .all-on-4-6-texts h4 {
+        font-size: clamp(0.9rem, 5vw, 1rem);
   }
   
   .immediate-implants-texts p,
-  .single-stage-texts p {
-    font-size: 0.7rem;
+    .single-stage-texts p,
+    .all-on-4-6-texts p {
+        font-size: clamp(0.75rem, 4vw, 0.8rem);
   }
   
   .basal-features h3 {
-    font-size: 1.1rem;
+        font-size: clamp(1.1rem, 5vw, 1.2rem);
   }
   
   .basal-features p {
-    font-size: 0.7rem;
+        font-size: clamp(0.75rem, 4vw, 0.8rem);
   }
   
   .basal-texts li {
-    font-size: 0.7rem;
-    margin-top: 0.6rem;
+        font-size: clamp(0.75rem, 4vw, 0.8rem);
   }
   
   .single-tooth-name h4,
   .multiple-teeth-name h4,
   .all-mouth-name h4 {
-    font-size: 1rem;
+        font-size: clamp(0.9rem, 5vw, 1rem);
   }
   
   .single-tooth-info p,
   .multiple-teeth-info p,
   .all-mouth-info p {
-    font-size: 0.7rem;
+        font-size: clamp(0.75rem, 4vw, 0.8rem);
   }
   
   .conventional-implants-section h2 {
-    font-size: 1.1rem;
+        font-size: clamp(1.1rem, 5vw, 1.2rem);
   }
   
   .conventional-texts-container p {
-    font-size: 0.7rem;
+        font-size: clamp(0.75rem, 4vw, 0.8rem);
   }
   
   .advantage-title {
-    font-size: 1.1rem;
+        font-size: clamp(1.1rem, 5vw, 1.2rem);
   }
   
   .advantage p {
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .dental-implants-heading h3 {
-    font-size: 1.1rem !important;
-  }
-  
-  .dental-implants-sub-heading p {
-    font-size: 0.7rem !important;
-  }
-  
-  .dental-implants-text-part .contact-btn {
-    height: 1.8rem;
-    width: 6.5rem;
-    font-size: 0.6rem;
-  }
-  
-  .second-section-heading h3 {
-    font-size: 1rem;
-  }
-  
-  .second-section-sub-heading p {
-    font-size: 0.6rem;
-  }
-  
-  .dentalsmile-b-img-sub-container,
-  .dentalsmile-a-img-sub-container {
-    height: 160px;
-  }
-  
-  .dentallabel {
-    font-size: 0.7rem;
-    padding: 2px 5px;
-  }
-  
-  .immediate-implants-texts h4,
-  .single-stage-texts h4 {
-    font-size: 0.9rem;
-  }
-  
-  .immediate-implants-texts p,
-  .single-stage-texts p {
-    font-size: 0.6rem;
-  }
-  
-  .basal-features h3 {
-    font-size: 1rem;
-  }
-  
-  .basal-features p {
-    font-size: 0.6rem;
-  }
-  
-  .basal-texts li {
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
-  }
-  
-  .single-tooth-name h4,
-  .multiple-teeth-name h4,
-  .all-mouth-name h4 {
-    font-size: 0.9rem;
-  }
-  
-  .single-tooth-info p,
-  .multiple-teeth-info p,
-  .all-mouth-info p {
-    font-size: 0.6rem;
-  }
-  
-  .conventional-implants-section h2 {
-    font-size: 1rem;
-  }
-  
-  .conventional-texts-container p {
-    font-size: 0.6rem;
-  }
-  
-  .advantage-title {
-    font-size: 1rem;
-  }
-  
-  .advantage p {
-    font-size: 0.6rem;
+        font-size: clamp(0.75rem, 4vw, 0.8rem);
   }
 }
  

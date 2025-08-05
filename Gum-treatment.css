@@ -4,99 +4,88 @@ body{
   padding: 0;
 }
 
-
 .gum-treatment-main-section{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    margin-top: 7vh;
-    /* border: 2px solid transparent; */
-    background-color:  #c0b9b2;
-  }
+    margin-top: clamp(50px, 6vw, 7vh);
+    background-color: #c0b9b2;
+}
   
-  .gum-treatment-subsection{
-    height: 100vh;
+.gum-treatment-subsection{
+    min-height: 100vh;
     width: 100%;
-    /* border: 2px solid blue; */
-    background-color:  #c0b9b2;
-    margin-top: 7vh;
+    background-color: #c0b9b2;
+    margin-top: clamp(50px, 6vw, 7vh);
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .gum-treatment-subsection-text-part{
+.gum-treatment-subsection-text-part{
     height: 100%;
-    width: 60%;
-    /* border: 2px solid blueviolet; */
-  }
+    width: clamp(300px, 60%, 60%);
+}
   
-  .gum-treatment-subsection-text-part .gum-treatment-bg{
-    height: 60vh;
-    width: 70%;
+.gum-treatment-subsection-text-part .gum-treatment-bg{
+    height: clamp(300px, 60vh, 60vh);
+    width: clamp(250px, 70%, 70%);
     border: 2px solid transparent;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), center no-repeat;
-    margin-top: 20%;
-    margin-left: 5%;
+    margin-top: clamp(10%, 20%, 20%);
+    margin-left: clamp(2%, 5%, 5%);
     padding-top: -10%;
-  }
+}
   
-  .gum-treatment-wrapper{
+.gum-treatment-wrapper{
     width: 100%;
     height: 100vh;
-    top:0%;
+    top: 0%;
     background: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0,0.1)), url(gum-treatment-bg.jpg) center no-repeat;
     background-size: cover;
     position: relative;
-  }
+}
   
-  .gum-treatment-subsection-text-part .gum-treatment-title{
+.gum-treatment-subsection-text-part .gum-treatment-title{
     height: 10%;
     width: 100%;
-    /* border: 2px solid red; */
-    margin-top: 8%;
-  }
+    margin-top: clamp(5%, 8%, 8%);
+}
   
-  .gum-treatment-title h3{
-    font-size: 2rem !important;
+.gum-treatment-title h3{
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
     font-weight: normal;
-    margin-left: 5%;
+    margin-left: clamp(2%, 5%, 5%);
     color: white;
     font-weight: 500;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-  }
+}
   
-  .gum-treatment-subsection-text-part .gum-treatment-sub-title{
-    /* border: 2px solid rgb(189, 11, 71); */
+.gum-treatment-subsection-text-part .gum-treatment-sub-title{
     height: 55%;
     width: 100%;
-    margin-top: 2%;
-  }
+    margin-top: clamp(1%, 2%, 2%);
+}
   
-  .gum-treatment-sub-title p{
-    font-size: 1.2rem !important;
-    /* font-family: 'sweeth-gothic', sans-serif; */
+.gum-treatment-sub-title p{
+    font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
     font-family: 'SangBleu Kingdom Light, Georgia', serif;
     letter-spacing: 0.12rem;
     color: white;
     font-weight: 500;
-    width: 90%;
-    margin-left: 5%;
-  }
+    width: clamp(80%, 90%, 90%);
+    margin-left: clamp(2%, 5%, 5%);
+}
 
-  .gum-treatment-subsection-text-part .contact-btn{
-    margin-top: -20% ;
-    height: 2.5rem;
-    width: 9.5rem;
-    /* border-radius: 20px; */
+.gum-treatment-subsection-text-part .contact-btn{
+    margin-top: clamp(-25%, -20%, -20%);
+    height: clamp(2rem, 4vw, 2.5rem);
+    width: clamp(7rem, 15vw, 9.5rem);
     border: 1px solid white;
     background-color: white;
-    margin-left: 5%;
-  }
-
-  .gum-treatment-subsection-text-part .contact-btn{
+    margin-left: clamp(2%, 5%, 5%);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
     letter-spacing: 0.2rem;
     color: black;
   }
@@ -115,43 +104,42 @@ body{
   /* ********************************************************************gum-treatment-procedure******************************************************* */
 
 .gum-treatment-procedure-img{
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   background-color:  #ded4ca;
-  /* border: 2px solid red; */
   display: flex;
-  align-items: center; /* Align vertically */
-  justify-content: space-between; /* Adjust spacing */
-  gap: 20px; /* Space between image and text */
-  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
   position: relative;
+  flex-direction: row;
 }
 
-
 .gum-treatment-procedure-img .gum-img-cont {
-  height: 55vh;
-  width: 38vw;
-  margin-left: 5%;
+  height: clamp(300px, 55vh, 55vh);
+  width: clamp(300px, 38vw, 38vw);
+  margin-left: clamp(2%, 5%, 5%);
   background-size: contain;
-  /* border: 2px solid red; */
+  flex-shrink: 0;
 }
 
 .gum-img-cont img{
   height: 100%;
   width: 100%;
-  background-size: contain;
+  object-fit: contain;
 }
 
 .gum-treatment-procedure-img .gum-treatment-procedure-content {
-  width: 40%;
-  margin-right: 5%;
-  margin-top: 7%;
-  height: 60vh;
-  /* border: 2px solid red; */
+  width: clamp(300px, 40%, 40%);
+  margin-right: clamp(2%, 5%, 5%);
+  margin-top: clamp(2%, 7%, 7%);
+  min-height: 60vh;
+  flex-shrink: 0;
 }
 
 .gum-treatment-procedure-content h4{
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: normal;
   font-family: 'Sweet Gothic', sans-serif;
   text-align: end;
@@ -163,7 +151,7 @@ body{
   margin-top: 5%;
   margin-left: -5%;
   width: 98%;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   font-weight: normal;
   text-align: start;
   letter-spacing: 0.1rem;
@@ -176,7 +164,7 @@ body{
 
 .gum-treatment-procedure-content ol li {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: normal;
   text-align: start;
   letter-spacing: 0.1rem;
@@ -186,55 +174,54 @@ body{
 /* ********************************************************************gum-treatment-types******************************************************** */
 
 .gum-treatment-types-section{
-  height: 70vh;
+  min-height: 70vh;
   width: 100%;
   background-color:  #c0b9b2;
-  /* border: 2px solid red; */
   display: flex;
-  align-items: center; /* Align vertically */
-  justify-content: space-between; /* Adjust spacing */
-  gap: 20px; /* Space between image and text */
-  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
   position: relative;
+  flex-direction: row;
 }
 
-
 .gum-treatment-types-section .gum-type-img-cont {
-  height: 52vh;
-  width: 38vw;
-  margin-right: 5%;
+  height: clamp(300px, 52vh, 52vh);
+  width: clamp(300px, 38vw, 38vw);
+  margin-right: clamp(2%, 5%, 5%);
   background-size: contain;
-  /* border: 2px solid red; */
+  flex-shrink: 0;
 }
 
 .gum-type-img-cont img{
   height: 100%;
   width: 100%;
-  background-size: contain;
+  object-fit: contain;
 }
 
 .gum-treatment-types-section .gum-treatment-types-content {
-  width: 40%;
-  margin-right: 5%;
-  margin-top: 7%;
-  height: 60vh;
-  /* border: 2px solid red; */
+  width: clamp(300px, 40%, 40%);
+  margin-left: clamp(2%, 5%, 5%);
+  margin-top: clamp(2%, 7%, 7%);
+  min-height: 60vh;
+  flex-shrink: 0;
 }
 
 .gum-treatment-types-content h4{
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: normal;
   font-family: 'Sweet Gothic', sans-serif;
   text-align: start;
-  margin-left: 8%;
+  margin-left: clamp(4%, 8%, 8%);
   letter-spacing: 0.1rem;
 }
 
 .gum-treatment-types-content p{
   margin-top: 5%;
-  margin-left: 9%;
+  margin-left: clamp(5%, 9%, 9%);
   width: 98%;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   font-weight: normal;
   text-align: start;
   letter-spacing: 0.1rem;
@@ -247,29 +234,32 @@ body{
 
 .gum-treatment-types-content ol li {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: normal;
   text-align: start;
   letter-spacing: 0.1rem;
   margin-top: 1.5%;
-  margin-left: 15%;
+  margin-left: clamp(10%, 15%, 15%);
 }
 
 /* -------------------------------------------------------------gum-bef-af-images------------------------------------------------- */
 
 .gum-bef-af-images{
-  height: 50vh;
+  min-height: 50vh;
   width: 100%;
   background-color: #c8c2bd;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* border: 2px solid red; */
+  flex-wrap: wrap;
+  gap: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
 }
 
 .gum-bef-cont{
-  height: 40vh;
-  width: 18vw;
+  height: clamp(250px, 40vh, 40vh);
+  width: clamp(200px, 18vw, 300px);
+  min-width: 200px;
 }
 
 .gum-bef-cont img{
@@ -279,8 +269,9 @@ body{
 }
 
 .gum-af-cont{
-  height: 40vh;
-  width: 18vw;
+  height: clamp(250px, 40vh, 40vh);
+  width: clamp(200px, 18vw, 300px);
+  min-width: 200px;
 }
 
 .gum-af-cont img{
@@ -292,54 +283,56 @@ body{
 /* ------------------------------------------------------------gum-bef-af-texts------------------------------------------------------ */
 
 .bef-af-text-section{
-  height: 12vh;
+  min-height: 12vh;
   width: 100%;
-  /* border: 2px solid black; */
   background: #c8c2bd;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: clamp(10px, 2vw, 20px);
 }
 
 .bef-af-text-section .bef-text{
-  height: 7vh;
+  height: auto;
   width: auto;
   padding: 8px 20px 8px 20px;
   color: black;
-  margin-left: 24vw;
 }
 
 .bef-af-text-section .af-text{
-  height: 7vh;
+  height: auto;
   width: auto;
   padding: 8px 20px 8px 20px;
   color: black;
-  margin-left: 30vw;
 }
 
 .bef-text h2, .af-text h2{
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   letter-spacing: 0.2rem;
   font-weight: 400;
   text-align: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-
-/* -------------------------------------------------------------gum-bef-af-images------------------------------------------------- */
+/* -------------------------------------------------------------gum-bef-af-second-images------------------------------------------------- */
 
 .gum-bef-af-second-images{
-  height: 45vh;
+  min-height: 45vh;
   width: 100%;
   background-color: #c8c2bd;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
 }
 
 .gum-bef-second-cont{
-  height: 30vh;
-  width: 25vw;
+  height: clamp(200px, 30vh, 30vh);
+  width: clamp(250px, 25vw, 350px);
+  min-width: 250px;
 }
 
 .gum-bef-second-cont img{
@@ -349,8 +342,9 @@ body{
 }
 
 .gum-af-second-cont{
-  height: 30vh;
-  width: 25vw;
+  height: clamp(200px, 30vh, 30vh);
+  width: clamp(250px, 25vw, 350px);
+  min-width: 250px;
 }
 
 .gum-af-second-cont img{
@@ -359,20 +353,18 @@ body{
   object-fit: cover;
 }
 
-
-
-
 /* ----------------------------------------------------------benefits---------------------------------------------------------- */
 
 .gum-treatment-benefits{
-  height: 45ch;
+  min-height: 45ch;
   width: 100%;
   background-color: #dad3cd;
+  padding: clamp(20px, 4vw, 40px);
 }
 
 .gum-treatment-benefits h2{
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   letter-spacing: 0.1rem;
   font-weight: 500;
@@ -383,15 +375,160 @@ body{
 .gum-treatment-benefits ol{
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: clamp(10px, 2vh, 20px);
 }
 
 .gum-treatment-benefits ol li{
   text-align: left;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   letter-spacing: 0.1rem;
   font-weight: 500;
   padding-top: 1%;
-  margin-left: 12%;
+  margin-left: clamp(5%, 12%, 12%);
+  width: 90%;
 }
 
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  
+  .gum-treatment-subsection-text-part{
+    width: clamp(280px, 90%, 90%);
+  }
+  
+  .gum-treatment-subsection-text-part .gum-treatment-bg{
+    width: clamp(280px, 90%, 90%);
+    margin-left: clamp(5%, 5%, 5%);
+  }
+
+  .gum-treatment-procedure-img{
+    flex-direction: column;
+    min-height: auto;
+    padding: clamp(20px, 4vw, 30px);
+  }
+
+  .gum-treatment-procedure-img .gum-img-cont {
+    width: clamp(280px, 80vw, 80vw);
+    height: clamp(250px, 40vh, 40vh);
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .gum-treatment-procedure-img .gum-treatment-procedure-content {
+    width: clamp(280px, 90%, 90%);
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .gum-treatment-procedure-content h4{
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .gum-treatment-procedure-content p{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .gum-treatment-procedure-content ol li {
+    margin-left: 5%;
+  }
+
+  .gum-treatment-types-section{
+    flex-direction: column-reverse;
+    min-height: auto;
+    padding: clamp(20px, 4vw, 30px);
+  }
+
+  .gum-treatment-types-section .gum-type-img-cont {
+    width: clamp(280px, 80vw, 80vw);
+    height: clamp(250px, 40vh, 40vh);
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .gum-treatment-types-section .gum-treatment-types-content {
+    width: clamp(280px, 90%, 90%);
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .gum-treatment-types-content h4{
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .gum-treatment-types-content p{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .gum-treatment-types-content ol li {
+    margin-left: 5%;
+  }
+
+  .gum-bef-af-images{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gum-bef-cont, .gum-af-cont{
+    width: clamp(250px, 70vw, 350px);
+    height: clamp(200px, 35vh, 300px);
+  }
+
+  .bef-af-text-section{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gum-bef-af-second-images{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gum-bef-second-cont, .gum-af-second-cont{
+    width: clamp(250px, 70vw, 350px);
+    height: clamp(200px, 30vh, 250px);
+  }
+
+  .gum-treatment-benefits ol{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gum-treatment-benefits ol li{
+    margin-left: clamp(5%, 8%, 10%);
+    text-align: left;
+    width: 85%;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  
+  .gum-treatment-procedure-img .gum-img-cont {
+    width: clamp(300px, 35vw, 35vw);
+  }
+
+  .gum-treatment-procedure-img .gum-treatment-procedure-content {
+    width: clamp(350px, 45%, 45%);
+  }
+
+  .gum-treatment-types-section .gum-type-img-cont {
+    width: clamp(300px, 35vw, 35vw);
+  }
+
+  .gum-treatment-types-section .gum-treatment-types-content {
+    width: clamp(350px, 45%, 45%);
+  }
+
+  .gum-bef-cont, .gum-af-cont{
+    width: clamp(220px, 22vw, 280px);
+  }
+
+  .gum-bef-second-cont, .gum-af-second-cont{
+    width: clamp(280px, 30vw, 320px);
+  }
+}

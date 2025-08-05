@@ -7,95 +7,82 @@ body{
 /* ====================================================================================smile-in-hour-section============================================================================= */
 
 .smile-hour-main-section{
-    height: 90vh;
+    min-height: 90vh;
     width: 100%;
-    margin-top: 7vh;
-    /* border: 2px solid transparent; */
-    background-color:  #c0b9b2;
-  }
+    margin-top: clamp(50px, 6vw, 7vh);
+    background-color: #c0b9b2;
+}
   
-  .smile-hour-subsection{
-    height: 100vh;
+.smile-hour-subsection{
+    min-height: 100vh;
     width: 100%;
-    /* border: 2px solid blue; */
-    background-color:  #c0b9b2;
-    margin-top: 7vh;
+    background-color: #c0b9b2;
+    margin-top: clamp(50px, 6vw, 7vh);
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .smile-hour-subsection-text-part{
+.smile-hour-subsection-text-part{
     height: 100%;
-    width: 60%;
-    /* border: 2px solid blueviolet; */
-  }
+    width: clamp(300px, 60%, 60%);
+}
   
-  .smile-hour-subsection-text-part .smile-hour-bg{
-    height: 60vh;
-    width: 70%;
+.smile-hour-subsection-text-part .smile-hour-bg{
+    height: clamp(300px, 60vh, 60vh);
+    width: clamp(250px, 70%, 70%);
     border: 2px solid transparent;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), center no-repeat;
-    /* background: linear-gradient(rgba(6, 79, 205, 0.7), rgba(5, 85, 198, 0.2)), center no-repeat; */
-    margin-top: 20%;
-    margin-left: 5%;
+    margin-top: clamp(10%, 20%, 20%);
+    margin-left: clamp(2%, 5%, 5%);
     padding-top: -10%;
-  }
+}
   
-  .smile-hour-wrapper{
+.smile-hour-wrapper{
     width: 100%;
     height: 100vh;
-    top:-8%;
+    top: -8%;
     background: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0,0.1)), url(smile-in-hour-bg.jpg) center no-repeat;
     background-size: cover;
-    /* box-shadow: 0.1rem 5rem rgba(0, 0, 0, 0.6); */
     position: relative;
-  }
+}
   
-  .smile-hour-subsection-text-part .smile-hour-title{
+.smile-hour-subsection-text-part .smile-hour-title{
     height: 10%;
     width: 100%;
-    /* border: 2px solid red; */
-    margin-top: 8%;
-    /* margin-left: -30%; */
-  }
+    margin-top: clamp(5%, 8%, 8%);
+}
   
-  .smile-hour-title h3{
-    font-size: 2rem !important;
+.smile-hour-title h3{
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
     font-weight: normal;
-    margin-left: 5%;
+    margin-left: clamp(2%, 5%, 5%);
     color: white;
     font-weight: 500;
-    /* text-align: center; */
-    /* font-family: 'playfair display', serif; */
-    /* font-family: 'sweeth-gothic', sans-serif; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-  }
+}
   
-  .smile-hour-subsection-text-part .smile-hour-sub-title{
-    /* border: 2px solid rgb(189, 11, 71); */
+.smile-hour-subsection-text-part .smile-hour-sub-title{
     height: 55%;
     width: 100%;
-    margin-top: 2%;
-  }
+    margin-top: clamp(1%, 2%, 2%);
+}
   
-  .smile-hour-sub-title p{
-    font-size: 1.2rem !important;
-    /* font-family: 'sweeth-gothic', sans-serif; */
+.smile-hour-sub-title p{
+    font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
     font-family: 'SangBleu Kingdom Light, Georgia', serif;
     letter-spacing: 0.12rem;
     color: white;
     font-weight: 500;
-    width: 90%;
-    margin-left: 5%;
-  }
+    width: clamp(80%, 90%, 90%);
+    margin-left: clamp(2%, 5%, 5%);
+}
 
-  .smile-hour-subsection-text-part .contact-btn{
-    margin-top: -20% ;
-    height: 2.5rem;
-    width: 9.5rem;
-    /* border-radius: 20px; */
+.smile-hour-subsection-text-part .contact-btn{
+    margin-top: clamp(-25%, -20%, -20%);
+    height: clamp(2rem, 4vw, 2.5rem);
+    width: clamp(7rem, 15vw, 9.5rem);
     border: 1px solid white;
     background-color: white;
     margin-left: 5%;

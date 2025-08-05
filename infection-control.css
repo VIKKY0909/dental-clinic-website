@@ -1,4 +1,3 @@
-
 /* =========================================================================infection-control-section========================================================== */
 body{
   overflow-x: hidden;
@@ -9,76 +8,78 @@ body{
 /* --------------------------------------------------------------------1------------------------------------------------------- */
 
 .infection-control-section{
-    height: 140vh;
+    min-height: 140vh;
     width: 100%;
     border: 2px solid transparent;
     background-color: #ebe3da;
+    padding: clamp(20px, 4vw, 40px);
   }
   
   .infection-control-section h2{
     text-align: center;
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    margin-top: 8%;
+    margin-top: clamp(4%, 8%, 8%);
   }
   
   .infection-control-section .infection-control-container{
-     /* border : 2px solid black; */
-     height: 70vh;
+     min-height: 70vh;
      display: flex;
      justify-content: center;
      align-items: center;
-     margin-top: 2%;
+     margin-top: clamp(1%, 2%, 2%);
+     gap: clamp(10px, 2vw, 20px);
+     flex-wrap: wrap;
   }
   
   .infection-control-container .infection-control-image-container{
-    /* border : 2px solid blue; */
-    height: 100%;
-    width: 50%;
+    min-height: 400px;
+    width: clamp(300px, 50%, 50%);
+    flex-shrink: 0;
   }
   
   .infection-control-image-container .infection-control-sub-container{
-    height: 50vh;
-    width: 80%;
-    /* border : 2px solid blue; */
-    margin-left: 10%;
-    margin-top: 10%;
+    height: clamp(300px, 50vh, 50vh);
+    width: clamp(280px, 80%, 80%);
+    margin-left: clamp(5%, 10%, 10%);
+    margin-top: clamp(5%, 10%, 10%);
   }
   
   .infection-control-sub-container img{
     height: 100%;
     width: 100%;
-    background-size: cover;
+    object-fit: cover;
   }
   
   .infection-control-container .infection-control-intro-container{
-    /* border : 2px solid magenta; */
-    height: 100%;
-    width: 50%;
+    min-height: 400px;
+    width: clamp(300px, 50%, 50%);
+    flex-shrink: 0;
   }
   
   .infection-control-intro-container h3{
     text-align: center;
-    font-size: 1.7rem;
+    font-size: clamp(1.4rem, 3vw, 1.7rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    margin-top: 2%;
+    margin-top: clamp(1%, 2%, 2%);
   }
   
   .infection-control-intro-container ul{
-    margin-top: 4%;
-    width: 90%;
-    margin-left: 5%;
-    line-height: 2rem;
+    margin-top: clamp(2%, 4%, 4%);
+    width: clamp(85%, 90%, 95%);
+    margin-left: clamp(2.5%, 5%, 7.5%);
+    line-height: clamp(1.6rem, 2.5vh, 2rem);
   }
   
   .infection-control-intro-container ul li{
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
+    margin-bottom: clamp(5px, 1vh, 10px);
   }
   
   .infection-control-intro-container ul li span{
@@ -87,25 +88,151 @@ body{
   
   #second-title-infection-control{
     text-align: center;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 3.5vw, 2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
     margin-top: 0%;
+    padding: clamp(10px, 2vh, 20px) 0;
   }
   
   .infection-control-benefits-content .infection-control-benefit{
-    /* border : 2px solid blue; */
-    margin-top: 2%;
+    margin-top: clamp(1%, 2%, 2%);
+    padding: clamp(10px, 2vw, 20px);
   }
   
   .infection-control-benefit li{
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
-    margin-left: 5%;
-    /* text-align: left; */
+    margin-left: clamp(2%, 5%, 5%);
+    margin-bottom: clamp(5px, 1vh, 10px);
+    line-height: clamp(1.4rem, 2vh, 1.8rem);
   }
   
+  /* Mobile Responsive Styles */
+  @media screen and (max-width: 768px) {
+    
+    .infection-control-section{
+      min-height: auto;
+      padding: clamp(15px, 5vw, 25px);
+    }
+    
+    .infection-control-section h2{
+      margin-top: clamp(2%, 5%, 6%);
+      margin-bottom: clamp(15px, 3vh, 25px);
+    }
+    
+    .infection-control-section .infection-control-container{
+      flex-direction: column;
+      min-height: auto;
+      gap: clamp(15px, 4vw, 25px);
+    }
+    
+    .infection-control-container .infection-control-image-container{
+      width: clamp(280px, 90%, 400px);
+      min-height: auto;
+      order: 1;
+    }
+    
+    .infection-control-image-container .infection-control-sub-container{
+      width: clamp(260px, 85%, 85%);
+      height: clamp(200px, 35vh, 300px);
+      margin-left: clamp(7.5%, 7.5%, 7.5%);
+      margin-top: clamp(2%, 5%, 5%);
+    }
+    
+    .infection-control-container .infection-control-intro-container{
+      width: clamp(280px, 95%, 95%);
+      min-height: auto;
+      order: 2;
+    }
+    
+    .infection-control-intro-container h3{
+      margin-top: clamp(2%, 4%, 4%);
+      margin-bottom: clamp(10px, 2vh, 15px);
+    }
+    
+    .infection-control-intro-container ul{
+      width: clamp(90%, 95%, 95%);
+      margin-left: clamp(2.5%, 2.5%, 2.5%);
+      padding-left: clamp(10px, 3vw, 20px);
+    }
+    
+    .infection-control-intro-container ul li{
+      margin-bottom: clamp(8px, 1.5vh, 12px);
+    }
+    
+    #second-title-infection-control{
+      margin-top: clamp(20px, 4vh, 30px);
+      margin-bottom: clamp(15px, 3vh, 20px);
+    }
+    
+    .infection-control-benefits-content .infection-control-benefit{
+      padding: clamp(5px, 2vw, 15px);
+    }
+    
+    .infection-control-benefit li{
+      margin-left: clamp(1%, 3%, 4%);
+      margin-bottom: clamp(8px, 1.5vh, 12px);
+    }
+  }
   
+  /* Tablet Responsive Styles */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    .infection-control-section{
+      padding: clamp(25px, 3vw, 35px);
+    }
+    
+    .infection-control-container .infection-control-image-container{
+      width: clamp(320px, 45%, 45%);
+    }
+    
+    .infection-control-container .infection-control-intro-container{
+      width: clamp(350px, 50%, 50%);
+    }
+    
+    .infection-control-image-container .infection-control-sub-container{
+      width: clamp(300px, 75%, 75%);
+      height: clamp(280px, 45vh, 45vh);
+    }
+    
+    .infection-control-intro-container ul{
+      width: clamp(88%, 92%, 92%);
+    }
+    
+    .infection-control-intro-container ul li{
+      line-height: clamp(1.5rem, 2.2vh, 1.9rem);
+    }
+    
+    .infection-control-benefit li{
+      line-height: clamp(1.5rem, 2.2vh, 1.9rem);
+    }
+  }
   
+  /* Large Desktop Styles */
+  @media screen and (min-width: 1400px) {
+    
+    .infection-control-section h2{
+      font-size: 2.4rem;
+    }
+    
+    .infection-control-intro-container h3{
+      font-size: 1.8rem;
+    }
+    
+    #second-title-infection-control{
+      font-size: 2.1rem;
+    }
+    
+    .infection-control-intro-container ul li{
+      font-size: 1.3rem;
+      line-height: 2.2rem;
+    }
+    
+    .infection-control-benefit li{
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+  }
