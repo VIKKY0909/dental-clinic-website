@@ -215,6 +215,9 @@ let isVideoPlaying = false; // Track if any video is playing
 // Position slides initially
 celebSlides.forEach((celebSlide, index) => {
   celebSlide.style.left = `${index * 100}%`;
+  celebSlide.style.transition = 'transform 0.5s ease-in-out';
+  celebSlide.style.width = '100%';
+  celebSlide.style.height = '100%';
 });
 
 function slideclip() {
@@ -223,6 +226,15 @@ function slideclip() {
       celebSlide.style.transform = `translateX(-${counter * 100}%)`;
     });
   }
+}
+
+// Initialize slider position
+function initializeSlider() {
+  celebSlides.forEach((celebSlide, index) => {
+    celebSlide.style.left = `${index * 100}%`;
+    celebSlide.style.transform = 'translateX(0%)';
+  });
+  counter = 0;
 }
 
 // Function to go to the next slide
@@ -287,7 +299,74 @@ videos.forEach(video => {
   });
 });
 
-// Start auto-slide when the page loads
+// Handle window resize to recalculate slider positions
+window.addEventListener('resize', () => {
+  initializeSlider();
+  slideclip();
+});
+
+// Add touch/swipe support for mobile
+let startX = 0;
+let endX = 0;
+let isDragging = false;
+
+celebSlides.forEach(slide => {
+  // Touch events
+  slide.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    stopAutoSlide();
+  });
+
+  slide.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+  });
+
+  slide.addEventListener('touchend', (e) => {
+    if (!isDragging) return;
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+    isDragging = false;
+    startAutoSlide();
+  });
+
+  // Mouse events for desktop
+  slide.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+    isDragging = true;
+    stopAutoSlide();
+  });
+
+  slide.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+  });
+
+  slide.addEventListener('mouseup', (e) => {
+    if (!isDragging) return;
+    endX = e.clientX;
+    handleSwipe();
+    isDragging = false;
+    startAutoSlide();
+  });
+});
+
+function handleSwipe() {
+  const threshold = window.innerWidth < 480 ? 30 : 50; // Lower threshold for mobile
+  const distance = endX - startX;
+  
+  if (Math.abs(distance) > threshold) {
+    if (distance > 0) {
+      prevbutton(); // Swiped right
+    } else {
+      nextbutton(); // Swiped left
+    }
+  }
+}
+
+// Initialize and start auto-slide when the page loads
+initializeSlider();
 startAutoSlide();
 
 

@@ -1,46 +1,134 @@
 /* ===========================================================
-   FIXED ELEMENTS STYLING
+   FIXED ELEMENTS STYLING - RESPONSIVE ACROSS ALL PAGES
    =========================================================== */
 
-/* Contact Button */
-#contact-btn {
+/* Fixed Phone Button */
+.fixed-phone-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: clamp(15px, 3vw, 25px);
+    right: clamp(15px, 3vw, 25px);
     z-index: 999;
+    text-decoration: none;
 }
 
 .phn-no {
     background: linear-gradient(45deg, #8B4513, #A0522D);
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-size: 1rem;
+    padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
+    border-radius: clamp(15px, 4vw, 25px);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .phn-no:hover {
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.phn-no i {
+    margin-right: clamp(4px, 1vw, 8px);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
 }
 
 /* WhatsApp Button */
 .whatsapp-no {
     position: fixed;
-    bottom: 80px;
-    right: 20px;
+    bottom: clamp(70px, 15vw, 90px);
+    right: clamp(15px, 3vw, 25px);
     z-index: 999;
 }
 
 .whatsapp-no a {
     color: #25D366;
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
     transition: transform 0.3s ease;
+    display: block;
+    text-decoration: none;
 }
 
 .whatsapp-no a:hover {
     transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .fixed-phone-btn {
+        bottom: clamp(12px, 2.5vw, 20px);
+        right: clamp(12px, 2.5vw, 20px);
+    }
+    
+    .whatsapp-no {
+        bottom: clamp(60px, 12vw, 75px);
+        right: clamp(12px, 2.5vw, 20px);
+    }
+    
+    .phn-no {
+        padding: clamp(6px, 1.8vw, 10px) clamp(10px, 2.5vw, 16px);
+        font-size: clamp(0.7rem, 2.2vw, 0.9rem);
+    }
+    
+    .whatsapp-no a {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .fixed-phone-btn {
+        bottom: clamp(10px, 2vw, 15px);
+        right: clamp(10px, 2vw, 15px);
+    }
+    
+    .whatsapp-no {
+        bottom: clamp(50px, 10vw, 65px);
+        right: clamp(10px, 2vw, 15px);
+    }
+    
+    .phn-no {
+        padding: clamp(5px, 1.5vw, 8px) clamp(8px, 2vw, 12px);
+        font-size: clamp(0.6rem, 2vw, 0.8rem);
+        border-radius: clamp(12px, 3vw, 18px);
+    }
+    
+    .phn-no i {
+        margin-right: clamp(3px, 0.8vw, 5px);
+        font-size: clamp(0.5rem, 1.8vw, 0.7rem);
+    }
+    
+    .whatsapp-no a {
+        font-size: clamp(1.5rem, 4.5vw, 2rem);
+    }
+}
+
+@media (max-width: 360px) {
+    .fixed-phone-btn {
+        bottom: 8px;
+        right: 8px;
+    }
+    
+    .whatsapp-no {
+        bottom: 45px;
+        right: 8px;
+    }
+    
+    .phn-no {
+        padding: 4px 8px;
+        font-size: 0.65rem;
+        border-radius: 12px;
+    }
+    
+    .phn-no i {
+        margin-right: 3px;
+        font-size: 0.5rem;
+    }
+    
+    .whatsapp-no a {
+        font-size: 1.4rem;
+    }
 }
   

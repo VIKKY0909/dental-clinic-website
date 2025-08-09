@@ -1,110 +1,130 @@
 /* =============================================================clinic-hours-section========================================== */
 
+/* Global responsive improvements */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
 /* -----------------------------------------------------------------1--------------------------------------------------------- */
 
 .clinic-hours-section{
-    height: 100vh;
+    min-height: auto;
     width: 100%;
     border: 2px solid transparent;
     background-color: #ebe3da;
+    padding: clamp(80px, 10vw, 120px) clamp(1rem, 3vw, 2rem) clamp(2rem, 5vw, 4rem);
+    margin-top: clamp(2rem, 4vw, 3rem);
   }
   
   .clinic-hours-section h2{
     text-align: center;
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    margin-top: 10%;
+    margin-top: 0;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
   }
   
   .clinic-hours-section h3{
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
     color: #111;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 0;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
     letter-spacing: 0.1rem;
   }
   
   .clinic-hours-section .clinic-hours-main-container{
-    height: 60vh;
-    max-width: 1550px;
-    /* border: 2px solid black; */
+    min-height: auto;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-  
+    gap: clamp(2rem, 4vw, 4rem);
+    flex-wrap: wrap;
   }
   
   .clinic-hours-main-container .clinic-hours-images-container{
-    height: 68vh;
-    width: 50%;
-    padding-top: 3%;
-    /* border: 12px solid blue; */
+    min-height: auto;
+    width: clamp(300px, 45%, 600px);
+    padding: clamp(1rem, 2vw, 2rem);
+    flex-shrink: 0;
   }
   
   .clinic-hours-images-container .clinic-hours-img{
-    height: 41vh;
-    width: 75%;
-    margin-left: 12.5%;
-    margin-top: 10%;
-    /* border: 8px solid black; */
+    min-height: auto;
+    width: 100%;
+    margin: 0;
   }
   
-  /* .den-clinic-img img{
-    height: 100%;
-    width: 100%;
-  } */
-  
   .clinic-hours-main-container .clinic-hours-intro-container{
-    height: 48vh;
-    width: 50%;
-    /* border: 20px solid green; */
-    padding-top: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
+    min-height: auto;
+    width: clamp(300px, 45%, 600px);
+    padding: clamp(1rem, 2vw, 2rem);
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .clinic-hours-intro-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   
   .clinic-hours-intro-container li{
-    margin-top: 2%;
-    font-size: 1.1rem;
+    margin-top: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     text-align: left;
-    line-height: 2rem;
+    line-height: 1.6;
+    padding: clamp(0.8rem, 1.5vw, 1.2rem);
+    background: white;
+    border-radius: clamp(8px, 1.5vw, 12px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   
   .clinic-hours-intro-container li span{
-    font-weight:700;
+    font-weight: 700;
+    color: #8B4513;
   }
   
   /* ******************************************* */
   
   .clinic-hours-images-list{
-    height: 100%;
+    min-height: auto;
     width: 100%;
     background-color: transparent;
-    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); */
-    /* border: 2px solid blue; */
   }
   
   .clinic-hours-images-list .clinic-hours-images-list{
-    height: 100%;
+    min-height: auto;
     width: 100%;
-    margin-top: 5%;
-    /* border: 5px solid green; */
+    margin-top: 0;
     overflow: hidden;
+    border-radius: clamp(10px, 2vw, 20px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    background: white;
+    padding: clamp(1rem, 2vw, 2rem);
   }
   
-  
   .clinic-hours-images-list .clinic-hours-images-content img{
-    height: 100%;
+    height: auto;
     width: 100%;
-    object-fit: cover; 
-    /* border: 8px solid black; */
+    object-fit: cover;
+    border-radius: clamp(5px, 1vw, 10px);
+    transition: transform 0.3s ease;
+  }
+  
+  .clinic-hours-images-list .clinic-hours-images-content img:hover {
+    transform: scale(1.05);
   }
   
   /* -----------------------------------------------------------------2--------------------------------------------------------- */
@@ -215,110 +235,321 @@
   }
   
   
-  /* -----------------------------------------------------------------3--------------------------------------------------------- */
+  /* ----------------------------------------------------------------3--------------------------------------------------------- */
   
   .clinic-hours-Colaba-section{
-    height: 80vh;
+    min-height: auto;
     width: 100%;
     border: 2px solid transparent;
     background-color: #ebe3da;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 3vw, 2rem);
   }
   
-  /* .clinic-hours-SouthMumbai-section h2{
-    text-align: center;
-    font-size: 2.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 10%;
-  } */
-  
   .clinic-hours-Colaba-section h3{
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
     color: #111;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 0;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
     letter-spacing: 0.1rem;
   }
   
   .clinic-hours-Colaba-section .clinic-hours-Colaba-main-container{
-    height: 60vh;
-    max-width: 1550px;
-    /* border: 2px solid black; */
+    min-height: auto;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-  
+    gap: clamp(2rem, 4vw, 4rem);
+    flex-wrap: wrap;
   }
   
   .clinic-hours-Colaba-main-container .clinic-hours-Colaba-images-container{
-    height: 68vh;
-    width: 50%;
-    padding-top: 3%;
-    /* border: 12px solid blue; */
+    min-height: auto;
+    width: clamp(300px, 45%, 600px);
+    padding: clamp(1rem, 2vw, 2rem);
+    flex-shrink: 0;
   }
   
   .clinic-hours-Colaba-images-container .clinic-hours-Colaba-img{
-    height: 41vh;
-    width: 75%;
-    margin-left: 12.5%;
-    margin-top: 10%;
-    /* border: 8px solid black; */
+    min-height: auto;
+    width: 100%;
+    margin: 0;
   }
   
-  /* .den-clinic-img img{
-    height: 100%;
-    width: 100%;
-  } */
-  
   .clinic-hours-Colaba-main-container .clinic-hours-Colaba-intro-container{
-    height: 48vh;
-    width: 50%;
-    /* border: 20px solid green; */
-    padding-top: 12%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
+    min-height: auto;
+    width: clamp(300px, 45%, 600px);
+    padding: clamp(1rem, 2vw, 2rem);
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .clinic-hours-Colaba-intro-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   
   .clinic-hours-Colaba-intro-container li{
-    margin-top: 2%;
-    font-size: 1.1rem;
+    margin-top: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     text-align: left;
-    line-height: 2rem;
+    line-height: 1.6;
+    padding: clamp(0.8rem, 1.5vw, 1.2rem);
+    background: white;
+    border-radius: clamp(8px, 1.5vw, 12px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   
   .clinic-hours-Colaba-intro-container li span{
-    font-weight:700;
+    font-weight: 700;
+    color: #8B4513;
   }
   
-  /* ******************************************* */
-  
   .clinic-hours-Colaba-images-list{
-    height: 100%;
+    min-height: auto;
     width: 100%;
     background-color: transparent;
-    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); */
-    /* border: 2px solid blue; */
   }
   
   .clinic-hours-Colaba-images-list .clinic-hours-Colaba-images-list{
-    height: 100%;
+    min-height: auto;
     width: 100%;
-    margin-top: 5%;
-    /* border: 5px solid green; */
+    margin-top: 0;
     overflow: hidden;
+    border-radius: clamp(10px, 2vw, 20px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    background: white;
+    padding: clamp(1rem, 2vw, 2rem);
   }
-  
   
   .clinic-hours-Colaba-images-list .clinic-hours-Colaba-images-content img{
-    height: 100%;
+    height: auto;
     width: 100%;
-    object-fit: cover; 
-    /* border: 8px solid black; */
+    object-fit: cover;
+    border-radius: clamp(5px, 1vw, 10px);
+    transition: transform 0.3s ease;
   }
+  
+  .clinic-hours-Colaba-images-list .clinic-hours-Colaba-images-content img:hover {
+    transform: scale(1.05);
+  }
+
+/* Floating Contact Buttons */
+#contact-btn .phn-no {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background: linear-gradient(45deg, #8B4513, #A0522D);
+    color: white;
+    border: none;
+    padding: clamp(0.8rem, 1.5vw, 1.2rem) clamp(1.2rem, 2vw, 1.8rem);
+    border-radius: clamp(25px, 4vw, 35px);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    white-space: nowrap;
+}
+
+#contact-btn .phn-no:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+.whatsapp-no {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+}
+
+.whatsapp-no a {
+    color: #25D366;
+    font-size: clamp(2rem, 4vw, 3rem);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-no a:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .clinic-hours-section .clinic-hours-main-container,
+    .clinic-hours-Colaba-section .clinic-hours-Colaba-main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .clinic-hours-main-container .clinic-hours-images-container,
+    .clinic-hours-main-container .clinic-hours-intro-container,
+    .clinic-hours-Colaba-main-container .clinic-hours-Colaba-images-container,
+    .clinic-hours-Colaba-main-container .clinic-hours-Colaba-intro-container {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .clinic-hours-section h2,
+    .clinic-hours-Colaba-section h3 {
+        font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    }
+    
+    .clinic-hours-section h3 {
+        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    }
+    
+    .clinic-hours-intro-container li,
+    .clinic-hours-Colaba-intro-container li {
+        font-size: clamp(0.9rem, 1.1vw, 1rem);
+        padding: clamp(0.6rem, 1.2vw, 1rem);
+    }
+    
+    .clinic-hours-main-container .clinic-hours-images-container,
+    .clinic-hours-main-container .clinic-hours-intro-container,
+    .clinic-hours-Colaba-main-container .clinic-hours-Colaba-images-container,
+    .clinic-hours-Colaba-main-container .clinic-hours-Colaba-intro-container {
+        padding: clamp(0.8rem, 1.5vw, 1.2rem);
+    }
+    
+    #contact-btn .phn-no {
+        padding: clamp(0.7rem, 1.2vw, 1rem) clamp(1rem, 1.5vw, 1.5rem);
+        font-size: clamp(0.8rem, 1.1vw, 1rem);
+    }
+    
+    .whatsapp-no a {
+        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .clinic-hours-section,
+    .clinic-hours-Colaba-section {
+        padding: clamp(60px, 8vw, 80px) clamp(0.8rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 3rem);
+    }
+    
+    .clinic-hours-section h2,
+    .clinic-hours-Colaba-section h3 {
+        font-size: clamp(1.2rem, 3vw, 1.6rem);
+    }
+    
+    .clinic-hours-section h3 {
+        font-size: clamp(1rem, 2.2vw, 1.2rem);
+    }
+    
+    .clinic-hours-intro-container li,
+    .clinic-hours-Colaba-intro-container li {
+        font-size: clamp(0.8rem, 1vw, 0.9rem);
+        padding: clamp(0.5rem, 1vw, 0.8rem);
+        margin-top: clamp(0.8rem, 1.5vw, 1.2rem);
+    }
+    
+    .clinic-hours-main-container .clinic-hours-images-container,
+    .clinic-hours-main-container .clinic-hours-intro-container,
+    .clinic-hours-Colaba-main-container .clinic-hours-Colaba-images-container,
+    .clinic-hours-Colaba-main-container .clinic-hours-Colaba-intro-container {
+        width: 100%;
+        padding: clamp(0.6rem, 1.2vw, 1rem);
+    }
+    
+    #contact-btn .phn-no {
+        padding: clamp(0.6rem, 1vw, 0.9rem) clamp(0.8rem, 1.2vw, 1.3rem);
+        font-size: clamp(0.7rem, 1vw, 0.9rem);
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-no {
+        bottom: 70px;
+        right: 15px;
+    }
+    
+    .whatsapp-no a {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+}
+
+@media (max-width: 320px) {
+    .clinic-hours-section h2,
+    .clinic-hours-Colaba-section h3 {
+        font-size: clamp(1.1rem, 2.8vw, 1.4rem);
+    }
+    
+    .clinic-hours-section h3 {
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }
+    
+    .clinic-hours-intro-container li,
+    .clinic-hours-Colaba-intro-container li {
+        font-size: clamp(0.7rem, 0.9vw, 0.8rem);
+        padding: clamp(0.4rem, 0.8vw, 0.6rem);
+    }
+    
+    #contact-btn .phn-no {
+        padding: clamp(0.5rem, 0.8vw, 0.7rem) clamp(0.7rem, 1vw, 1.1rem);
+        font-size: clamp(0.6rem, 0.9vw, 0.8rem);
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .whatsapp-no {
+        bottom: 60px;
+        right: 10px;
+    }
+    
+    .whatsapp-no a {
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+    }
+}
+
+/* Accessibility and Performance */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .clinic-hours-section h2,
+    .clinic-hours-section h3,
+    .clinic-hours-Colaba-section h3 {
+        color: #000;
+        text-shadow: none;
+    }
+    
+    .clinic-hours-intro-container li,
+    .clinic-hours-Colaba-intro-container li {
+        background: #000;
+        color: #fff;
+    }
+}
+
+@media print {
+    .whatsapp-no,
+    #contact-btn {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .clinic-hours-section,
+    .clinic-hours-Colaba-section {
+        background: white !important;
+    }
+}
   

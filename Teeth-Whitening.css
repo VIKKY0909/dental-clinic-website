@@ -10,183 +10,217 @@ body{
 .teeth-whitening-bg-img-section{
     min-height: 90vh;
     width: 100%;
-    margin-top: clamp(60px, 8vw, 10vh);
+    margin-top: 0;
     background-color: #ebe3da;
+    overflow-x: hidden;
 }
   
 .teeth-whitening-main-container{
-    min-height: 87.9vh;
+    min-height: 90vh;
     width: 100%;
     background-color: transparent;
-    margin-top: clamp(30px, 4vw, 5vh);
+    margin-top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
   
 .teeth-whitening-text-part{
     height: 100%;
-    width: clamp(300px, 60%, 60%);
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
 }
   
 .teeth-whitening-wrapper{
-    width: clamp(100%, 120%, 120%);
-    height: 100vh;
-    top: -10%;
-    margin-left: clamp(-2%, -1%, -1%);
-    background: linear-gradient(rgba(0,0,0.7), rgba(0,0,0,0.5)), url(StockCake-Dental\ procedure\ underway_1736195294.jpg) center no-repeat;
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(StockCake-Dental\ procedure\ underway_1736195294.jpg) center no-repeat;
     background-size: cover;
-    position: relative;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
   
 .teeth-whitening-text-part .teeth-whitening-heading{
-    height: 10%;
-    width: clamp(200px, 150%, 150%);
-    margin-top: clamp(15%, 25%, 25%);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
 }
   
 .teeth-whitening-heading h3{
-    font-size: clamp(1.5rem, 4vw, 2rem) !important;
-    font-weight: normal;
-    margin-left: clamp(20%, 44%, 44%);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
     color: white;
-    font-weight: 500;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
   
 .teeth-whitening-text-part .teeth-whitening-sub-heading{
-    height: 10%;
-    width: clamp(200px, 150%, 150%);
-    margin-top: 0%;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    max-width: 800px;
 }
   
 .teeth-whitening-sub-heading p{
-    font-size: clamp(1rem, 2.5vw, 1.3rem) !important;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     font-family: 'SangBleu Kingdom Light, Georgia', serif;
-    letter-spacing: 0.1rem;
-    margin-left: clamp(10%, 20%, 20%);
+    letter-spacing: 0.05rem;
     color: white;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 .teeth-whitening-text-part .contact-btn{
-    height: clamp(2rem, 4vw, 2.5rem);
-    width: clamp(7rem, 15vw, 9.5rem);
-    border: 1px solid white;
+    height: clamp(2.5rem, 5vw, 3rem);
+    width: clamp(8rem, 20vw, 12rem);
+    border: 2px solid white;
     background-color: white;
-    margin-left: clamp(40%, 70%, 70%);
-    margin-top: clamp(1%, 2%, 2%);
+    margin: 0;
     text-decoration: none;
-    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
-    letter-spacing: 0.2rem;
-    color: black;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    letter-spacing: 0.1rem;
+    color: #333;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    line-height: clamp(2.5rem, 5vw, 3rem);
 }
 
-  .teeth-whitening-text-part .contact-btn:hover{
-    background-color: black;
-    cursor: pointer;
-    border: 2px solid transparent;
-  }
-  
-  .teeth-whitening-text-part a:hover button{
+.teeth-whitening-text-part .contact-btn:hover{
+    background-color: transparent;
     color: white;
-  } 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+  
+.teeth-whitening-text-part a:hover button{
+    color: white;
+}
+
+/* Mobile Adjustments for Hero Section */
+@media (max-width: 768px) {
+    .teeth-whitening-wrapper {
+        background-attachment: scroll;
+    }
+    
+    .teeth-whitening-text-part {
+        padding: 0 1rem;
+    }
+    
+    .teeth-whitening-sub-heading p br {
+        display: none;
+    }
+} 
   
   
   
-  @media (max-width: 1286px){
-  .teeth-whitening-heading h3{
-    font-size: 2.8rem;
-    margin-top: 25%;
-  }
+/* --------------------------------------------------------------------2nd page------------------------------------------------ */
   
-  .teeth-whitening-sub-heading p{
-    font-size: 1.8rem;
-    margin-top: 2%;
-  }
-  
-  .teeth-whitening-text-part .contact-btn{
-    margin-top: 5%;
-  }
-  }
-  
-  /* --------------------------------------------------------------------2nd page------------------------------------------------ */
-  
-  .teeth-whitening-first-section{
-    height: 300vh;
+.teeth-whitening-first-section{
+    min-height: auto;
     width: 100%;
     background-color: #ebe3da;
-    border: 2px solid transparent;
-  }
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+    overflow-x: hidden;
+}
   
-  .teeth-whitening-first-section h2{
+.teeth-whitening-first-section h2{
     text-align: center;
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    margin: 0 0 clamp(1rem, 3vw, 2rem) 0;
+    color: #333;
+}
+  
+.teeth-whitening-first-section h4{
+    text-align: center;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    margin-top: 5%;
-  }
+    margin: 0 0 clamp(2rem, 4vw, 3rem) 0;
+    color: #555;
+}
   
-  .teeth-whitening-first-section h4{
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 1%;
-  }
-  
-  .teeth-whitening-first-section .teeth-whitening-first-sub-section{
-    height: 60vh;
+.teeth-whitening-first-section .teeth-whitening-first-sub-section{
+    min-height: auto;
     width: 100%;
-    margin-top: 3%;
-    /* border: 2px solid black; */
+    max-width: 1200px;
+    margin: 0 auto clamp(3rem, 6vw, 4rem) auto;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    gap: clamp(2rem, 4vw, 3rem);
+}
   
-  .teeth-whitening-first-sub-section .teeth-whitening-texts-section{
-    height: 100%;
-    width: 50%;
-    /* border: 2px solid blue; */
-  }
+.teeth-whitening-first-sub-section .teeth-whitening-texts-section{
+    flex: 1;
+    min-width: 300px;
+}
   
-  .teeth-whitening-texts-section p{
-    width: 90%;
-    margin-left: 5%;
-    /* border: 2px solid pink; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 10%;
-    line-height: 2rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-  }
-  
-  .teeth-whitening-first-sub-section .teeth-whitening-img-section{
-    height: 100%;
-    width: 50%;
-    /* border: 2px solid blue; */
-  }
-  
-  .teeth-whitening-img-section .teeth-whitening-image-container{
-    height: 50vh;
-    width: 80%;
-    /* border: 2px solid red; */
-    margin-top: 5%;
-    margin-left: 10%;
-  }
-  
-  .teeth-whitening-image-container img{
-    height: 100%;
+.teeth-whitening-texts-section p{
     width: 100%;
-    background-size: cover;
-  }
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.7;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    letter-spacing: 0.05rem;
+    color: #444;
+    text-align: justify;
+}
+  
+.teeth-whitening-first-sub-section .teeth-whitening-img-section{
+    flex: 1;
+    min-width: 300px;
+}
+  
+.teeth-whitening-img-section .teeth-whitening-image-container{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+  
+.teeth-whitening-image-container img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Mobile Layout for Content Sections */
+@media (max-width: 768px) {
+    .teeth-whitening-first-section .teeth-whitening-first-sub-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .teeth-whitening-first-sub-section:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    
+    .teeth-whitening-texts-section p {
+        text-align: center;
+    }
+}
   
   
   .teeth-whitening-first-section h2{
@@ -199,99 +233,158 @@ body{
   }
   
   
-  .tw-video-container{
-    height: 70vh;
+.tw-video-container{
+    min-height: auto;
     width: 100%;
-    /* border: 2px solid red; */
-    padding-top: 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-  }
+    justify-content: center;
+    gap: clamp(2rem, 4vw, 3rem);
+}
   
-  .tw-video-container .tw-client-info{
-    /* border: 2px solid blue; */
-    width: 40%;
-    height: 100%;
-  }
+.tw-video-container .tw-client-info{
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   
-  .tw-client-info .tw-client-box{
-    height: 33vh;
+.tw-client-info .tw-client-box{
     width: 100%;
-    background:#95928f ;
-    border-radius: 20px;
-    margin-top: 19vh;
-  }
+    max-width: 500px;
+    background: #95928f;
+    border-radius: 15px;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
   
-  .tw-client-box p{
-    width: 90%;
-    margin-left: 5%;
-    font-size: 1rem;
+.tw-client-box .left-quote{
+    position: absolute;
+    top: -10px;
+    left: 15px;
+}
+
+.tw-client-box p{
+    width: 100%;
+    margin: clamp(1rem, 3vw, 1.5rem) 0;
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
     text-align: center;
-    margin-top: 2vh;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+    line-height: 1.6;
+    color: #333;
+}
   
-  .tw-client-box h5{
-    text-align: end;
-    margin-right: 5%;
-    margin-top: 3%;
-    font-size: 1.2rem;
+.tw-client-box h5{
+    text-align: right;
+    margin: clamp(1rem, 2vw, 1.5rem) 0 0 0;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    letter-spacing: 0.1rem;
-  }
+    letter-spacing: 0.05rem;
+    color: #333;
+    font-style: italic;
+}
   
-  .tw-client-box .right-quote{
-    text-align: end;
-    margin-top: 2%;
-  }
-  .tw-client-box i{
-    font-size: 2.5rem;
+.tw-client-box .right-quote{
+    position: absolute;
+    bottom: -10px;
+    right: 15px;
+}
+
+.tw-client-box i{
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: rgb(79, 56, 56);
-  }
+}
   
-  .tw-video-container .tw-client-video{
-    /* border: 2px solid blue; */
-    width: 30%;
-    height: 50vh;
-  }
+.tw-video-container .tw-client-video{
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
   
-  .tw-client-video video{
-    height: 100%;
+.tw-client-video video{
     width: 100%;
+    height: auto;
+    min-height: 250px;
     object-fit: cover;
-  }
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Mobile Layout for Video Testimonial Section */
+@media (max-width: 768px) {
+    .tw-video-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tw-client-video {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+    
+    .tw-client-video video {
+        max-height: 300px;
+    }
+}
   
   
-  .teeth-whitening-first-section .teeth-whitening-benefits-content{
-    height: 30vh;
-    width: 90%;
-    margin-left: 5%;
-    /* border: 2px solid black; */
-    display: grid;
-    padding-top: 5%;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: repeat(1, auto); 
-  }
-  
-  .teeth-whitening-benefits-content .teeth-whitening-benefit{
-    height: 30vh;
+.teeth-whitening-first-section .teeth-whitening-benefits-content{
     width: 100%;
-    margin-top: 2%;
-  }
+    max-width: 800px;
+    margin: 0 auto;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+}
   
-  .teeth-whitening-benefit .teeth-whitening-benefits-list{
-    /* border : 2px solid blue; */
-    margin-top: 3%;
-  }
+.teeth-whitening-benefits-content .teeth-whitening-benefit{
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
   
-  .teeth-whitening-benefits-list li{
-    font-size: 1.2rem;
+.teeth-whitening-benefit .teeth-whitening-benefits-list{
+    margin: clamp(0.5rem, 2vw, 1rem) 0;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    background: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.teeth-whitening-benefit .teeth-whitening-benefits-list:hover{
+    transform: translateY(-3px);
+}
+  
+.teeth-whitening-benefits-list li{
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    /* text-align: left; */
-  }
+    letter-spacing: 0.05rem;
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Mobile Layout for Benefits */
+@media (max-width: 768px) {
+    .teeth-whitening-benefits-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .teeth-whitening-benefit {
+        width: 100%;
+        max-width: 400px;
+    }
+}
   
   .tw-bf-af-pics{
     /* border : 2px solid blue; */
@@ -314,55 +407,293 @@ body{
     object-fit: cover;
   }
   
-/* ------------------------------------------------------------------------------------dentist-client------------------------------------ */
+/* ------------------------------------------------------------------------------------People Slider Section------------------------------------ */
   
 .people-main-section{
   position: relative;
   width: 100%;
-  height: 70vh;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; */
-  /* background-color: #BEB2A6; */
-  background-color:  #c0b9b2;
-  border: 2px solid transparent;
+  min-height: auto;
+  background-color: #c0b9b2;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+  overflow-x: hidden;
 }
 
+.people-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.people-slider-container {
+  position: relative;
+  padding: 0 50px;
+}
 
 .people-main-section .people-slider-wrapper{
-  overflow: hidden;
-  margin: 0 60x 50px;
+  overflow: visible;
+  position: relative;
 }
-
 
 .people-main-section .people-item {
   display: flex;
-  /* padding: 35px; */
-  padding-top: 15px;
-  padding-bottom: 50px;
+  padding: clamp(1rem, 3vw, 2rem);
   text-align: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 4%;
-  /* border: 2px solid black; */
+  justify-content: center;
+  height: auto;
 }
 
 .people-main-section .people-item .people-images{
-  width: 350px;
-  height: 250px;
-  background-size: cover;
-  /* border-radius: 50%; */
-  margin-bottom: 50px;
-  border: 10px solid #f9f2e8;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 8px solid #f9f2e8;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.people-main-section .people-item .people-images:hover{
+  transform: scale(1.05);
+}
+
+/* Swiper Navigation Buttons */
+.people-slider-container .swiper-button-next,
+.people-slider-container .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  color: #333;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.people-slider-container .swiper-button-next:hover,
+.people-slider-container .swiper-button-prev:hover {
+  background: rgba(255,255,255,1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.people-slider-container .swiper-button-next {
+  right: 10px;
+}
+
+.people-slider-container .swiper-button-prev {
+  left: 10px;
+}
+
+.people-slider-container .swiper-button-next:after,
+.people-slider-container .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Swiper Pagination */
+.people-main-section .swiper-pagination{
+  position: relative;
+  margin-top: clamp(1rem, 3vw, 2rem);
 }
 
 .people-main-section .swiper-pagination-bullet{
-  width: 15px;
-  height: 15px;
-  opacity: 1;
-  margin-bottom: 5%;
-  /* border: 2px solid black; */
+  width: 12px;
+  height: 12px;
+  opacity: 0.5;
+  background: #333;
+  transition: all 0.3s ease;
 }
 
- 
+.people-main-section .swiper-pagination-bullet-active{
+  opacity: 1;
+  background: #444;
+  transform: scale(1.2);
+}
+
+/* Mobile Adjustments for People Slider */
+@media (max-width: 768px) {
+  .people-slider-container {
+    padding: 0 40px;
+  }
+  
+  .people-slider-container .swiper-button-next,
+  .people-slider-container .swiper-button-prev {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .people-slider-container .swiper-button-next:after,
+  .people-slider-container .swiper-button-prev:after {
+    font-size: 14px;
+  }
+  
+  .people-slider-container .swiper-button-next {
+    right: 5px;
+  }
+  
+  .people-slider-container .swiper-button-prev {
+    left: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .people-slider-container {
+    padding: 0 30px;
+  }
+  
+  .people-main-section .people-item .people-images{
+    max-width: 280px;
+  }
+}
+
+/* ============================================================================= Floating Elements & Mobile Adjustments =========================================================================== */
+
+/* Ensure floating phone and WhatsApp buttons don't interfere with content */
+#contact-btn .phn-no {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 15px;
+  background: linear-gradient(45deg, #8B4513, #A0522D);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+#contact-btn .phn-no:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  background: linear-gradient(45deg, #A0522D, #8B4513);
+}
+
+.whatsapp-no {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-no a {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  color: #25D366;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-no a:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Responsive Adjustments */
+footer {
+  background: #333;
+  color: white;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+}
+
+.last-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.first-footer-section {
+  text-align: center;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.first-footer-section p {
+  margin: 0.5rem 0;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.second-footer-section {
+  text-align: center;
+}
+
+.second-footer-section p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
+}
+
+#add1 {
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  opacity: 0.8;
+}
+
+#address span {
+  font-weight: bold;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+  /* Adjust floating buttons for mobile */
+  #contact-btn .phn-no {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 12px;
+  }
+  
+  .whatsapp-no {
+    bottom: 65px;
+    right: 15px;
+  }
+  
+  /* Hide background attachment on mobile for better performance */
+  .teeth-whitening-wrapper {
+    background-attachment: scroll;
+  }
+  
+  /* Ensure no horizontal scrolling */
+  body {
+    max-width: 100vw;
+  }
+  
+  /* Footer adjustments */
+  .first-footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further mobile optimizations */
+  .teeth-whitening-text-part {
+    padding: 0 0.5rem;
+  }
+  
+  /* Adjust floating buttons for very small screens */
+  #contact-btn .phn-no {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Performance optimization - reduce animations on mobile */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .teeth-whitening-heading h3,
+  .teeth-whitening-sub-heading p {
+    text-shadow: 2px 2px 0 #000;
+  }
+}

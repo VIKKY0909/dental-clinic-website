@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Sweet+Gothic&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="testimonials.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="fixed-element.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <!-- navbar -->
  <header>
     <nav class="navbar">
-        <div class="nav-logo">
+        <a href="index.html" class="nav-logo">
             <div class="logo"></div>
             <div class="clinic-centers">
                 <p>Andheri | Colaba</p>
             </div>
-        </div>  
+        </a>  
 
         <div class="menu-icon" id="menu-icon">
             <i class="fa fa-bars"></i>
@@ -54,15 +54,14 @@
     </nav>
 </header>
 
-<a href="tel:+919819201882" id="contact-btn"><button class="phn-no" id="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button> </a>
+<a href="tel:+919819201882" class="fixed-phone-btn"><button class="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button></a>
 <div class="whatsapp-no"><a href="https://wa.me/919819201882"><i class="fa-brands fa-square-whatsapp"></i></a></div>
 
     <!-- testimonials -->
-<section class="patients-testimonials-section">
-   <div class="patients-testimonials-container">
-    <div class="patients-testimonials-wrapper">
-        <div class="patients-testimonials-header">
-            <div class="stars">
+<section class="testimonials-section">
+    <div class="testimonials-container">
+        <div class="testimonials-header">
+            <div class="rating-stars">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -70,337 +69,97 @@
                 <i class="fa-solid fa-star"></i>
             </div>
         </div>
-        <div class="patients-testimonials">
-            <div class="patients-testimonials-slider">
-                <!-- 1st -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                            <video src="johhnny Lever- video-testimonial.mp4" controls id="johhnny-lever"></video>
+        
+        <div class="testimonials-slider-wrapper">
+            <div class="testimonials-slider">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide active">
+                    <div class="slide-card">
+                        <div class="patient-media">
+                            <video src="johhnny Lever- video-testimonial.mp4" controls></video>
                         </div>
-                        <div class="patients-slide-text">
-                            <h3>Johnny Lever</h3>
-                            <p>Whenever I have a dental problem, I come to Kadali Dental Clinic. There is a cavity in my tooth and they filled it. Thanks Dr. Saurabh and Dr. Shalaka.</p>
-                            <p class="patients-destination">Bollywood Actor, Mumbai</p>
+                        <div class="patient-info">
+                            <h3 class="patient-name">Johnny Lever</h3>
+                            <p class="patient-testimonial">Whenever I have a dental problem, I come to Kadali Dental Clinic. There is a cavity in my tooth and they filled it. Thanks Dr. Saurabh and Dr. Shalaka.</p>
+                            <p class="patient-location">Bollywood Actor, Mumbai</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- 2nd -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                            <video src="shilpa-agnihotri.mp4" controls id="shilpa-agnihotri"></video>
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <div class="slide-card">
+                        <div class="patient-media">
+                            <video src="shilpa-agnihotri.mp4" controls></video>
                         </div>
-                        <div class="patients-slide-text">
-                            <h3>Shilpa Agnihotri</h3>
-                            <p>Thanks to Dr.Shalaka and Dr.Saurabh, I finally have my dream smile. It was a marvellous Experience. Heartfelt Thank you to whole team of Kadali !!!</p>
-                            <p class="patients-destination">Actress</p>
+                        <div class="patient-info">
+                            <h3 class="patient-name">Shilpa Agnihotri</h3>
+                            <p class="patient-testimonial">Thanks to Dr.Shalaka and Dr.Saurabh, I finally have my dream smile. It was a marvellous Experience. Heartfelt Thank you to whole team of Kadali !!!</p>
+                            <p class="patient-location">Actress</p>
                         </div>
                     </div>
                 </div>
-                    <!-- 3rd -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
+                <!-- Slide 3 -->
+                <div class="testimonial-slide">
+                    <div class="slide-card">
+                        <div class="patient-media">
                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Ravi Kiran">
                         </div>
-                        <div class="patients-slide-text">
-                            <h3>Ravi Kiran</h3>
-                            <p>Simply superb. In all ways. Right from explaining the treatment to doing it. I was totally at ease...</p>
-                            <p class="patients-destination">CEO-Starcom South Asia, Singapore</p>
+                        <div class="patient-info">
+                            <h3 class="patient-name">Ravi Kiran</h3>
+                            <p class="patient-testimonial">Simply superb. In all ways. Right from explaining the treatment to doing it. I was totally at ease...</p>
+                            <p class="patient-location">CEO-Starcom South Asia, Singapore</p>
                         </div>
                     </div>
                 </div>
 
-                     <!-- 4th -->
-                 <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                            <video src="Mushtaq-Khan.mp4" controls id="Mushtaq-Khan"></video>
+                <!-- Slide 4 -->
+                <div class="testimonial-slide">
+                    <div class="slide-card">
+                        <div class="patient-media">
+                            <video src="Mushtaq-Khan.mp4" controls></video>
                         </div>
-                        <div class="patients-slide-text">
-                            <h3>Mushtaq Khan</h3>
-                            <p>Thanks to Dr.Saurabh and Dr.Shalaka, my dental implant is done so nicely... Without feeling any pain, they helped me very well. If you ever have any dental issues, remember the name 'kadali Advanced Dental care'... Absolutely fine Experience. Thank you so much, doctors !!!</p>
-                            <p class="patients-destination">Bollywood Actor, Mumbai</p>
+                        <div class="patient-info">
+                            <h3 class="patient-name">Mushtaq Khan</h3>
+                            <p class="patient-testimonial">Thanks to Dr.Saurabh and Dr.Shalaka, my dental implant is done so nicely... Without feeling any pain, they helped me very well. If you ever have any dental issues, remember the name 'kadali Advanced Dental care'... Absolutely fine Experience. Thank you so much, doctors !!!</p>
+                            <p class="patient-location">Bollywood Actor, Mumbai</p>
                         </div>
                     </div>
                 </div>
 
-                    <!-- 5th -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
+                <!-- Slide 5 -->
+                <div class="testimonial-slide">
+                    <div class="slide-card">
+                        <div class="patient-media">
                                 <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Vijay Raaz">
                         </div>
-                        <div class="patients-slide-text">
-                            <h3>Vijay Raaz</h3>
-                            <p>A fine combination of the latest techniques with personal care. Really appreciate the follow ups. Thank you doctor...</p>
-                            <p class="patients-destination">Bollywood Actor, Mumbai</p>
+                        <div class="patient-info">
+                            <h3 class="patient-name">Vijay Raaz</h3>
+                            <p class="patient-testimonial">A fine combination of the latest techniques with personal care. Really appreciate the follow ups. Thank you doctor...</p>
+                            <p class="patient-location">Bollywood Actor, Mumbai</p>
                         </div>
                     </div>
                 </div>
-                      <!-- 6th -->
-                  <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                            <video src="Longinous-video.mp4" controls id="shilpa-agnihotri"></video>
+                <!-- Only keeping first 5 slides for now to test -->
                         </div>
-                        <div class="patients-slide-text">
-                            <h3>Longinus Fernandes</h3>
-                            <p>There was a time when I used to be very conscious about my Teeth & Smile.Thanks to Dr Kadali !! They have actually made me feel comfortable and above all "SPECIAL"..</p>
-                            <p class="patients-destination">Choreographer, India</p>
-                        </div>
-                    </div>
-                </div>
-                    <!-- 7th -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b17c?w=300&h=300&fit=crop&crop=face" alt="Sugandha Mishra">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Sugandha Mishra</h3>
-                            <p>After my smile makeover I feel more confident. It has changed my life totally... </p>
-                            <p class="patients-destination">Singer and Actress, Mumbai</p>
-                        </div>
-                    </div>
-                </div>
-                      <!-- 8th -->
-                  <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" alt="Ravi K Chandran">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3 id="ravichandran">Ravi K Chandran</h3>
-                                <p>Hospitality is key at the Kadali clinic. Kadali's treatment is simple and painless. The couple together takes special care of every patient making them feel at home and forget their pains. The clinic is an epitome of cleanliness and hygiene. Every visit to their clinic makes me trust them more and I value their treatment.</p>
-                            <p class="patients-destination" id="ravi-destination">Film Director</p>
-                        </div>
-                    </div>
-                </div>
-                    <!-- 9th -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face" alt="Mallika Kapoor">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Mallika Kapoor</h3>
-                            <p>Thank you very much for your kind and efficient dental treatment in india. I am very pleased with my dental crowns.</p>
-                            <p class="patients-destination">Actress, Mumbai</p>
-                        </div>
-                    </div>
-                </div>
-                      <!-- 10th -->
-                  <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face" alt="Ms. Luba">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Ms. Luba</h3>
-                                <p>Simply thrilled. I got my new smile in 7 days. Kadali's are the best. Highly recommended...</p>
-                            <p class="patients-destination">Russian Federation</p>
-                        </div>
-                    </div>
-                </div>
-                    <!-- 11th -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Jay Soni">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Jay Soni</h3>
-                            <p>I am actually scared of dental treatment. But once i got the dental treatment in mumbai from dr kadali my fear has disappeared.So thank you dr kadali for taking care of my dental needs.</p>
-                            <p class="patients-destination">Actor, Mumbai</p>
-                        </div>
-                    </div>
-                </div>
-                      <!-- 12th -->
-                  <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Deepak Quazir">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Deepak Quazir</h3>
-                            <p>They are the best dentist in Mumbai ...</p>
-                            <p class="patients-destination">Actor, Bollywood</p>
-                        </div>
-                    </div>
-                </div>
-                    <!-- 13th -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b17c?w=300&h=300&fit=crop&crop=face" alt="Madhuri Bhatia">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Madhuri Bhatia</h3>
-                            <p>Dental machines transform themselves into vicious monsters when i am in the patients chair. However Dr. Kadali always allays my fears with explanation, manner and of course excellent treatment...</p>
-                            <p class="patients-destination">Actress, Mumbai</p>
-                        </div>
-                    </div>
-                </div>
-                      <!-- 14th -->
-                  <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Mohit Ahlawat">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Mohit Ahlawat</h3>
-                                <p>Thank you! Initially I was very nervous but the entire team was very helpful and made me very comfortable. Now I don't dread the dentist anymore...</p>
-                            <p class="patients-destination">Actor, Mumbai</p>
-                        </div>
-                    </div>
-                </div>
-                    <!-- 15th -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face" alt="Nishigandha Wad">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Nishigandha Wad</h3>
-                            <p>Dr. Shalaka and Dr. Saurabh it was a real pleasure knowing myself again, under your expertise, with an enhanced beautiful smile......you too keep smiling always. Warm regards and thank you. Hari om.</p>
-                            <p class="patients-destination">Actress, Mumbai</p>
-                        </div>
-                    </div>
-                </div>
-                      <!-- 16th -->
-                  <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face" alt="Dhwani Mittal">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Dhwani Mittal</h3>
-                            <p>It was a comfortable cosmetic dental treatment, unlike what i had in mind,i was always scared of visiting a dental clinic, not any more. Its a very friendly place love the atmosphere here,its clean hygienic dental clinic in andheri mumbai and yes i got a great smile here and confidence.</p>
-                            <p class="patients-destination">Actress and Model, Mumbai</p>
-                        </div>
-                    </div>
-                </div>
-                    <!-- 17th -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Anjan Srivastav">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Anjan Srivastav</h3>
-                            <p>Thanks for taking care of my 32 and my fear .I had forgotten that i was on a dentist chair getting dental treatment.</p>
-                            <p class="patients-destination">Bollywood Actor, Mumbai</p>
-                        </div>
-                    </div>
-                </div>
-                      <!-- 18th -->
-                  <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Aakash Deep">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Aakash Deep</h3>
-                            <p>Full credit to the doctors and their team for making dental treatment a pleasant experience. I highly recommend them to all. Their personal touch in every small thing really sets them apart.</p>
-                            <p class="patients-destination">Actor</p>
-                        </div>
-                    </div>
-                </div>
-                    <!-- 19th -->
-                <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" alt="Tarun Khanna">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3>Tarun khanna</h3>
-                                <p>Dear friends if you want a friendly cosmetic dentist, you don't need to look any further then Dr. Kadalis clinic. They know their job and know it damn well. Thanks to them I can smile without any hesitation...</p>
-                            <p class="patients-destination">Model and Actor, Mumbai</p>
-                        </div>
-                    </div>
+            
+            <!-- Navigation Controls -->
+            <div class="slider-controls">
+                <button class="control-btn prev-btn" aria-label="Previous testimonial">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="control-btn next-btn" aria-label="Next testimonial">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
                 </div>
 
-                      <!-- 20th -->
-                  <div class="patients-testimonials-slide">
-                    <div class="slide-bg"></div>
-                    <div class="slide-content">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <i class="fa-solid fa-quote-right"></i>
-                        <div class="patients-slide-img">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Kunal Dasgupta">
-                        </div>
-                        <div class="patients-slide-text">
-                            <h3 id="kunaldasgupta">Kunal Dasgupta</h3>
-                                <p>At Kadali's it is refreshing to find two caring doctors and staff that have such a high level of professionalism and personal service. While they employ the latest in dental technology and techniques, they still provide old fashioned care and service. I couldn't be more comfortable or be more happy with their care...</p>
-                            <p class="patients-destination" id="kunal-dest">Ex-CEO, Sony Entertainment Television</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="testimonials-controls">
-            <i class="fa-solid fa-arrow-left"></i>
-            <i class="fa-solid fa-arrow-right"></i>
+            <!-- Dots Indicator -->
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
         </div>
     </div>
    </div>
@@ -422,402 +181,204 @@
 </section>
 
     <!-- Textual testimonials section -->
-<section class="img-section img-sec-testi">
-    <div class="img-testi-container">
-      <h2 class="img-title">Words from Our Happy Patients...</h2>
-    </div>
+    <!-- YouTube videos section -->
 
-    <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
 
-          <!-- Testimonial 1 -->
-      <div class="swiper-slide">
-        <div class="swiper-client-msg">
-          <p>I wanted to change my smile and when it was my front tooth i was a bit careful in making the right choice. after checking few websites 
-                I decided on Kadali's as they are cosmetic dentist to many celebrities in india mumbai. I am highly delighted with the treatment 
-            I have had here from the wonderful dr kadalis . They have given me back my smile.</p>
+    <!-- Simple & Reliable Textual Testimonials Slider -->
+<section class="testimonials-text-section">
+    <div class="testimonials-text-container">
+        <h2 class="testimonials-text-title">Words from Our Happy Patients...</h2>
+        
+        <div class="testimonials-slider-wrapper" id="textSliderWrapper">
+            <div class="testimonials-slider-container">
+                <div class="testimonials-slides-track" id="slidesTrack">
+                    
+                    <!-- Slide 1 -->
+                    <div class="testimonial-text-slide">
+                        <div class="testimonial-quote">
+                            <p>"I wanted to change my smile and when it was my front tooth i was a bit careful in making the right choice. after checking few websites I decided on Kadali's as they are cosmetic dentist to many celebrities in india mumbai. I am highly delighted with the treatment I have had here from the wonderful dr kadalis. They have given me back my smile."</p>
         </div>
-        <div class="swiper-client-data grid grid-two-column">
-          <figure>
+                        <div class="testimonial-author">
+                            <div class="author-image">
                 <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Helen Rhodes">
-          </figure>
-          <div class="client-data-details">
-            <p><i>Helen Rhodes, from UK</i></p>
-                <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag"> 
+                            </div>
+                            <div class="author-info">
+                                <h4>Helen Rhodes</h4>
+                                <p><img src="https://flagcdn.com/w40/gb.png" alt="UK Flag"> from UK</p>
           </div>
         </div>
       </div>
 
-          <!-- Testimonial 2 -->
-      <div class="swiper-slide">
-        <div class="swiper-client-msg">
-          <p>Thank you for all your help! The place was wonderfully clean and professional, and all staff very friendly, 
-            welcoming and knowledgeable! Dr Kadali was incredibly helpful in decisions regarding my teeth. Thanks Again</p>
+                    
+                    <!-- Slide 2 -->
+                    <div class="testimonial-text-slide">
+                        <div class="testimonial-quote">
+                            <p>"Thank you for all your help! The place was wonderfully clean and professional, and all staff very friendly, welcoming and knowledgeable! Dr Kadali was incredibly helpful in decisions regarding my teeth. Thanks Again"</p>
         </div>
-
-        <div class="swiper-client-data grid grid-two-column">
-          <figure>
+                        <div class="testimonial-author">
+                            <div class="author-image">
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Cameroon">
-          </figure>
-          <div class="client-data-details">
-            <p><i>Cameroon, from New York, USA</i></p>
-                <img src="https://flagcdn.com/w40/us.png" alt="USA Flag"> 
+                            </div>
+                            <div class="author-info">
+                                <h4>Cameroon</h4>
+                                <p><img src="https://flagcdn.com/w40/us.png" alt="USA Flag"> from New York, USA</p>
           </div>
         </div>
       </div>
 
-          <!-- Testimonial 3 -->
-      <div class="swiper-slide">
-        <div class="swiper-client-msg">
-          <p>Hi there,I'm so happy i came to My Dental Boutique.I was unsure at first whether its a good idea but as soon as i arrived, 
-            saw the clinic and met the staff i knew everything would be grand.Also there is no beating the price.Its really an investment.
-            Recommended to anybody in the future.</p>
+                    <!-- Slide 3 -->
+                    <div class="testimonial-text-slide">
+                        <div class="testimonial-quote">
+                            <p>"Hi there, I'm so happy i came to My Dental Boutique. I was unsure at first whether its a good idea but as soon as i arrived, saw the clinic and met the staff i knew everything would be grand. Also there is no beating the price. Its really an investment. Recommended to anybody in the future."</p>
         </div>
-
-        <div class="swiper-client-data grid grid-two-column">
-          <figure>
+                        <div class="testimonial-author">
+                            <div class="author-image">
                 <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Ossian">
-          </figure>
-          <div class="client-data-details">
-            <p><i>Ossian, from Australia</i></p>
-                <img src="https://flagcdn.com/w40/au.png" alt="Australia Flag"> 
+                            </div>
+                            <div class="author-info">
+                                <h4>Ossian</h4>
+                                <p><img src="https://flagcdn.com/w40/au.png" alt="Australia Flag"> from Australia</p>
           </div>
         </div>
       </div>
 
-          <!-- Testimonial 4 -->
-      <div class="swiper-slide">
-        <div class="swiper-client-msg">
-          <p>"I would like to assure that the dental treatment carried out here at this dental clinic in india mumbai by Dr Kadali (Both of them!) 
-            is first class.I just have twenty eight ( Yes 28 ) CROWNS fitted and the end results was excellent and the procedure was painless.I would like to 
-            thank both highly experienced dentist in mumbai ( Dr Kadali - Mr + Mrs ) for their excellence and professionalism.I would also like to thank 
-            all the staff who were very helpful and friendly who played a huge role in setting up my trip and treatment. I flew all the way from Perth Australia 
-            just to have this work carried out.Certainly picked one of the finest dental practices in mumbai. Thank you again</p>
+                    <!-- Slide 4 -->
+                    <div class="testimonial-text-slide">
+                        <div class="testimonial-quote">
+                            <p>"The staff at Kadali Dental are absolutely fantastic. From the moment I walked in, I felt comfortable and well cared for. Dr. Kadali took the time to explain everything and made sure I was completely satisfied with my treatment. The results exceeded my expectations!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Michael Johnson">
         </div>
-
-        <div class="swiper-client-data grid grid-two-column">
-          <figure>
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" alt="Elliot Ramsay">
-          </figure>
-          <div class="client-data-details">
-            <p><i>Elliot Ramsay, from Australia</i></p>
-                <img src="https://flagcdn.com/w40/au.png" alt="Australia Flag"> 
+                            <div class="author-info">
+                                <h4>Michael Johnson</h4>
+                                <p><img src="https://flagcdn.com/w40/ca.png" alt="Canada Flag"> from Canada</p>
           </div>
         </div>
       </div>
 
-          <!-- Testimonial 5 -->
-      <div class="swiper-slide">
-        <div class="swiper-client-msg">
-          <p>I visited the city clinic and found it to be very clean professional and friendly .1st visit got my lower bridge done. 
-            and came for a second visit for my dental implants at the sea resort clinic stayed at sea resort found it very good and 
-            value for money. clinic specially is neat and clean and bright in the end very happy with everything.</p>
+                    <!-- Slide 5 -->
+                    <div class="testimonial-text-slide">
+                        <div class="testimonial-quote">
+                            <p>"I travelled from Boston specifically for my dental treatment at Kadali Dental. The quality of care and attention to detail was outstanding. The clinic is modern, clean, and the staff are professional and friendly. I would definitely recommend this clinic to anyone considering dental tourism."</p>
         </div>
-
-        <div class="swiper-client-data grid grid-two-column">
-          <figure>
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Mark Schofield">
-          </figure>
-          <div class="client-data-details">
-            <p><i>Mark Schofield, from UK</i></p>
-                <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag"> 
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Ms. Heather Hutt">
+          </div>
+                            <div class="author-info">
+                                <h4>Ms. Heather Hutt</h4>
+                                <p><img src="https://flagcdn.com/w40/us.png" alt="USA Flag"> from Boston USA</p>
           </div>
         </div>
       </div>
 
-          <!-- Testimonial 6 -->
-      <div class="swiper-slide">
-        <div class="swiper-client-msg">
-          <p>once i was inside the clinic i felt completely confident i was in professional hands. 
-            very thorough and professional.Warm welcome from the front desk. would certainly recommend.</p>
-        </div>
-
-        <div class="swiper-client-data grid grid-two-column">
-          <figure>
-                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b17c?w=100&h=100&fit=crop&crop=face" alt="Priscilla Armstrong">
-          </figure>
-          <div class="client-data-details">
-            <p><i>Priscilla Armstrong, from Australia</i></p>
-                <img src="https://flagcdn.com/w40/au.png" alt="Australia Flag"> 
-          </div>
         </div>
       </div>
 
-          <!-- Testimonial 7 -->
-      <div class="swiper-slide">
-        <div class="swiper-client-msg">
-          <p>i got my full mouth treatment done....at 1/3rd the cost!! Very satisfied.Excellent quality!! </p>
+            <!-- Simple Progress Bar -->
+            <div class="slider-progress">
+                <div class="progress-fill" id="progressFill"></div>
         </div>
 
-        <div class="swiper-client-data grid grid-two-column">
-          <figure>
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="Ms. Tanya">
-          </figure>
-          <div class="client-data-details">
-            <p><i>Ms. Tanya, from UK</i></p>
-                <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag"> 
+            <!-- Simple Dots -->
+            <div class="slider-dots" id="sliderDots">
+                <!-- Auto-generated by JS -->
           </div>
         </div>
-      </div>
-
-          <!-- Testimonial 8 -->
-      <div class="swiper-slide">
-        <div class="swiper-client-msg">
-              <p>I was referred by a friend. Couldn't have been more happier with the treatment and service. 
-            Specially appreciate the follow ups they provide...</p>
-        </div>
-
-        <div class="swiper-client-data grid grid-two-column">
-          <figure>
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Ms. Heather Hutt">
-          </figure>
-          <div class="client-data-details">
-            <p><i>Ms. Heather Hutt, from Boston USA</i></p>
-                <img src="https://flagcdn.com/w40/us.png" alt="USA Flag"> 
-          </div>
-        </div>
-      </div>
-     
-    </div>
-    <div class="swiper-pagination"></div>
   </div>
   </section>
       
     <!-- Footer -->
     <footer>
         <div class="last-container">
+            <!-- Contact Information Section -->
             <div class="first-footer-section">
                 <p><i class="fa-regular fa-envelope"></i> info@kadalidental.com</p>
                 <p><i class="fa-solid fa-phone-volume"></i> +91 981 920 1882</p>
             </div>
+
+            <!-- Main Footer Content -->
             <div class="second-footer-section">
-                <p id="add1">Home  | Facilities At The Clinic   | Our Team   | Cosmetic Dentistry   | Tooth Whitening   | Dental Implants   | Before & Afters   | Dental Tourism   | Frequently Asked Questions   | Sitemap <br>
-                    © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India.</p>
-                <p id="address"><span>Kadali Dental</span> <br>
-                    Address: 40/102, 1st Floor, Sargam Society, Mhada Complex, Oshiwara Link Road Andheri West, Mumbai, Maharashtra 400102, India <br>
-                    Phone: +91 22 2635 9490
-                </p>
+                <!-- Navigation Links -->
+                <div class="footer-nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="Facilities-clinic.html">Facilities</a>
+                    <a href="Dentists.html">Our Team</a>
+                    <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
+                    <a href="Teeth-Whitening.html">Teeth Whitening</a>
+                    <a href="Dental-Implants.html">Dental Implants</a>
+                    <a href="before-after.html">Before & After</a>
+                    <a href="dental-tourism.html">Dental Tourism</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact-us.html">Contact</a>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/drkadalicarecentre" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Kadalidentalclinic" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <!-- Address and Clinic Information -->
+                <div id="address">
+                    <span>Kadali Dental - Advanced Dental Care</span>
+                    <br><br>
+                    <strong>Andheri Clinic:</strong><br>
+                    40/102, 1st Floor, Sargam Society, Mhada Complex,<br>
+                    Oshiwara Link Road, Andheri West, Mumbai, Maharashtra 400102<br>
+                    Phone: +91 22 2635 9490<br><br>
+                    
+                    <strong>Colaba Clinic:</strong><br>
+                    Available for appointments<br>
+                    Phone: +91 981 920 1882<br><br>
+                    
+                    <strong>Operating Hours:</strong><br>
+                    Monday - Saturday: 10:00 AM - 7:00 PM<br>
+                    Sunday: By Appointment Only
+                </div>
+
+                <!-- Copyright Section -->
+                <div class="footer-copyright">
+                    © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India. 
+                    All Rights Reserved. | 
+                    <a href="privacy-policy.html" style="color: #d4a373; text-decoration: none;">Privacy Policy</a> | 
+                    <a href="terms-conditions.html" style="color: #d4a373; text-decoration: none;">Terms & Conditions</a>
+                </div>
             </div>
         </div>
-        </footer>
+    </footer>
+
+    <!-- Fixed Contact Elements -->
+    <a href="tel:+919819201882" class="fixed-phone-btn">
+        <button class="phn-no">
+            <i class="fa-solid fa-phone-volume"></i> 981-920-1882
+        </button>
+    </a>
+
+    <div class="whatsapp-no">
+        <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+            <i class="fa-brands fa-square-whatsapp"></i>
+        </a>
+    </div>
 
     <!-- Scripts -->
-     <script src="testimonials.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!-- 
-    <script>
-        //toggle icon navbar
-        let menuIcon = document.querySelector('#menu-icon')
-        let navbar = document.querySelector('.nav-list')
-
-        menuIcon.onclick = () => {
-          menuIcon.classList.toggle('bx-x')
-          navbar.classList.toggle('active')
-        }
-
-        // testimonial-clients section 
-        document.addEventListener("DOMContentLoaded", () => {
-
-        const patientSlider = document.querySelector(".patients-testimonials-slider");
-        const patientSlides = document.querySelectorAll(".patients-testimonials-slide");
-        const leftArrow = document.querySelector(".testimonials-controls i:nth-child(1)");
-        const rightArrow = document.querySelector(".testimonials-controls i:nth-child(2)");
-
-        let slideIndex = 0;
-
-        // Responsive slide movement based on screen size
-        function getSlideMovement() {
-          if (window.innerWidth <= 768) {
-            return -100; // Full slide movement for mobile and tablet
-          } else if (window.innerWidth <= 1024) {
-            return -25; // Adjusted movement for smaller desktop
-          } else {
-            return -5; // Original movement for large desktop
-          }
-        }
-
-        function updateSliderPosition() {
-          const movement = getSlideMovement();
-          patientSlider.style.transform = `translateX(${slideIndex * movement}%)`;
-        }
-
-        leftArrow.addEventListener("click", () => {
-          slideIndex = slideIndex > 0 ? slideIndex - 1 : 0;
-          updateSliderPosition();
-        });
-
-        rightArrow.addEventListener("click", () => {
-          slideIndex = slideIndex < patientSlides.length - 1 ? slideIndex + 1 : patientSlides.length - 1;
-          updateSliderPosition();
-        });
-
-        // Handle window resize for responsive behavior
-        window.addEventListener('resize', () => {
-          updateSliderPosition();
-        });
-
-        // Initialize slider position
-        updateSliderPosition();
-
-        });
-
-        //   for you-tube videos section
-        const videos = {
-          1: [
-            "https://www.youtube.com/embed/mlBxPicGME4?si=PhR5uzHdR8xjOWdx",
-            "https://www.youtube.com/embed/py57CE8xJ_g?si=aDxcWd899-DNqxWs",
-            "https://www.youtube.com/embed/RJbQMsMXZrc?si=U0EwgQNs5Rbr7vRH",
-            "https://www.youtube.com/embed/tN_V-4ZGrbI?si=vJMSl34-1PAMd2h9",
-            "https://www.youtube.com/embed/BJ7OtCUs9sE?si=vwEwBoErw7yacQ5y",
-            "https://www.youtube.com/embed/xny8znE-obw?si=EMVbWjd6rv0Rp9Wb",
-            "https://www.youtube.com/embed/Q2-V6n45AFQ?si=w-PNixXwAHyIsyvN",
-            "https://www.youtube.com/embed/T2JCe0TJ6Jk?si=NtFqI5nqn6nI9bOL"
-          ],
-          2: [
-            "https://www.youtube.com/embed/pLpbzwa43Rw?si=tqVZ1Gbd6GCOPbwM",
-            "https://www.youtube.com/embed/fS7dMiuiz14?si=3uu6sMjcxoYyqb24",
-            "https://www.youtube.com/embed/ZM9F-Ht9BBE?si=kRQ6voE_sX7RUMau",
-            "https://www.youtube.com/embed/09PZqvQPtmA?si=J4iJYnQSXd4mqR6x",
-            "https://www.youtube.com/embed/hRDJxvumW_U?si=69QOtzQUCtCJo6I9",
-            "https://www.youtube.com/embed/HFnvh6Flqp4?si=gUr0MR3RZdW4SCrE",
-            "https://www.youtube.com/embed/wnQtHpE5YiM?si=s1vX9CGB_W9iYF9C",
-            "https://www.youtube.com/embed/fuEtiXH0L04?si=1Ex_BFIvTUqLIrd-"
-          ],
-          3: [
-            "https://www.youtube.com/embed/zqg682P5wHQ?si=SFzMGwlJsFjXR3rm",
-            "https://www.youtube.com/embed/1t0_cr1w8Uk?si=-eIa86-3t2qL5v_C",
-            "https://www.youtube.com/embed/bpob8N1az6g?si=maF92RzQiKRCTvAw",
-            "https://www.youtube.com/embed/pkPCTh9qUwI?si=V6nIDAXtKPoeoW8N",
-            "https://www.youtube.com/embed/AczU5oEOT4Q?si=6Jz3Ajk8ftrw3ApA",
-            "https://www.youtube.com/embed/QpkwLdfEtnU?si=ptHirgj8S5fquali",
-            "https://www.youtube.com/embed/pv4TR4v0WKI?si=StCUfVbZxqrvGIYP",
-            "https://www.youtube.com/embed/bvRIwi-IJcw?si=z4ggX5Gw9Wi_clnx"
-          ],
-          4:[
-            "https://www.youtube.com/embed/qfas8PVlHwg?si=u4YRM7MK1siBOy4v",
-            "https://www.youtube.com/embed/e_D9Yt-wgBg?si=GcmqG3zyJxMzoxBG",
-            "https://www.youtube.com/embed/zzsfKHtuDMA?si=NXk5wDDqtjEGTDDS",
-            "https://www.youtube.com/embed/CqmLk6O7USU?si=NsP54lsMWavIk1vz",
-            "https://www.youtube.com/embed/CtRsrWkUzhY?si=4-jF--RRk1qtvykF",
-            "https://www.youtube.com/embed/KPkm1Ff-i-Q?si=E-6wPvxC6UVLmu38",
-            "https://www.youtube.com/embed/v0C6dA5i4fA?si=sVjRvyFPKwOgqEiI",
-            "https://www.youtube.com/embed/Q_JHwvE5hf8?si=ufhRnrxeMqTZ8Ngr"
-          ],
-          5:[
-            "https://www.youtube.com/embed/ILbWMHf6VtM?si=Q8e4juG6a_1bc7oG",
-            "https://www.youtube.com/embed/T-nDtCfHAkg?si=ZsY0U3owyBq2IY2m",
-            "https://www.youtube.com/embed/ZXgSX1qfgT8?si=qyAk0T3o058JvMZc",
-            "https://www.youtube.com/embed/qSU24ifhr20?si=TAZMH-K0wFmqXdrx",
-            "https://www.youtube.com/embed/KuMlVuE0W7w?si=Y5-rDZu-7poww7nz",
-            "https://www.youtube.com/embed/Dk7We24GC0s?si=HVgKUYV9CV_VxMNc",
-            "https://www.youtube.com/embed/YPvI7_Bx-Nc?si=smNHZbSFmqmh8HlG",
-            "https://www.youtube.com/embed/CjB-Ixr5uKg?si=MvCRZgPM-zz9wpvT"
-          ],
-          6:[
-            "https://www.youtube.com/embed/WrjS4o9sZno?si=9EMl-gm-fwVD_7jn",
-            "https://www.youtube.com/embed/M-C5jTx9QPw?si=xTR9k5dXCwY0l0d9",
-            "https://www.youtube.com/embed/9yTNG6OpD6A?si=Z_IuPhPgulB7KNYZ",
-            "https://www.youtube.com/embed/ownG_-qIKDQ?si=o_fVP6OyQ76yYl5k",
-            "https://www.youtube.com/embed/053QbiAiD4o?si=YRa8okcREP3iuDMH",
-            "https://www.youtube.com/embed/aoX73ozQRqw?si=wOE9s0JKC4c4R52n",
-            "https://www.youtube.com/embed/ujgAtcFOOzw?si=4zW97OPsGpaXWSh-", 
-            "https://www.youtube.com/embed/1nt_wAOkzu4?si=QDVvQv7-P-AWfiA9"
-          ]
-        };
-
-        function changePage(pageNumber) {
-          const container = document.getElementById('videoContainer');
-          container.innerHTML = '';
-          
-          // Responsive video layout based on screen size
-          const isMobile = window.innerWidth <= 768;
-          const isSmallMobile = window.innerWidth <= 480;
-          
-          videos[pageNumber].forEach(videoUrl => {
-              const iframe = document.createElement('iframe');
-              iframe.src = videoUrl;
-              iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-              iframe.allowFullscreen = true;
-              
-              // Add responsive classes
-              if (isSmallMobile) {
-                  iframe.style.width = '100%';
-                  iframe.style.height = '180px';
-              } else if (isMobile) {
-                  iframe.style.width = '100%';
-                  iframe.style.height = '200px';
-              } else {
-                  iframe.style.width = '300px';
-                  iframe.style.height = '200px';
-              }
-              
-              container.appendChild(iframe);
-          });
-
-          // Change the color of the active button
-          const buttons = document.querySelectorAll('.pagination button');
-          buttons.forEach(button => {
-              if (parseInt(button.textContent) === pageNumber) {
-                  button.style.backgroundColor = '#0056b3';
-              } else {
-                  button.style.backgroundColor = '#007BFF';
-              }
-          });
-        }
-
-        // Initialize with the first page
-        changePage(1);
-
-        // Handle window resize for video container
-        window.addEventListener('resize', () => {
-          // Re-apply responsive video sizing when window is resized
-          const container = document.getElementById('videoContainer');
-          if (container && container.children.length > 0) {
-            const iframes = container.querySelectorAll('iframe');
-            const isMobile = window.innerWidth <= 768;
-            const isSmallMobile = window.innerWidth <= 480;
-            
-            iframes.forEach(iframe => {
-              if (isSmallMobile) {
-                iframe.style.width = '100%';
-                iframe.style.height = '180px';
-              } else if (isMobile) {
-                iframe.style.width = '100%';
-                iframe.style.height = '200px';
-              } else {
-                iframe.style.width = '300px';
-                iframe.style.height = '200px';
-              }
-            });
-          }
-        });
-
-        // Textual testimonials swiper
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          autoplay:{
-            delay: 3000,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          // Responsive breakpoints
-          breakpoints: {
-            768: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            }
-          }
-        });
-    </script> -->
-     <script src="testimonial.js"></script>
+    <script src="script.js"></script>
+    <script src="testimonial.js"></script>
+    <script src="tt.js"></script>
  </body>
  </html>

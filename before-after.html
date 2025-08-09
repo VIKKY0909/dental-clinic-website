@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="before-after.css">
     <link rel="stylesheet" href="fixed-element.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
 
@@ -21,12 +22,12 @@
     <header>
         <nav class="navbar">
             <!-- Logo Section -->
-            <div class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <div class="logo"></div>
                 <div class="clinic-centers">
                     <p>Andheri | Colaba</p>
                 </div>
-            </div>  
+            </a>  
     
             <!-- Menu Icon for Mobile -->
             <div class="menu-icon" id="menu-icon">
@@ -63,7 +64,7 @@
         </nav>
     </header>
 
-    <a href="tel:+919819201882" id="contact-btn"><button class="phn-no" id="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button> </a>
+    <a href="tel:+919819201882" class="fixed-phone-btn"><button class="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button></a>
     <div class="whatsapp-no"><a href="https://wa.me/919819201882"><i class="fa-brands fa-square-whatsapp"></i></a></div>
 
     <!-- ---------------------------------------------------1st-page---------------------------------------------------------------------------------- -->
@@ -74,92 +75,72 @@
         <div class="before-after-image-container">
             <div class="before-after-before-container">
               <div class="before-after-b-img-sub-container">
-                <div class="before-after-before-images-content">
-                    <img src="sm-bef-6-copy.jpeg" alt="" class="before-b-img">
-                    <!-- <img src="bef-make-14-copy.jpeg" alt="" class="before-b-img"> -->
-                    <img src="bef-make-15-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-6.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-7-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-16-copy.jpeg" alt="" class="before-b-img">
-                    <img src="before1-kkk.jpeg" alt="" class="before-b-img">
-                    <img src="sm-bef-2-copy.jpeg" alt="" class="before-b-img">
-                    <img src="before3-ppp.jpeg" alt="" class="before-b-img">
-                    <img src="before5.jpeg" alt="" class="before-b-img">
-                    <img src="before7-ppp.jpeg" alt="" class="before-b-img">
-                    <img src="sm-bef-1-copy.jpeg" alt="" class="before-b-img">
-                    <img src="before2.jpeg" alt="" class="before-b-img">
-                    <img src="before4-ppp.jpeg" alt="" class="before-b-img"> 
-                    <img src="bef-make-13-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-3-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-10-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-17-copy.jpeg" alt="" class="before-b-img">
-                    <img src="sm-bef-3-copy.jpeg" alt="" class="before-b-img">
-                    <img src="basal-bef-2-c2.jpeg" alt="" class="before-b-img">
-                    <!-- <img src="basal-bef-3-c2.jpeg" alt="" class="b-img"> -->
-                    <img src="sm-bef-4-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-5-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-4-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-8-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-2-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-1-copy.jpeg" alt="" class="before-b-img">
-                    <!-- <img src="bef-make-9-copy.jpeg" alt="" class="b-img"> -->
-                    <img src="bef-make-11-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-12-copy.jpeg" alt="" class="before-b-img">
-                    <img src="sm-bef-5-copy.jpeg" alt="" class="before-b-img">
-                    <img src="den-bef-1-copy.jpeg" alt="" class="before-b-img">
-                    <img src="den-bef-rep-1.jpeg" alt="" class="before-b-img">
-                    <img src="den-bef-3.jpeg" alt="" class="before-b-img">
-                    <img src="den-bef-4-copy.jpeg" alt="" class="before-b-img">
-                    <img src="den-bef-5-copy.jpeg" alt="" class="before-b-img">
-                    <img src="den-bef-6-copy.jpeg" alt="" class="before-b-img">
-                    <img src="bef-make-9-copy.jpeg" alt="" class="before-b-img">
-                    <img src="basal-bef-3-c2.jpeg" alt="" class="before-b-img">
+                <div class="before-after-before-images-content" id="before-slideshow">
+                    <img src="bef-make-1.jpeg" alt="Before treatment" class="before-b-img before-slide active">
+                    <img src="bef-make-2.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-3.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-4.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-5.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-6.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-7.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-8.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-9.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-10.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-11.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-12.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-13.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-14.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="bef-make-17.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="before1.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="before2.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="before3.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="before4.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="before5.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="before6.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="before7.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="den-bef-3.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="den-bef-4.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="den-bef-5.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="basal-before-2.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="basal-before-3.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="gum-before-1.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    <img src="gum-before-2.jpeg" alt="Before treatment" class="before-b-img before-slide">
                 </div>
               </div>
               <div class="dentallabel">BEFORE</div>
             </div>
             <div class="before-after-after-container">
                <div class="before-after-a-img-sub-container">
-               <div class="before-after-after-images-content">
-                <img src="sm-af-6-copy.jpeg" alt="" class="after-a-img">
-                <!-- <img src="af-make-14-copy.jpeg" alt="" class="after-a-img"> -->
-                <img src="af-make-15-copy.jpeg" alt="" class="after-a-img">
-                <img src="af-make-6.jpeg" alt="" class="after-a-img">
-                <img src="af-make-7-copy.jpeg" alt="" class="after-a-img">
-                <img src="af-make-16-copy.jpeg" alt="" class="after-a-img">
-                <img src="after1-ppp.jpeg" alt="" class="after-a-img">
-                <img src="sm-af-2-copy.jpeg" alt="" class="after-a-img">
-                <img src="after3-ppp.jpeg" alt=""  class="after-a-img">
-                <img src="after5-ppp.jpeg" alt=""  class="after-a-img">
-                <img src="after7.jpeg" alt=""  class="after-a-img">
-                <img src="sm-af-1-copy.jpeg" alt="" class="after-a-img">
-                <img src="after2-ppp.jpeg" alt=""  class="after-a-img">
-                <img src="after4-lll.jpeg" alt=""  class="after-a-img"> 
-                <img src="af-make-13-copy.jpeg" alt=""  class="after-a-img">
-                <img src="af-make-3-copy.jpeg" alt=""  class="after-a-img">
-                <img src="af-make-10-copy.jpeg" alt=""  class="after-a-img">
-                <img src="af-make-17-copy.jpeg" alt=""  class="after-a-img">
-                <img src="sm-af-3-copy.jpeg" alt="" class="after-a-img">
-                <img src="basal-after-2.jpeg" alt="" class="after-a-img">
-                <!-- <img src="basal-after-3-c1.jpeg" alt="" class="a-img"> -->
-                <img src="sm-af-4-copy.jpeg" alt="" class="after-a-img">
-                <img src="af-make-5-copy.jpeg" alt="" class="after-a-img">
-                <img src="af-make-4-copy.jpeg" alt="" class="after-a-img">
-                <img src="af-make-8-copy.jpeg" alt="" class="after-a-img">
-                <img src="af-make-2-copy.jpeg" alt="" class="after-a-img">
-                <img src="af-make-1-copy.jpeg" alt="" class="after-a-img">
-                <!-- <img src="af-make-9-copy.jpeg" alt="" class="a-img"> -->
-                <img src="af-make-11-copy.jpeg" alt="" class="after-a-img">
-                <img src="af-make-12-copy.jpeg" alt="" class="after-a-img">
-                <img src="sm-af-5-copy.jpeg" alt="" class="after-a-img">
-                <img src="den-aft-1-copy.jpeg" alt="" class="after-a-img">
-                <img src="den-aft-rep-1.jpeg" alt="" class="after-a-img">
-                <img src="den-aft-3-copy.jpeg" alt="" class="after-a-img">
-                <img src="den-aft-4-copy.jpeg" alt="" class="after-a-img">
-                <img src="den-aft-5-copy.jpeg" alt="" class="after-a-img">
-                <img src="den-aft-6-copy.jpeg" alt="" class="after-a-img">
-                <img src="af-make-9-copy.jpeg" alt="" class="after-a-img">
-                <img src="basal-after-3-c1.jpeg" alt="" class="after-a-img">
+                <div class="before-after-after-images-content" id="after-slideshow">
+                    <img src="af-make-1.jpeg" alt="After treatment" class="after-a-img after-slide active">
+                    <img src="af-make-2.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-3.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-4.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-5.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-6.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-7.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-8.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-9.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-10.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-11.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-12.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-13.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-14.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="af-make-17.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="after1.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="after2.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="after3.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="after4.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="after5.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="after6.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="after7.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="den-aft-3.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="den-aft-4.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="den-aft-5.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="basal-after-2.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="basal-after-3.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="gum-after-1.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    <img src="gum-after-2.jpeg" alt="After treatment" class="after-a-img after-slide">
                 </div>
               </div> 
               <div class="dentallabel">AFTER</div>
@@ -170,42 +151,40 @@
       <!-- ----------------------------------------------------------------------------dentists-client------------------------------------------------------------------------------ -->
 
       <section class="people-main-section">
-        <div class="people-content">  <!--details-section-content == section-content-->
-          <div class="people-slider-container swiper"> <!--details-slider-container == slider-container-->
-              <div class="people-slider-wrapper">  <!--details-slider-wrapper == slider-wrapper-->
-                  <ul class="people-list swiper-wrapper"> <!--celebrity-list = testimonial-list-->
-                      <li class="people-item swiper-slide">
-                          <img src="img13.png" alt="" class="people-images"> <!--celeb-img == user img-->
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Dental_Treatment-at-Kadali-Dental-300x225.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="img14.png" alt="" class="people-images"> <!--celeb-img == user img-->
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Kadali_Dental_Satisfied_patients-300x169.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Patients_review_of_Kadali_Dental-300x169.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Dental_Patient-300x169.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Cosmetic-Dentistry-Happy-Patient.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Picture_with_a_patient-e1517107400187-300x221.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Picture_with_happy_patient-300x225.jpg" alt="" class="people-images"> <!--celeb-img == user img-->
-                      </li> 
-                  </ul>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+        <div class="people-content">
+          <div class="people-slider-container swiper">
+              <div class="people-slider-wrapper swiper-wrapper">
+                  <div class="people-item swiper-slide">
+                      <img src="img13.png" alt="Happy Patient 1" class="people-images">
+                  </div>  
+                  <div class="people-item swiper-slide">
+                      <img src="Dental_Treatment-at-Kadali-Dental-300x225.jpg" alt="Happy Patient 2" class="people-images">
+                  </div>  
+                  <div class="people-item swiper-slide">
+                      <img src="img14.png" alt="Happy Patient 3" class="people-images">
+                  </div>  
+                  <div class="people-item swiper-slide">
+                      <img src="Kadali_Dental_Satisfied_patients-300x169.jpg" alt="Happy Patient 4" class="people-images">
+                  </div>  
+                  <div class="people-item swiper-slide">
+                      <img src="Patients_review_of_Kadali_Dental-300x169.jpg" alt="Happy Patient 5" class="people-images">
+                  </div>  
+                  <div class="people-item swiper-slide">
+                      <img src="Dental_Patient-300x169.jpg" alt="Happy Patient 6" class="people-images">
+                  </div>  
+                  <div class="people-item swiper-slide">
+                      <img src="Cosmetic-Dentistry-Happy-Patient.jpg" alt="Happy Patient 7" class="people-images">
+                  </div>  
+                  <div class="people-item swiper-slide">
+                      <img src="Picture_with_a_patient-e1517107400187-300x221.jpg" alt="Happy Patient 8" class="people-images">
+                  </div>  
+                  <div class="people-item swiper-slide">
+                      <img src="Picture_with_happy_patient-300x225.jpg" alt="Happy Patient 9" class="people-images">
+                  </div> 
               </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
           </div>
       </div>
   </section>
@@ -214,25 +193,96 @@
     <!-- -----------------------------------------------------------------------------------footer - contact-------------------------------------------------------- -->
     <footer>
         <div class="last-container">
+            <!-- Contact Information Section -->
             <div class="first-footer-section">
-                <p><i class="fa-regular fa-envelope"></i> info@kadalidental.com</p>
-                <p><i class="fa-solid fa-phone-volume"></i> +91 981 920 1882</p>
-                <!-- <p><i class="fa-solid fa-car-side"></i> Free Pick-up</p> -->
-            </div>
-            <div class="second-footer-section">
-                <p id="add1">Home  | Facilities At The Clinic   | Our Team   | Cosmetic Dentistry   | Tooth Whitening   | Dental Implants   | Before & Afters   | Dental Tourism   | Frequently Asked Questions   | Sitemap <br>
-                    © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India.</p>
-                <p id="address"><span>Kadali Dental</span> <br>
-  
-                    Address: 40/102, 1st Floor, Sargam Society, Mhada Complex, Oshiwara Link Road Andheri West, Mumbai, Maharashtra 400102, India <br>
-                    Phone: +91 22 2635 9490
+                <p>
+                    <i class="fa-regular fa-envelope"></i> 
+                    <a href="mailto:info@kadalidental.com" style="color: inherit; text-decoration: none;">
+                        info@kadalidental.com
+                    </a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone-volume"></i> 
+                    <a href="tel:+919819201882" style="color: inherit; text-decoration: none;">
+                        +91 981 920 1882
+                    </a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-map-marker-alt"></i> 
+                    <a href="location-map.html" style="color: inherit; text-decoration: none;">
+                        Find Our Clinics
+                    </a>
                 </p>
             </div>
+    
+            <!-- Main Footer Content -->
+            <div class="second-footer-section">
+                <!-- Navigation Links -->
+                <div class="footer-nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="Facilities-clinic.html">Facilities</a>
+                    <a href="Dentists.html">Our Team</a>
+                    <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
+                    <a href="Teeth-Whitening.html">Teeth Whitening</a>
+                    <a href="Dental-Implants.html">Dental Implants</a>
+                    <a href="before-after.html">Before & After</a>
+                    <a href="dental-tourism.html">Dental Tourism</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact-us.html">Contact</a>
+                </div>
+    
+                <!-- Social Media Links -->
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/drkadalicarecentre" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Kadalidentalclinic" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+    
+                <!-- Address and Clinic Information -->
+                <div id="address">
+                    <span>Kadali Dental - Advanced Dental Care</span>
+                    <br><br>
+                    <strong>Andheri Clinic:</strong><br>
+                    40/102, 1st Floor, Sargam Society, Mhada Complex,<br>
+                    Oshiwara Link Road, Andheri West, Mumbai, Maharashtra 400102<br>
+                    Phone: +91 22 2635 9490<br><br>
+                    
+                    <strong>Colaba Clinic:</strong><br>
+                    Available for appointments<br>
+                    Phone: +91 981 920 1882<br><br>
+                    
+                    <strong>Operating Hours:</strong><br>
+                    Monday - Saturday: 10:00 AM - 7:00 PM<br>
+                    Sunday: By Appointment Only
+                </div>
+    
+                <!-- Copyright Section -->
+                <div class="footer-copyright">
+                    © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India. 
+                    All Rights Reserved. | 
+                    <a href="privacy-policy.html" style="color: #d4a373; text-decoration: none;">Privacy Policy</a> | 
+                    <a href="terms-conditions.html" style="color: #d4a373; text-decoration: none;">Terms & Conditions</a>
+                </div>
+            </div>
         </div>
-        </footer>
+    </footer>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="before-after.js"></script>
 </body>
+</html>
 </html>

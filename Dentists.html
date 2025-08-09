@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Sweet+Gothic&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="fixed-element.css">
+    <link rel="stylesheet" href="footer.css">
     
     <!-- <link rel="stylesheet" href="dentists.css"> -->
 
@@ -21,6 +23,8 @@
         }
 
         body {
+            margin: 0;
+            padding: 0;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             line-height: 1.6;
             overflow-x: hidden;
@@ -142,6 +146,11 @@
             z-index: 999;
         }
 
+
+        .phn-no:hover {
+            transform: translateY(-2px);
+        } */
+
         .phn-no {
             background: linear-gradient(45deg, #8B4513, #A0522D);
             color: white;
@@ -153,11 +162,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
-
-        .phn-no:hover {
-            transform: translateY(-2px);
-        } */
-
         .whatsapp-no {
             position: fixed;
             bottom: 80px;
@@ -180,10 +184,11 @@
             min-height: 100vh;
             width: 100%;
             background-color: #ebe3da;
-            padding: clamp(80px, 10vw, 120px) clamp(1rem, 4vw, 2rem) clamp(1rem, 3vw, 2rem);
+            padding: clamp(80px, 12vw, 120px) clamp(2rem, 5vw, 4rem) clamp(3rem, 6vw, 4rem);
             display: flex;
             flex-direction: column;
             justify-content: center;
+            box-sizing: border-box;
         }
 
         .dentists-main-section h2 {
@@ -207,9 +212,10 @@
         .dentists-main-container {
             display: flex;
             align-items: center;
-            gap: clamp(1.5rem, 4vw, 3rem);
-            max-width: 1200px;
+            gap: clamp(2rem, 5vw, 4rem);
+            max-width: 1400px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .dentists-images-container,
@@ -219,11 +225,17 @@
 
         .den-img {
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             margin: 0 auto;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .den-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
 
         .den-img img {
@@ -254,15 +266,17 @@
             min-height: 90vh;
             width: 100%;
             background-color: #ebe3da;
-            padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+            padding: clamp(3rem, 6vw, 4rem) clamp(2rem, 5vw, 4rem);
+            box-sizing: border-box;
         }
 
         .dentists-clinic-main-container {
             display: flex;
             align-items: center;
-            gap: clamp(1.5rem, 4vw, 3rem);
-            max-width: 1200px;
+            gap: clamp(2rem, 5vw, 4rem);
+            max-width: 1400px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .dentists-clinic-images-container,
@@ -272,16 +286,16 @@
 
         .den-clinic-img {
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             margin: 0 auto;
         }
 
         .dental-images-list {
             width: 100%;
-            height: clamp(200px, 40vw, 300px);
+            height: clamp(220px, 35vw, 320px);
             overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .clinic-images-list {
@@ -296,7 +310,7 @@
 
         .dental-clinic-images-content img {
             width: 100%;
-            height: clamp(200px, 40vw, 300px);
+            height: clamp(220px, 35vw, 320px);
             object-fit: cover;
             flex-shrink: 0;
         }
@@ -324,12 +338,14 @@
             min-height: 100vh;
             width: 100%;
             background-color: #ebe3da;
-            padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+            padding: clamp(3rem, 6vw, 4rem) clamp(2rem, 5vw, 4rem);
+            box-sizing: border-box;
         }
 
         .dentists-clinic-second-main-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .dentists-clinic-second-main-container ul {
@@ -387,7 +403,8 @@
             width: 100%;
             min-height: 70vh;
             background-color: #c0b9b2;
-            padding: clamp(2rem, 5vw, 3rem) 0;
+            padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem);
+            box-sizing: border-box;
         }
 
         .people-item {
@@ -399,18 +416,57 @@
         }
 
         .people-images {
-            width: clamp(250px, 60vw, 350px);
-            height: clamp(180px, 40vw, 250px);
+            width: clamp(280px, 55vw, 380px);
+            height: clamp(200px, 35vw, 280px);
             object-fit: cover;
-            border: clamp(5px, 1.5vw, 10px) solid #f9f2e8;
-            border-radius: 10px;
-            margin-bottom: clamp(0.5rem, 2vw, 1rem);
+            border: clamp(6px, 1.5vw, 12px) solid #f9f2e8;
+            border-radius: 15px;
+            margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .people-images:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .swiper-pagination-bullet {
-            width: clamp(10px, 2vw, 15px);
-            height: clamp(10px, 2vw, 15px);
+            width: clamp(12px, 2vw, 16px);
+            height: clamp(12px, 2vw, 16px);
             opacity: 1;
+            background-color: rgba(139, 69, 19, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #8B4513;
+            transform: scale(1.2);
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #8B4513;
+            background: rgba(255, 255, 255, 0.9);
+            width: clamp(35px, 6vw, 50px);
+            height: clamp(35px, 6vw, 50px);
+            border-radius: 50%;
+            margin-top: calc(0px - (clamp(35px, 6vw, 50px) / 2));
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: clamp(14px, 3vw, 20px);
+            font-weight: bold;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: #8B4513;
+            color: white;
+            transform: scale(1.1);
         }
 
         /* Footer */
@@ -500,123 +556,186 @@
             } */
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .dentists-main-section,
+            .dentists-clinic-main-section,
+            .dentists-clinic-second-main-section {
+                padding-left: clamp(1.5rem, 4vw, 3rem);
+                padding-right: clamp(1.5rem, 4vw, 3rem);
+            }
+        }
+
         @media (max-width: 1024px) {
             .dentists-main-container,
             .dentists-clinic-main-container {
                 flex-direction: column;
-                gap: clamp(1.5rem, 4vw, 2rem);
+                gap: clamp(2rem, 5vw, 3rem);
+                text-align: center;
             }
 
             .dentists-main-section {
-                padding: clamp(80px, 10vw, 100px) clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.5rem);
+                padding: clamp(80px, 12vw, 100px) clamp(1.5rem, 4vw, 2rem) clamp(2rem, 5vw, 3rem);
             }
 
             .dentists-clinic-main-section {
-                padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
+                padding: clamp(2rem, 6vw, 3rem) clamp(1.5rem, 4vw, 2rem);
             }
 
             .dentists-clinic-second-main-section {
-                padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem);
+                padding: clamp(2rem, 6vw, 3rem) clamp(1.5rem, 4vw, 2rem);
+            }
+
+            .den-img,
+            .den-clinic-img {
+                max-width: 500px;
             }
         }
 
         @media (max-width: 768px) {
-            .dentists-main-section h2 {
-                font-size: clamp(1.3rem, 5vw, 1.8rem);
+            .dentists-main-section,
+            .dentists-clinic-main-section,
+            .dentists-clinic-second-main-section {
+                padding-left: clamp(1rem, 3vw, 1.5rem);
+                padding-right: clamp(1rem, 3vw, 1.5rem);
             }
 
-            .dentists-main-section h3 {
-                font-size: clamp(1rem, 4vw, 1.4rem);
+            .dentists-main-section {
+                padding-top: clamp(70px, 15vw, 90px);
+                padding-bottom: clamp(2rem, 6vw, 3rem);
+            }
+
+            .dentists-main-container,
+            .dentists-clinic-main-container {
+                gap: clamp(1.5rem, 4vw, 2.5rem);
             }
 
             .dentists-intro-container li,
             .dentists-clinic-intro-container li,
             .dentists-clinic-second-main-container ul li,
             .mission-content li {
-                font-size: clamp(0.85rem, 3vw, 1rem);
+                font-size: clamp(0.9rem, 3vw, 1rem);
+                text-align: left;
+                line-height: 1.6;
             }
 
             .dentists-clinic-second-main-container h2 {
-                font-size: clamp(1.1rem, 4vw, 1.4rem);
+                font-size: clamp(1.2rem, 4vw, 1.5rem);
             }
 
             .people-images {
-                width: clamp(200px, 70vw, 280px);
-                height: clamp(140px, 50vw, 200px);
+                width: clamp(220px, 65vw, 300px);
+                height: clamp(160px, 45vw, 220px);
             }
 
-            .whatsapp-no {
-                bottom: 70px;
-                right: 15px;
+            .den-img,
+            .den-clinic-img {
+                max-width: 400px;
             }
 
-            .whatsapp-no a {
-                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            .dental-images-list {
+                height: clamp(180px, 40vw, 250px);
+            }
+
+            .dental-clinic-images-content img {
+                height: clamp(180px, 40vw, 250px);
             }
         }
 
         @media (max-width: 480px) {
+            .dentists-main-section,
+            .dentists-clinic-main-section,
+            .dentists-clinic-second-main-section {
+                padding-left: clamp(0.8rem, 3vw, 1rem);
+                padding-right: clamp(0.8rem, 3vw, 1rem);
+            }
+
             .dentists-main-section {
-                padding: clamp(70px, 8vw, 90px) clamp(0.5rem, 2vw, 1rem) clamp(0.5rem, 2vw, 1rem);
+                padding-top: clamp(60px, 12vw, 80px);
+                padding-bottom: clamp(1.5rem, 5vw, 2rem);
             }
 
-            .dentists-main-section h2 {
-                font-size: clamp(1.1rem, 6vw, 1.5rem);
-            }
-
-            .dentists-main-section h3 {
-                font-size: clamp(0.9rem, 5vw, 1.2rem);
+            .dentists-main-container,
+            .dentists-clinic-main-container {
+                gap: clamp(1.2rem, 4vw, 2rem);
             }
 
             .dentists-intro-container li,
             .dentists-clinic-intro-container li,
             .dentists-clinic-second-main-container ul li,
             .mission-content li {
-                font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+                font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+                line-height: 1.5;
             }
 
             .dentists-clinic-second-main-container h2 {
-                font-size: clamp(1rem, 5vw, 1.2rem);
+                font-size: clamp(1.1rem, 5vw, 1.3rem);
             }
 
             .people-images {
-                width: clamp(180px, 80vw, 250px);
-                height: clamp(130px, 60vw, 180px);
+                width: clamp(200px, 75vw, 280px);
+                height: clamp(140px, 55vw, 200px);
             }
 
-            .whatsapp-no {
-                bottom: 60px;
-                right: 10px;
+            .den-img,
+            .den-clinic-img {
+                max-width: 350px;
             }
 
-            .whatsapp-no a {
-                font-size: clamp(1.5rem, 8vw, 2rem);
+            .dental-images-list {
+                height: clamp(160px, 45vw, 220px);
+            }
+
+            .dental-clinic-images-content img {
+                height: clamp(160px, 45vw, 220px);
             }
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 360px) {
+            .dentists-main-section,
+            .dentists-clinic-main-section,
+            .dentists-clinic-second-main-section {
+                padding-left: clamp(0.5rem, 2vw, 0.8rem);
+                padding-right: clamp(0.5rem, 2vw, 0.8rem);
+            }
+
             .dentists-main-section {
-                padding: clamp(60px, 6vw, 80px) clamp(0.3rem, 1.5vw, 0.5rem) clamp(0.3rem, 1.5vw, 0.5rem);
+                padding-top: clamp(50px, 15vw, 70px);
+                padding-bottom: clamp(1rem, 4vw, 1.5rem);
             }
 
-            .dentists-main-section h2 {
-                font-size: clamp(1rem, 7vw, 1.3rem);
-            }
-
-            .dentists-main-section h3 {
-                font-size: clamp(0.8rem, 6vw, 1.1rem);
+            .dentists-main-container,
+            .dentists-clinic-main-container {
+                gap: clamp(1rem, 5vw, 1.5rem);
             }
 
             .dentists-intro-container li,
             .dentists-clinic-intro-container li,
             .dentists-clinic-second-main-container ul li,
             .mission-content li {
-                font-size: clamp(0.75rem, 4vw, 0.85rem);
+                font-size: clamp(0.8rem, 4vw, 0.9rem);
+                line-height: 1.4;
+            }
+
+            .dentists-clinic-second-main-container h2 {
+                font-size: clamp(1rem, 6vw, 1.2rem);
             }
 
             .people-images {
-                width: clamp(160px, 85vw, 220px);
-                height: clamp(120px, 65vw, 160px);
+                width: clamp(180px, 85vw, 250px);
+                height: clamp(130px, 65vw, 180px);
+            }
+
+            .den-img,
+            .den-clinic-img {
+                max-width: 300px;
+            }
+
+            .dental-images-list {
+                height: clamp(140px, 50vw, 200px);
+            }
+
+            .dental-clinic-images-content img {
+                height: clamp(140px, 50vw, 200px);
             }
         }
     </style>
@@ -627,12 +746,12 @@
     <!-- Navigation -->
     <header>
         <nav class="navbar">
-            <div class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <div class="logo"></div>
                 <div class="clinic-centers">
                     <p>Andheri | Colaba</p>
                 </div>
-            </div>  
+            </a>  
     
             <div class="menu-icon" id="menu-icon">
                 <i class="fa fa-bars"></i>
@@ -664,16 +783,13 @@
         </nav>
     </header>
 
-    <a href="tel:+919819201882" id="contact-btn">
-        <button class="phn-no" id="phn-no">
-            <i class="fa-solid fa-phone-volume"></i> 981-920-1882
-        </button>
-    </a>
+    
     <div class="whatsapp-no">
         <a href="https://wa.me/919819201882">
             <i class="fa-brands fa-square-whatsapp"></i>
         </a>
     </div>
+    <a href="tel:+919819201882" class="fixed-phone-btn"><button class="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button></a>
 
     <!-- Main Content -->
     <section class="dentists-main-section">
@@ -796,22 +912,94 @@
       </div>
   </section>
 
- <footer>
+  <footer>
     <div class="last-container">
+        <!-- Contact Information Section -->
         <div class="first-footer-section">
-            <p><i class="fa-regular fa-envelope"></i> info@kadalidental.com</p>
-            <p><i class="fa-solid fa-phone-volume"></i> +91 981 920 1882</p>
-        </div>
-        <div class="second-footer-section">
-                <p id="add1">Home | Facilities At The Clinic | Our Team | Cosmetic Dentistry | Tooth Whitening | Dental Implants | Before & Afters | Dental Tourism | Frequently Asked Questions | Sitemap <br>
-                © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India.</p>
-            <p id="address"><span>Kadali Dental</span> <br>
-                Address: 40/102, 1st Floor, Sargam Society, Mhada Complex, Oshiwara Link Road Andheri West, Mumbai, Maharashtra 400102, India <br>
-                Phone: +91 22 2635 9490
+            <p>
+                <i class="fa-regular fa-envelope"></i> 
+                <a href="mailto:info@kadalidental.com" style="color: inherit; text-decoration: none;">
+                    info@kadalidental.com
+                </a>
+            </p>
+            <p>
+                <i class="fa-solid fa-phone-volume"></i> 
+                <a href="tel:+919819201882" style="color: inherit; text-decoration: none;">
+                    +91 981 920 1882
+                </a>
+            </p>
+            <p>
+                <i class="fa-solid fa-map-marker-alt"></i> 
+                <a href="location-map.html" style="color: inherit; text-decoration: none;">
+                    Find Our Clinics
+                </a>
             </p>
         </div>
+
+        <!-- Main Footer Content -->
+        <div class="second-footer-section">
+            <!-- Navigation Links -->
+            <div class="footer-nav-links">
+                <a href="index.html">Home</a>
+                <a href="Facilities-clinic.html">Facilities</a>
+                <a href="Dentists.html">Our Team</a>
+                <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
+                <a href="Teeth-Whitening.html">Teeth Whitening</a>
+                <a href="Dental-Implants.html">Dental Implants</a>
+                <a href="before-after.html">Before & After</a>
+                <a href="dental-tourism.html">Dental Tourism</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact-us.html">Contact</a>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <a href="https://www.facebook.com/drkadalicarecentre" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@Kadalidentalclinic" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <!-- Address and Clinic Information -->
+            <div id="address">
+                <span>Kadali Dental - Advanced Dental Care</span>
+                <br><br>
+                <strong>Andheri Clinic:</strong><br>
+                40/102, 1st Floor, Sargam Society, Mhada Complex,<br>
+                Oshiwara Link Road, Andheri West, Mumbai, Maharashtra 400102<br>
+                Phone: +91 22 2635 9490<br><br>
+                
+                <strong>Colaba Clinic:</strong><br>
+                Available for appointments<br>
+                Phone: +91 981 920 1882<br><br>
+                
+                <strong>Operating Hours:</strong><br>
+                Monday - Saturday: 10:00 AM - 7:00 PM<br>
+                Sunday: By Appointment Only
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="footer-copyright">
+                © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India. 
+                All Rights Reserved. | 
+                <a href="privacy-policy.html" style="color: #d4a373; text-decoration: none;">Privacy Policy</a> | 
+                <a href="terms-conditions.html" style="color: #d4a373; text-decoration: none;">Terms & Conditions</a>
+            </div>
+        </div>
     </div>
-    </footer>
+</footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
@@ -927,38 +1115,41 @@
         });
 
         // Initialize Swiper for People Section
-        // const swiperpeople = new Swiper('.people-slider-container', {
-        //     loop: true,
-        //     grabCursor: true,
-        //     spaceBetween: 25,
-        //     autoplay: {
-        //         delay: 3000,
-        //         disableOnInteraction: false,
-        //     },
+        const swiperpeople = new Swiper('.people-slider-container', {
+            loop: true,
+            grabCursor: true,
+            spaceBetween: 25,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
 
-        //     pagination: {
-        //         el: '.swiper-pagination',
-        //         clickable: true,
-        //         dynamicBullets: true,
-        //     },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
 
-        //     navigation: {
-        //         nextEl: '.swiper-button-next',
-        //         prevEl: '.swiper-button-prev',
-        //     },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
 
-        //     breakpoints: {
-        //         0: {
-        //             slidesPerView: 1
-        //         },
-        //         768: {
-        //             slidesPerView: 2
-        //         },
-        //         1024: {
-        //             slidesPerView: 3
-        //         },
-        //     }
-        // });
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 15
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 25
+                },
+            }
+        });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1020,4 +1211,5 @@
         });
     </script>
 </body>
+</html>
 </html>

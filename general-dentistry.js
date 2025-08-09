@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializePeopleSlider() {
-  const peopleSlider = document.querySelector('.people-slider-wrapper');
+  const peopleSlider = document.querySelector('.people-slider-container');
   if (!peopleSlider) {
     console.log('People slider not found');
     return;
@@ -27,10 +27,11 @@ function initializePeopleSlider() {
   console.log('Initializing people slider');
   
   // People Slider with Swiper
-const swiperpeople = new Swiper('.people-slider-wrapper', {
+const swiperpeople = new Swiper('.people-slider-container', {
   loop: true,
     grabCursor: true,
-    spaceBetween: 25,
+    spaceBetween: 30,
+    centeredSlides: false,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
@@ -62,7 +63,11 @@ const swiperpeople = new Swiper('.people-slider-wrapper', {
     },
     1024: {
         slidesPerView: 3,
-        spaceBetween: 25
+        spaceBetween: 30
+    },
+    1200: {
+        slidesPerView: 4,
+        spaceBetween: 30
     },
   }
 });

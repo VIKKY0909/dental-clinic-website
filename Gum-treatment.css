@@ -4,531 +4,663 @@ body{
   padding: 0;
 }
 
+/* =============================================== Hero Section =============================================== */
+
 .gum-treatment-main-section{
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
-    margin-top: clamp(50px, 6vw, 7vh);
+    margin-top: 0;
     background-color: #c0b9b2;
+    overflow-x: hidden;
 }
   
 .gum-treatment-subsection{
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
-    background-color: #c0b9b2;
-    margin-top: clamp(50px, 6vw, 7vh);
+    background-color: transparent;
+    margin-top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
   
 .gum-treatment-subsection-text-part{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
     height: 100%;
-    width: clamp(300px, 60%, 60%);
 }
   
 .gum-treatment-subsection-text-part .gum-treatment-bg{
-    height: clamp(300px, 60vh, 60vh);
-    width: clamp(250px, 70%, 70%);
-    border: 2px solid transparent;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), center no-repeat;
-    margin-top: clamp(10%, 20%, 20%);
-    margin-left: clamp(2%, 5%, 5%);
-    padding-top: -10%;
+    width: 100%;
+    max-width: 800px;
+    padding: clamp(2rem, 5vw, 4rem);
+    background: rgba(0,0,0,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
 }
   
 .gum-treatment-wrapper{
     width: 100%;
-    height: 100vh;
-    top: 0%;
-    background: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0,0.1)), url(gum-treatment-bg.jpg) center no-repeat;
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url(gum-treatment-bg.jpg) center no-repeat;
     background-size: cover;
-    position: relative;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
   
 .gum-treatment-subsection-text-part .gum-treatment-title{
-    height: 10%;
-    width: 100%;
-    margin-top: clamp(5%, 8%, 8%);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
 }
   
 .gum-treatment-title h3{
-    font-size: clamp(1.5rem, 4vw, 2rem) !important;
-    font-weight: normal;
-    margin-left: clamp(2%, 5%, 5%);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    margin: 0;
     color: white;
-    font-weight: 500;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
   
 .gum-treatment-subsection-text-part .gum-treatment-sub-title{
-    height: 55%;
-    width: 100%;
-    margin-top: clamp(1%, 2%, 2%);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
 }
   
 .gum-treatment-sub-title p{
-    font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     font-family: 'SangBleu Kingdom Light, Georgia', serif;
-    letter-spacing: 0.12rem;
+    letter-spacing: 0.05rem;
     color: white;
-    font-weight: 500;
-    width: clamp(80%, 90%, 90%);
-    margin-left: clamp(2%, 5%, 5%);
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 .gum-treatment-subsection-text-part .contact-btn{
-    margin-top: clamp(-25%, -20%, -20%);
-    height: clamp(2rem, 4vw, 2.5rem);
-    width: clamp(7rem, 15vw, 9.5rem);
-    border: 1px solid white;
+    height: clamp(2.5rem, 5vw, 3rem);
+    width: clamp(8rem, 20vw, 12rem);
+    border: 2px solid white;
     background-color: white;
-    margin-left: clamp(2%, 5%, 5%);
+    margin: 0;
     text-decoration: none;
-    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
-    letter-spacing: 0.2rem;
-    color: black;
-  }
-
-  .gum-treatment-subsection-text-part .contact-btn:hover{
-    background-color: black;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    letter-spacing: 0.1rem;
+    color: #333;
     cursor: pointer;
-    border: 2px solid transparent;
-  }
-  
-  .gum-treatment-subsection-text-part a:hover button{
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+    line-height: clamp(2.5rem, 5vw, 3rem);
+}
+
+.gum-treatment-subsection-text-part .contact-btn:hover{
+    background-color: transparent;
     color: white;
-  } 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+  
+.gum-treatment-subsection-text-part a:hover button{
+    color: white;
+}
+
+/* Mobile Adjustments for Hero Section */
+@media (max-width: 768px) {
+    .gum-treatment-wrapper {
+        background-attachment: scroll;
+    }
+    
+    .gum-treatment-subsection-text-part {
+        padding: 0 1rem;
+    }
+} 
   
 
-  /* ********************************************************************gum-treatment-procedure******************************************************* */
+/* =============================================== Procedure Section =============================================== */
 
 .gum-treatment-procedure-img{
-  min-height: 90vh;
-  width: 100%;
-  background-color:  #ded4ca;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(10px, 2vw, 20px);
-  padding: clamp(10px, 2vw, 20px);
-  position: relative;
-  flex-direction: row;
+    min-height: auto;
+    width: 100%;
+    background-color: #ded4ca;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2rem, 4vw, 3rem);
+    overflow-x: hidden;
 }
 
 .gum-treatment-procedure-img .gum-img-cont {
-  height: clamp(300px, 55vh, 55vh);
-  width: clamp(300px, 38vw, 38vw);
-  margin-left: clamp(2%, 5%, 5%);
-  background-size: contain;
-  flex-shrink: 0;
+    flex: 1;
+    min-width: 300px;
+}
+
+.gum-img-cont {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .gum-img-cont img{
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .gum-treatment-procedure-img .gum-treatment-procedure-content {
-  width: clamp(300px, 40%, 40%);
-  margin-right: clamp(2%, 5%, 5%);
-  margin-top: clamp(2%, 7%, 7%);
-  min-height: 60vh;
-  flex-shrink: 0;
+    flex: 1;
+    min-width: 300px;
 }
 
 .gum-treatment-procedure-content h4{
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: normal;
-  font-family: 'Sweet Gothic', sans-serif;
-  text-align: end;
-  margin-right: 1%;
-  letter-spacing: 0.1rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    margin: 0 0 clamp(1.5rem, 3vw, 2rem) 0;
+    letter-spacing: 0.1rem;
+    color: #333;
 }
 
 .gum-treatment-procedure-content p{
-  margin-top: 5%;
-  margin-left: -5%;
-  width: 98%;
-  font-size: clamp(1rem, 2.2vw, 1.2rem);
-  font-weight: normal;
-  text-align: start;
-  letter-spacing: 0.1rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 0 clamp(1.5rem, 3vw, 2rem) 0;
+    width: 100%;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.05rem;
+    line-height: 1.7;
+    color: #444;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .gum-treatment-procedure-content ol{
-  margin-top: 3%;
+    margin: 0;
+    padding-left: 1.5rem;
 }
 
 .gum-treatment-procedure-content ol li {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  font-weight: normal;
-  text-align: start;
-  letter-spacing: 0.1rem;
-  margin-top: 1.5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.05rem;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+    color: #444;
 }
 
-/* ********************************************************************gum-treatment-types******************************************************** */
+/* Mobile Layout for Procedure Section */
+@media (max-width: 768px) {
+    .gum-treatment-procedure-img {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .gum-treatment-procedure-content h4 {
+        text-align: center;
+    }
+    
+    .gum-treatment-procedure-content p,
+    .gum-treatment-procedure-content ol li {
+        text-align: left;
+    }
+}
+
+/* =============================================== Types Section =============================================== */
 
 .gum-treatment-types-section{
-  min-height: 70vh;
-  width: 100%;
-  background-color:  #c0b9b2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(10px, 2vw, 20px);
-  padding: clamp(10px, 2vw, 20px);
-  position: relative;
-  flex-direction: row;
+    min-height: auto;
+    width: 100%;
+    background-color: #c0b9b2;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2rem, 4vw, 3rem);
+    overflow-x: hidden;
 }
 
 .gum-treatment-types-section .gum-type-img-cont {
-  height: clamp(300px, 52vh, 52vh);
-  width: clamp(300px, 38vw, 38vw);
-  margin-right: clamp(2%, 5%, 5%);
-  background-size: contain;
-  flex-shrink: 0;
+    flex: 1;
+    min-width: 300px;
+    order: 2;
+}
+
+.gum-type-img-cont {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .gum-type-img-cont img{
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .gum-treatment-types-section .gum-treatment-types-content {
-  width: clamp(300px, 40%, 40%);
-  margin-left: clamp(2%, 5%, 5%);
-  margin-top: clamp(2%, 7%, 7%);
-  min-height: 60vh;
-  flex-shrink: 0;
+    flex: 1;
+    min-width: 300px;
+    order: 1;
 }
 
 .gum-treatment-types-content h4{
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: normal;
-  font-family: 'Sweet Gothic', sans-serif;
-  text-align: start;
-  margin-left: clamp(4%, 8%, 8%);
-  letter-spacing: 0.1rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    margin: 0 0 clamp(1.5rem, 3vw, 2rem) 0;
+    letter-spacing: 0.1rem;
+    color: #333;
 }
 
 .gum-treatment-types-content p{
-  margin-top: 5%;
-  margin-left: clamp(5%, 9%, 9%);
-  width: 98%;
-  font-size: clamp(1rem, 2.2vw, 1.2rem);
-  font-weight: normal;
-  text-align: start;
-  letter-spacing: 0.1rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 0 clamp(1.5rem, 3vw, 2rem) 0;
+    width: 100%;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.05rem;
+    line-height: 1.7;
+    color: #444;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .gum-treatment-types-content ol{
-  margin-top: 3%;
+    margin: 0;
+    padding-left: 1.5rem;
 }
 
 .gum-treatment-types-content ol li {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  font-weight: normal;
-  text-align: start;
-  letter-spacing: 0.1rem;
-  margin-top: 1.5%;
-  margin-left: clamp(10%, 15%, 15%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 0.05rem;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+    color: #444;
 }
 
-/* -------------------------------------------------------------gum-bef-af-images------------------------------------------------- */
+/* Mobile Layout for Types Section */
+@media (max-width: 768px) {
+    .gum-treatment-types-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .gum-treatment-types-section .gum-type-img-cont {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+    
+    .gum-treatment-types-content h4 {
+        text-align: center;
+    }
+    
+    .gum-treatment-types-content p,
+    .gum-treatment-types-content ol li {
+        text-align: left;
+    }
+}
+
+/* =============================================== Before/After Images Section =============================================== */
 
 .gum-bef-af-images{
-  min-height: 50vh;
-  width: 100%;
-  background-color: #c8c2bd;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: clamp(10px, 2vw, 20px);
-  padding: clamp(10px, 2vw, 20px);
+    min-height: auto;
+    width: 100%;
+    background-color: #c8c2bd;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2rem, 4vw, 3rem);
+    overflow-x: hidden;
 }
 
-.gum-bef-cont{
-  height: clamp(250px, 40vh, 40vh);
-  width: clamp(200px, 18vw, 300px);
-  min-width: 200px;
+.gum-bef-cont, .gum-af-cont{
+    flex: 1;
+    max-width: 400px;
+    min-width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.gum-bef-cont img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.gum-bef-cont img, .gum-af-cont img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
 }
 
-.gum-af-cont{
-  height: clamp(250px, 40vh, 40vh);
-  width: clamp(200px, 18vw, 300px);
-  min-width: 200px;
-}
-
-.gum-af-cont img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* ------------------------------------------------------------gum-bef-af-texts------------------------------------------------------ */
-
+/* Before/After Text Labels */
 .bef-af-text-section{
-  min-height: 12vh;
-  width: 100%;
-  background: #c8c2bd;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: clamp(10px, 2vw, 20px);
+    min-height: auto;
+    width: 100%;
+    background: #c8c2bd;
+    padding: clamp(1rem, 3vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2rem, 4vw, 3rem);
 }
 
-.bef-af-text-section .bef-text{
-  height: auto;
-  width: auto;
-  padding: 8px 20px 8px 20px;
-  color: black;
-}
-
+.bef-af-text-section .bef-text,
 .bef-af-text-section .af-text{
-  height: auto;
-  width: auto;
-  padding: 8px 20px 8px 20px;
-  color: black;
+    flex: 1;
+    text-align: center;
+    max-width: 400px;
 }
 
 .bef-text h2, .af-text h2{
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  letter-spacing: 0.2rem;
-  font-weight: 400;
-  text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* -------------------------------------------------------------gum-bef-af-second-images------------------------------------------------- */
-
+/* Second Before/After Images */
 .gum-bef-af-second-images{
-  min-height: 45vh;
-  width: 100%;
-  background-color: #c8c2bd;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: clamp(10px, 2vw, 20px);
-  padding: clamp(10px, 2vw, 20px);
+    min-height: auto;
+    width: 100%;
+    background-color: #c8c2bd;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2rem, 4vw, 3rem);
+    overflow-x: hidden;
 }
 
-.gum-bef-second-cont{
-  height: clamp(200px, 30vh, 30vh);
-  width: clamp(250px, 25vw, 350px);
-  min-width: 250px;
+.gum-bef-second-cont, .gum-af-second-cont{
+    flex: 1;
+    max-width: 400px;
+    min-width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.gum-bef-second-cont img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.gum-bef-second-cont img, .gum-af-second-cont img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
 }
 
-.gum-af-second-cont{
-  height: clamp(200px, 30vh, 30vh);
-  width: clamp(250px, 25vw, 350px);
-  min-width: 250px;
-}
-
-.gum-af-second-cont img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* ----------------------------------------------------------benefits---------------------------------------------------------- */
-
+/* Benefits Section */
 .gum-treatment-benefits{
-  min-height: 45ch;
-  width: 100%;
-  background-color: #dad3cd;
-  padding: clamp(20px, 4vw, 40px);
+    min-height: auto;
+    width: 100%;
+    background-color: #dad3cd;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 2rem);
+    overflow-x: hidden;
 }
 
 .gum-treatment-benefits h2{
-  text-align: center;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  letter-spacing: 0.1rem;
-  font-weight: 500;
-  padding-top: 5%;
-  padding-bottom: 5%;
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    margin: 0 0 clamp(2rem, 4vw, 3rem) 0;
+    color: #333;
 }
 
 .gum-treatment-benefits ol{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: clamp(10px, 2vh, 20px);
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
 }
 
 .gum-treatment-benefits ol li{
-  text-align: left;
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  letter-spacing: 0.1rem;
-  font-weight: 500;
-  padding-top: 1%;
-  margin-left: clamp(5%, 12%, 12%);
-  width: 90%;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    color: #444;
 }
 
-/* Mobile Responsive Styles */
-@media screen and (max-width: 768px) {
-  
-  .gum-treatment-subsection-text-part{
-    width: clamp(280px, 90%, 90%);
-  }
-  
-  .gum-treatment-subsection-text-part .gum-treatment-bg{
-    width: clamp(280px, 90%, 90%);
-    margin-left: clamp(5%, 5%, 5%);
-  }
+/* Mobile Layout for Before/After Sections */
+@media (max-width: 768px) {
+    .gum-bef-af-images,
+    .gum-bef-af-second-images {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .bef-af-text-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
 
-  .gum-treatment-procedure-img{
-    flex-direction: column;
-    min-height: auto;
-    padding: clamp(20px, 4vw, 30px);
-  }
+/* ============================================================================= Floating Elements & Mobile Optimizations =========================================================================== */
 
-  .gum-treatment-procedure-img .gum-img-cont {
-    width: clamp(280px, 80vw, 80vw);
-    height: clamp(250px, 40vh, 40vh);
-    margin-left: 0;
-    margin-bottom: 20px;
-  }
+/* Ensure floating phone and WhatsApp buttons don't interfere with content */
+#contact-btn .phn-no {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 15px;
+  background: linear-gradient(45deg, #8B4513, #A0522D);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
 
-  .gum-treatment-procedure-img .gum-treatment-procedure-content {
-    width: clamp(280px, 90%, 90%);
-    margin-right: 0;
-    margin-top: 0;
-  }
+#contact-btn .phn-no:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  background: linear-gradient(45deg, #A0522D, #8B4513);
+}
 
-  .gum-treatment-procedure-content h4{
-    text-align: center;
-    margin-right: 0;
-  }
+.whatsapp-no {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1000;
+}
 
-  .gum-treatment-procedure-content p{
-    margin-left: 0;
-    width: 100%;
-  }
+.whatsapp-no a {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  color: #25D366;
+  transition: all 0.3s ease;
+}
 
-  .gum-treatment-procedure-content ol li {
-    margin-left: 5%;
-  }
+.whatsapp-no a:hover {
+  transform: scale(1.1);
+}
 
-  .gum-treatment-types-section{
-    flex-direction: column-reverse;
-    min-height: auto;
-    padding: clamp(20px, 4vw, 30px);
-  }
+/* Footer Responsive Adjustments */
+footer {
+  background: #333;
+  color: white;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+}
 
-  .gum-treatment-types-section .gum-type-img-cont {
-    width: clamp(280px, 80vw, 80vw);
-    height: clamp(250px, 40vh, 40vh);
-    margin-right: 0;
-    margin-top: 20px;
-  }
+.last-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .gum-treatment-types-section .gum-treatment-types-content {
-    width: clamp(280px, 90%, 90%);
-    margin-left: 0;
-    margin-top: 0;
-  }
+.first-footer-section {
+  text-align: center;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
 
-  .gum-treatment-types-content h4{
-    text-align: center;
-    margin-left: 0;
-  }
+.first-footer-section p {
+  margin: 0.5rem 0;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
 
-  .gum-treatment-types-content p{
-    margin-left: 0;
-    width: 100%;
-  }
+.second-footer-section {
+  text-align: center;
+}
 
-  .gum-treatment-types-content ol li {
-    margin-left: 5%;
-  }
+.second-footer-section p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
+}
 
-  .gum-bef-af-images{
-    flex-direction: column;
-    gap: 20px;
-  }
+#add1 {
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  opacity: 0.8;
+}
 
-  .gum-bef-cont, .gum-af-cont{
-    width: clamp(250px, 70vw, 350px);
-    height: clamp(200px, 35vh, 300px);
-  }
+#address span {
+  font-weight: bold;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
 
-  .bef-af-text-section{
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .gum-bef-af-second-images{
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .gum-bef-second-cont, .gum-af-second-cont{
-    width: clamp(250px, 70vw, 350px);
-    height: clamp(200px, 30vh, 250px);
-  }
-
-  .gum-treatment-benefits ol{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .gum-treatment-benefits ol li{
-    margin-left: clamp(5%, 8%, 10%);
-    text-align: left;
-    width: 85%;
+/* Tablet Specific Adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+  /* Adjust content for tablets */
+  .gum-treatment-procedure-img,
+  .gum-treatment-types-section {
+    gap: 2rem;
   }
 }
 
-/* Tablet Responsive Styles */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+  /* Adjust floating buttons for mobile */
+  #contact-btn .phn-no {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 12px;
+  }
   
-  .gum-treatment-procedure-img .gum-img-cont {
-    width: clamp(300px, 35vw, 35vw);
+  .whatsapp-no {
+    bottom: 65px;
+    right: 15px;
   }
-
-  .gum-treatment-procedure-img .gum-treatment-procedure-content {
-    width: clamp(350px, 45%, 45%);
+  
+  /* Hide background attachment on mobile for better performance */
+  .gum-treatment-wrapper {
+    background-attachment: scroll;
   }
-
-  .gum-treatment-types-section .gum-type-img-cont {
-    width: clamp(300px, 35vw, 35vw);
+  
+  /* Ensure no horizontal scrolling */
+  body {
+    max-width: 100vw;
   }
-
-  .gum-treatment-types-section .gum-treatment-types-content {
-    width: clamp(350px, 45%, 45%);
+  
+  /* Footer adjustments */
+  .first-footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
-
-  .gum-bef-cont, .gum-af-cont{
-    width: clamp(220px, 22vw, 280px);
+  
+  /* Section spacing adjustments */
+  .gum-treatment-procedure-img,
+  .gum-treatment-types-section,
+  .gum-bef-af-images,
+  .gum-bef-af-second-images,
+  .gum-treatment-benefits {
+    padding: clamp(2rem, 4vw, 3rem) clamp(0.5rem, 2vw, 1rem);
   }
+}
 
-  .gum-bef-second-cont, .gum-af-second-cont{
-    width: clamp(280px, 30vw, 320px);
+@media (max-width: 480px) {
+  /* Further mobile optimizations */
+  .gum-treatment-subsection-text-part {
+    padding: 0 0.5rem;
+  }
+  
+  /* Adjust floating buttons for very small screens */
+  #contact-btn .phn-no {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+  
+  /* Reduce spacing on very small screens */
+  .gum-treatment-procedure-img,
+  .gum-treatment-types-section,
+  .gum-bef-af-images,
+  .gum-bef-af-second-images,
+  .gum-treatment-benefits {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+/* Landscape phone adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .gum-treatment-wrapper {
+    height: 100vh;
+  }
+  
+  .gum-treatment-subsection {
+    min-height: 100vh;
+  }
+}
+
+/* Performance optimization - reduce animations on mobile */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .gum-treatment-title h3,
+  .gum-treatment-sub-title p {
+    text-shadow: 2px 2px 0 #000;
+  }
+}
+
+/* Print styles */
+@media print {
+  .whatsapp-no,
+  #contact-btn {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .gum-treatment-wrapper {
+    background: none !important;
   }
 }

@@ -1,111 +1,790 @@
-/* =====================================================================video-testimonial-main-section==================================================== */
+/* =====================================================================
+   TESTIMONIALS VIDEOS PAGE - RESPONSIVE FIXED VERSION
+   ===================================================================== */
 
-/* ----------------------------------------------------------------1------------------------------------------------- */
+/* CSS Variables for consistent theming */
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #A0522D;
+    --accent-color: #007BFF;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f5f5f5;
+    --bg-dark: #333;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 15px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 25px rgba(0,0,0,0.2);
+    --border-radius: 15px;
+    --transition: all 0.3s ease;
+}
 
-.video-testimonial-main-section{
-    height: 70vh;
-    width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
-    padding: 140px 0 100px;
-  }
-  
-  .video-testimonial-main-section h2{
-    text-align: center;
-    font-size: 2.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
-    margin-top: 0%;
-    /* font-family: 'Sweet Gothic', sans-serif; */
-  }
-  
-  .video-testimonial-main-section .video-testimonial-main-section-slider-wrapper{
-    overflow: hidden;
-    margin: 0 60px 50px;
-  }
-  
-  .video-testimonial-main-section .video-testimonial-main-section-testimonial{
-    display: flex;
-    padding-top: 15px;
-    padding-bottom: 50px;
-    text-align: center;
-    flex-direction: column;
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* =====================================================================
+   SECTION 1: VIDEO TESTIMONIALS SLIDER
+   ===================================================================== */
+
+.video-testimonial-main-section {
+  min-height: 100vh;
+    background: linear-gradient(135deg, var(--bg-light) 0%, #e8e8e8 100%);
+    padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
     align-items: center;
-    margin-top: 4%;
-  }
-  
-  .video-testimonial-main-section .video-testimonial-main-section-testimonial .video-testimonial-main-section-user-video{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 50px;
-    /* border-radius: 50%; */
-  }
-  
-  .video-testimonial-main-section .swiper-pagination-bullet{
-    width: 15px;
-    height: 15px;
-    opacity: 1;
-    background-color: black;
-  }
-  
-  .video-testimonial-main-section .swiper-slide-button{
-    margin-top: -50px;
-    color: blue;
-    transition: 0.3s ease;
-  }
-  
-  .video-testimonial-main-section .swiper-slide-button:hover{
-    color: black;
-  }
-  
-  /* ---------------------------------------------------------------------------2------------------------------------------------------------------------------------- */
-  
-  .you-tube-videos-main-section{
-    height: 90vh;
+    position: relative;
+}
+
+.video-testimonial-main-section-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    color: var(--text-dark);
+  text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    line-height: 1.2;
+}
+
+.video-testimonial-main-section-title i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.video-testimonial-main-section-content {
     width: 100%;
-    border: 2px solid transparent;
-    background-color: #ebe3da;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.video-testimonial-main-section-slider-container {
+    width: 100%;
+    height: auto;
+  position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: white;
+}
+
+.video-testimonial-main-section-slider-wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.video-testimonial-main-section-testimonial {
+    width: 100%;
+    height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    padding: 1rem;
+    background: white;
+}
+
+.video-testimonial-main-section-user-video {
+    width: 100%;
+    max-width: 800px;
+    height: clamp(250px, 50vw, 500px);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+  object-fit: cover;
+    transition: var(--transition);
+}
+
+.video-testimonial-main-section-user-video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Swiper Navigation - Fixed for all screen sizes */
+.swiper-button-next,
+.swiper-button-prev {
+    width: clamp(40px, 8vw, 60px) !important;
+    height: clamp(40px, 8vw, 60px) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 50% !important;
+    box-shadow: var(--shadow-md) !important;
+    transition: var(--transition) !important;
+    color: var(--text-dark) !important;
+    font-size: clamp(16px, 3vw, 24px) !important;
+    z-index: 10 !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.swiper-button-next {
+    right: clamp(10px, 2vw, 20px) !important;
+}
+
+.swiper-button-prev {
+    left: clamp(10px, 2vw, 20px) !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(255, 255, 255, 1) !important;
+    transform: translateY(-50%) scale(1.1) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: clamp(16px, 3vw, 24px) !important;
+    font-weight: bold !important;
+    color: var(--text-dark) !important;
+}
+
+/* Swiper Pagination - Fixed for all screen sizes */
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 1.5rem !important;
+    bottom: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+}
+
+.swiper-pagination-bullet {
+    width: clamp(10px, 2vw, 15px) !important;
+    height: clamp(10px, 2vw, 15px) !important;
+    background: var(--accent-color) !important;
+    opacity: 0.5 !important;
+    margin: 0 !important;
+    transition: var(--transition) !important;
+    border-radius: 50% !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: var(--primary-color) !important;
+    transform: scale(1.2) !important;
+}
+
+/* =====================================================================
+   SECTION 2: YOUTUBE VIDEOS GALLERY
+   ===================================================================== */
+
+.you-tube-videos-main-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ebe3da 0%, #d4ccc3 100%);
+    padding: 2rem 1rem;
+}
+
+.you-tube-videos-main-section h2 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    line-height: 1.2;
+}
+
+.you-tube-videos-main-section h2 i {
+    color: #FF0000;
+    margin-right: 0.5rem;
+    animation: youtube-pulse 2s infinite;
+}
+
+@keyframes youtube-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
   }
   
   .video-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
   }
   
   .video-container iframe {
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: clamp(180px, 30vw, 250px);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: none;
+}
+
+.video-container iframe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Pagination Styles */
+.pagination {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
   }
   
-  .pagination {
-    text-align: center;
-    margin: 20px;
+.pagination button {
+    background: linear-gradient(135deg, var(--accent-color), #0056b3);
+    color: var(--text-light);
+    border: none;
+    padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 18px);
+    margin: 0;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination button:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+}
+
+.pagination button.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(139,69,19,0.5);
+}
+
+/* =====================================================================
+   RESPONSIVE DESIGN - MOBILE FIRST APPROACH
+   ===================================================================== */
+
+/* Extra Small Mobile (320px and below) */
+@media (max-width: 320px) {
+    .video-testimonial-main-section,
+  .you-tube-videos-main-section {
+        padding: 1rem 0.5rem;
+    }
+    
+    .video-testimonial-main-section-title,
+    .you-tube-videos-main-section h2 {
+        font-size: 1.5rem;
+    margin-bottom: 1rem;
+    }
+    
+    .video-testimonial-main-section-user-video {
+        height: 200px;
+  }
+  
+  .video-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .video-container iframe {
+        height: 160px;
+    }
+    
+    .pagination {
+        gap: 0.3rem;
   }
   
   .pagination button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
+        padding: 6px 10px;
+    font-size: 0.8rem;
+        min-width: 36px;
+        min-height: 36px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 14px !important;
+    }
+    
+    .swiper-button-next {
+        right: 5px !important;
+    }
+    
+    .swiper-button-prev {
+        left: 5px !important;
+    }
+}
+
+/* Small Mobile (321px - 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+    .video-testimonial-main-section,
+    .you-tube-videos-main-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .video-testimonial-main-section-title,
+    .you-tube-videos-main-section h2 {
+    font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .video-testimonial-main-section-user-video {
+        height: 220px;
+  }
+  
+  .video-container {
+        grid-template-columns: 1fr;
+    gap: 1.5rem;
+        padding: 1rem;
+  }
+  
+  .video-container iframe {
+    height: 180px;
+  }
+  
+  .pagination button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 16px !important;
+    }
+}
+
+/* Medium Mobile (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .video-testimonial-main-section,
+    .you-tube-videos-main-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .video-testimonial-main-section-title,
+    .you-tube-videos-main-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .video-testimonial-main-section-user-video {
+        height: 280px;
+    }
+    
+    .video-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .video-container iframe {
+        height: 200px;
+    }
+    
+    .pagination button {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 18px !important;
+    }
+}
+
+/* Large Mobile/Small Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .video-testimonial-main-section,
+    .you-tube-videos-main-section {
+        padding: 2.5rem 2rem;
+    }
+    
+    .video-testimonial-main-section-title,
+    .you-tube-videos-main-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .video-testimonial-main-section-user-video {
+        height: 350px;
+  }
+  
+  .video-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+  }
+  
+  .video-container iframe {
+        height: 220px;
+  }
+  
+  .pagination button {
+        padding: 12px 18px;
+        font-size: 1.1rem;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 20px !important;
+    }
+}
+
+/* Desktop (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .video-testimonial-main-section,
+    .you-tube-videos-main-section {
+        padding: 3rem 2rem;
+    }
+    
+    .video-testimonial-main-section-title,
+    .you-tube-videos-main-section h2 {
+        font-size: 2.8rem;
+        margin-bottom: 3rem;
+    }
+    
+    .video-testimonial-main-section-user-video {
+        height: 400px;
+  }
+  
+  .video-container {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        padding: 2.5rem;
+  }
+  
+  .video-container iframe {
+        height: 240px;
+  }
+  
+  .pagination button {
+        padding: 15px 20px;
+    font-size: 1.2rem;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 55px !important;
+        height: 55px !important;
+        font-size: 22px !important;
+    }
+}
+
+/* Large Desktop (1441px and above) */
+@media (min-width: 1441px) {
+    .video-testimonial-main-section,
+    .you-tube-videos-main-section {
+        padding: 4rem 3rem;
+    }
+    
+    .video-testimonial-main-section-title,
+    .you-tube-videos-main-section h2 {
+        font-size: 3rem;
+        margin-bottom: 3.5rem;
+    }
+    
+    .video-testimonial-main-section-user-video {
+        height: 500px;
+  }
+  
+  .video-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        padding: 3rem;
+  }
+  
+  .video-container iframe {
+        height: 280px;
+  }
+  
+  .pagination button {
+        padding: 18px 25px;
+        font-size: 1.3rem;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 24px !important;
+    }
+}
+
+/* =====================================================================
+   LANDSCAPE ORIENTATION FIXES
+   ===================================================================== */
+
+@media (orientation: landscape) and (max-height: 600px) {
+    .video-testimonial-main-section,
+    .you-tube-videos-main-section {
+        min-height: auto;
+        padding: 1.5rem 1rem;
+    }
+    
+    .video-testimonial-main-section-title,
+    .you-tube-videos-main-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .video-testimonial-main-section-user-video {
+        height: clamp(200px, 40vh, 300px);
+    }
+    
+    .video-container iframe {
+        height: clamp(150px, 25vh, 200px);
+    }
+}
+
+/* =====================================================================
+   FLOATING ELEMENTS
+   ===================================================================== */
+
+/* Phone Button */
+#contact-btn .phn-no {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+    padding: 12px 18px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+  border: none;
+  border-radius: 25px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 500;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+  text-decoration: none;
     cursor: pointer;
+}
+
+#contact-btn .phn-no:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+/* WhatsApp Button */
+.whatsapp-no {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-no a {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  color: #25D366;
+    transition: var(--transition);
+}
+
+.whatsapp-no a:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile adjustments for floating elements */
+@media (max-width: 480px) {
+    #contact-btn .phn-no {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+    
+    .whatsapp-no {
+        bottom: 70px;
+        right: 15px;
+    }
+    
+    .whatsapp-no a {
+        font-size: 2.2rem;
+    }
+}
+
+/* =====================================================================
+   FOOTER STYLES
+   ===================================================================== */
+
+footer {
+    background: var(--bg-dark);
+    color: var(--text-light);
+  padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+}
+
+.last-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.first-footer-section {
+  text-align: center;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.first-footer-section p {
+  margin: 0.5rem 0;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.second-footer-section {
+  text-align: center;
+}
+
+.second-footer-section p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
+}
+
+#add1 {
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  opacity: 0.8;
+}
+
+#address span {
+  font-weight: bold;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
+
+/* =====================================================================
+   ACCESSIBILITY & PERFORMANCE
+   ===================================================================== */
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .video-testimonial-main-section,
+    .you-tube-videos-main-section {
+        filter: contrast(1.2);
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        border: 2px solid var(--text-dark) !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .whatsapp-no,
+  #contact-btn {
+    display: none !important;
   }
   
-  .pagination button:hover {
-    background-color: #0056b3;
-    opacity: 0.7;
+  body {
+    background: white !important;
+    color: black !important;
   }
   
-  @media screen and (max-width: 1300px) {
-    .you-tube-videos-main-section{
-      height: 90vh;
-    }
-    .video-container iframe{
-        width: 250px /* 3 images per row */
-    }
+    .video-testimonial-main-section,
+    .you-tube-videos-main-section {
+    background: none !important;
   }
+}
+
+/* =====================================================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ===================================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    .video-testimonial-main-section-user-video:hover {
+        transform: none;
+    }
+    
+    .video-container iframe:hover {
+        transform: none;
+    }
+    
+    .pagination button:hover {
+        transform: none;
+    }
+    
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        transform: translateY(-50%) !important;
+    }
+    
+    /* Increase touch targets */
+    .pagination button {
+        min-width: 48px;
+        min-height: 48px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        min-width: 48px !important;
+        min-height: 48px !important;
+    }
+}
+
+/* =====================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ===================================================================== */
+
+/* Optimize for low-end devices */
+@media (max-width: 480px) {
+    .video-testimonial-main-section-user-video {
+        will-change: auto;
+    }
+    
+    .video-container iframe {
+        will-change: auto;
+    }
+}
+
+/* Optimize for high-end devices */
+@media (min-width: 1024px) {
+    .video-testimonial-main-section-user-video {
+        will-change: transform;
+    }
+    
+    .video-container iframe {
+        will-change: transform;
+  }
+}

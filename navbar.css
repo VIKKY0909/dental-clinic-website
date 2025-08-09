@@ -18,7 +18,7 @@ html {
 body {
   font-family: 'SangBleuKingdom', sans-serif;
   background-color: #f5f5f5;
-  padding-top: 80px; /* Account for fixed navbar */
+   /* Account for fixed navbar */
 }
 
 /* Navbar Styling */
@@ -42,17 +42,28 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 150px;
+  min-width: 200px;
+  max-width: 200px;                                   
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+  text-decoration: none;
 }
 
 .logo {
-  background-image: url('https://via.placeholder.com/150x60/d4a373/000000?text=KADALI+DENTAL');
-  height: 50px;
-  width: 140px;
+  background-image: url('Kadali-Dental-1472.png');
+  height: 70px;
+  width: 180px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center left;
   margin-bottom: 5px;
+  transition: all 0.3s ease;
 }
 
 .clinic-centers {
@@ -307,10 +318,7 @@ body {
 
 /* Mobile and Tablet */
 @media (max-width: 854px) {
-  body {
-      padding-top: 70px;
-  }
-
+  
   .navbar {
       padding: 10px 20px;
       min-height: 70px;
@@ -423,6 +431,19 @@ body {
   .navbar {
       padding: 8px 15px;
   }
+  
+  .nav-logo {
+      min-width: 160px;
+  }
+  
+  .logo {
+      height: 55px;
+      width: 140px;
+  }
+  
+  .clinic-centers {
+      font-size: 0.65rem;
+  }
 
   .menu-icon {
       right: 15px;
@@ -447,17 +468,24 @@ body {
 
 /* Small Mobile */
 @media (max-width: 500px) {
-  body {
-      padding-top: 60px;
+ 
+  
+  .nav-logo {
+      min-width: 140px;
+  }
+  
+  .logo {
+      height: 50px;
+      width: 120px;
+  }
+  
+  .clinic-centers {
+      font-size: 0.6rem;
   }
 
   .navbar {
       min-height: 60px;
       padding: 5px 10px;
-  }
-
-  .nav-logo {
-      min-width: 100px;
   }
 
   .logo {

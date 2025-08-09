@@ -1,79 +1,291 @@
 /* =========================================================images-of-clinic-main-section============================================= */
 
+/* Global responsive improvements */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
 .images-of-clinic-main-section{
-    height: 100vh;
+    min-height: auto;
     width: 100%;
     border: 2px solid transparent;
     background-color: #ebe3da;
+    padding: clamp(80px, 10vw, 120px) clamp(1rem, 3vw, 2rem) clamp(2rem, 5vw, 4rem);
+    margin-top: clamp(2rem, 4vw, 3rem);
   }
   
   .images-of-clinic-main-section h2{
     text-align: center;
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    margin-top: 10%;
+    margin-top: 0;
+    margin-bottom: clamp(2rem, 5vw, 4rem);
   }
   
   .clinic-images-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: clamp(1rem, 2vw, 2rem);
+    padding: clamp(1rem, 2vw, 2rem);
+    max-width: 1400px;
+    margin: 0 auto;
   }
   
   .clinic-images-container img{
-    width: 300px;
-    height: 200px;
+    width: clamp(250px, 30vw, 350px);
+    height: clamp(180px, 25vw, 250px);
+    object-fit: cover;
+    border-radius: clamp(8px, 1.5vw, 12px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .clinic-images-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   }
   
   .clinicimagespagination{
     text-align: center;
-    margin: 20px;
+    margin: clamp(1rem, 2vw, 2rem);
   }
   
   .clinicimagespagination button{
-    padding: 10px 20px;
-    margin: 0 5px;
+    padding: clamp(0.6rem, 1.2vw, 1rem) clamp(1rem, 1.5vw, 1.5rem);
+    margin: 0 clamp(2px, 0.5vw, 5px);
     border: none;
-    background-color: #007BFF;
+    background: linear-gradient(45deg, #8B4513, #A0522D);
     color: white;
     cursor: pointer;
     letter-spacing: 0.1rem;
+    border-radius: clamp(5px, 1vw, 8px);
+    font-size: clamp(0.8rem, 1.1vw, 1rem);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.3);
   }
   
   .clinicimagespagination button:hover{
-    background-color: #0056b3;
-    opacity: 0.7;
+    background: linear-gradient(45deg, #A0522D, #8B4513);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
   }
   
   .clinicimagespagination button.active {
-    background-color: #0056b3;
+    background: linear-gradient(45deg, #A0522D, #8B4513);
+    transform: scale(1.05);
   }
-  
-  /* For screens less than 1200px wide */
-  @media screen and (max-width: 1300px) {
-    .images-of-clinic-main-section{
-      height: 100vh;
+
+/* Floating Contact Buttons */
+#contact-btn .phn-no {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background: linear-gradient(45deg, #8B4513, #A0522D);
+    color: white;
+    border: none;
+    padding: clamp(0.8rem, 1.5vw, 1.2rem) clamp(1.2rem, 2vw, 1.8rem);
+    border-radius: clamp(25px, 4vw, 35px);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    white-space: nowrap;
+}
+
+#contact-btn .phn-no:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+.whatsapp-no {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+}
+
+.whatsapp-no a {
+    color: #25D366;
+    font-size: clamp(2rem, 4vw, 3rem);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-no a:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1024px) {
+    .clinic-images-container {
+        gap: clamp(0.8rem, 1.5vw, 1.5rem);
+        padding: clamp(0.8rem, 1.5vw, 1.5rem);
     }
+    
     .clinic-images-container img {
-        width: 250px /* 3 images per row */
+        width: clamp(280px, 35vw, 320px);
+        height: clamp(200px, 30vw, 230px);
     }
-  }
-  
-  /* For screens less than 768px wide */
-  @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
+    .images-of-clinic-main-section {
+        padding: clamp(60px, 8vw, 80px) clamp(0.8rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 3rem);
+    }
+    
+    .images-of-clinic-main-section h2 {
+        font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    }
+    
+    .clinic-images-container {
+        gap: clamp(0.6rem, 1.2vw, 1rem);
+        padding: clamp(0.6rem, 1.2vw, 1rem);
+    }
+    
     .clinic-images-container img {
-        width: calc(50% - 40px); /* 2 images per row */
+        width: clamp(300px, 90vw, 350px);
+        height: clamp(220px, 65vw, 250px);
     }
-  }
-  
-  /* For screens less than 480px wide */
-  @media screen and (max-width: 480px) {
+    
+    .clinicimagespagination {
+        margin: clamp(0.8rem, 1.5vw, 1.5rem);
+    }
+    
+    .clinicimagespagination button {
+        padding: clamp(0.5rem, 1vw, 0.8rem) clamp(0.8rem, 1.2vw, 1.2rem);
+        font-size: clamp(0.7rem, 1vw, 0.9rem);
+    }
+    
+    #contact-btn .phn-no {
+        padding: clamp(0.7rem, 1.2vw, 1rem) clamp(1rem, 1.5vw, 1.5rem);
+        font-size: clamp(0.8rem, 1.1vw, 1rem);
+    }
+    
+    .whatsapp-no a {
+        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .images-of-clinic-main-section {
+        padding: clamp(50px, 7vw, 70px) clamp(0.6rem, 1.5vw, 1rem) clamp(1rem, 3vw, 2rem);
+    }
+    
+    .images-of-clinic-main-section h2 {
+        font-size: clamp(1.2rem, 3vw, 1.6rem);
+    }
+    
+    .clinic-images-container {
+        gap: clamp(0.5rem, 1vw, 0.8rem);
+        padding: clamp(0.5rem, 1vw, 0.8rem);
+    }
+    
     .clinic-images-container img {
-        width: 100%; /* 1 image per row */
+        width: clamp(280px, 95vw, 300px);
+        height: clamp(200px, 70vw, 220px);
     }
-  }
+    
+    .clinicimagespagination {
+        margin: clamp(0.6rem, 1.2vw, 1rem);
+    }
+    
+    .clinicimagespagination button {
+        padding: clamp(0.4rem, 0.8vw, 0.6rem) clamp(0.6rem, 1vw, 1rem);
+        font-size: clamp(0.6rem, 0.9vw, 0.8rem);
+        margin: 0 clamp(1px, 0.3vw, 3px);
+    }
+    
+    #contact-btn .phn-no {
+        padding: clamp(0.6rem, 1vw, 0.9rem) clamp(0.8rem, 1.2vw, 1.3rem);
+        font-size: clamp(0.7rem, 1vw, 0.9rem);
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-no {
+        bottom: 70px;
+        right: 15px;
+    }
+    
+    .whatsapp-no a {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .images-of-clinic-main-section h2 {
+        font-size: clamp(1.1rem, 2.8vw, 1.4rem);
+    }
+    
+    .clinic-images-container img {
+        width: clamp(250px, 98vw, 270px);
+        height: clamp(180px, 75vw, 200px);
+    }
+    
+    .clinicimagespagination button {
+        padding: clamp(0.3rem, 0.6vw, 0.5rem) clamp(0.5rem, 0.8vw, 0.8rem);
+        font-size: clamp(0.5rem, 0.8vw, 0.7rem);
+    }
+    
+    #contact-btn .phn-no {
+        padding: clamp(0.5rem, 0.8vw, 0.7rem) clamp(0.7rem, 1vw, 1.1rem);
+        font-size: clamp(0.6rem, 0.9vw, 0.8rem);
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .whatsapp-no {
+        bottom: 60px;
+        right: 10px;
+    }
+    
+    .whatsapp-no a {
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+    }
+}
+
+/* Accessibility and Performance */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .images-of-clinic-main-section h2 {
+        color: #000;
+        text-shadow: none;
+    }
+    
+    .clinicimagespagination button {
+        background: #000;
+        color: #fff;
+    }
+}
+
+@media print {
+    .whatsapp-no,
+    #contact-btn {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .images-of-clinic-main-section {
+        background: white !important;
+    }
+}
   

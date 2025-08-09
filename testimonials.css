@@ -1,88 +1,524 @@
-/* ==========================================================================================================testimonial-patient==================================================================================== */
-
-/* -------------------------------------------------------------------------------------------------------patients-testimonials-section----------------------------------------------------------------------------------- */
-
-.patients-testimonials-section{
-    height: 110vh;
+/* ==========================================================================================================
+   ISOLATED TESTIMONIALS SECTION - CLEAN IMPLEMENTATION
+   ============================================================================================================ */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+/* Main Testimonials Section - Isolated */
+.testimonials-section {
+    min-height: 100vh;
     width: 100%;
-    background-color: #ebe3da;
-   padding-top: 6%;
-   /* border: 2px solid blue; */
-   /* text-align: center; */
-  }
-  
-  .patients-testimonials-container{
+    background: linear-gradient(135deg, #f5f1eb 0%, #ebe3da 100%);
+    padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Isolated Container for testimonials-section only */
+.testimonials-section .testimonials-container {
     width: 100%;
-    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
+                url(clinic.jpg) center/cover;
+    border-radius: clamp(1.5rem, 3vw, 2.5rem);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(10px);
+    isolation: isolate;
+}
+
+/* Isolated Header for testimonials-section only */
+.testimonials-section .testimonials-header {
+    text-align: center;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
+    background: rgba(0,0,0,0.3);
+}
+
+.testimonials-section .rating-stars {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-  }
+    gap: clamp(0.3rem, 1vw, 0.6rem);
+}
+
+.testimonials-section .rating-stars i {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #FFD700;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.testimonials-section .rating-stars i:hover {
+    transform: scale(1.1);
+}
   
-  .patients-testimonials-wrapper{
-    width: 100%;
-    height: 110%;
-    top:-10%;
-    background: linear-gradient(rgba(0,0,0.5), rgba(0,0,0,0.1)), url(StockCake-Dental\ Clinic\ Interior_1735830181.jpg) center no-repeat;
-    background-size: cover;
-    /* box-shadow: 0.1rem 5rem rgba(0, 0, 0, 0.6); */
+  
+  
+  
+/* Isolated Slider Wrapper for testimonials-section only */
+.testimonials-section .testimonials-slider-wrapper {
     position: relative;
-  }
-  
-  
-  
-  
-  .patients-testimonials-header{
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
-  
-  /* .patients-testimonials-header h3{
-    font-size: 2rem;
-    color: white;
-    font-weight: 300;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-  }
-  
-  .patients-testimonials-header h1{
-    font-size: 3rem;
-    color: white;
-    font-weight: 300;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-  } */
-  
-  .patients-testimonials-header i{
-    font-size: 2.6rem;
-    color: rgb(255,220,62);
-    margin: 0 0.5rem;
-    margin-top: 10%;
-  }
-  
-  .patients-testimonials{
-    width: 55%;
-    height: 22rem;
-    position: absolute;
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: clamp(25rem, 55vh, 35rem);
     overflow: hidden;
-    /* border: 0.1rem solid #fff; */
-  }
-  
-  .patients-testimonials-slider{
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.testimonials-section .testimonials-slider {
+    position: relative;
     height: 100%;
-    width: 2000%;
+    width: 100%;
+}
+
+/* Isolated Individual Slide for testimonials-section only */
+.testimonials-section .testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    /* justify-content: space-between; */
-    /* border: 2px solid orangered; */
-    transition: all 0.8s cubic-bezier(1, 0, 0, 1);
-    transform: translateX(0);
-  }
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 5vw, 4rem);
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.testimonials-section .testimonial-slide.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Isolated Slide Card for testimonials-section only */
+.testimonials-section .slide-card {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: clamp(1.5rem, 3vw, 2.5rem);
+    padding: clamp(2rem, 5vw, 3.5rem);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+    box-sizing: border-box;
+}
+  
+/* Isolated Patient Media for testimonials-section only */
+.testimonials-section .patient-media {
+    width: clamp(10rem, 25vw, 14rem);
+    height: clamp(9rem, 22vw, 13rem);
+    flex-shrink: 0;
+    border-radius: clamp(1.2rem, 3vw, 2rem);
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.testimonials-section .patient-media img,
+.testimonials-section .patient-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.testimonials-section .patient-media video {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonials-section .patient-media video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials-section .patient-media video:focus {
+    outline: 3px solid #8B4513;
+    outline-offset: 2px;
+}
+
+/* Isolated Patient Information for testimonials-section only */
+.testimonials-section .patient-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: clamp(12rem, 25vh, 16rem);
+    overflow: hidden;
+}
+
+.testimonials-section .patient-name {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.2;
+}
+
+.testimonials-section .patient-testimonial {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    max-height: clamp(8rem, 20vh, 12rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    hyphens: auto;
+    padding-right: clamp(0.5rem, 1vw, 1rem);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 69, 19, 0.3) transparent;
+}
+
+/* Custom scrollbar for webkit browsers */
+.testimonials-section .patient-testimonial::-webkit-scrollbar {
+    width: 4px;
+}
+
+.testimonials-section .patient-testimonial::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.testimonials-section .patient-testimonial::-webkit-scrollbar-thumb {
+    background: rgba(139, 69, 19, 0.3);
+    border-radius: 2px;
+}
+
+.testimonials-section .patient-testimonial::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 69, 19, 0.5);
+}
+
+/* Add fade effect at bottom when content overflows */
+.testimonials-section .patient-testimonial {
+    position: relative;
+}
+
+.testimonials-section .patient-testimonial::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show fade when scrollable */
+.testimonials-section .patient-testimonial:hover::after {
+    opacity: 1;
+}
+
+.testimonials-section .patient-location {
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    color: #8B4513;
+    font-weight: 600;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    margin-top: auto;
+}
+  
+/* Isolated Navigation Controls for testimonials-section only */
+.testimonials-section .slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+    pointer-events: none;
+    z-index: 100;
+}
+
+.testimonials-section .control-btn {
+    width: clamp(3rem, 8vw, 4rem);
+    height: clamp(3rem, 8vw, 4rem);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(139, 69, 19, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    pointer-events: auto;
+    backdrop-filter: blur(15px);
+}
+
+.testimonials-section .control-btn:hover {
+    background: #8B4513;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(139, 69, 19, 0.25);
+    border-color: #8B4513;
+}
+
+.testimonials-section .control-btn:active {
+    transform: scale(0.95);
+}
+
+.testimonials-section .control-btn i {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    color: #8B4513;
+    transition: color 0.3s ease;
+}
+
+.testimonials-section .control-btn:hover i {
+    color: white;
+}
+
+/* Isolated Dots Indicator for testimonials-section only */
+.testimonials-section .slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.5rem, 1.5vw, 0.8rem);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    background: rgba(0,0,0,0.2);
+}
+
+.testimonials-section .dot {
+    width: clamp(10px, 2.5vw, 14px);
+    height: clamp(10px, 2.5vw, 14px);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonials-section .dot.active {
+    background: #FFD700;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.testimonials-section .dot:hover {
+    background: rgba(255, 215, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* ===== ISOLATED RESPONSIVE DESIGN FOR TESTIMONIALS-SECTION ===== */
+
+/* Tablet and Small Desktop */
+@media (max-width: 1024px) {
+    .testimonials-section {
+        padding: clamp(2rem, 6vw, 4rem) clamp(0.8rem, 2vw, 1.5rem);
+    }
+    
+    .testimonials-section .slide-card {
+        max-width: 800px;
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+        gap: clamp(1.2rem, 3vw, 2rem);
+    }
+    
+    .testimonials-section .patient-media {
+        width: clamp(9rem, 28vw, 12rem);
+        height: clamp(8rem, 25vw, 11rem);
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .testimonials-section {
+        min-height: 100vh;
+        padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.8rem, 2vw, 1.2rem);
+    }
+    
+    .testimonials-section .testimonials-container {
+        max-width: none;
+        margin: 0;
+        border-radius: clamp(1rem, 2.5vw, 1.5rem);
+    }
+    
+    .testimonials-section .testimonials-header {
+        padding: clamp(1.5rem, 4vw, 2rem);
+    }
+    
+    .testimonials-section .rating-stars i {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    .testimonials-section .testimonials-slider-wrapper {
+        height: clamp(28rem, 70vh, 40rem);
+    }
+    
+    .testimonials-section .slide-card {
+        flex-direction: column;
+        text-align: center;
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+        gap: clamp(1.2rem, 4vw, 2rem);
+        max-width: none;
+    }
+    
+    .patient-media {
+        width: clamp(10rem, 35vw, 14rem);
+        height: clamp(9rem, 32vw, 13rem);
+        margin: 0 auto;
+    }
+    
+    .patient-info {
+        width: 100%;
+    }
+    
+    .patient-name {
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
+        margin-bottom: clamp(0.6rem, 2vw, 1rem);
+    }
+    
+    .testimonials-section .patient-testimonial {
+        font-size: clamp(0.95rem, 3.8vw, 1.2rem);
+        margin-bottom: clamp(0.8rem, 2.5vw, 1.2rem);
+        text-align: center;
+        max-height: clamp(6rem, 15vh, 8rem);
+        line-height: 1.5;
+    }
+    
+    .patient-location {
+        font-size: clamp(0.85rem, 3.5vw, 1.05rem);
+    }
+    
+    .control-btn {
+        width: clamp(2.5rem, 10vw, 3.5rem);
+        height: clamp(2.5rem, 10vw, 3.5rem);
+    }
+    
+    .control-btn i {
+        font-size: clamp(1rem, 4vw, 1.3rem);
+    }
+    
+    .slider-dots {
+        padding: clamp(1.2rem, 3vw, 1.8rem);
+    }
+    
+    .dot {
+        width: clamp(8px, 3vw, 12px);
+        height: clamp(8px, 3vw, 12px);
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .testimonials-section {
+        padding: clamp(1rem, 3vw, 1.8rem) clamp(0.5rem, 1.5vw, 1rem);
+    }
+    
+    .testimonials-header {
+        padding: clamp(1rem, 3vw, 1.5rem);
+    }
+    
+    .rating-stars i {
+        font-size: clamp(1.3rem, 4.5vw, 1.7rem);
+        gap: clamp(0.2rem, 0.8vw, 0.4rem);
+    }
+    
+    .testimonials-slider-wrapper {
+        height: clamp(25rem, 65vh, 35rem);
+    }
+    
+    .slide-card {
+        padding: clamp(1.2rem, 3.5vw, 2rem);
+        gap: clamp(1rem, 3vw, 1.5rem);
+    }
+    
+    .patient-media {
+        width: clamp(8rem, 32vw, 11rem);
+        height: clamp(7rem, 30vw, 10rem);
+    }
+    
+    .patient-name {
+        font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+        margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
+    }
+    
+    .testimonials-section .patient-testimonial {
+        font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+        margin-bottom: clamp(0.7rem, 2vw, 1rem);
+        line-height: 1.5;
+        max-height: clamp(5rem, 12vh, 7rem);
+    }
+    
+    .patient-location {
+        font-size: clamp(0.8rem, 3.2vw, 1rem);
+    }
+    
+    .control-btn {
+        width: clamp(2.2rem, 9vw, 3rem);
+        height: clamp(2.2rem, 9vw, 3rem);
+    }
+    
+    .control-btn i {
+        font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    }
+    
+    .slider-controls {
+        padding: 0 clamp(0.5rem, 1.5vw, 1rem);
+    }
+    
+    .slider-dots {
+        padding: clamp(1rem, 2.5vw, 1.5rem);
+        gap: clamp(0.4rem, 1.2vw, 0.6rem);
+    }
+    
+    .dot {
+        width: clamp(7px, 2.5vw, 10px);
+        height: clamp(7px, 2.5vw, 10px);
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+    .slide-card {
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .patient-media {
+        width: 7rem;
+        height: 6rem;
+    }
+    
+    .patient-name {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .testimonials-section .patient-testimonial {
+        font-size: 0.85rem;
+        margin-bottom: 0.6rem;
+        max-height: 4rem;
+        line-height: 1.4;
+    }
+    
+    .patient-location {
+        font-size: 0.75rem;
+    }
+}
 
   #ravichandran, #kunaldasgupta{
     margin-top: 10%;
@@ -93,60 +529,72 @@
   }
   
   .patients-testimonials-slide{
-    width: 20%;
+    width: 100%;
+    flex-shrink: 0;
     position: relative;
-    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 4vw, 3rem);
+    box-sizing: border-box;
+    height: 100%;
   }
   
-  
   .slide-bg{
-    width: 80%;
+    width: 88%;
     height: 85%;
-    background-color: rgb(131, 93, 6);
+    background-color: rgba(131, 93, 6, 0.7);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotateZ(-6deg);
-    border-radius: 2rem;
-    opacity: 0.7;
+    transform: translate(-50%, -50%) rotateZ(-3deg);
+    border-radius: clamp(1.5rem, 3vw, 2.5rem);
+    opacity: 0.8;
+    z-index: 1;
   }
   
   .slide-content{
-    width: 70%;
-    height: 85%;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 2rem;
+    width: 85%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.98);
+    position: relative;
+    border-radius: clamp(1.5rem, 3vw, 2.5rem);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 5rem;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    padding: clamp(2rem, 5vw, 3.5rem);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    z-index: 2;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
   }
   
   .patients-testimonials-slide i{
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 6vw, 4rem);
     color: rgb(131, 93, 6);
     position: absolute;
+    opacity: 0.8;
   }
   
   .patients-testimonials-slide i:nth-child(1){
-    top: -5%;
-    left: 3%;
+    top: clamp(-8%, -2vw, -5%);
+    left: clamp(1%, 2vw, 3%);
   }
   
   .patients-testimonials-slide i:nth-child(2){
-    bottom: -5%;
-    right: 3%;
+    bottom: clamp(-8%, -2vw, -5%);
+    right: clamp(1%, 2vw, 3%);
   }
   
   .patients-slide-img{
-    width: 15rem;
-    height: 14rem;
+    width: clamp(9rem, 25vw, 14rem);
+    height: clamp(8rem, 22vw, 13rem);
     position: relative;
-   /* border: 2px solid black; */
+    flex-shrink: 0;
+    border-radius: clamp(1.8rem, 4vw, 2.5rem);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   }
   
   .patients-slide-img::after,
@@ -200,32 +648,59 @@
   }
   
   .patients-slide-text{
-    width: 70%;
-    /* border: 2px solid blue; */
-    margin-left: 4%;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .patients-slide-text h3{
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 300;
-    color: #111;
-    margin-bottom: 1rem;
-    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
+    letter-spacing: 0.03rem;
+    line-height: 1.2;
   }
   
   .patients-slide-text p{
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(30, 40, 50);
-    font-weight: 300;
-    margin-bottom: 2rem;
+    color: rgb(40, 50, 60);
+    font-weight: 400;
+    margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    overflow-y: auto;
+    max-height: clamp(4rem, 12vh, 8rem);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(131, 93, 6, 0.3) transparent;
+  }
+  
+  .patients-slide-text p::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .patients-slide-text p::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .patients-slide-text p::-webkit-scrollbar-thumb {
+    background: rgba(131, 93, 6, 0.3);
+    border-radius: 2px;
+  }
+  
+  .patients-slide-text p::-webkit-scrollbar-thumb:hover {
+    background: rgba(131, 93, 6, 0.5);
   }
   
   .patients-slide-text .patients-destination{
-    font-size: 1.3rem;
+    font-size: clamp(0.9rem, 2.2vw, 1.2rem);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(102, 74, 8);
+    color: rgb(131, 93, 6);
+    font-weight: 600;
+    margin-top: auto;
   }
   
   .testimonials-controls {
@@ -237,99 +712,344 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 3vw, 2rem);
     pointer-events: none;
-    z-index: 20;
+    z-index: 30;
   }
   
   .testimonials-controls i{
-    width: 3rem;
-    height: 3rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    opacity: 0.8;
+    width: clamp(2.5rem, 6vw, 3.5rem);
+    height: clamp(2.5rem, 6vw, 3.5rem);
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0.9;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    color: #333;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: rgb(131, 93, 6);
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid rgba(131, 93, 6, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     pointer-events: auto;
+    backdrop-filter: blur(10px);
   }
   
   .testimonials-controls i:hover{
     opacity: 1;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(131, 93, 6);
+    color: white;
     transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(131, 93, 6, 0.4);
+  }
+  
+  .testimonials-controls i:active{
+    transform: scale(0.95);
   }
   
   
-  @media(max-width:1286px){
-    .patients-testimonials-header h3{
-    /* border: 2px solid black; */
-    font-size: 1.8rem;
+  /* Mobile and Tablet Responsiveness */
+  @media (max-width: 768px) {
+    .patients-testimonials-section {
+      padding: clamp(1.5rem, 3vw, 2rem) clamp(0.8rem, 1.5vw, 1rem);
+      min-height: 100vh;
     }
+    
+    .patients-testimonials-wrapper {
+      background-attachment: scroll;
+      border-radius: clamp(1rem, 2vw, 1.5rem);
+      height: clamp(32rem, 80vh, 45rem);
+      flex-direction: column;
+    }
+    
+    .patients-testimonials-header {
+      padding: clamp(1rem, 3vw, 1.5rem);
+      flex-shrink: 0;
+    }
+    
+    .patients-testimonials-header i {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      margin: 0 clamp(0.1rem, 0.5vw, 0.3rem);
+    }
+    
+    .patients-testimonials {
+      flex: 1;
+      padding: 0 clamp(0.5rem, 1.5vw, 1rem);
+    }
+    
+    .slide-content {
+      flex-direction: column;
+      text-align: center;
+      gap: clamp(1rem, 3vw, 1.8rem);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      width: 92%;
+      height: 85%;
+      justify-content: center;
+    }
+    
+    .patients-slide-img {
+      width: clamp(8rem, 25vw, 12rem);
+      height: clamp(7rem, 22vw, 11rem);
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+    
+    .patients-slide-text {
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(0.5rem, 2vw, 1rem);
+    }
+    
+    .patients-slide-text h3 {
+      font-size: clamp(1.3rem, 5vw, 1.6rem);
+      margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
+      line-height: 1.3;
+    }
+    
+    .patients-slide-text p {
+      font-size: clamp(0.9rem, 4vw, 1.1rem);
+      margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
+      max-height: clamp(4.5rem, 15vh, 8rem);
+      overflow-y: auto;
+      line-height: 1.6;
+      text-align: center;
+    }
+    
+    .patients-slide-text .patients-destination {
+      font-size: clamp(0.9rem, 4.2vw, 1.2rem);
+      margin-top: auto;
+      font-weight: 600;
+    }
+    
+    .testimonials-controls {
+      padding: 0 clamp(0.8rem, 2vw, 1.2rem);
+    }
+    
+    .testimonials-controls i {
+      width: clamp(2.5rem, 9vw, 3.2rem);
+      height: clamp(2.5rem, 9vw, 3.2rem);
+      font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    }
+  }
   
+  @media (max-width: 480px) {
+    .patients-testimonials-section {
+      padding: clamp(1rem, 2.5vw, 1.5rem) clamp(0.5rem, 1vw, 0.8rem);
+      min-height: 100vh;
+    }
+    
+    .patients-testimonials-wrapper {
+      height: clamp(28rem, 75vh, 40rem);
+    }
+    
+    .patients-testimonials-header {
+      padding: clamp(0.8rem, 2.5vw, 1.2rem);
+    }
+    
+    .patients-testimonials-header i {
+      font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+      margin: 0 clamp(0.05rem, 0.3vw, 0.2rem);
+    }
+    
+    .slide-content {
+      gap: clamp(0.8rem, 2.5vw, 1.2rem);
+      padding: clamp(1.2rem, 3.5vw, 2rem);
+      width: 95%;
+      height: 90%;
+    }
+    
+    .patients-slide-img {
+      width: clamp(7rem, 23vw, 9rem);
+      height: clamp(6rem, 20vw, 8rem);
+    }
+    
+    .patients-slide-text h3 {
+      font-size: clamp(1.1rem, 4.5vw, 1.3rem);
+      margin-bottom: clamp(0.4rem, 1.2vw, 0.6rem);
+    }
+    
+    .patients-slide-text p {
+      font-size: clamp(0.85rem, 3.8vw, 1rem);
+      max-height: clamp(3.5rem, 12vh, 6rem);
+      line-height: 1.5;
+      margin-bottom: clamp(0.6rem, 1.8vw, 1rem);
+    }
+    
+    .patients-slide-text .patients-destination {
+      font-size: clamp(0.85rem, 4vw, 1.1rem);
+    }
+    
+    .testimonials-controls i {
+      width: clamp(2.2rem, 8vw, 2.8rem);
+      height: clamp(2.2rem, 8vw, 2.8rem);
+      font-size: clamp(1rem, 4vw, 1.3rem);
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .patients-testimonials-section {
+      padding: 1rem 0.5rem;
+      min-height: 80vh;
+    }
+    
+    .patients-testimonials {
+      width: 98%;
+      height: clamp(15rem, 32vh, 18rem);
+    }
+    
+    .slide-content {
+      gap: 0.5rem;
+      padding: 1rem;
+    }
+    
+    .patients-slide-img {
+      width: clamp(5.5rem, 18vw, 7rem);
+      height: clamp(4.5rem, 16vw, 6rem);
+    }
+    
+    .patients-slide-text h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    
+    .patients-slide-text p {
+      font-size: 0.8rem;
+      max-height: 2.8rem;
+      line-height: 1.3;
+    }
+    
+    .patients-slide-text .patients-destination {
+      font-size: 0.8rem;
+    }
+    
+    .testimonials-controls i {
+      width: 1.8rem;
+      height: 1.8rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (min-width: 1286px) {
+    .patients-testimonials-header h3{
+      font-size: 1.8rem;
+    }
+    
     .patients-testimonials-header h1{
       font-size: 2.5rem;
       margin-top: 2%;
     }
-    
   }
   
   
    /* ---------------------------------------------------------------------------2------------------------------------------------------------------------------------- */
   
    .you-tube-videos-main-section{
-    height: 95vh;
+    min-height: 95vh;
     width: 100%;
-    border: 2px solid transparent;
     background-color: #ebe3da;
+    padding: clamp(2rem, 6vw, 4rem) 0;
   }
   
   .video-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    padding-top: 6%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    padding: clamp(1rem, 4vw, 2rem);
+    max-width: 1400px;
+    margin: 0 auto;
   }
   
   .video-container iframe {
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: clamp(180px, 25vw, 200px);
+    border-radius: clamp(0.5rem, 1vw, 1rem);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .video-container iframe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   }
   
   .pagination {
     text-align: center;
-    margin: 20px;
+    margin: clamp(1.5rem, 4vw, 2rem);
+    padding: 0 1rem;
   }
   
   .pagination button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: none;
     background-color: #007BFF;
     color: white;
+    border: none;
+    padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 18px);
+    margin: clamp(0.2rem, 1vw, 0.5rem);
     cursor: pointer;
+    border-radius: clamp(0.3rem, 1vw, 0.5rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,123,255,0.3);
   }
   
   .pagination button:hover {
     background-color: #0056b3;
-    opacity: 0.7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,123,255,0.4);
   }
   
-  @media screen and (max-width: 1300px) {
-    .you-tube-videos-main-section{
-      height: 90vh;
+  .pagination button:active {
+    transform: translateY(0);
+  }
+  
+  /* YouTube Videos Responsive Design */
+  @media (max-width: 768px) {
+    .video-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
     }
-    .video-container iframe{
-        width: 250px /* 3 images per row */
+    
+    .video-container iframe {
+      height: clamp(160px, 30vw, 180px);
+    }
+    
+    .pagination {
+      margin: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .pagination button {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .video-container {
+      grid-template-columns: 1fr;
+      padding: 0.5rem;
+    }
+    
+    .video-container iframe {
+      height: clamp(140px, 35vw, 160px);
+    }
+    
+    .pagination button {
+      padding: 6px 10px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (min-width: 1300px) {
+    .video-container {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
   
@@ -337,115 +1057,350 @@
   /* --------------------------------------------------textual testimonial---------------------------------------------------------------- */
 
   
-.img-sec-testi{
-  height: 100vh;
-  background: #c7c0b9;
-}
-
-.img-sec-testi .img-testi-container h2{
-  text-align: center;
-  font-size: 2.2rem;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  letter-spacing: 0.1rem;
-  font-weight: 500;
-  padding-top: 5%;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  height: 70vh;
-  font-size: 18px;
-  background: #c7c0b9;
+/* Enhanced Textual Testimonials Section */
+.img-sec-testi {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #c7c0b9 0%, #b8b0a8 50%, #c7c0b9 100%);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 3vw, 2rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-sec-testi::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23000" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23000" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.img-testi-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.img-sec-testi .img-testi-container h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  color: #4a3f36;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.img-sec-testi .img-testi-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(4rem, 10vw, 8rem);
+  height: 3px;
+  background: linear-gradient(90deg, #8B4513, #D2691E, #8B4513);
+  border-radius: 2px;
+}
+
+/* Enhanced Swiper Container */
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  position: relative;
+  z-index: 2;
+}
+
+/* Modern Card-Based Testimonial Slides */
+.swiper-slide {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 248, 248, 0.95));
+  border-radius: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 
+    0 20px 60px rgba(0,0,0,0.08),
+    0 8px 25px rgba(139, 69, 19, 0.06);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(139, 69, 19, 0.08);
+  height: auto; /* Allow natural height */
+  min-height: clamp(28rem, 55vh, 35rem);
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, content, footer */
+  gap: clamp(1.5rem, 3vw, 2rem);
+  padding: clamp(2rem, 5vw, 3rem);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+/* Remove hover effects since no interaction is allowed */
+
+.swiper-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(4rem, 20%, 8rem);
+  height: 4px;
+  background: linear-gradient(90deg, #8B4513, #D2691E, #8B4513);
+  border-radius: 0 0 4px 4px;
+}
+
+/* Modern Testimonial Content Area */
+.swiper-client-msg {
+  grid-row: 2; /* Middle section in grid */
+  display: flex;
   align-items: center;
-  margin-top: 3rem;
-  /* box-shadow: 2px 2px 5px lightblue; */
+  justify-content: center;
+  text-align: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  position: relative;
+  min-height: clamp(8rem, 25vh, 12rem);
+}
+
+/* Removed hover effects - auto-play only mode */
+
+.swiper-client-msg p {
+  font-family: 'Georgia', serif;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  word-wrap: break-word;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* Modern Client Profile Section */
+.swiper-client-data {
+  grid-row: 3; /* Bottom section in grid */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.2rem, 3vw, 2rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  background: rgba(139, 69, 19, 0.03);
+  border-radius: clamp(0.8rem, 2vw, 1.2rem);
+  margin: 0 -0.5rem -0.5rem -0.5rem;
+}
+
+.swiper-client-data figure {
+  margin: 0;
+  flex-shrink: 0;
+  position: relative;
 }
 
 .swiper-slide img {
-  width: 6rem;
-  height: 6rem;
-  display: block;
+  width: clamp(5rem, 15vw, 8rem);
+  height: clamp(5rem, 15vw, 8rem);
   border-radius: 50%;
-  /* width: 100%;
-  height: 100%; */
   object-fit: cover;
-  /* border: 2px solid blue; */
+  box-shadow: 
+    0 8px 30px rgba(0,0,0,0.1),
+    0 2px 8px rgba(139, 69, 19, 0.15);
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  outline: 2px solid rgba(139, 69, 19, 0.2);
+  transition: all 0.3s ease;
 }
 
+/* Removed image hover effects - auto-play only mode */
 
-.swiper-client-msg{
-  padding: 2rem 2rem;
-  border-radius: 1rem;
-  text-align: left;
+.client-data-details {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
+}
+
+.client-data-details p {
+  font-family: 'Inter', 'Georgia', serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #4a3f36;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.client-data-details img {
+  width: clamp(1.5rem, 4vw, 2rem);
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* No navigation buttons - auto-play only mode */
+
+/* Simple Swiper Pagination */
+.swiper-pagination {
   position: relative;
-  width: 35rem;
-  background: rgb(146, 145, 145);
-  box-shadow: 2px 2px 5px #878684;
-  /* border: 2px solid black; */
+  margin-top: clamp(2rem, 4vw, 3rem);
+  text-align: center;
 }
 
-.swiper-client-msg p{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  letter-spacing: 0.1rem;
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(139, 69, 19, 0.4);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+  opacity: 1;
 }
 
-.swiper-client-msg::before{
-  content: "";
-  position: absolute;
-  bottom: -5rem;
-  left: 45%;
-  border: 2.5rem solid white;
-  border-color: transparent;
-  border-top-color: #878684;
+.swiper-pagination-bullet-active {
+  background: #8B4513;
+  transform: scale(1.2);
 }
 
-
-.swiper-client-msg p::before{
-  content: "\f10d";
-  position: absolute;
-  top: 0;
-  left: 0rem;
-  font-size: 2.5rem;
-  font-family: "Font Awesome 6 free";
-  font-weight: 900;
-  color:  rgb(78, 53, 11);
+/* Responsive Design for Textual Testimonials */
+@media (max-width: 768px) {
+  .img-sec-testi {
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
+  }
+  
+  .swiper {
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+  
+  .swiper-slide {
+    min-height: clamp(32rem, 70vh, 42rem);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+  
+  .swiper-client-msg {
+    min-height: clamp(10rem, 25vh, 15rem);
+    padding: clamp(0.8rem, 2vw, 1.5rem);
+  }
+  
+  .swiper-client-msg p {
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    line-height: 1.6;
+  }
+  
+  .swiper-client-data {
+    flex-direction: column;
+    text-align: center;
+    gap: clamp(1rem, 3vw, 1.5rem);
+    align-items: center;
+    padding: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .swiper-slide img {
+    width: clamp(4rem, 18vw, 6rem);
+    height: clamp(4rem, 18vw, 6rem);
+  }
+  
+  .client-data-details p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
 }
 
-.swiper-client-msg p::after{
-  content: "\f10e";
-  position: absolute;
-  bottom: 0;
-  right: 0rem;
-  font-size: 2.5rem;
-  font-family: "Font Awesome 6 free";
-  font-weight: 900;
-  color: rgb(78, 53, 11);
+@media (max-width: 480px) {
+  .swiper-slide {
+    min-height: clamp(30rem, 75vh, 38rem);
+    padding: clamp(1.2rem, 4vw, 2rem);
+    gap: clamp(0.8rem, 2vw, 1.2rem);
+  }
+  
+  .swiper-client-msg {
+    padding: clamp(1rem, 3vw, 1.5rem);
+    min-height: clamp(8rem, 20vh, 12rem);
+  }
+  
+  .swiper-client-msg p {
+    font-size: clamp(0.95rem, 4vw, 1.2rem);
+    line-height: 1.5;
+  }
+  
+  .swiper-client-data {
+    padding: clamp(0.8rem, 2vw, 1.2rem);
+    gap: clamp(0.8rem, 2vw, 1.2rem);
+  }
+  
+  .swiper-slide img {
+    width: clamp(3.5rem, 15vw, 5rem);
+    height: clamp(3.5rem, 15vw, 5rem);
+  }
+  
+  .client-data-details p {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+  }
 }
+
+@media (min-width: 1024px) {
+  .swiper-slide {
+    margin: 0 clamp(0.5rem, 1vw, 1rem);
+    min-height: clamp(30rem, 55vh, 38rem);
+    max-width: 90%;
+  }
+  
+  .swiper-client-msg {
+    min-height: clamp(8rem, 25vh, 12rem);
+  }
+  
+  .swiper-client-msg p {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  }
+  
+  .swiper-slide img {
+    width: clamp(5rem, 12vw, 7rem);
+    height: clamp(5rem, 12vw, 7rem);
+  }
+  
+  .client-data-details p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+  }
+}
+
+/* Removed gray arrow - clean design */
+
+/* Removed quote icon for cleaner look */
+
+/* Removed closing quote icon for cleaner look */
 
 .swiper-client-data{
   align-items: center;
   display: flex;
-  margin-top: 3.2rem;
+  margin-top: clamp(2rem, 5vw, 3.2rem);
+  gap: clamp(1rem, 3vw, 2rem);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .client-data-details{
-  margin-left: 3rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.5rem, 1vw, 1rem);
 }
 
 .client-data-details p{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.1rem;
-  margin-top: 0.8rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  letter-spacing: 0.05rem;
+  margin: 0;
+  text-align: center;
   margin-bottom: 0.8rem;
 }
 
@@ -797,37 +1752,11 @@
     margin: 0;
   }
   
-  .swiper-client-msg::before {
-    content: "";
-    position: absolute;
-    bottom: -1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1rem solid transparent;
-    border-top-color: rgba(255, 255, 255, 0.95);
-  }
+  /* Removed arrow for clean design */
   
-  .swiper-client-msg p::before {
-    content: "\f10d";
-    position: absolute;
-    top: -0.5rem;
-    left: 1rem;
-    font-size: 2rem;
-    font-family: "Font Awesome 6 free";
-    font-weight: 900;
-    color: rgb(78, 53, 11);
-  }
+  /* Removed quote icon for clean design */
   
-  .swiper-client-msg p::after {
-    content: "\f10e";
-    position: absolute;
-    bottom: -0.5rem;
-    right: 1rem;
-    font-size: 2rem;
-    font-family: "Font Awesome 6 free";
-    font-weight: 900;
-    color: rgb(78, 53, 11);
-  }
+  /* Removed closing quote icon for clean design */
   
   .swiper-client-data {
     display: flex;
@@ -1554,5 +2483,392 @@
   .testimonials-controls i {
     font-size: 0.9rem;
     padding: 0.2rem;
+  }
+}
+
+/* ============================================================================= Floating Elements & Mobile Optimizations =========================================================================== */
+
+/* Floating phone and WhatsApp buttons */
+#contact-btn .phn-no {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 15px;
+  background: linear-gradient(45deg, #8B4513, #A0522D);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+#contact-btn .phn-no:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  background: linear-gradient(45deg, #A0522D, #8B4513);
+}
+
+.whatsapp-no {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-no a {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  color: #25D366;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-no a:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Responsive Adjustments */
+footer {
+  background: #333;
+  color: white;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+}
+
+.last-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.first-footer-section {
+  text-align: center;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.first-footer-section p {
+  margin: 0.5rem 0;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.second-footer-section {
+  text-align: center;
+}
+
+.second-footer-section p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
+}
+
+#add1 {
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  opacity: 0.8;
+}
+
+#address span {
+  font-weight: bold;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+  /* Adjust floating buttons for mobile */
+  #contact-btn .phn-no {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 12px;
+  }
+  
+  .whatsapp-no {
+    bottom: 65px;
+    right: 15px;
+  }
+  
+  /* Hide background attachment on mobile for better performance */
+  .patients-testimonials-wrapper {
+    background-attachment: scroll;
+  }
+  
+  /* Ensure no horizontal scrolling */
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Footer adjustments */
+  .first-footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust floating buttons for very small screens */
+  #contact-btn .phn-no {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Performance optimization - reduce animations on mobile */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .patients-testimonials-header i,
+  .swiper-client-msg {
+    filter: contrast(1.5);
+  }
+}
+
+/* Print styles */
+@media print {
+  .whatsapp-no,
+  #contact-btn {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .patients-testimonials-wrapper {
+    background: none !important;
+  }
+}
+
+/* ==========================================
+   SIMPLE & RELIABLE TEXTUAL TESTIMONIALS SLIDER
+   ========================================== */
+
+.testimonials-text-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  overflow: hidden;
+}
+
+.testimonials-text-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-text-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #8B4513;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.testimonials-text-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #8B4513, #D2691E);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+.testimonials-slider-wrapper {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(139, 69, 19, 0.1);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.testimonials-slider-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonials-slides-track {
+  display: flex;
+  width: 500%; /* 5 slides */
+  transition: transform 0.8s ease-in-out;
+}
+
+.testimonial-text-slide {
+  width: 20%; /* 100% / 5 slides = 20% */
+  padding: 60px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial-quote {
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.testimonial-quote p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.8;
+  color: #333;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  position: relative;
+  margin: 0;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.author-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #8B4513;
+  flex-shrink: 0;
+}
+
+.author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-text-slide:hover .author-image img {
+  transform: scale(1.1);
+}
+
+.author-info h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #8B4513;
+  margin: 0 0 8px 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.author-info p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.author-info img {
+  width: 20px;
+  height: auto;
+  border-radius: 2px;
+}
+
+/* Simple Progress Bar */
+.slider-progress {
+  width: 100%;
+  height: 6px;
+  background: rgba(139, 69, 19, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #8B4513, #D2691E);
+  border-radius: 3px;
+  transition: width 0.8s ease-in-out;
+  width: 20%; /* Start at 20% (first slide) */
+}
+
+/* Simple Dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(139, 69, 19, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-dot:hover {
+  background: rgba(139, 69, 19, 0.6);
+  transform: scale(1.2);
+}
+
+.slider-dot.active {
+  background: #8B4513;
+  transform: scale(1.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-text-section {
+    padding: 60px 15px;
+  }
+  
+  .testimonial-text-slide {
+    padding: 40px 20px;
+  }
+  
+  .testimonial-author {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .author-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-text-slide {
+    padding: 30px 15px;
+  }
+  
+  .author-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .author-info h4 {
+    font-size: 1.1rem;
+  }
+  
+  .author-info p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-slides-track,
+  .progress-fill,
+  .slider-dot,
+  .author-image img {
+    transition: none !important;
   }
 }
