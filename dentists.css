@@ -258,11 +258,36 @@
   /* People section responsive adjustments */
   .people-main-section {
     height: 60vh;
+    padding: 1rem 0;
   }
   
   .people-main-section .people-item .people-images {
     width: 280px;
     height: 200px;
+    border-width: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .people-main-section .people-item {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin-top: 2%;
+  }
+  
+  .people-main-section .swiper-button-next,
+  .people-main-section .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .people-main-section .swiper-button-next::after,
+  .people-main-section .swiper-button-prev::after {
+    font-size: 16px;
+  }
+  
+  .people-main-section .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
   }
     
   }
@@ -374,78 +399,77 @@
   /* ------------------------------------------------------------------------------------dentist-client------------------------------------ */
   
   .people-main-section{
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; */
-    /* background-color: #BEB2A6; */
-    background-color:  #c0b9b2;
-    border: 2px solid transparent;
-  }
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  background-color: #c0b9b2;
+  border: 2px solid transparent;
+  padding: 40px 0;
+}
   
   
-  .people-main-section .people-slider-wrapper{
-    overflow: hidden;
-    margin: 0 60x 50px;
-  }
+  .people-content{
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.people-main-section .people-slider-wrapper{
+  overflow: hidden;
+  margin: 0 60px 50px;
+}
   
   
   .people-main-section .people-item {
-    display: flex;
-    /* padding: 35px; */
-    padding-top: 15px;
-    padding-bottom: 50px;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4%;
-    /* border: 2px solid black; */
-  }
+  display: flex;
+  padding: 20px 10px 50px 10px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4%;
+}
   
   .people-main-section .people-item .people-images{
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 250px;
-  background-size: cover;
-  /* border-radius: 50%; */
-  margin-bottom: 50px;
+  object-fit: cover;
+  margin-bottom: 30px;
   border: 10px solid #f9f2e8;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-.people-main-section .people-item .people-images:hover {
+.people-main-section .people-item .people-images:hover{
   transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  border-color: #e6d7c3;
 }
+
+
   
   .people-main-section .swiper-pagination-bullet{
   width: 15px;
   height: 15px;
   opacity: 1;
-  background-color: #333;
-  margin: 0 5px;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  margin-bottom: 5%;
+  background-color: #d4a373;
+}
+
+.people-main-section .swiper-pagination-bullet-active{
+  background-color: #8b4513;
 }
   
-  .people-main-section .swiper-pagination-bullet-active{
-    background-color: #666;
-  }
-  
   /* Swiper navigation buttons */
-  .people-main-section .swiper-button-next,
-  .people-main-section .swiper-button-prev {
-    color: #666;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-  }
+.people-main-section .swiper-button-next,
+.people-main-section .swiper-button-prev {
+  color: #8b4513;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
   
   .people-main-section .swiper-button-next:hover,
   .people-main-section .swiper-button-prev:hover {
@@ -471,6 +495,28 @@
     width: 100%;
     height: 100%;
     padding: 20px 0;
+  }
+  
+  /* Mobile-specific enhancements */
+  @media (max-width: 768px) {
+    .people-main-section .people-slider-container {
+      padding: 15px 0;
+    }
+    
+    .people-main-section .people-item .people-images {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    .people-main-section .swiper-button-next,
+    .people-main-section .swiper-button-prev {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    
+    .people-main-section .swiper-pagination {
+      bottom: 10px;
+    }
   }
   
   /* --- Mobile & Tablet Responsive Adjustments --- */
@@ -589,11 +635,50 @@
   /* People section responsive adjustments */
   .people-main-section {
     height: 50vh;
+    padding: 0.8rem 0;
   }
   
   .people-main-section .people-item .people-images {
     width: 250px;
     height: 180px;
+    border-width: 6px;
+    margin-bottom: 25px;
+  }
+  
+  .people-main-section .people-item {
+    padding-top: 8px;
+    padding-bottom: 25px;
+    margin-top: 1.5%;
+  }
+  
+  .people-main-section .swiper-button-next,
+  .people-main-section .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .people-main-section .swiper-button-next::after,
+  .people-main-section .swiper-button-prev::after {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .people-main-section .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    opacity: 1;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .people-main-section .swiper-pagination-bullet-active {
+    background-color: #666;
   }
 }
 
@@ -660,7 +745,54 @@
     margin-top: 0.8rem;
   }
   
-
+  /* People section responsive adjustments */
+  .people-main-section {
+    height: 45vh;
+    padding: 0.6rem 0;
+  }
+  
+  .people-main-section .people-item .people-images {
+    width: 220px;
+    height: 160px;
+    border-width: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .people-main-section .people-item {
+    padding-top: 6px;
+    padding-bottom: 20px;
+    margin-top: 1%;
+  }
+  
+  .people-main-section .swiper-button-next,
+  .people-main-section .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .people-main-section .swiper-button-next::after,
+  .people-main-section .swiper-button-prev::after {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .people-main-section .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+    background-color: #333;
+    opacity: 1;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .people-main-section .swiper-pagination-bullet-active {
+    background-color: #666;
+  }
 }
 
 @media (max-width: 400px) {
@@ -691,11 +823,50 @@
   /* People section responsive adjustments */
   .people-main-section {
     height: 40vh;
+    padding: 0.5rem 0;
   }
   
   .people-main-section .people-item .people-images {
     width: 200px;
     height: 140px;
+    border-width: 4px;
+    margin-bottom: 18px;
+  }
+  
+  .people-main-section .people-item {
+    padding-top: 5px;
+    padding-bottom: 18px;
+    margin-top: 0.8%;
+  }
+  
+  .people-main-section .swiper-button-next,
+  .people-main-section .swiper-button-prev {
+    width: 28px;
+    height: 28px;
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .people-main-section .swiper-button-next::after,
+  .people-main-section .swiper-button-prev::after {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .people-main-section .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    opacity: 1;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .people-main-section .swiper-pagination-bullet-active {
+    background-color: #666;
   }
 }
 
@@ -727,11 +898,101 @@
   /* People section responsive adjustments */
   .people-main-section {
     height: 35vh;
+    padding: 0.4rem 0;
   }
   
   .people-main-section .people-item .people-images {
     width: 180px;
     height: 120px;
+    border-width: 3px;
+    margin-bottom: 15px;
+  }
+  
+  .people-main-section .people-item {
+    padding-top: 4px;
+    padding-bottom: 15px;
+    margin-top: 0.6%;
+  }
+  
+  .people-main-section .swiper-button-next,
+  .people-main-section .swiper-button-prev {
+    width: 25px;
+    height: 25px;
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .people-main-section .swiper-button-next::after,
+  .people-main-section .swiper-button-prev::after {
+    font-size: 11px;
+    font-weight: bold;
+  }
+  
+  .people-main-section .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    background-color: #333;
+    opacity: 1;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .people-main-section .swiper-pagination-bullet-active {
+    background-color: #666;
+  }
+  
+  /* Ultra-small screen optimizations */
+  @media (max-width: 320px) {
+    .people-main-section {
+      height: 30vh;
+      padding: 0.3rem 0;
+    }
+    
+    .people-main-section .people-item .people-images {
+      width: 160px;
+      height: 100px;
+      border-width: 2px;
+      margin-bottom: 12px;
+    }
+    
+    .people-main-section .people-item {
+      padding-top: 3px;
+      padding-bottom: 12px;
+      margin-top: 0.4%;
+    }
+    
+      .people-main-section .swiper-button-next,
+  .people-main-section .swiper-button-prev {
+    width: 22px;
+    height: 22px;
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .people-main-section .swiper-button-next::after,
+  .people-main-section .swiper-button-prev::after {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .people-main-section .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background-color: #333;
+    opacity: 1;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .people-main-section .swiper-pagination-bullet-active {
+    background-color: #666;
+  }
   }
 }
 
