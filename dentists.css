@@ -128,7 +128,7 @@
     height: auto;
     min-height: 400px;
     width: 50%;
-    padding-top: 5%;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,7 +238,7 @@
   
     .dentists-clinic-main-container .dentists-clinic-images-container{
       width: 100%;
-      padding-top: 0%;
+      padding: 20px;
       margin-top: 0%;
       min-height: 300px;
     }
@@ -249,11 +249,21 @@
       padding: 1rem;
     }
     
-    .dentists-clinic-images-container .den-clinic-img{
-      height: 280px;
-      width: 90%;
-      max-width: 400px;
-    }
+      .dentists-clinic-images-container .den-clinic-img{
+    height: 280px;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* People section responsive adjustments */
+  .people-main-section {
+    height: 60vh;
+  }
+  
+  .people-main-section .people-item .people-images {
+    width: 280px;
+    height: 200px;
+  }
     
   }
   
@@ -396,23 +406,71 @@
   }
   
   .people-main-section .people-item .people-images{
-    width: 350px;
-    height: 250px;
-    background-size: cover;
-    /* border-radius: 50%; */
-    margin-bottom: 50px;
-    border: 10px solid #f9f2e8;
-  }
+  width: 350px;
+  height: 250px;
+  background-size: cover;
+  /* border-radius: 50%; */
+  margin-bottom: 50px;
+  border: 10px solid #f9f2e8;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.people-main-section .people-item .people-images:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: #e6d7c3;
+}
   
   .people-main-section .swiper-pagination-bullet{
-    width: 15px;
-    height: 15px;
-    opacity: 1;
-    background-color: #333;
-  }
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background-color: #333;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
   
   .people-main-section .swiper-pagination-bullet-active{
     background-color: #666;
+  }
+  
+  /* Swiper navigation buttons */
+  .people-main-section .swiper-button-next,
+  .people-main-section .swiper-button-prev {
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .people-main-section .swiper-button-next:hover,
+  .people-main-section .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+  }
+  
+  .people-main-section .swiper-button-next::after,
+  .people-main-section .swiper-button-prev::after {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* People section responsive adjustments */
+  .people-main-section .people-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .people-main-section .people-slider-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
   }
   
   /* --- Mobile & Tablet Responsive Adjustments --- */
@@ -476,8 +534,10 @@
   .dentists-clinic-images-container {
     width: 100% !important;
     height: auto;
-    padding-top: 0;
+    padding: 20px;
   }
+  
+
   
   .dentists-clinic-intro-container {
     width: 100% !important;
@@ -525,6 +585,16 @@
   .mission-content li {
     font-size: 0.9rem;
   }
+  
+  /* People section responsive adjustments */
+  .people-main-section {
+    height: 50vh;
+  }
+  
+  .people-main-section .people-item .people-images {
+    width: 250px;
+    height: 180px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -570,6 +640,8 @@
     padding: 0.5rem;
   }
   
+
+  
   .dentists-clinic-second-main-section {
     padding: 1rem 0.5rem;
   }
@@ -587,6 +659,8 @@
     font-size: 0.8rem;
     margin-top: 0.8rem;
   }
+  
+
 }
 
 @media (max-width: 400px) {
@@ -613,6 +687,16 @@
     font-size: 0.7rem;
     margin-top: 0.6rem;
   }
+  
+  /* People section responsive adjustments */
+  .people-main-section {
+    height: 40vh;
+  }
+  
+  .people-main-section .people-item .people-images {
+    width: 200px;
+    height: 140px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -639,36 +723,43 @@
     font-size: 0.6rem;
     margin-top: 0.5rem;
   }
-}
   
- 
+  /* People section responsive adjustments */
+  .people-main-section {
+    height: 35vh;
+  }
+  
+  .people-main-section .people-item .people-images {
+    width: 180px;
+    height: 120px;
   }
 }
 
-@media (max-width: 360px) {
-  .dentists-main-section h2 {
-    margin-top: 25%;
-    font-size: 1.1rem;
-  }
-  
-  .dentists-main-section h3 {
-    font-size: 0.8rem;
-  }
-  
-  .dentists-intro-container li {
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
-  }
-  
-  .dentists-clinic-second-main-container ul li {
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
-  }
-  
-  .mission-content li {
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
-  }
+/* ==========================================================
+   CLINIC IMAGES AUTO-SLIDER STYLES
+   ========================================================== */
+
+/* Ensure proper positioning and transitions for auto-slider */
+.clinic-images-list .dental-clinic-images-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-  
- 
+
+.clinic-images-list .dental-clinic-images-content img.cli-den-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  border-radius: 15px;
+}
+
+.clinic-images-list .dental-clinic-images-content img.cli-den-img.active {
+  opacity: 1;
+  z-index: 1;
+}

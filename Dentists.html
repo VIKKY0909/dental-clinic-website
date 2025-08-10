@@ -304,9 +304,18 @@
         }
 
         .dental-clinic-images-content {
-            display: flex;
-            animation: scroll 20s linear infinite;
-        }
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: 200%; /* This ensures enough width for seamless loop */
+}
+
+.dental-clinic-images-content img {
+    width: 100%;
+    height: clamp(220px, 35vw, 320px);
+    object-fit: cover;
+    flex-shrink: 0;
+    min-width: 100%; /* Ensure each image takes full container width */
+}
 
         .dental-clinic-images-content img {
             width: 100%;
@@ -831,7 +840,7 @@
                     <div class="dental-images-list">
                         <div class="clinic-images-list">
                           <div class="dental-clinic-images-content">
-                            <img src="assets/IMG_9632.jpg" alt="Clinic Image 1" class="cli-den-img">
+                            <img src="assets/IMG_9632.jpg" alt="Clinic Image 1" class="cli-den-img active">
                             <img src="assets/IMG_9637.jpeg" alt="Clinic Image 2" class="cli-den-img">
                             <img src="assets/IMG_9627.jpeg" alt="Clinic Image 3" class="cli-den-img">
                             <img src="assets/IMG_9633.jpeg" alt="Clinic Image 4" class="cli-den-img">
@@ -1004,6 +1013,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="dentists.js"></script>
+    <script src="dt.js"></script>
     
     <script>
         // Mobile Navigation Toggle

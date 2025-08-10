@@ -1,245 +1,296 @@
+// Mobile Navigation Toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const menuIcon = document.getElementById("menu-icon");
+  const navList = document.querySelector(".nav-list");
+  const icon = menuIcon ? menuIcon.querySelector("i") : null;
 
-// Image Auto Slider for Clinic Images
-var firstIndex = 0;
-var clinicImages = [];
+  if (menuIcon && navList && icon) {
+      menuIcon.addEventListener("click", function (e) {
+          navList.classList.toggle("active");
 
-function initializeClinicSlider() {
-  const imgContainer = document.querySelector('.dental-clinic-images-content');
-  if (!imgContainer) {
-    console.log('❌ Clinic images container not found');
-    return;
-  }
-  
-  clinicImages = imgContainer.querySelectorAll('.cli-den-img');
-  if (clinicImages.length === 0) {
-    console.log('❌ No clinic images found');
-    return;
-  }
-  
-  console.log('✅ Found', clinicImages.length, 'clinic images');
-  
-  // Ensure all images are properly loaded and styled
-  clinicImages.forEach((img, index) => {
-    // Force image display and positioning
-    img.style.display = 'block';
-    img.style.position = 'absolute';
-    img.style.top = '0';
-    img.style.left = '0';
-    img.style.width = '100%';
-    img.style.height = '100%';
-    img.style.objectFit = 'cover';
-    img.style.opacity = '0';
-    img.style.transition = 'opacity 0.8s ease-in-out';
-    img.style.borderRadius = '15px';
-    img.classList.remove('active');
-    
-    // Handle image load errors
-    img.onerror = function() {
-      console.warn(`⚠️ Failed to load image: ${img.src}`);
-      img.style.display = 'none';
-    };
-    
-    img.onload = function() {
-      console.log(`✅ Loaded image ${index + 1}: ${img.alt}`);
-    };
-    
-    console.log(`🖼️ Image ${index + 1} initialized: ${img.src}`);
-  });
-  
-  // Show first image
-  if (clinicImages[0]) {
-    clinicImages[0].style.opacity = '1';
-    clinicImages[0].classList.add('active');
-    clinicImages[0].style.zIndex = '1';
-    console.log('✅ First image displayed');
-  }
-  
-  // Start auto slide with delay
-  setTimeout(() => {
-    automaticSlide();
-    console.log('🚀 Auto-slide started for clinic images');
-  }, 1000);
-}
+          if (navList.classList.contains("active")) {
+              icon.classList.replace("fa-bars", "fa-times");
+          } else {
+              icon.classList.replace("fa-times", "fa-bars");
+          }
+          e.stopPropagation();
+      });
 
-function automaticSlide() {
-  if (clinicImages.length === 0) {
-    console.log('❌ No clinic images available for auto-slide');
-    return;
+      // Close menu when clicking outside
+      document.addEventListener("click", function (e) {
+          if (navList.classList.contains("active") && 
+              !navList.contains(e.target) && 
+              e.target !== menuIcon && 
+              !menuIcon.contains(e.target)) {
+              navList.classList.remove("active");
+              icon.classList.replace("fa-times", "fa-bars");
+          }
+      });
   }
-  
-  // Hide current image
-  if (clinicImages[firstIndex]) {
-    clinicImages[firstIndex].style.opacity = '0';
-    clinicImages[firstIndex].classList.remove('active');
-    clinicImages[firstIndex].style.zIndex = '0';
-  }
-  
-  // Move to next image (infinite loop)
-  firstIndex++;
-  if (firstIndex >= clinicImages.length) {
-    firstIndex = 0;
-  }
-  
-  // Show new image
-  if (clinicImages[firstIndex]) {
-    clinicImages[firstIndex].style.opacity = '1';
-    clinicImages[firstIndex].classList.add('active');
-    clinicImages[firstIndex].style.zIndex = '1';
-    console.log(`🔄 Showing clinic image ${firstIndex + 1}/${clinicImages.length}`);
-  }
-  
-  // Schedule next slide
-  setTimeout(automaticSlide, 4000); // 4 seconds for better viewing
-}
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('🚀 DOM loaded, initializing dentists page');
-  
-  // Ensure container has proper height
-  const imageContainer = document.querySelector('.dentists-clinic-images-container');
-  if (imageContainer) {
-    console.log('📐 Setting proper container dimensions');
-    imageContainer.style.minHeight = '400px';
-    imageContainer.style.display = 'flex';
-    imageContainer.style.alignItems = 'center';
-    imageContainer.style.justifyContent = 'center';
-  }
-  
-  // Initialize clinic slider with delay to ensure DOM is ready
-  setTimeout(() => {
-    initializeClinicSlider();
-  }, 500);
-  
-  // Initialize people slider if Swiper is available
-  if (typeof Swiper !== 'undefined') {
-    initializePeopleSlider();
-  } else {
-    console.log('Swiper not available, waiting...');
-    // Wait a bit for Swiper to load
-    setTimeout(initializePeopleSlider, 1000);
-  }
-  
-  // Debug: Check all clinic images after page load
-  setTimeout(() => {
-    const allImages = document.querySelectorAll('.cli-den-img');
-    console.log('🔍 Debug: Total clinic images found:', allImages.length);
-    allImages.forEach((img, index) => {
-      console.log(`🖼️ Image ${index + 1}: ${img.src} - Loaded: ${img.complete}`);
-      if (!img.complete) {
-        console.warn(`⚠️ Image ${index + 1} not fully loaded`);
+  // Active Link Highlighting
+  let currentPage = window.location.pathname.split("/").pop().toLowerCase();
+  let navLinks = document.querySelectorAll(".nav-list a");
+
+  navLinks.forEach(link => {
+      let linkPage = link.getAttribute("href").toLowerCase();
+      if (currentPage === linkPage || (currentPage === "" && linkPage === "index.html")) {
+          link.classList.add("active");
+          link.setAttribute('aria-current', 'page');
+      } else {
+          link.classList.remove("active");
+          link.removeAttribute('aria-current');
       }
-    });
-  }, 2000);
+  });
+
+  // Close mobile menu after navigation
+  navLinks.forEach(link => {
+      link.addEventListener("click", function () {
+          if (window.innerWidth <= 854 && navList && navList.classList.contains("active")) {
+              navList.classList.remove("active");
+              if (icon) {
+                  icon.classList.replace("fa-times", "fa-bars");
+              }
+          }
+      });
+  });
+
+  // Dropdown functionality for mobile
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownMenu = dropdown ? dropdown.querySelector(".dropdown-menu") : null;
+  const dropdownLink = dropdown ? dropdown.querySelector("a") : null;
+
+  if (dropdown && dropdownLink && dropdownMenu) {
+      dropdownLink.setAttribute('aria-haspopup', 'true');
+      dropdownLink.setAttribute('aria-expanded', 'false');
+      dropdownMenu.setAttribute('role', 'menu');
+      dropdownMenu.setAttribute('aria-label', 'Treatments submenu');
+
+      function isMobile() { return window.innerWidth <= 854; }
+      let dropdownOpen = false;
+
+      function closeDropdown() {
+          dropdownMenu.style.display = '';
+          dropdownLink.setAttribute('aria-expanded', 'false');
+          dropdownOpen = false;
+      }
+      
+      function openDropdown() {
+          dropdownMenu.style.display = 'block';
+          dropdownLink.setAttribute('aria-expanded', 'true');
+          dropdownOpen = true;
+      }
+
+      dropdownLink.addEventListener('click', function (e) {
+          if (isMobile()) {
+              e.preventDefault();
+              if (dropdownOpen) {
+                  closeDropdown();
+              } else {
+                  openDropdown();
+              }
+          }
+      });
+
+      document.addEventListener('click', function (e) {
+          if (isMobile() && dropdownOpen && !dropdown.contains(e.target)) {
+              closeDropdown();
+          }
+      });
+
+      window.addEventListener('resize', function () {
+          if (!isMobile()) {
+              closeDropdown();
+          }
+      });
+  }
+
+  // Initialize clinic images slider - Fixed approach
+  initClinicImagesSlider();
+
+  // Initialize People Swiper - Wait for DOM to be fully ready
+  setTimeout(() => {
+      initPeopleSwiper();
+  }, 100);
 });
 
-function initializePeopleSlider() {
-  const peopleSlider = document.querySelector('.people-slider-wrapper');
-  if (!peopleSlider) {
-    console.log('People slider not found');
-    return;
-  }
+// Fixed Clinic Images Slider
+function initClinicImagesSlider() {
+  const clinicImagesContainer = document.querySelector('.dental-clinic-images-content');
+  const clinicImages = document.querySelectorAll('.dental-clinic-images-content img');
   
-  if (typeof Swiper === 'undefined') {
-    console.log('Swiper still not available');
-    return;
+  if (!clinicImagesContainer || !clinicImages.length) {
+      console.log('Clinic images not found');
+      return;
   }
-  
-  console.log('Initializing people slider');
-  
-  // People Slider with Swiper
-const swiperpeople = new Swiper('.people-slider-wrapper', {
-  loop: true,
-    grabCursor: true,
-    spaceBetween: 25,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true,
-  },
+  // Duplicate images for seamless loop
+  const originalImages = Array.from(clinicImages);
+  originalImages.forEach(img => {
+      const clone = img.cloneNode(true);
+      clinicImagesContainer.appendChild(clone);
+  });
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  // Ensure the animation is working
+  clinicImagesContainer.style.display = 'flex';
+  clinicImagesContainer.style.animation = 'scroll 20s linear infinite';
 
-  breakpoints: {
-    0: {
-        slidesPerView: 1,
-        spaceBetween: 15
-      },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 20
-    },
-    768: {
-        slidesPerView: 2,
-        spaceBetween: 25
-    },
-    1024: {
-        slidesPerView: 3,
-        spaceBetween: 25
-    },
-  }
-});
+  // Pause animation on hover
+  clinicImagesContainer.addEventListener('mouseenter', function() {
+      this.style.animationPlayState = 'paused';
+  });
+
+  clinicImagesContainer.addEventListener('mouseleave', function() {
+      this.style.animationPlayState = 'running';
+  });
+
+  console.log('Clinic images slider initialized');
 }
-function initializePeopleSlider() {
-  const peopleSlider = document.querySelector('.people-slider-wrapper');
-  if (!peopleSlider) {
-    console.log('People slider not found');
-    return;
-  }
-  
+
+// Fixed People Swiper Initialization
+function initPeopleSwiper() {
+  // Check if Swiper is loaded
   if (typeof Swiper === 'undefined') {
-    console.log('Swiper still not available');
-    return;
+      console.error('Swiper is not loaded');
+      return;
   }
-  
-  console.log('Initializing people slider');
-  
-  // People Slider with Swiper
-const swiperpeople = new Swiper('.people-slider-wrapper', {
-  loop: true,
-    grabCursor: true,
-    spaceBetween: 25,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  breakpoints: {
-    0: {
-        slidesPerView: 1,
-        spaceBetween: 15
-      },
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 20
-    },
-    768: {
-        slidesPerView: 2,
-        spaceBetween: 25
-    },
-    1024: {
-        slidesPerView: 3,
-        spaceBetween: 25
-    },
+  const swiperContainer = document.querySelector('.people-slider-container');
+  if (!swiperContainer) {
+      console.error('Swiper container not found');
+      return;
   }
-});
+
+  // Destroy existing swiper instance if any
+  if (swiperContainer.swiper) {
+      swiperContainer.swiper.destroy(true, true);
+  }
+
+  try {
+      const swiperpeople = new Swiper('.people-slider-container', {
+          loop: true,
+          grabCursor: true,
+          spaceBetween: 25,
+          autoplay: {
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+          },
+          speed: 800,
+          effect: 'slide',
+
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+              dynamicBullets: true,
+          },
+
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+
+          breakpoints: {
+              0: {
+                  slidesPerView: 1,
+                  spaceBetween: 15
+              },
+              768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+              },
+              1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 25
+              },
+          },
+
+          // Error handling
+          on: {
+              init: function () {
+                  console.log('People Swiper initialized successfully');
+              },
+              slideChange: function () {
+                  // Optional: Add any slide change effects
+              }
+          }
+      });
+
+      // Ensure autoplay starts
+      swiperpeople.autoplay.start();
+
+  } catch (error) {
+      console.error('Error initializing People Swiper:', error);
+  }
 }
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+          target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+          });
+      }
+  });
+});
+
+// Add scroll effect to navbar
+let lastScrollTop = 0;
+const navbar = document.querySelector('header');
+
+if (navbar) {
+  window.addEventListener('scroll', function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+          // Scrolling down
+          navbar.style.transform = 'translateY(-100%)';
+      } else {
+          // Scrolling up
+          navbar.style.transform = 'translateY(0)';
+      }
+      lastScrollTop = scrollTop;
+  });
+}
+
+// Add loading animation
+window.addEventListener('load', function() {
+  document.body.classList.add('loaded');
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+      }
+  });
+}, observerOptions);
+
+// Observe elements for animation
+document.querySelectorAll('.dentists-intro-container li, .dentists-clinic-intro-container li, .mission-content').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+
+// Ensure Swiper reinitializes on window resize
+window.addEventListener('resize', function() {
+  setTimeout(() => {
+      const swiperContainer = document.querySelector('.people-slider-container');
+      if (swiperContainer && swiperContainer.swiper) {
+          swiperContainer.swiper.update();
+      }
+  }, 100);
+});
