@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials Debug</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="testimonials.css">
+    <style>
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        .debug-info { background: #f0f0f0; padding: 20px; margin: 20px 0; border-radius: 10px; }
+        .debug-info h3 { color: #333; margin-bottom: 10px; }
+        .debug-info p { margin: 5px 0; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .status.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .status.error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .status.info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+    </style>
+</head>
+<body>
+    <h1>Testimonials Slider Debug</h1>
+    
+    <div class="debug-info">
+        <h3>Debug Information</h3>
+        <p><strong>Page:</strong> <span id="pageInfo">Loading...</span></p>
+        <p><strong>DOM Ready:</strong> <span id="domStatus">Loading...</span></p>
+        <p><strong>Slider Elements:</strong> <span id="sliderStatus">Loading...</span></p>
+        <p><strong>JavaScript Loaded:</strong> <span id="jsStatus">Loading...</span></p>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <div class="rating-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            
+            <div class="testimonials-slider-wrapper">
+                <div class="testimonials-slider">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="slide-card">
+                            <div class="patient-media">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Test Patient">
+                            </div>
+                            <div class="patient-info">
+                                <h3 class="patient-name">Test Patient</h3>
+                                <p class="patient-testimonial">This is a test testimonial to verify the slider is working properly.</p>
+                                <p class="patient-location">Test Location</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="slide-card">
+                            <div class="patient-media">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Test Patient 2">
+                            </div>
+                            <div class="patient-info">
+                                <h3 class="patient-name">Test Patient 2</h3>
+                                <p class="patient-testimonial">Second test testimonial to check slider functionality.</p>
+                                <p class="patient-location">Test Location 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Controls -->
+                <div class="slider-controls">
+                    <button class="control-btn prev-btn" aria-label="Previous testimonial">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="control-btn next-btn" aria-label="Next testimonial">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Dots Indicator -->
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="debugOutput"></div>
+
+    <script>
+        // Debug script
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🔍 Debug: DOM Content Loaded');
+            
+            // Update debug info
+            document.getElementById('domStatus').textContent = '✅ Ready';
+            document.getElementById('pageInfo').textContent = window.location.pathname;
+            
+            // Check for slider elements
+            const sliderWrapper = document.querySelector('.testimonials-slider-wrapper');
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dots = document.querySelectorAll('.dot');
+            
+            let status = '';
+            if (sliderWrapper) status += '✅ Slider wrapper found\n';
+            else status += '❌ Slider wrapper missing\n';
+            
+            if (slides.length > 0) status += `✅ ${slides.length} slides found\n`;
+            else status += '❌ No slides found\n';
+            
+            if (prevBtn) status += '✅ Previous button found\n';
+            else status += '❌ Previous button missing\n';
+            
+            if (nextBtn) status += '✅ Next button found\n';
+            else status += '❌ Next button missing\n';
+            
+            if (dots.length > 0) status += `✅ ${dots.length} dots found\n`;
+            else status += '❌ No dots found\n';
+            
+            document.getElementById('sliderStatus').innerHTML = status.replace(/\n/g, '<br>');
+            
+            // Test button functionality
+            if (prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', function() {
+                    console.log('🔍 Debug: Previous button clicked');
+                    document.getElementById('debugOutput').innerHTML += '<div class="status info">Previous button clicked</div>';
+                });
+                
+                nextBtn.addEventListener('click', function() {
+                    console.log('🔍 Debug: Next button clicked');
+                    document.getElementById('debugOutput').innerHTML += '<div class="status info">Next button clicked</div>';
+                });
+                
+                document.getElementById('jsStatus').textContent = '✅ Event listeners attached';
+            } else {
+                document.getElementById('jsStatus').textContent = '❌ Buttons not found';
+            }
+        });
+    </script>
+</body>
+</html>

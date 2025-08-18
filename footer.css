@@ -55,7 +55,7 @@ footer::before {
   padding: 0.5rem 1rem;
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
 }
 
 .first-footer-section p:hover {
@@ -428,7 +428,7 @@ footer::before {
   padding: 0.5rem 1rem;
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
 }
 
 .first-footer-section p:hover {

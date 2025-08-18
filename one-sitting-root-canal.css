@@ -368,57 +368,6 @@ body{
 
 /* ==============================================================================-People Section-=========================================================================== */
 
-.people-main-section{
-  position: relative;
-  width: 100%;
-  min-height: 70vh;
-  background-color: #c0b9b2;
-  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
-  overflow-x: hidden;
-}
-
-.people-main-section .people-content{
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.people-main-section .people-slider-wrapper{
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-}
-
-.people-main-section .people-item {
-  display: flex;
-  padding: clamp(1rem, 2vw, 1.5rem);
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: clamp(1rem, 2vw, 2rem);
-}
-
-.people-main-section .people-item .people-images{
-  width: clamp(250px, 80%, 350px);
-  height: clamp(180px, 25vh, 250px);
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: clamp(1rem, 2vw, 1.5rem);
-  border: 8px solid #f9f2e8;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.people-main-section .swiper-pagination-bullet{
-  width: clamp(10px, 2vw, 15px);
-  height: clamp(10px, 2vw, 15px);
-  opacity: 1;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
-  background-color: #a89f95;
-}
-
-.people-main-section .swiper-pagination-bullet-active{
-  background-color: #333;
-}
 
 /* ==============================================================================-Responsive Design-=========================================================================== */
 
@@ -609,10 +558,7 @@ body{
     height: clamp(160px, 20vh, 200px);
   }
 
-  .people-main-section .people-item .people-images{
-    width: clamp(200px, 70%, 250px);
-    height: clamp(150px, 20vh, 180px);
-  }
+ 
 }
 
 @media (max-width:362px){
@@ -667,8 +613,5 @@ body{
     height: clamp(140px, 18vh, 180px);
   }
 
-  .people-main-section .people-item .people-images{
-    width: clamp(180px, 65%, 220px);
-    height: clamp(130px, 18vh, 160px);
-  }
+ 
 }

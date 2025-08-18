@@ -10,14 +10,14 @@ body{
     min-height: 90vh;
     width: 100%;
     margin-top: 0;
-    background-color: #c0b9b2;
+    /* background-color: #c0b9b2; */
     overflow-x: hidden;
 }
   
 .orthodontic-braces-subsection{
     min-height: 90vh;
     width: 100%;
-    background-color: transparent;
+    /* background-color: transparent; */
     margin-top: 0;
     display: flex;
     align-items: center;
@@ -42,15 +42,15 @@ body{
     width: 100%;
     max-width: 800px;
     padding: clamp(2rem, 5vw, 4rem);
-    background: rgba(0,0,0,0.1);
+    /* background: rgba(0,0,0,0.1); */
     border-radius: 15px;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 }
   
 .orthodontic-braces-wrapper{
     width: 100%;
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url(orthodontic-bg.jpg) center no-repeat;
+    background: url(orthodontic-bg.jpg) center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: absolute;
@@ -128,7 +128,11 @@ body{
     }
 } 
   
-
+@media (min-width: 1286px){
+  .orthodontic-braces-subsection-text-part{
+    margin-left: 150px;
+  }
+}
 
 /* =============================================== Types Section =============================================== */
 

@@ -33,7 +33,7 @@ const swiperpeople = new Swiper('.people-slider-container', {
     spaceBetween: 30,
     centeredSlides: false,
     autoplay: {
-      delay: 3000,
+      delay: 1000,
       disableOnInteraction: false,
     },
 
@@ -66,7 +66,7 @@ const swiperpeople = new Swiper('.people-slider-container', {
         spaceBetween: 30
     },
     1200: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 30
     },
   }

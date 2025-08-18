@@ -125,9 +125,12 @@ body{
         display: none;
     }
 } 
-  
-  
-  
+@media (min-width: 1286px){
+  .teeth-whitening-text-part{
+    margin-left: 145px;
+  }
+}
+
 /* --------------------------------------------------------------------2nd page------------------------------------------------ */
   
 .teeth-whitening-first-section{
@@ -585,7 +588,7 @@ body{
 
 .whatsapp-no a {
   display: block;
-  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   color: #25D366;
   transition: all 0.3s ease;
 }

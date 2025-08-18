@@ -55,7 +55,7 @@ body{
   max-width: 90%;
   padding: 2rem;
   /* background: rgba(255, 255, 255, 0.1); */
-  backdrop-filter: blur(3px);
+  /* backdrop-filter: blur(3px); */
   border-radius: 15px;
   margin: 0 auto;
 }
@@ -2077,69 +2077,27 @@ margin-top: 5%;
 
   
 
-  .people-main-section{
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; */
-    /* background-color: #BEB2A6; */
-    background-color:  #c0b9b2;
-    border: 2px solid transparent;
-  }
-  
-  
-  .people-main-section .people-slider-wrapper{
-    overflow: hidden;
-    margin: 0 60x 50px;
-  }
-  
-  
-  .people-main-section .people-item {
-    display: flex;
-    /* padding: 35px; */
-    padding-top: 15px;
-    padding-bottom: 50px;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4%;
-    /* border: 2px solid black; */
-  }
-  
-  .people-main-section .people-item .people-images{
-    width: 350px;
-    height: 250px;
-    background-size: cover;
-    /* border-radius: 50%; */
-    margin-bottom: 50px;
-    border: 10px solid #f9f2e8;
-  }
-  
-  .people-main-section .swiper-pagination-bullet{
-    width: 15px;
-    height: 15px;
-    opacity: 1;
-    margin-bottom: 5%;
-    /* border: 2px solid black; */
-  }
-
-  @media (max-width:400px) and (min-width:300px) {
-    .people-main-section{
-      position: relative;
-      width: 100%;
-      height: 50vh;
-    }
-    
-    .people-main-section .people-item .people-images{
-      width: 250px;
-      height: 150px;
-    }
-  }
+ 
 
 
 
 
 
+/* Remove all animations from people slider arrows */
+.people-slider-wrapper .swiper-button-next,
+.people-slider-wrapper .swiper-button-prev {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+
+.people-slider-wrapper .swiper-button-next:hover,
+.people-slider-wrapper .swiper-button-prev:hover,
+.people-slider-wrapper .swiper-button-next:active,
+.people-slider-wrapper .swiper-button-prev:active {
+    background-color: #8B4513;
+    color: white;
+    transform: none !important;
+    animation: none !important;
+}

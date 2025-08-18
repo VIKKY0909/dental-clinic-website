@@ -28,6 +28,7 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             line-height: 1.6;
             overflow-x: hidden;
+            font-size: 3rem;
         }
 
         /* Navigation Styles */
@@ -171,7 +172,7 @@
 
         .whatsapp-no a {
             color: #25D366;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(3rem, 6vw, 5rem);
             transition: transform 0.3s ease;
         }
 
@@ -410,7 +411,7 @@
         /* People Section */
         .people-main-section {
             width: 100%;
-            min-height: 70vh;
+            min-height: 39vh;
             background-color: #c0b9b2;
             padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem);
             box-sizing: border-box;
@@ -651,22 +652,31 @@
         }
 
         @media (max-width: 480px) {
-            .dentists-main-section,
+            /* .dentists-main-section,
             .dentists-clinic-main-section,
-            .dentists-clinic-second-main-section {
-                padding-left: clamp(0.8rem, 3vw, 1rem);
-                padding-right: clamp(0.8rem, 3vw, 1rem);
-            }
+            .dentists-clinic-second-main-section { */
+                /* padding-left: clamp(0.8rem, 3vw, 1rem); */
+                /* padding-right: clamp(0.8rem, 3vw, 1rem); */
+            /* } */
 
             .dentists-main-section {
-                padding-top: clamp(60px, 12vw, 80px);
-                padding-bottom: clamp(1.5rem, 5vw, 2rem);
-            }
+        padding-top: clamp(110px, 12vw, 80px);
+        padding-bottom: clamp(1.5rem, 5vw, 2rem);
+    }
 
             .dentists-main-container,
             .dentists-clinic-main-container {
+                margin-left: 2px;
                 gap: clamp(1.2rem, 4vw, 2rem);
             }
+            .dentists-clinic-intro-container{
+                width: 20rem;
+                margin-left: 1rem;
+            }
+            
+.dental-clinic-images-content{
+    margin-right: 3px;
+}
 
             .dentists-intro-container li,
             .dentists-clinic-intro-container li,
@@ -677,6 +687,7 @@
             }
 
             .dentists-clinic-second-main-container h2 {
+                
                 font-size: clamp(1.1rem, 5vw, 1.3rem);
             }
 

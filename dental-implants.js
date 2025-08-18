@@ -97,7 +97,7 @@ function initializeSwipers() {
   // Dental testimonials slider
   const dentalTestimonialsSlider = document.querySelector('.makeover-slider-dentalcontainer');
   if (dentalTestimonialsSlider) {
-    new Swiper('.makeover-slider-dentalcontainer', {
+    const dentalSwiper = new Swiper('.makeover-slider-dentalcontainer', {
       loop: true,
       grabCursor: true,
       spaceBetween: 25,
@@ -132,13 +132,42 @@ function initializeSwipers() {
           spaceBetween: 25
         },
       }
+    });
+
+    // Add video event listeners to pause/resume autoplay
+    const videos = dentalTestimonialsSlider.querySelectorAll('video');
+    videos.forEach(video => {
+      // Pause autoplay when video starts playing
+      video.addEventListener('play', () => {
+        dentalSwiper.autoplay.stop();
+      });
+
+      // Resume autoplay when video is paused
+      video.addEventListener('pause', () => {
+        dentalSwiper.autoplay.start();
+      });
+
+      // Resume autoplay when video ends
+      video.addEventListener('ended', () => {
+        dentalSwiper.autoplay.start();
+      });
+
+      // Resume autoplay when video is seeking
+      video.addEventListener('seeking', () => {
+        dentalSwiper.autoplay.stop();
+      });
+
+      // Resume autoplay when video seeked
+      video.addEventListener('seeked', () => {
+        dentalSwiper.autoplay.start();
+      });
     });
   }
 
   // Basal video testimonials slider
   const basalSlider = document.querySelector('.basal-slider-container');
   if (basalSlider) {
-    new Swiper('.basal-slider-container', {
+    const basalSwiper = new Swiper('.basal-slider-container', {
       loop: true,
       grabCursor: true,
       spaceBetween: 25,
@@ -174,12 +203,45 @@ function initializeSwipers() {
         },
       }
     });
+
+    // Add click event listeners for lazy loading videos
+    const videoPlaceholders = basalSlider.querySelectorAll('.video-placeholder');
+    videoPlaceholders.forEach(placeholder => {
+      placeholder.addEventListener('click', function() {
+        const videoId = this.getAttribute('data-video-id');
+        const videoTitle = this.getAttribute('data-video-title');
+        
+        // Create iframe with the video
+        const iframe = document.createElement('iframe');
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        iframe.title = videoTitle;
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.allowFullscreen = true;
+        
+        // Replace placeholder content with iframe
+        this.innerHTML = '';
+        this.appendChild(iframe);
+        this.classList.add('loaded');
+        
+        // Pause autoplay when video is loaded
+        basalSwiper.autoplay.stop();
+        
+        // Resume autoplay after a delay (when user might finish watching)
+        setTimeout(() => {
+          basalSwiper.autoplay.start();
+        }, 10000); // Resume after 10 seconds
+      });
+    });
   }
 
   // People slider
   const peopleSlider = document.querySelector('.people-slider-container');
   if (peopleSlider) {
-    new Swiper('.people-slider-container', {
+    const peopleSwiper = new Swiper('.people-slider-container', {
       loop: true,
       grabCursor: true,
       spaceBetween: 25,
@@ -214,6 +276,35 @@ function initializeSwipers() {
           spaceBetween: 25
         },
       }
+    });
+
+    // Add video event listeners to pause/resume autoplay if there are videos
+    const peopleVideos = peopleSlider.querySelectorAll('video');
+    peopleVideos.forEach(video => {
+      // Pause autoplay when video starts playing
+      video.addEventListener('play', () => {
+        peopleSwiper.autoplay.stop();
+      });
+
+      // Resume autoplay when video is paused
+      video.addEventListener('pause', () => {
+        peopleSwiper.autoplay.start();
+      });
+
+      // Resume autoplay when video ends
+      video.addEventListener('ended', () => {
+        peopleSwiper.autoplay.start();
+      });
+
+      // Resume autoplay when video is seeking
+      video.addEventListener('seeking', () => {
+        peopleSwiper.autoplay.stop();
+      });
+
+      // Resume autoplay when video seeked
+      video.addEventListener('seeked', () => {
+        peopleSwiper.autoplay.start();
+      });
     });
   }
   } catch (error) {

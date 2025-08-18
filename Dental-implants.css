@@ -198,7 +198,9 @@ html, body {
   }
 
   .whatsapp-no a {
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    color: #25D366;
+    font-size: clamp(3rem, 6vw, 5rem);
+    transition: transform 0.3s ease;
   }
 }
 
@@ -254,7 +256,9 @@ html, body {
   }
 
   .whatsapp-no a {
-    font-size: clamp(1.5rem, 8vw, 2rem);
+    color: #25D366;
+    font-size: clamp(3rem, 6vw, 5rem);
+    transition: transform 0.3s ease;
   }
 }
 
@@ -1130,7 +1134,7 @@ html, body {
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 50%;
     color: #8B4513;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     z-index: 10;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(139, 69, 19, 0.1);
@@ -1139,7 +1143,6 @@ html, body {
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
     background-color: rgba(255, 255, 255, 1);
-    transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     border-color: rgba(139, 69, 19, 0.3);
   }
@@ -1215,7 +1218,9 @@ html, body {
     }
   
     .whatsapp-no a {
-      font-size: clamp(1.8rem, 6vw, 2.5rem);
+      color: #25D366;
+      font-size: clamp(3rem, 6vw, 5rem);
+      transition: transform 0.3s ease;
     }
   }
   
@@ -1243,7 +1248,9 @@ html, body {
     }
   
     .whatsapp-no a {
-      font-size: clamp(1.5rem, 8vw, 2rem);
+      color: #25D366;
+      font-size: clamp(3rem, 6vw, 5rem);
+      transition: transform 0.3s ease;
     }
   
     /* Swiper navigation adjustments for small mobile */
@@ -1927,19 +1934,9 @@ html, body {
     gap: clamp(1rem, 3vw, 1.5rem);
   }
 
-  /* Enhanced Swiper navigation for mobile */
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: clamp(2.5rem, 12vw, 3.5rem);
-    height: clamp(2.5rem, 12vw, 3.5rem);
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  
 
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: clamp(1rem, 4vw, 1.2rem);
-  }
+  
 
   /* Slider responsive adjustments */
   .makeover-dentaltestimonial,
@@ -1967,7 +1964,9 @@ html, body {
   }
 
   .whatsapp-no a {
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    color: #25D366;
+    font-size: clamp(3rem, 6vw, 5rem);
+    transition: transform 0.3s ease;
   }
 
   /* Features section mobile adjustments */
@@ -2051,7 +2050,9 @@ html, body {
   }
 
   .whatsapp-no a {
-    font-size: clamp(1.5rem, 8vw, 2rem);
+    color: #25D366;
+    font-size: clamp(3rem, 6vw, 5rem);
+    transition: transform 0.3s ease;
   }
 }
 
@@ -2173,7 +2174,7 @@ html, body {
 
 .whatsapp-no a {
   display: block;
-  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   color: #25D366;
   transition: all 0.3s ease;
 }
@@ -2297,4 +2298,318 @@ footer {
     background: none !important;
   }
 }
- 
+
+@media (max-width: 768px) {
+    .dental-implants-main-section {
+        padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 1.5rem);
+    }
+    
+    .dental-implants-before-after-container {
+        flex-direction: row;
+        gap: clamp(1rem, 2vw, 1.5rem);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .dental-implants-before-container,
+    .dental-implants-after-container {
+        width: calc(50% - clamp(0.5rem, 1vw, 0.75rem));
+        min-width: 250px;
+        max-width: 300px;
+    }
+    
+    .dental-implants-before-images-content,
+    .dental-implants-after-images-content {
+        height: clamp(200px, 35vh, 280px);
+    }
+    
+    .dental-implants-label {
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        padding: clamp(0.4rem, 1.2vw, 0.8rem) clamp(0.8rem, 2vw, 1.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .dental-implants-main-section {
+        padding: clamp(1rem, 3vw, 1.5rem) clamp(0.8rem, 2.5vw, 1rem);
+    }
+    
+    .dental-implants-before-after-container {
+        gap: clamp(0.8rem, 1.5vw, 1rem);
+    }
+    
+    .dental-implants-before-container,
+    .dental-implants-after-container {
+        width: calc(50% - clamp(0.4rem, 0.75vw, 0.5rem));
+        min-width: 200px;
+        max-width: 250px;
+    }
+    
+    .dental-implants-before-images-content,
+    .dental-implants-after-images-content {
+        height: clamp(180px, 30vh, 250px);
+    }
+    
+    .dental-implants-label {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        padding: clamp(0.3rem, 1vw, 0.6rem) clamp(0.6rem, 1.5vw, 1.2rem);
+    }
+}
+
+/* Video placeholder styles for lazy loading */
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  height: clamp(200px, 40vw, 250px);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-placeholder:hover .video-thumbnail {
+  transform: scale(1.05);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 0, 0, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.video-placeholder:hover .play-button {
+  background-color: rgba(255, 0, 0, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-placeholder.loaded {
+  background-color: transparent;
+}
+
+.video-placeholder.loaded .play-button,
+.video-placeholder.loaded .video-thumbnail {
+  display: none;
+}
+
+.people-slider-wrapper .swiper-button-next:hover,
+.people-slider-wrapper .swiper-button-prev:hover,
+.people-slider-wrapper .swiper-button-next:active,
+.people-slider-wrapper .swiper-button-prev:active {
+    background-color: #8B4513;
+    color: white;
+    transform: none !important;
+    animation: none !important;
+}
+/* ==============================================================================-FIXED SWIPER NAVIGATION - NO CLICK ANIMATION-=========================================================================== */
+
+/* Enhanced Swiper Navigation - Fixed Positioning */
+.swiper-button-next,
+.swiper-button-prev {
+  width: clamp(3rem, 8vw, 4rem);
+  height: clamp(3rem, 8vw, 4rem);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  color: #8B4513;
+  /* REMOVED: transition that was causing click animation */
+  /* transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; */
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(139, 69, 19, 0.1);
+  /* Add only background transition for smooth hover effect */
+  /* transition: background-color 0.2s ease; */
+}
+
+/* FIXED: Hover effect without transform animations */
+
+  /* REMOVED: box-shadow and border-color transitions that cause animation */
+  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(139, 69, 19, 0.3); */
+
+
+/* FIXED: Prevent any transform or scale effects on active/focus states */
+
+
+
+/* FIXED: Specific override for people slider wrapper */
+.people-slider-wrapper .swiper-button-next,
+.people-slider-wrapper .swiper-button-prev {
+  /* Remove any inherited transitions */
+  transition: background-color 0.2s ease;
+}
+
+.people-slider-wrapper .swiper-button-next:hover,
+.people-slider-wrapper .swiper-button-prev:hover {
+  background-color: #8B4513;
+  color: white;
+}
+
+/* CRITICAL FIX: Override any transform animations on click/active */
+.people-slider-wrapper .swiper-button-next:hover,
+.people-slider-wrapper .swiper-button-prev:hover,
+.people-slider-wrapper .swiper-button-next:active,
+.people-slider-wrapper .swiper-button-prev:active {
+  background-color: #8B4513;
+  color: white;
+  transform: none !important; /* This was already correct */
+  animation: none !important; /* This was already correct */
+  box-shadow: none !important; /* Add this to prevent shadow animation */
+}
+
+/* FIXED: Video placeholder play button - remove scale animation */
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  height: clamp(200px, 40vw, 250px);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* REMOVED: transition that could cause animation */
+  /* transition: transform 0.3s ease; */
+}
+
+/* FIXED: Remove hover transform that can interfere with click */
+.video-placeholder:hover .video-thumbnail {
+  /* REMOVED: transform: scale(1.05); */
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 0, 0, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  /* SIMPLIFIED: Only background transition, no transform */
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+/* FIXED: Remove scale transform on hover */
+.video-placeholder:hover .play-button {
+  background-color: rgba(255, 0, 0, 1);
+  /* REMOVED: transform: translate(-50%, -50%) scale(1.1); */
+}
+
+/* FIXED: Remove any click/active animations */
+.video-placeholder:active .play-button,
+.play-button:active {
+  transform: translate(-50%, -50%) !important;
+  animation: none !important;
+}
+
+/* ==============================================================================-RESPONSIVE SWIPER FIXES-=========================================================================== */
+
+@media (max-width: 1024px) {
+  .people-main-section .people-slider-wrapper {
+    padding: 0 clamp(3.5rem, 8vw, 5rem);
+  }
+
+  /* .swiper-button-next,
+  .swiper-button-prev {
+    width: clamp(2.8rem, 7vw, 3.5rem);
+    height: clamp(2.8rem, 7vw, 3.5rem);
+   
+    transition: none;
+  } */
+}
+
+@media (max-width: 768px) {
+  /* .swiper-button-next,
+  .swiper-button-prev {
+    width: clamp(2.5rem, 12vw, 3.5rem);
+    height: clamp(2.5rem, 12vw, 3.5rem);
+    top: 50%;
+    transform: translateY(-50%);
+  
+    transition: none !important;
+  } */
+
+  /* .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  } */
+
+  /* Mobile specific - no hover effects */
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #8B4513;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: clamp(2rem, 15vw, 3rem);
+    height: clamp(2rem, 15vw, 3rem);
+    transition: none !important;
+  }
+
+  /* .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: clamp(0.8rem, 5vw, 1rem);
+  } */
+}
+
+/* ==============================================================================-GLOBAL ANIMATION DISABLE FOR BUTTONS-=========================================================================== */
+
+/* Prevent any button animations that might interfere */
+button.swiper-button-next,
+button.swiper-button-prev,
+.swiper-button-next,
+.swiper-button-prev {
+  animation: none !important;
+  transform-origin: center center !important;
+}
+
+/* Disable focus animations */
+.basal-slider-container .swiper-button-next:focus,
+.basal-slider-container .swiper-button-prev:focus {
+  animation: none !important;
+  transform: none !important;
+  outline: none;
+}
+
+/* Disable active state animations */
+.basal-slider-container .swiper-button-next:active,
+.basal-slider-container .swiper-button-prev:active {
+  animation: none !important;
+  transform: none !important;
+}

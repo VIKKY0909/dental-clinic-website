@@ -240,11 +240,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Add scroll effect to navbar
 let lastScrollTop = 0;
-const navbar = document.querySelector('header');
+const navbar = document.querySelector('.navbar');
 
 if (navbar) {
   window.addEventListener('scroll', function() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Always show navbar when at the top
+      if (scrollTop <= 100) {
+          navbar.style.transform = 'translateY(0)';
+          lastScrollTop = scrollTop;
+          return;
+      }
       
       if (scrollTop > lastScrollTop && scrollTop > 100) {
           // Scrolling down

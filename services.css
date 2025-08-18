@@ -12,7 +12,7 @@ body{
     width: 100%;
     margin-top: 10vh;
     border: 2px solid transparent;
-    background-color: #ebe3da;
+    /* background-color: #ebe3da; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@ body{
   .services-main-container{
     min-height: 90vh;
     width: 100%;
-    background-color: transparent;
+    /* background-color: transparent; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@ body{
   .services-wrapper{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(StockCake-Modern\ dental\ office_1736228364.jpg) center no-repeat;
+    background: url(StockCake-Modern\ dental\ office_1736228364.jpg) center no-repeat;
     background-size: cover;
     position: relative;
     display: flex;

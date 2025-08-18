@@ -285,7 +285,7 @@ html, body {
 
 .whatsapp-no a {
     color: #25D366;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(3rem, 6vw, 5rem);
     transition: transform 0.3s ease;
 }
 
@@ -402,7 +402,9 @@ html, body {
     }
     
     .whatsapp-no a {
-        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+        color: #25D366;
+        font-size: clamp(3rem, 6vw, 5rem);
+        transition: transform 0.3s ease;
     }
 }
 
@@ -509,7 +511,9 @@ html, body {
     }
     
     .whatsapp-no a {
-        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        color: #25D366;
+        font-size: clamp(3rem, 6vw, 5rem);
+        transition: transform 0.3s ease;
     }
 }
 
@@ -585,7 +589,9 @@ html, body {
     }
     
     .whatsapp-no a {
-        font-size: clamp(1.4rem, 2.5vw, 2rem);
+        color: #25D366;
+        font-size: clamp(3rem, 6vw, 5rem);
+        transition: transform 0.3s ease;
     }
 }
 

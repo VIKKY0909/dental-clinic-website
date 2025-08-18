@@ -46,8 +46,8 @@
 
 .whatsapp-no a {
     color: #25D366;
-    font-size: clamp(2.2rem, 6vw, 3.2rem);
-    transition: transform 0.3s ease;
+            font-size: clamp(3rem, 6vw, 5rem);
+            transition: transform 0.3s ease;
     display: block;
     text-decoration: none;
 }
@@ -74,7 +74,9 @@
     }
     
     .whatsapp-no a {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        color: #25D366;
+            font-size: clamp(3rem, 6vw, 5rem);
+            transition: transform 0.3s ease;
     }
 }
 
@@ -101,7 +103,9 @@
     }
     
     .whatsapp-no a {
-        font-size: clamp(1.5rem, 4.5vw, 2rem);
+        color: #25D366;
+            font-size: clamp(3rem, 6vw, 5rem);
+            transition: transform 0.3s ease;
     }
 }
 
@@ -128,7 +132,9 @@
     }
     
     .whatsapp-no a {
-        font-size: 1.4rem;
+        color: #25D366;
+        font-size: clamp(3rem, 6vw, 5rem);
+        transition: transform 0.3s ease;
     }
 }
   

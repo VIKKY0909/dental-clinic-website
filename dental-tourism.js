@@ -116,7 +116,7 @@ const swiperpeople = new Swiper('.people-slider-wrapper', {
     grabCursor: true,
     spaceBetween: 25,
     autoplay: {
-      delay: 3000,
+      delay: 1000,
       disableOnInteraction: false,
     },
 

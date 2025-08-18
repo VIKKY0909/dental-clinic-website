@@ -120,6 +120,11 @@ body{
         padding: 0 1rem;
     }
 } 
+@media (min-width: 1286px){
+  .general-dentistry-text-part{
+      margin-left: 120px;
+  }
+}
   
   
 /* =============================================== Restorative Dentistry Types Section =============================================== */
@@ -370,145 +375,6 @@ body{
 
 /* =============================================== People Slider Section =============================================== */
 
-.people-main-section{
-    min-height: auto;
-    width: 100%;
-    background-color: #c0b9b2;
-    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
-    overflow-x: hidden;
-}
-
-.people-main-section .people-content{
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.people-slider-container .swiper-button-next,
-.people-slider-container .swiper-button-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(255,255,255,0.95);
-    border-radius: 50%;
-    color: #333;
-    z-index: 10;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.people-slider-container .swiper-button-next:after,
-.people-slider-container .swiper-button-prev:after {
-    font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free', serif;
-    font-weight: 900;
-    font-size: 16px;
-    color: #333;
-    line-height: 1;
-}
-
-.people-slider-container .swiper-button-next:after {
-    content: '\f054'; /* FontAwesome right arrow */
-}
-
-.people-slider-container .swiper-button-prev:after {
-    content: '\f053'; /* FontAwesome left arrow */
-}
-
-/* Fallback for when FontAwesome is not available */
-.people-slider-container .swiper-button-next:not([class*="fa"]):after {
-    content: '›';
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.people-slider-container .swiper-button-prev:not([class*="fa"]):after {
-    content: '‹';
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.people-slider-container .swiper-button-next:hover,
-.people-slider-container .swiper-button-prev:hover {
-    background: white;
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-}
-
-.people-slider-container .swiper-button-next {
-    right: -25px;
-}
-
-.people-slider-container .swiper-button-prev {
-    left: -25px;
-}
-
-.people-slider-container .swiper-button-disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.people-main-section .people-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: clamp(1rem, 3vw, 2rem);
-}
-
-.people-main-section .people-item .people-images{
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 8px solid #f9f2e8;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.people-main-section .people-item .people-images:hover {
-    transform: scale(1.02);
-}
-
-.people-main-section .swiper-pagination{
-    position: relative;
-    margin-top: clamp(1rem, 3vw, 2rem);
-}
-
-.people-main-section .swiper-pagination-bullet{
-    width: 12px;
-    height: 12px;
-    background: rgba(255,255,255,0.5);
-    opacity: 1;
-    margin: 0 5px;
-    transition: all 0.3s ease;
-}
-
-.people-main-section .swiper-pagination-bullet-active{
-    background: white;
-    transform: scale(1.2);
-}
-
-/* Mobile Adjustments for Slider */
-@media (max-width: 768px) {
-    .people-slider-container .swiper-button-next,
-    .people-slider-container .swiper-button-prev {
-        display: none;
-    }
-    
-    .people-main-section .people-item .people-images {
-        border-width: 5px;
-    }
-}
 
 /* ============================================================================= Floating Elements & Mobile Optimizations =========================================================================== */
 
@@ -543,7 +409,7 @@ body{
 
 .whatsapp-no a {
   display: block;
-  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   color: #25D366;
   transition: all 0.3s ease;
 }
@@ -637,8 +503,7 @@ footer {
   /* Section spacing adjustments */
   .general-dentistry-types,
   .preventive-measures-general-dent,
-  .general-dentistry-benefits-container,
-  .people-main-section {
+  .general-dentistry-benefits-container {
     padding: clamp(2rem, 4vw, 3rem) clamp(0.5rem, 2vw, 1rem);
   }
 }
@@ -658,8 +523,7 @@ footer {
   /* Reduce spacing on very small screens */
   .general-dentistry-types,
   .preventive-measures-general-dent,
-  .general-dentistry-benefits-container,
-  .people-main-section {
+  .general-dentistry-benefits-container{
     padding: 1.5rem 0.5rem;
   }
   
