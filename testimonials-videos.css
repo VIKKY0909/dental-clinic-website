@@ -616,6 +616,7 @@ body {
     transition: var(--transition);
 }
 
+
 .whatsapp-no a:hover {
   transform: scale(1.1);
 }

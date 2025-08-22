@@ -439,6 +439,7 @@
 /* Small Mobile (375px - 479px) */
 @media (max-width: 479px) and (min-width: 375px) {
   .dental-tourism-section {
+    MARGIN-TOP: 3REM;
     padding: 8px 0;
   }
   

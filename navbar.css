@@ -16,7 +16,6 @@ html {
 }
 
 body {
-  font-family: 'SangBleuKingdom', sans-serif;
   background-color: #f5f5f5;
    /* Account for fixed navbar */
 }
@@ -56,6 +55,10 @@ body {
   text-decoration: none;
 }
 
+.nav-logo p{
+  color: #ffffff !important;
+}
+
 .logo {
   background-image: url('Kadali-Dental-1472.png');
   height: 70px;
@@ -70,8 +73,10 @@ body {
 .clinic-centers {
   background-color: transparent;
   color: #ebe3da;
-  font-size: 0.725rem;
-  letter-spacing: 0.1rem;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .clinic-centers p {
@@ -95,9 +100,11 @@ body {
   text-decoration: none;
   color: #ded4ca;
   font-size: 18px;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
   padding: 8px 12px;
   transition: all 0.3s ease;
-  letter-spacing: 0.1rem;
+  letter-spacing: var(--letter-spacing-wide);
   border-radius: 4px;
   display: block;
 }
@@ -143,7 +150,9 @@ body {
   display: block;
   padding: 12px 20px;
   transition: all 0.3s ease;
-  font-size: 16px;
+  font-size: var(--font-size-base);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-normal);
   border-radius: 0;
 }
 
@@ -268,9 +277,9 @@ body {
       gap: 1.2rem;
   }
   
-  .nav-list a {
-      font-size: 16px;
-      padding: 6px 10px;
+    .nav-list a {
+    font-size: var(--font-size-base);
+    padding: 6px 10px;
   }
   
   .dropdown-menu {
@@ -280,9 +289,9 @@ body {
 
 /* Medium Desktop */
 @media (max-width: 1190px) {
-  .nav-list a {
-      font-size: 15px;
-      padding: 5px 8px;
+    .nav-list a {
+    font-size: var(--font-size-base);
+    padding: 5px 8px;
   }
   
   .nav-list {
@@ -296,9 +305,9 @@ body {
       padding: 15px 20px;
   }
   
-  .nav-list a {
-      font-size: 14px;
-      padding: 5px 6px;
+    .nav-list a {
+    font-size: var(--font-size-sm);
+    padding: 5px 6px;
   }
   
   .nav-list {
@@ -308,8 +317,8 @@ body {
 
 /* Tablet Portrait and Small Laptop */
 @media (max-width: 912px) {
-  .nav-list a {
-      font-size: 13px;
+    .nav-list a {
+    font-size: var(--font-size-sm);
   }
   
   .nav-list {
@@ -335,8 +344,8 @@ body {
       width: 150px;
   }
 
-  .clinic-centers {
-      font-size: 12px;
+    .clinic-centers {
+    font-size: var(--font-size-xs);
   }
 
   /* Show Menu Icon */
@@ -380,13 +389,15 @@ body {
       margin-bottom: 15px;
   }
 
-  .nav-list a {
-      font-size: 18px;
-      padding: 15px 20px;
-      text-align: center;
-      display: block;
-      width: 100%;
-      border-bottom: 1px solid #333;
+    .nav-list a {
+    font-size: var(--font-size-lg);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+    padding: 15px 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #333;
   }
 
   /* Mobile Dropdown */
@@ -407,10 +418,12 @@ body {
       display: block;
   }
 
-  .dropdown-menu li a {
-      font-size: 16px;
-      padding: 12px 40px;
-      border-bottom: 1px solid #2a2a2a;
+    .dropdown-menu li a {
+    font-size: var(--font-size-base);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-normal);
+    padding: 12px 40px;
+    border-bottom: 1px solid #2a2a2a;
   }
 
   /* Dropdown Arrow for Mobile */
@@ -442,8 +455,8 @@ body {
       width: 150px;
   }
   
-  .clinic-centers {
-      font-size: 0.65rem;
+    .clinic-centers {
+    font-size: var(--font-size-xs);
   }
 
   .menu-icon {
@@ -456,14 +469,18 @@ body {
       padding: 20px 15px;
   }
 
-  .nav-list a {
-      font-size: 16px;
-      padding: 12px 15px;
+    .nav-list a {
+    font-size: var(--font-size-base);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+    padding: 12px 15px;
   }
 
-  .dropdown-menu li a {
-      font-size: 14px;
-      padding: 10px 30px;
+    .dropdown-menu li a {
+    font-size: var(--font-size-sm);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-normal);
+    padding: 10px 30px;
   }
 }
 
@@ -476,8 +493,8 @@ body {
   }
 
   
-  .clinic-centers {
-      font-size: 0.6rem;
+    .clinic-centers {
+    font-size: var(--font-size-xs);
   }
 
   .navbar {
@@ -490,9 +507,9 @@ body {
       width: 170px;
   }
 
-  .clinic-centers {
-      margin-left: 15px;
-      font-size: 10px;
+    .clinic-centers {
+    margin-left: 15px;
+    font-size: var(--font-size-xs);
   }
 
   .nav-list {
@@ -501,14 +518,18 @@ body {
       padding: 15px 10px;
   }
 
-  .nav-list a {
-      font-size: 14px;
-      padding: 10px 12px;
+    .nav-list a {
+    font-size: var(--font-size-sm);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+    padding: 10px 12px;
   }
 
-  .dropdown-menu li a {
-      font-size: 12px;
-      padding: 8px 25px;
+    .dropdown-menu li a {
+    font-size: var(--font-size-xs);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-normal);
+    padding: 8px 25px;
   }
 
   .first-footer-section {
@@ -543,14 +564,18 @@ body {
       font-size: 20px;
   }
 
-  .nav-list a {
-      font-size: 13px;
-      padding: 8px 10px;
+    .nav-list a {
+    font-size: var(--font-size-sm);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+    padding: 8px 10px;
   }
 
-  .dropdown-menu li a {
-      font-size: 11px;
-      padding: 6px 20px;
+    .dropdown-menu li a {
+    font-size: var(--font-size-xs);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-normal);
+    padding: 6px 20px;
   }
 
   .logo {
@@ -558,9 +583,9 @@ body {
       width: 150px;
   }
 
-  .clinic-centers {
+    .clinic-centers {
     margin-left: 10px;
-      font-size: 10px;
+    font-size: var(--font-size-xs);
   }
 }
 
@@ -575,14 +600,18 @@ body {
       font-size: 18px;
   }
 
-  .nav-list a {
-      font-size: 12px;
-      padding: 6px 8px;
+    .nav-list a {
+    font-size: var(--font-size-xs);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+    padding: 6px 8px;
   }
 
-  .dropdown-menu li a {
-      font-size: 10px;
-      padding: 5px 15px;
+    .dropdown-menu li a {
+    font-size: var(--font-size-xs);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-normal);
+    padding: 5px 15px;
   }
 
   .logo {
@@ -590,7 +619,51 @@ body {
       width: 140px;
   }
 
-  .clinic-centers {
-      font-size: 8px;
+    .clinic-centers {
+    font-size: var(--font-size-xs);
   }
+}
+
+/* WhatsApp Logo - Speech Bubble Style */
+.whatsapp-logo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background-color: #25D366;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10000;
+  /* Speech bubble tail */
+  position: relative;
+}
+
+.whatsapp-logo::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #25D366;
+  transform: rotate(-15deg);
+}
+
+.whatsapp-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-logo svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
 }

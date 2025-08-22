@@ -2,45 +2,38 @@
 
 const images = {
   1: [
-      "assets/IMG_9642.jpeg",
-      "assets/IMG_9638.jpeg",
-      "assets/IMG_9636.jpeg",
-      "assets/IMG_9627.jpeg",
-      "assets/IMG_9637.jpeg",
-      "assets/IMG_9633.jpeg",
-      "assets/IMG_9639-zoom.jpeg",
-      "assets/andheri-2.jpg"
-  ],
-  2: [
-      "assets/IMG_9638.jpeg",
-      "assets/IMG_9636.jpeg",
-      "assets/IMG_9627.jpeg",
-      "assets/IMG_9637.jpeg",
-      "assets/andheri-2.jpg",
-      "assets/IMG_9633.jpeg",
-     "assets/IMG_9642.jpeg",
-      "assets/IMG_9639-zoom.jpeg"
+      "a-1.jpeg",
+      "a-2.jpeg", 
+      "a-3.jpeg",
+      "a-4.jpeg",
+      "a-5.jpeg",
+      "a-6.jpeg",
+      "a-7.jpeg",
+      "a-8.jpeg",
+      "a-9.jpeg"
   ],
   3: [
-      "assets/IMG_9636.jpeg",
-      "assets/IMG_9639-zoom.jpeg",
-      "assets/IMG_9638.jpeg",
-      "assets/IMG_9642.jpeg",
-      "assets/IMG_9627.jpeg",
-      "assets/IMG_9633.jpeg",
-      "assets/IMG_9637.jpeg",
-      "assets/andheri-2.jpg"
+      "c-1.jpeg",
+      "c-2.jpeg",
+      "c-3.jpeg", 
+      "c-4.jpeg",
+      "c-5.jpeg",
+      "c-6.jpeg",
   ]
 };
 
 function changePage(pageNumber) {
   const container = document.getElementById('clinic-images-container');
   container.innerHTML = '';
-  images[pageNumber].forEach(imageUrl => {
-      const img = document.createElement('img');
-      img.src = imageUrl;
-      container.appendChild(img);
-  });
+  
+  if (images[pageNumber]) {
+    images[pageNumber].forEach(imageUrl => {
+        const img = document.createElement('img');
+        img.src = imageUrl;
+        img.alt = `Clinic Image ${imageUrl}`;
+        container.appendChild(img);
+    });
+  }
 
   // Change the color of the active button
   const buttons = document.querySelectorAll('.clinicimagespagination button');
@@ -53,5 +46,5 @@ function changePage(pageNumber) {
   });
 }
 
-// Initialize with the first page
+// Initialize with the first page (Andheri)
 changePage(1);

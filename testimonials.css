@@ -12,10 +12,10 @@
   body{
     margin: 0;
     padding: 0;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
   }
   /* Main Testimonials Section - Isolated */
   .testimonials-section {
+    margin-top: 5rem;
       min-height: 100vh;
       width: 100%;
       background: linear-gradient(135deg, #f5f1eb 0%, #ebe3da 100%);
@@ -33,8 +33,7 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
-                  url(clinic.jpg) center/cover;
+      background: url(clinic.jpg) center/cover;
       border-radius: clamp(1.5rem, 3vw, 2.5rem);
       box-shadow: 0 30px 80px rgba(0,0,0,0.3);
       overflow: hidden;
@@ -47,7 +46,7 @@
   .testimonials-section .testimonials-header {
       text-align: center;
       padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 3vw, 2rem);
-      background: rgba(0,0,0,0.3);
+      /* background: rgba(0,0,0,0.3); */
   }
   
   .testimonials-section .rating-stars {
@@ -91,6 +90,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      margin-left: 3rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -168,20 +168,20 @@
   }
   
   .testimonials-section .patient-name {
-      font-size: clamp(1.5rem, 4vw, 2.2rem);
-      font-weight: 700;
-      color: #2c3e50;
+      font-size: var(--font-size-2xl);
+      font-family: var(--font-heading);
+      font-weight: var(--font-weight-bold);
+      color: #1a1a1a;
       margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
-      font-family: 'Inter', 'Segoe UI', sans-serif;
-      line-height: 1.2;
+      line-height: var(--line-height-tight);
   }
   
   .testimonials-section .patient-testimonial {
-      font-size: clamp(1rem, 2.5vw, 1.3rem);
-      color: #34495e;
-      line-height: 1.6;
+      font-size: var(--font-size-base);
+      font-family: var(--font-primary);
+      color: #555;
+      line-height: var(--line-height-relaxed);
       margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
-      font-family: 'Georgia', serif;
       font-style: italic;
       max-height: clamp(8rem, 20vh, 12rem);
       overflow-y: auto;
@@ -235,10 +235,10 @@
   }
   
   .testimonials-section .patient-location {
-      font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+      font-size: var(--font-size-sm);
+      font-family: var(--font-primary);
+      font-weight: var(--font-weight-semibold);
       color: #8B4513;
-      font-weight: 600;
-      font-family: 'Inter', 'Segoe UI', sans-serif;
       margin-top: auto;
   }
     
@@ -300,7 +300,7 @@
       justify-content: center;
       gap: clamp(0.5rem, 1.5vw, 0.8rem);
       padding: clamp(1.5rem, 4vw, 2.5rem);
-      background: rgba(0,0,0,0.2);
+      /* background: rgba(0,0,0,0.2); */
   }
   
   .testimonials-section .dot {
@@ -369,6 +369,7 @@
       }
       
       .testimonials-section .slide-card {
+        margin-left: -3rem;
           flex-direction: column;
           text-align: center;
           padding: clamp(1.5rem, 4vw, 2.5rem);
@@ -438,7 +439,7 @@
       }
       
       .testimonials-slider-wrapper {
-          height: clamp(25rem, 65vh, 35rem);
+          height: clamp(25rem, 80vh, 35rem);
       }
       
       .slide-card {
@@ -656,22 +657,22 @@
     }
     
     .patients-slide-text h3{
-      font-size: clamp(1.4rem, 3.5vw, 2rem);
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      font-weight: 600;
+      font-size: var(--font-size-2xl);
+      font-family: var(--font-heading);
+      font-weight: var(--font-weight-semibold);
       color: #1a1a1a;
       margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
-      letter-spacing: 0.03rem;
-      line-height: 1.2;
+      letter-spacing: var(--letter-spacing-wide);
+      line-height: var(--line-height-tight);
     }
     
     .patients-slide-text p{
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      color: rgb(40, 50, 60);
-      font-weight: 400;
+      font-size: var(--font-size-base);
+      font-family: var(--font-primary);
+      color: #555;
+      font-weight: var(--font-weight-normal);
       margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
-      line-height: 1.6;
+      line-height: var(--line-height-relaxed);
       overflow-y: auto;
       max-height: clamp(4rem, 12vh, 8rem);
       scrollbar-width: thin;
@@ -696,10 +697,10 @@
     }
     
     .patients-slide-text .patients-destination{
-      font-size: clamp(0.9rem, 2.2vw, 1.2rem);
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: var(--font-size-sm);
+      font-family: var(--font-primary);
       color: rgb(131, 93, 6);
-      font-weight: 600;
+      font-weight: var(--font-weight-semibold);
       margin-top: auto;
     }
     
@@ -1089,11 +1090,11 @@
   }
   
   .img-sec-testi .img-testi-container h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-family: 'Georgia', serif;
-    font-weight: 600;
-    color: #4a3f36;
-    letter-spacing: 0.02em;
+    font-size: var(--font-size-4xl);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-semibold);
+    color: #1a1a1a;
+    letter-spacing: var(--letter-spacing-wide);
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin: 0;
     padding: 0;
@@ -1172,10 +1173,10 @@
   /* Removed hover effects - auto-play only mode */
   
   .swiper-client-msg p {
-    font-family: 'Georgia', serif;
-    font-size: clamp(1.1rem, 3vw, 1.4rem);
-    line-height: 1.7;
-    color: #333;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: #555;
     margin: 0;
     padding: 0;
     font-style: italic;
@@ -2525,6 +2526,7 @@
     transition: all 0.3s ease;
   }
   
+  
   .whatsapp-no a:hover {
     transform: scale(1.1);
   }
@@ -2662,12 +2664,12 @@
   }
   
   .testimonials-text-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
     text-align: center;
     margin-bottom: 60px;
     color: #8B4513;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
   }
   
   .testimonials-text-title::after {
@@ -2682,7 +2684,7 @@
   
   .testimonials-slider-wrapper {
     position: relative;
-    background: white;
+    /* background: white; */
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(139, 69, 19, 0.1);
     overflow: hidden;
@@ -2717,11 +2719,11 @@
   }
   
   .testimonial-quote p {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: 1.8;
-    color: #333;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    font-weight: 400;
+    font-size: var(--font-size-lg);
+    font-family: var(--font-primary);
+    line-height: var(--line-height-loose);
+    color: #555;
+    font-weight: var(--font-weight-normal);
     font-style: italic;
     position: relative;
     margin: 0;
@@ -2754,11 +2756,11 @@
   }
   
   .author-info h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: var(--font-size-lg);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-semibold);
     color: #8B4513;
     margin: 0 0 8px 0;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
   }
   
   .author-info p {

@@ -2,6 +2,88 @@
    FIXED ELEMENTS STYLING - RESPONSIVE ACROSS ALL PAGES
    =========================================================== */
 
+/* WhatsApp Logo - UNIVERSAL RESET - HIGH PRIORITY */
+.whatsapp-no,
+.whatsapp,
+.whatsapp-btn,
+div[class*="whatsapp"],
+div[class*="WhatsApp"] {
+    all: unset !important;
+    position: fixed !important;
+    bottom: clamp(70px, 15vw, 90px) !important;
+    right: clamp(15px, 3vw, 25px) !important;
+    top: auto !important;
+    left: auto !important;
+    width: 51px !important;
+    height: 49px !important;
+    background-color: #25D366 !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    z-index: 999 !important;
+}
+
+/* WhatsApp Logo - Universal Speech Bubble Tail */
+/* .whatsapp-no::after,
+.whatsapp::after,
+.whatsapp-btn::after,
+div[class*="whatsapp"]::after,
+div[class*="WhatsApp"]::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -8px !important;
+    right: 15px !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 8px solid transparent !important;
+    border-right: 8px solid transparent !important;
+    border-top: 8px solid #25D366 !important;
+    transform: rotate(-15deg) !important;
+} */
+
+/* WhatsApp Logo - Universal Link Styling */
+.whatsapp-no a,
+.whatsapp a,
+.whatsapp-btn a,
+div[class*="whatsapp"] a,
+div[class*="WhatsApp"] a {
+    color: white !important;
+    font-size: clamp(2rem, 4vw, 2.5rem) !important;
+    transition: transform 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* WhatsApp Logo - Universal Icon Styling */
+.whatsapp-no a i,
+.whatsapp a i,
+.whatsapp-btn a i,
+div[class*="whatsapp"] a i,
+div[class*="WhatsApp"] a i {
+    color: white !important;
+    font-size: clamp(2rem, 4vw, 2.5rem) !important;
+    line-height: 1 !important;
+    font-weight: normal !important;
+}
+
+/* WhatsApp Logo - Universal Hover Effects */
+/* .whatsapp-no:hover,
+.whatsapp:hover,
+.whatsapp-btn:hover,
+div[class*="whatsapp"]:hover,
+div[class*="WhatsApp"]:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6) !important;
+} */
+
 /* Fixed Phone Button */
 .fixed-phone-btn {
     position: fixed;
@@ -36,24 +118,196 @@
     font-size: clamp(0.7rem, 2vw, 0.9rem);
 }
 
-/* WhatsApp Button */
+/* WhatsApp Logo - Speech Bubble Style - FIXED */
 .whatsapp-no {
     position: fixed;
     bottom: clamp(70px, 15vw, 90px);
     right: clamp(15px, 3vw, 25px);
+    width: 70px;
+    height: 70px;
+    background-color: #25D366;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
     z-index: 999;
+    position: relative;
 }
 
+.whatsapp-no::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #25D366;
+    transform: rotate(-15deg);
+}
+
+/* Pulse animation for attention */
+.whatsapp-no::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: rgba(37, 211, 102, 0.3);
+    border-radius: 25px;
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 0;
+    }
+}
+
+/* WhatsApp link and icon styling - FIXED */
 .whatsapp-no a {
-    color: #25D366;
-            font-size: clamp(3rem, 6vw, 5rem);
-            transition: transform 0.3s ease;
-    display: block;
+    color: white !important;
+    font-size: clamp(2rem, 4vw, 2.5rem) !important;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
+    width: 100%;
+    height: 100%;
 }
 
-.whatsapp-no a:hover {
-    transform: scale(1.1);
+.whatsapp-no a i {
+    color: white !important;
+    font-size: clamp(2rem, 4vw, 2.5rem) !important;
+    line-height: 1;
+    font-weight: normal !important;
+    font-family: 'Font Awesome 5 Brands', 'Font Awesome 6 Brands', FontAwesome !important;
+}
+
+/* Ensure proper FontAwesome rendering */
+.whatsapp-no a i.fa-whatsapp:before {
+    content: "\f232" !important;
+    font-family: 'Font Awesome 5 Brands', 'Font Awesome 6 Brands', FontAwesome !important;
+}
+
+.whatsapp-no:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Additional WhatsApp button styles for other pages */
+.whatsapp, .whatsapp-btn {
+    position: fixed;
+    bottom: clamp(70px, 15vw, 90px);
+    right: clamp(15px, 3vw, 25px);
+    width: 70px;
+    height: 70px;
+    background-color: #25D366;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+    position: relative;
+}
+
+.whatsapp::after, .whatsapp-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #25D366;
+    transform: rotate(-15deg);
+}
+
+.whatsapp::before, .whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: rgba(37, 211, 102, 0.3);
+    border-radius: 25px;
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+.whatsapp a, .whatsapp-btn a {
+    color: white !important;
+    font-size: clamp(2rem, 4vw, 2.5rem) !important;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp a i, .whatsapp-btn a i {
+    color: white !important;
+    font-size: clamp(2rem, 4vw, 2.5rem) !important;
+    font-family: 'Font Awesome 5 Brands', 'Font Awesome 6 Brands', FontAwesome !important;
+}
+
+.whatsapp:hover, .whatsapp-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Responsive speech bubble tail positioning */
+@media (max-width: 768px) {
+    .whatsapp-no::after, .whatsapp::after, .whatsapp-btn::after {
+        bottom: -6px;
+        right: 12px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #25D366;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-no::after, .whatsapp::after, .whatsapp-btn::after {
+        bottom: -5px;
+        right: 10px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #25D366;
+    }
+}
+
+@media (max-width: 360px) {
+    .whatsapp-no::after, .whatsapp::after, .whatsapp-btn::after {
+        bottom: -4px;
+        right: 8px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #25D366;
+    }
 }
 
 /* Responsive Adjustments */
@@ -63,9 +317,11 @@
         right: clamp(12px, 2.5vw, 20px);
     }
     
-    .whatsapp-no {
+    .whatsapp-no, .whatsapp, .whatsapp-btn {
         bottom: clamp(60px, 12vw, 75px);
         right: clamp(12px, 2.5vw, 20px);
+        width: 60px;
+        height: 60px;
     }
     
     .phn-no {
@@ -73,10 +329,14 @@
         font-size: clamp(0.7rem, 2.2vw, 0.9rem);
     }
     
-    .whatsapp-no a {
-        color: #25D366;
-            font-size: clamp(3rem, 6vw, 5rem);
-            transition: transform 0.3s ease;
+    .whatsapp-no a, .whatsapp a, .whatsapp-btn a {
+        color: white !important;
+        font-size: clamp(2.5rem, 3vw, 2rem) !important;
+        transition: transform 0.3s ease;
+    }
+
+    .whatsapp-no a i, .whatsapp a i, .whatsapp-btn a i {
+        font-size: clamp(2.5rem, 3vw, 2rem) !important;
     }
 }
 
@@ -86,9 +346,11 @@
         right: clamp(10px, 2vw, 15px);
     }
     
-    .whatsapp-no {
+    .whatsapp-no, .whatsapp, .whatsapp-btn {
         bottom: clamp(50px, 10vw, 65px);
         right: clamp(10px, 2vw, 15px);
+        width: 55px;
+        height: 55px;
     }
     
     .phn-no {
@@ -102,11 +364,15 @@
         font-size: clamp(0.5rem, 1.8vw, 0.7rem);
     }
     
-    .whatsapp-no a {
-        color: #25D366;
-            font-size: clamp(3rem, 6vw, 5rem);
-            transition: transform 0.3s ease;
+    .whatsapp-no a, .whatsapp a, .whatsapp-btn a {
+        color: white !important;
+        font-size: clamp(2.3rem, 2.5vw, 1.8rem) !important;
+        transition: transform 0.3s ease;
     }
+
+            .whatsapp-no a i, .whatsapp a i, .whatsapp-btn a i {
+            font-size: clamp(2rem, 2.5vw, 1.8rem) !important;
+        }
 }
 
 @media (max-width: 360px) {
@@ -115,9 +381,11 @@
         right: 8px;
     }
     
-    .whatsapp-no {
+    .whatsapp-no, .whatsapp, .whatsapp-btn {
         bottom: 45px;
         right: 8px;
+        width: 50px;
+        height: 50px;
     }
     
     .phn-no {
@@ -131,10 +399,13 @@
         font-size: 0.5rem;
     }
     
-    .whatsapp-no a {
-        color: #25D366;
-        font-size: clamp(3rem, 6vw, 5rem);
+    .whatsapp-no a, .whatsapp a, .whatsapp-btn a {
+        color: white !important;
+        font-size: 1.2rem !important;
         transition: transform 0.3s ease;
     }
+
+    .whatsapp-no a i, .whatsapp a i, .whatsapp-btn a i {
+        font-size: 1.2rem !important;
+    }
 }
-  

@@ -61,7 +61,7 @@ body{
     color: white;
     font-weight: 500;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
+    /* letter-spacing: 0.1rem; */
 }
   
 .root-canal-subsection-text-part .root-canal-sub-title{
@@ -79,21 +79,33 @@ body{
     width: clamp(80%, 90%, 90%);
     margin-left: clamp(2%, 5%, 5%);
 }
+.contact-btn{
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  height: 50px ;
+  width: 160px;
+  border-radius: 5px;
+  margin-left: 30px;
 
-.root-canal-subsection-text-part .contact-btn{
+}
+
+
+
+/* .root-canal-subsection-text-part .contact-btn{
     margin-top: clamp(-25%, -20%, -20%);
     height: clamp(2rem, 4vw, 2.5rem);
     width: clamp(7rem, 15vw, 9.5rem);
     border: 1px solid white;
-    background-color: white;
     margin-left: 5%;
-  }
+  
 
   .root-canal-subsection-text-part .contact-btn{
     text-decoration: none;
     font-size: 0.9rem;
     letter-spacing: 0.2rem;
-    color: black;
+    color: white;
+    border:2px solid white ;
   }
 
   .root-canal-subsection-text-part .contact-btn:hover{
@@ -106,7 +118,7 @@ body{
     background-color: black;
     color: white;
     transition: all 0.3s ease;
-  }
+  } */
 
 /* ==============================================================================-First Section-=========================================================================== */
 
@@ -513,6 +525,12 @@ body{
     padding: clamp(0.8rem, 2.5vw, 1.5rem) clamp(0.5rem, 2vw, 0.8rem);
   }
 
+  .root-canal-bg{
+    width: 23rem;
+  }
+  .root-canal-title{
+    font-size: 2.5rem;
+  }
   .One-sitting-Root-Canal-section h2,
   .One-sitting-Root-Canal-second-section h2{
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
@@ -526,6 +544,7 @@ body{
 
   .One-sitting-Root-Canal-image-container .root-canal-sub-container{
     height: clamp(180px, 22vh, 220px);
+    margin-left: 14px;
   }
 
   .One-sitting-Root-Canal-intro-container ul li{

@@ -89,24 +89,20 @@ body{
 }
 
 .smile-hour-subsection-text-part .contact-btn{
-    height: clamp(2.5rem, 5vw, 3rem);
-    width: clamp(8rem, 20vw, 12rem);
-    border: 2px solid white;
-    background-color: white;
-    margin: 0;
-    text-decoration: none;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    letter-spacing: 0.1rem;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-    font-weight: 600;
-    display: inline-block;
-    line-height: clamp(2.5rem, 5vw, 3rem);
+    
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  height: 50px ;
+  width: 160px;
+  border-radius: 5px;
+  margin-left: 30px;
+
 }
 
-.smile-hour-subsection-text-part .contact-btn:hover{
+
+
+/* .smile-hour-subsection-text-part .contact-btn:hover{
     background-color: transparent;
     color: white;
     transform: translateY(-2px);
@@ -115,7 +111,7 @@ body{
   
 .smile-hour-subsection-text-part a:hover button{
     color: white;
-}
+} */
 
 /* Mobile Adjustments for Hero Section */
 @media (max-width: 768px) {
@@ -422,7 +418,7 @@ body{
 .smile-in-hour-video-container{
     min-height: auto;
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     background: #ebe3da;
     padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
@@ -499,6 +495,7 @@ body{
     width: 100%;
     height: auto;
     min-height: 250px;
+    margin-left: -5rem;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -704,6 +701,8 @@ body{
   transition: all 0.3s ease;
 }
 
+
+
 .whatsapp-no a:hover {
   transform: scale(1.1);
 }
@@ -826,6 +825,7 @@ footer {
   .new-Smile-vid video,
   .smile-in-hour-client-video video {
     min-height: 200px;
+    margin-left: 0;
   }
 }
 

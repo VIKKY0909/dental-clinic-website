@@ -119,6 +119,10 @@ html, body {
             transition: transform 0.3s ease;
 }
 
+.whatsapp-no a i{
+    font-size: 60px;
+}
+
 .whatsapp-no a:hover {
     transform: scale(1.1);
 }
@@ -178,11 +182,12 @@ html, body {
 
 @media screen and (max-width: 480px) {
     .images-of-clinic-main-section {
+        margin-top: 3rem;
         padding: clamp(50px, 7vw, 70px) clamp(0.6rem, 1.5vw, 1rem) clamp(1rem, 3vw, 2rem);
     }
     
     .images-of-clinic-main-section h2 {
-        font-size: clamp(1.2rem, 3vw, 1.6rem);
+        font-size: clamp(2.2rem, 3vw, 1.6rem);
     }
     
     .clinic-images-container {

@@ -73,7 +73,7 @@ All pages follow a consistent structure:
 <!-- WhatsApp Button -->
 <div class="whatsapp-no">
     <a href="https://wa.me/919819201882">
-        <i class="fa-brands fa-square-whatsapp"></i>
+        <i class="fa fa-whatsapp"></i>
     </a>
 </div>
 ```

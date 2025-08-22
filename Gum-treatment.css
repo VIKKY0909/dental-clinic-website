@@ -90,24 +90,19 @@ body{
 }
 
 .gum-treatment-subsection-text-part .contact-btn{
-    height: clamp(2.5rem, 5vw, 3rem);
-    width: clamp(8rem, 20vw, 12rem);
-    border: 2px solid white;
-    background-color: white;
-    margin: 0;
-    text-decoration: none;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    letter-spacing: 0.1rem;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-    font-weight: 600;
-    display: inline-block;
-    line-height: clamp(2.5rem, 5vw, 3rem);
+ 
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  height: 50px ;
+  width: 160px;
+  border-radius: 5px;
+  margin-left: 30px;
+
 }
 
-.gum-treatment-subsection-text-part .contact-btn:hover{
+
+/* .gum-treatment-subsection-text-part .contact-btn:hover{
     background-color: transparent;
     color: white;
     transform: translateY(-2px);
@@ -116,7 +111,7 @@ body{
   
 .gum-treatment-subsection-text-part a:hover button{
     color: white;
-}
+} */
 
 /* Mobile Adjustments for Hero Section */
 @media (max-width: 768px) {

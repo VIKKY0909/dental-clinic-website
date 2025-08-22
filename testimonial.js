@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentSlide = 0;
     let autoSlideInterval;
     let isAutoPlaying = true;
+    let isVideoPlaying = false;
     
     // Initialize slider
     if (testimonialSlides.length > 0) {
@@ -48,6 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
         
         updateNavButtons();
         updateDots();
+        
+        // Check if current slide has a video and pause autoplay if video is playing
+        const currentSlideElement = testimonialSlides[index];
+        const currentVideo = currentSlideElement.querySelector('video');
+        if (currentVideo && !currentVideo.paused) {
+            isVideoPlaying = true;
+            stopAutoSlide();
+        } else {
+            isVideoPlaying = false;
+            if (isAutoPlaying) {
+                startAutoSlide();
+            }
+        }
     }
     
     // Initialize slider
@@ -63,18 +77,93 @@ document.addEventListener("DOMContentLoaded", () => {
         // Add dot click events
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
+                // Pause any currently playing video before changing slides
+                const currentSlideElement = testimonialSlides[currentSlide];
+                const currentVideo = currentSlideElement.querySelector('video');
+                if (currentVideo && !currentVideo.paused) {
+                    currentVideo.pause();
+                    isVideoPlaying = false;
+                }
+                
                 currentSlide = index;
                 showSlide(currentSlide);
                 resetAutoSlide();
             });
         });
         
-        // Add video event listeners
+        // Enhanced video event listeners
         videos.forEach(video => {
-            video.addEventListener('play', stopAutoSlide);
-            video.addEventListener('pause', startAutoSlide);
-            video.addEventListener('ended', startAutoSlide);
+            // Stop autoplay when video starts playing
+            video.addEventListener('play', () => {
+                console.log('Video started playing - stopping autoplay');
+                isVideoPlaying = true;
+                stopAutoSlide();
+            });
+            
+            // Resume autoplay when video is paused
+            video.addEventListener('pause', () => {
+                console.log('Video paused - resuming autoplay');
+                isVideoPlaying = false;
+                if (isAutoPlaying) {
+                    startAutoSlide();
+                }
+            });
+            
+            // Resume autoplay when video ends
+            video.addEventListener('ended', () => {
+                console.log('Video ended - resuming autoplay');
+                isVideoPlaying = false;
+                if (isAutoPlaying) {
+                    startAutoSlide();
+                }
+            });
+            
+            // Stop autoplay when video is seeking
+            video.addEventListener('seeking', () => {
+                console.log('Video seeking - stopping autoplay');
+                isVideoPlaying = true;
+                stopAutoSlide();
+            });
+            
+            // Stop autoplay when video is waiting/buffering
+            video.addEventListener('waiting', () => {
+                console.log('Video waiting - stopping autoplay');
+                isVideoPlaying = true;
+                stopAutoSlide();
+            });
+            
+            // Handle when user manually interacts with video controls
+            video.addEventListener('userinteraction', () => {
+                console.log('User interaction with video - stopping autoplay');
+                isVideoPlaying = true;
+                stopAutoSlide();
+            });
         });
+        
+        // Add event listeners for manual navigation to ensure proper autoplay state
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                // Check if we're moving away from a video slide
+                const currentSlideElement = testimonialSlides[currentSlide];
+                const currentVideo = currentSlideElement.querySelector('video');
+                if (currentVideo && !currentVideo.paused) {
+                    currentVideo.pause();
+                    isVideoPlaying = false;
+                }
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                // Check if we're moving away from a video slide
+                const currentSlideElement = testimonialSlides[currentSlide];
+                const currentVideo = currentSlideElement.querySelector('video');
+                if (currentVideo && !currentVideo.paused) {
+                    currentVideo.pause();
+                    isVideoPlaying = false;
+                }
+            });
+        }
         
         // Add touch/swipe support
         let startX = 0;
@@ -95,8 +184,22 @@ document.addEventListener("DOMContentLoaded", () => {
         function handleSwipe() {
             const swipeThreshold = 50;
             if (endX - startX > swipeThreshold) {
+                // Pause any currently playing video before going to previous slide
+                const currentSlideElement = testimonialSlides[currentSlide];
+                const currentVideo = currentSlideElement.querySelector('video');
+                if (currentVideo && !currentVideo.paused) {
+                    currentVideo.pause();
+                    isVideoPlaying = false;
+                }
                 prevTestimonial();
             } else if (startX - endX > swipeThreshold) {
+                // Pause any currently playing video before going to next slide
+                const currentSlideElement = testimonialSlides[currentSlide];
+                const currentVideo = currentSlideElement.querySelector('video');
+                if (currentVideo && !currentVideo.paused) {
+                    currentVideo.pause();
+                    isVideoPlaying = false;
+                }
                 nextTestimonial();
             }
         }
@@ -104,9 +207,51 @@ document.addEventListener("DOMContentLoaded", () => {
         // Add keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
+                // Pause any currently playing video before going to previous slide
+                const currentSlideElement = testimonialSlides[currentSlide];
+                const currentVideo = currentSlideElement.querySelector('video');
+                if (currentVideo && !currentVideo.paused) {
+                    currentVideo.pause();
+                    isVideoPlaying = false;
+                }
                 prevTestimonial();
             } else if (e.key === 'ArrowRight') {
+                // Pause any currently playing video before going to next slide
+                const currentSlideElement = testimonialSlides[currentSlide];
+                const currentVideo = currentSlideElement.querySelector('video');
+                if (currentVideo && !currentVideo.paused) {
+                    currentVideo.pause();
+                    isVideoPlaying = false;
+                }
                 nextTestimonial();
+            }
+        });
+        
+        // Clean up videos when page is unloaded
+        window.addEventListener('beforeunload', () => {
+            videos.forEach(video => {
+                if (!video.paused) {
+                    video.pause();
+                }
+            });
+        });
+        
+        // Handle page visibility changes (user switches tabs, minimizes browser, etc.)
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                // Page is hidden - pause videos and stop autoplay
+                videos.forEach(video => {
+                    if (!video.paused) {
+                        video.pause();
+                        isVideoPlaying = false;
+                    }
+                });
+                stopAutoSlide();
+            } else {
+                // Page is visible again - resume autoplay if no video is playing
+                if (!isVideoPlaying && isAutoPlaying) {
+                    startAutoSlide();
+                }
             }
         });
     }
@@ -147,8 +292,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Start auto slide
     function startAutoSlide() {
-        if (autoSlideInterval) return;
+        if (autoSlideInterval || isVideoPlaying) return;
         
+        console.log('Starting autoplay');
         autoSlideInterval = setInterval(() => {
             nextTestimonial();
         }, 5000);
@@ -159,6 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Stop auto slide
     function stopAutoSlide() {
         if (autoSlideInterval) {
+            console.log('Stopping autoplay');
             clearInterval(autoSlideInterval);
             autoSlideInterval = null;
         }
@@ -168,7 +315,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reset auto slide
     function resetAutoSlide() {
         stopAutoSlide();
-        startAutoSlide();
+        // Only restart if no video is currently playing
+        if (!isVideoPlaying) {
+            startAutoSlide();
+        }
     }
 });
 

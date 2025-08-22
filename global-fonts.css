@@ -1,0 +1,254 @@
+/* ==========================================
+   GLOBAL FONT SYSTEM - KADALI DENTAL WEBSITE
+   MATCHING DENTZZ DENTAL WEBSITE FONTS
+   ========================================== */
+
+/* Import Google Fonts matching Dentzz Dental */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* CSS Custom Properties matching Dentzz Dental typography */
+:root {
+  /* Font Families - Exact match to Dentzz Dental */
+  --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  
+  /* Font Sizes - Matching Dentzz Dental exactly */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;     /* 36px */
+  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-6xl: 3.75rem;     /* 60px */
+  
+  /* Font Weights - Matching Dentzz Dental */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Line Heights - Matching Dentzz Dental */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+  --line-height-loose: 1.8;
+  
+  /* Letter Spacing - Matching Dentzz Dental */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+}
+
+/* Global Typography Reset */
+* {
+  font-family: var(--font-primary);
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #333;
+}
+
+/* Typography Classes - Matching Dentzz Dental */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+.text-5xl { font-size: var(--font-size-5xl); }
+.text-6xl { font-size: var(--font-size-6xl); }
+
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+.font-extrabold { font-weight: var(--font-weight-extrabold); }
+
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-normal { line-height: var(--line-height-normal); }
+.leading-relaxed { line-height: var(--line-height-relaxed); }
+.leading-loose { line-height: var(--line-height-loose); }
+
+.tracking-tight { letter-spacing: var(--letter-spacing-tight); }
+.tracking-normal { letter-spacing: var(--letter-spacing-normal); }
+.tracking-wide { letter-spacing: var(--letter-spacing-wide); }
+.tracking-wider { letter-spacing: var(--letter-spacing-wider); }
+.tracking-widest { letter-spacing: var(--letter-spacing-widest); }
+
+/* Heading Styles - Matching Dentzz Dental exactly */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-wide);
+  margin-bottom: 0.5em;
+  color: #1a1a1a;
+}
+
+h1 { 
+  font-size: var(--font-size-6xl); 
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wider);
+}
+h2 { 
+  font-size: var(--font-size-5xl); 
+  font-weight: var(--font-weight-semibold);
+}
+h3 { 
+  font-size: var(--font-size-4xl); 
+  font-weight: var(--font-weight-semibold);
+}
+h4 { 
+  font-size: var(--font-size-3xl); 
+  font-weight: var(--font-weight-medium);
+}
+h5 { 
+  font-size: var(--font-size-2xl); 
+  font-weight: var(--font-weight-medium);
+}
+h6 { 
+  font-size: var(--font-size-xl); 
+  font-weight: var(--font-weight-medium);
+}
+
+/* Paragraph Styles - Matching Dentzz Dental */
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1rem;
+  color: #555;
+  font-weight: var(--font-weight-normal);
+}
+
+/* Link Styles - Matching Dentzz Dental */
+a {
+  font-family: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #0066cc;
+}
+
+a:hover {
+  color: #004499;
+}
+
+/* Button Styles - Matching Dentzz Dental */
+button, .btn {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  font-size: var(--font-size-base);
+}
+
+/* Form Elements - Matching Dentzz Dental */
+input, textarea, select {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Special Text Classes - Matching Dentzz Dental */
+.text-heading {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-normal);
+}
+
+.text-accent {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-medium);
+  color: #d4a373;
+}
+
+/* Responsive Typography - Matching Dentzz Dental breakpoints */
+@media (max-width: 1200px) {
+  :root {
+    --font-size-6xl: 3.5rem;    /* 56px */
+    --font-size-5xl: 2.75rem;   /* 44px */
+    --font-size-4xl: 2rem;      /* 32px */
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --font-size-6xl: 3.25rem;   /* 52px */
+    --font-size-5xl: 2.5rem;    /* 40px */
+    --font-size-4xl: 1.875rem;  /* 30px */
+    --font-size-3xl: 1.5rem;    /* 24px */
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-6xl: 3rem;      /* 48px */
+    --font-size-5xl: 2.25rem;   /* 36px */
+    --font-size-4xl: 1.75rem;   /* 28px */
+    --font-size-3xl: 1.375rem;  /* 22px */
+    --font-size-2xl: 1.25rem;   /* 20px */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: var(--letter-spacing-normal);
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --font-size-6xl: 2.75rem;   /* 44px */
+    --font-size-5xl: 2rem;      /* 32px */
+    --font-size-4xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 1.25rem;   /* 20px */
+    --font-size-base: 0.9rem;   /* 14.4px */
+  }
+  
+  body {
+    line-height: var(--line-height-normal);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.3em;
+  }
+}
+
+/* High DPI Display Optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sweet+Gothic&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="global-fonts.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="fixed-element.css">
     <link rel="stylesheet" href="footer.css">
@@ -22,13 +23,105 @@
             box-sizing: border-box;
         }
 
+        /* WhatsApp CSS Reset - Ensure no conflicts */
+        .whatsapp-no {
+            all: unset !important;
+            position: fixed !important;
+            bottom: clamp(70px, 15vw, 90px) !important;
+            right: clamp(15px, 3vw, 25px) !important;
+            top: auto !important;
+            left: auto !important;
+            width: 70px !important;
+            height: 70px !important;
+            background-color: #25D366 !important;
+            border-radius: 20px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4) !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            z-index: 999 !important;
+        }
+
+        .whatsapp-no::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: -8px !important;
+            right: 15px !important;
+            width: 0 !important;
+            height: 0 !important;
+            border-left: 8px solid transparent !important;
+            border-right: 8px solid transparent !important;
+            border-top: 8px solid #25D366 !important;
+            transform: rotate(-15deg) !important;
+        }
+
+        .whatsapp-no a {
+            color: white !important;
+            font-size: clamp(2rem, 4vw, 2.5rem) !important;
+            transition: transform 0.3s ease !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-decoration: none !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .whatsapp-no:hover {
+            transform: scale(1.05) !important;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6) !important;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family: var(--font-primary), Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             line-height: 1.6;
             overflow-x: hidden;
             font-size: 3rem;
+            padding-top: 80px; /* Account for fixed navbar */
+        }
+
+        /* Navbar Sizing Fixes for Dentists Page */
+        .navbar {
+            min-height: 80px !important;
+            padding: 15px 30px !important;
+        }
+
+        .nav-logo {
+            min-width: 200px !important;
+            max-width: 200px !important;
+        }
+        .nav-logo p{
+            color: #ffffff !important;
+        }
+        .logo {
+            height: 70px !important;
+            width: 180px !important;
+        }
+
+        .clinic-centers {
+            font-size: 12px !important;
+            /* color: #ebe3da !important; */
+        }
+
+        .nav-list {
+            gap: 1.5rem !important;
+        }
+
+        .nav-list a {
+            font-size: 18px !important;
+            padding: 8px 12px !important;
+        }
+        
+        /* Phone Button Positioning Fixes */
+        .fixed-phone-btn {
+            position: fixed !important;
+            bottom: clamp(2px, -6vw, 29px) !important;
+            right: clamp(15px, 3vw, 25px) !important;
+            z-index: 999 !important;
         }
 
         /* Navigation Styles */
@@ -156,29 +249,14 @@
             background: linear-gradient(45deg, #8B4513, #A0522D);
             color: white;
             border: none;
-            padding: 12px 20px;
+            padding: 5px 10px;
             border-radius: 25px;
-            font-size: 1rem;
+            /* font-size: 1rem; */
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
-        .whatsapp-no {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            z-index: 999;
-        }
 
-        .whatsapp-no a {
-            color: #25D366;
-            font-size: clamp(3rem, 6vw, 5rem);
-            transition: transform 0.3s ease;
-        }
-
-        .whatsapp-no a:hover {
-            transform: scale(1.1);
-        }
 
         /* Main Sections */
         .dentists-main-section {
@@ -573,6 +651,32 @@
                 padding-left: clamp(1.5rem, 4vw, 3rem);
                 padding-right: clamp(1.5rem, 4vw, 3rem);
             }
+
+            /* Navbar responsive fixes */
+            .navbar {
+                padding: 15px 20px !important;
+            }
+
+            .nav-list {
+                gap: 1.2rem !important;
+            }
+
+            .nav-list a {
+                font-size: 16px !important;
+                padding: 6px 10px !important;
+            }
+
+            /* WhatsApp responsive fixes */
+            .whatsapp-no {
+                bottom: clamp(60px, 12vw, 75px) !important;
+                right: clamp(12px, 2.5vw, 20px) !important;
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            .whatsapp-no a {
+                font-size: clamp(1.5rem, 3vw, 2rem) !important;
+            }
         }
 
         @media (max-width: 1024px) {
@@ -598,6 +702,42 @@
             .den-img,
             .den-clinic-img {
                 max-width: 500px;
+            }
+
+            /* Navbar responsive fixes */
+            .navbar {
+                padding: 15px 20px !important;
+            }
+
+            .nav-list {
+                gap: 1rem !important;
+            }
+
+            .nav-list a {
+                font-size: 15px !important;
+                padding: 5px 8px !important;
+            }
+
+            .nav-logo {
+                min-width: 180px !important;
+                max-width: 180px !important;
+            }
+
+            .logo {
+                height: 65px !important;
+                width: 160px !important;
+            }
+
+            /* WhatsApp responsive fixes */
+            .whatsapp-no {
+                bottom: clamp(60px, 12vw, 75px) !important;
+                right: clamp(12px, 2.5vw, 20px) !important;
+                width: 60px !important;
+                height: 60px !important;
+            }
+
+            .whatsapp-no a {
+                font-size: clamp(1.5rem, 3vw, 2rem) !important;
             }
         }
 
@@ -649,34 +789,69 @@
             .dental-clinic-images-content img {
                 height: clamp(180px, 40vw, 250px);
             }
+
+            /* Mobile Navbar fixes */
+            .navbar {
+                padding: 10px 20px !important;
+                min-height: 70px !important;
+            }
+
+            .nav-logo {
+                min-width: 120px !important;
+                max-width: 120px !important;
+            }
+
+            .logo {
+                height: 70px !important;
+                width: 150px !important;
+            }
+
+            .clinic-centers {
+                font-size: 10px !important;
+            }
+
+            .nav-list {
+                gap: 0 !important;
+            }
+
+            .nav-list a {
+                font-size: 18px !important;
+                padding: 15px 20px !important;
+            }
+
+            /* WhatsApp mobile fixes */
+            .whatsapp-no {
+                bottom: clamp(50px, 10vw, 65px) !important;
+                right: clamp(10px, 2vw, 15px) !important;
+                width: 55px !important;
+                height: 55px !important;
+            }
+
+            .whatsapp-no a {
+                font-size: clamp(1.5rem, 3vw, 2rem) !important;
+            }
         }
 
         @media (max-width: 480px) {
-            /* .dentists-main-section,
-            .dentists-clinic-main-section,
-            .dentists-clinic-second-main-section { */
-                /* padding-left: clamp(0.8rem, 3vw, 1rem); */
-                /* padding-right: clamp(0.8rem, 3vw, 1rem); */
-            /* } */
-
             .dentists-main-section {
-        padding-top: clamp(110px, 12vw, 80px);
-        padding-bottom: clamp(1.5rem, 5vw, 2rem);
-    }
+                padding-top: clamp(110px, 12vw, 80px);
+                padding-bottom: clamp(1.5rem, 5vw, 2rem);
+            }
 
             .dentists-main-container,
             .dentists-clinic-main-container {
                 margin-left: 2px;
                 gap: clamp(1.2rem, 4vw, 2rem);
             }
+            
             .dentists-clinic-intro-container{
                 width: 20rem;
                 margin-left: 1rem;
             }
             
-.dental-clinic-images-content{
-    margin-right: 3px;
-}
+            .dental-clinic-images-content{
+                margin-right: 3px;
+            }
 
             .dentists-intro-container li,
             .dentists-clinic-intro-container li,
@@ -687,7 +862,6 @@
             }
 
             .dentists-clinic-second-main-container h2 {
-                
                 font-size: clamp(1.1rem, 5vw, 1.3rem);
             }
 
@@ -707,6 +881,43 @@
 
             .dental-clinic-images-content img {
                 height: clamp(160px, 45vw, 220px);
+            }
+
+            /* Small Mobile Navbar fixes */
+            .navbar {
+                padding: 8px 15px !important;
+                min-height: 60px !important;
+            }
+
+            .nav-logo {
+                min-width: 160px !important;
+                max-width: 160px !important;
+            }
+
+            .logo {
+                height: 75px !important;
+                width: 150px !important;
+            }
+
+            .clinic-centers {
+                font-size: 0.65rem !important;
+            }
+
+            .nav-list a {
+                font-size: 16px !important;
+                padding: 12px 15px !important;
+            }
+
+            /* WhatsApp small mobile fixes */
+            .whatsapp-no {
+                bottom: clamp(50px, 10vw, 65px) !important;
+                right: clamp(10px, 2vw, 15px) !important;
+                width: 55px !important;
+                height: 55px !important;
+            }
+
+            .whatsapp-no a {
+                font-size: clamp(1.5rem, 3vw, 2rem) !important;
             }
         }
 
@@ -757,6 +968,43 @@
             .dental-clinic-images-content img {
                 height: clamp(140px, 50vw, 200px);
             }
+
+            /* Very Small Mobile Navbar fixes */
+            .navbar {
+                padding: 5px 8px !important;
+                min-height: 60px !important;
+            }
+
+            .nav-logo {
+                min-width: 140px !important;
+                max-width: 140px !important;
+            }
+
+            .logo {
+                height: 70px !important;
+                width: 150px !important;
+            }
+
+            .clinic-centers {
+                font-size: 10px !important;
+            }
+
+            .nav-list a {
+                font-size: 14px !important;
+                padding: 10px 12px !important;
+            }
+
+            /* WhatsApp very small mobile fixes */
+            .whatsapp-no {
+                bottom: 45px !important;
+                right: 8px !important;
+                width: 50px !important;
+                height: 50px !important;
+            }
+
+            .whatsapp-no a {
+                font-size: clamp(1.5rem, 3vw, 2rem) !important;
+            }
         }
     </style>
     
@@ -804,13 +1052,16 @@
     </header>
 
     
+    <!-- WhatsApp Logo - Speech Bubble Style -->
+    
+
+    <a href="tel:+919819201882" class="fixed-phone-btn"><button class="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button></a>
+    <!-- WhatsApp Logo - Speech Bubble Style -->
     <div class="whatsapp-no">
-        <a href="https://wa.me/919819201882">
-            <i class="fa-brands fa-square-whatsapp"></i>
+        <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
-    <a href="tel:+919819201882" class="fixed-phone-btn"><button class="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button></a>
-
     <!-- Main Content -->
     <section class="dentists-main-section">
         <h2>The Dentists</h2>
@@ -1005,7 +1256,7 @@
                 Phone: +91 981 920 1882<br><br>
                 
                 <strong>Operating Hours:</strong><br>
-                Monday - Saturday: 10:00 AM - 7:00 PM<br>
+                Mon - Fri: 10:00 am to 5:00 pm, Sat - Sun: 10:00 am to 2:00 pm ( By Appointment )<br>
                 Sunday: By Appointment Only
             </div>
 

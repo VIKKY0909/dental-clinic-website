@@ -55,13 +55,14 @@ body{
   }
   
   .services-heading h3{
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 500;
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
     color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
     text-align: center;
     margin: 0;
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-wider);
   }
   
   .services-text-part .services-sub-heading{
@@ -70,38 +71,43 @@ body{
   }
   
   .services-sub-heading p{
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    font-family: 'SangBleu Kingdom Light, Georgia', serif;
-    letter-spacing: 0.1rem;
+    font-size: var(--font-size-xl);
+    font-family: var(--font-primary);
     color: white;
-    font-weight: 500;
+    font-weight: var(--font-weight-normal);
     text-align: center;
     margin: 0;
-    line-height: 1.4;
+    line-height: var(--line-height-relaxed);
+    letter-spacing: var(--letter-spacing-wide);
   }
 
+  .services-text-part a{
+    text-decoration: none;
+  }
   .services-text-part .contact-btn{
     height: clamp(2.5rem, 6vw, 3.5rem);
     width: clamp(9rem, 20vw, 12rem);
     border: 2px solid white;
-    background-color: white;
-    color: black;
+    background: transparent;
+    color: white;
     text-decoration: none;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    letter-spacing: 0.2rem;
+    font-size: var(--font-size-lg);
+    font-family: var(--font-primary);
+    letter-spacing: var(--letter-spacing-wider);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    font-weight: 500;
+    font-weight: var(--font-weight-semibold);
   }
   
   .services-text-part .contact-btn:hover{
-    background-color: black;
+    background: transparent;
     color: white;
     cursor: pointer;
     transform: scale(1.05);
   }
+
   
   /* --------------------------------------------------------------------------2nd -------------------------------------------------- */
   
@@ -115,12 +121,13 @@ body{
   
   .services-first-page-section h2{
     text-align: center;
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
+    font-size: var(--font-size-4xl);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-semibold);
     margin-bottom: 3rem;
-    color: #333;
+    color: #1a1a1a;
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-wide);
   }
   
   .services-first-page-section .services-first-page-sub-section{
@@ -176,24 +183,26 @@ body{
   .our-services-first-container h4{
     text-align: center;
     margin-bottom: 1rem;
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    color: #333;
-    line-height: 1.3;
+    font-size: var(--font-size-xl);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-semibold);
+    color: #1a1a1a;
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-wide);
   }
   
   .our-services-first-container a{
     text-align: center;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 500;
+    font-size: var(--font-size-lg);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
     color: #0066cc;
     text-decoration: none;
     transition: color 0.3s ease;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-wide);
   }
   
   .our-services-first-container a:hover{

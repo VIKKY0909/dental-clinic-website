@@ -373,6 +373,10 @@ html, body {
             transition: transform 0.3s ease;
 }
 
+.whatsapp-no a i{
+  font-size: 60px;
+}
+
 .whatsapp-no a:hover {
   transform: scale(1.1);
 }
