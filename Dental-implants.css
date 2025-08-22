@@ -815,7 +815,7 @@ html, body {
   
   .single-tooth-img, .multiple-teeth-img, .all-mouth-img{
     width: 100%;
-    height: clamp(150px, 30vw, 200px);
+    height: clamp(242px, 30vw, 260px);
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: clamp(0.5rem, 2vw, 1rem);
@@ -1552,11 +1552,12 @@ html, body {
   width: 100%;
 }
 
+
 .single-tooth-container .single-tooth-img .one-tooth-img,
 .multiple-teeth-container .multiple-teeth-img .more-teeth-img,
 .all-mouth-container .all-mouth-img .all-teeth-image {
   width: 100%;
-  height: clamp(120px, 25vw, 180px);
+  height: clamp(120px, 25vw, 256px);
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -1993,11 +1994,12 @@ html, body {
     height: clamp(100px, 25vw, 120px);
   }
 
+ 
   /* Teeth replacement mobile adjustments */
   .single-tooth-container .single-tooth-img .one-tooth-img,
   .multiple-teeth-container .multiple-teeth-img .more-teeth-img,
   .all-mouth-container .all-mouth-img .all-teeth-image {
-    height: clamp(100px, 25vw, 120px);
+    height: 15rem;
   }
 }
 
