@@ -1664,7 +1664,7 @@ html, body {
 .con-con-img img,
 .all-on-4-6-img img {
   width: 100%;
-  height: clamp(120px, 25vw, 180px);
+  height: clamp(120px, 25vw, 412px);
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;

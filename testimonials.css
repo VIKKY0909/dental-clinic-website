@@ -955,6 +955,41 @@
       padding: clamp(2rem, 6vw, 4rem) 0;
     }
     
+    .videos-section-header {
+      text-align: center;
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+      padding: 0 clamp(1rem, 3vw, 2rem);
+    }
+    
+    .videos-section-header h2 {
+      font-size: var(--font-size-4xl);
+      font-family: var(--font-heading);
+      font-weight: var(--font-weight-bold);
+      color: #8B4513;
+      margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
+      letter-spacing: var(--letter-spacing-wide);
+    }
+    
+    .videos-section-header h2::after {
+      content: '';
+      display: block;
+      width: clamp(4rem, 10vw, 8rem);
+      height: 3px;
+      background: linear-gradient(90deg, #8B4513, #D2691E, #8B4513);
+      margin: clamp(0.8rem, 2vw, 1.2rem) auto 0;
+      border-radius: 2px;
+    }
+    
+    .videos-section-header p {
+      font-size: var(--font-size-lg);
+      font-family: var(--font-primary);
+      color: #666;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--line-height-relaxed);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
     .video-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -972,6 +1007,56 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
+    /* Video wrapper for better control */
+    .video-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: clamp(0.5rem, 1vw, 1rem);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .video-wrapper:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: inherit;
+    }
+    
+    /* Video loading state */
+    .video-loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      color: #8B4513;
+      font-weight: 600;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+    }
+    
+    .video-loading i {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
     .video-container iframe:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 25px rgba(0,0,0,0.2);
@@ -984,7 +1069,7 @@
     }
     
     .pagination button {
-      background-color: #007BFF;
+      background-color: #8B4513;
       color: white;
       border: none;
       padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 18px);
@@ -993,13 +1078,19 @@
       border-radius: clamp(0.3rem, 1vw, 0.5rem);
       font-size: clamp(0.9rem, 2vw, 1rem);
       transition: all 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+      box-shadow: 0 2px 8px rgba(139, 69, 19, 0.3);
+      font-weight: 600;
     }
     
     .pagination button:hover {
-      background-color: #0056b3;
+      background-color: #A0522D;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,123,255,0.4);
+      box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
+    }
+    
+    .pagination button.active {
+      background-color: #D2691E;
+      box-shadow: 0 4px 12px rgba(210, 105, 30, 0.5);
     }
     
     .pagination button:active {
@@ -1008,6 +1099,20 @@
     
     /* YouTube Videos Responsive Design */
     @media (max-width: 768px) {
+      .videos-section-header {
+        margin-bottom: clamp(1.5rem, 3vw, 2rem);
+        padding: 0 clamp(0.8rem, 2vw, 1.5rem);
+      }
+      
+      .videos-section-header h2 {
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
+        margin-bottom: clamp(0.6rem, 1.5vw, 1rem);
+      }
+      
+      .videos-section-header p {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+      }
+      
       .video-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1rem;
@@ -1029,10 +1134,25 @@
       .pagination button {
         padding: 8px 12px;
         font-size: 0.9rem;
+        background-color: #8B4513;
       }
     }
     
     @media (max-width: 480px) {
+      .videos-section-header {
+        margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+        padding: 0 clamp(0.5rem, 1.5vw, 1rem);
+      }
+      
+      .videos-section-header h2 {
+        font-size: clamp(1.5rem, 4.5vw, 1.8rem);
+        margin-bottom: clamp(0.5rem, 1.2vw, 0.8rem);
+      }
+      
+      .videos-section-header p {
+        font-size: clamp(0.9rem, 2.8vw, 1.1rem);
+      }
+      
       .video-container {
         grid-template-columns: 1fr;
         padding: 0.5rem;
@@ -1045,6 +1165,7 @@
       .pagination button {
         padding: 6px 10px;
         font-size: 0.8rem;
+        background-color: #8B4513;
       }
     }
     

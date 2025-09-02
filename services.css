@@ -58,7 +58,7 @@ body{
     font-size: var(--font-size-5xl);
     font-family: var(--font-heading);
     font-weight: var(--font-weight-bold);
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     margin: 0;
     line-height: var(--line-height-tight);
@@ -73,7 +73,7 @@ body{
   .services-sub-heading p{
     font-size: var(--font-size-xl);
     font-family: var(--font-primary);
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: var(--font-weight-normal);
     text-align: center;
     margin: 0;
@@ -87,9 +87,9 @@ body{
   .services-text-part .contact-btn{
     height: clamp(2.5rem, 6vw, 3.5rem);
     width: clamp(9rem, 20vw, 12rem);
-    border: 2px solid white;
+    border: 2px solid rgb(7, 7, 7);
     background: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: var(--font-size-lg);
     font-family: var(--font-primary);
@@ -102,8 +102,8 @@ body{
   }
   
   .services-text-part .contact-btn:hover{
-    background: transparent;
-    color: white;
+    background: black;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transform: scale(1.05);
   }
