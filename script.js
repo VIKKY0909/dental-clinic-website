@@ -235,6 +235,7 @@ class CelebritySlider {
     this.autoSlideInterval = null;
     this.isVideoPlaying = false;
     this.currentPlayingVideo = null;
+    this.isTransitioning = false; // Add flag to prevent multiple rapid clicks
 
     if (
       this.slides.length > 0 &&
@@ -377,7 +378,14 @@ class CelebritySlider {
   }
 
   nextSlide() {
+    // Prevent multiple rapid clicks
+    if (this.isTransitioning) {
+      console.log("⏳ Transition in progress, ignoring click");
+      return;
+    }
+
     console.log("🔄 Next button clicked, current slide:", this.currentSlide);
+    this.isTransitioning = true;
 
     // Stop current video if playing
     if (this.currentPlayingVideo && !this.currentPlayingVideo.paused) {
@@ -388,18 +396,31 @@ class CelebritySlider {
       console.log("🛑 Stopped current video for slide change");
     }
 
+    // Move to next slide (only one slide at a time)
     this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
     this.updateSlidePosition();
     this.resetAutoSlide();
+
+    // Reset transition flag after animation completes
+    setTimeout(() => {
+      this.isTransitioning = false;
+    }, 500); // Match the CSS transition duration
 
     console.log("✅ Moved to next slide, new slide:", this.currentSlide);
   }
 
   previousSlide() {
+    // Prevent multiple rapid clicks
+    if (this.isTransitioning) {
+      console.log("⏳ Transition in progress, ignoring click");
+      return;
+    }
+
     console.log(
       "🔄 Previous button clicked, current slide:",
       this.currentSlide
     );
+    this.isTransitioning = true;
 
     // Stop current video if playing
     if (this.currentPlayingVideo && !this.currentPlayingVideo.paused) {
@@ -410,10 +431,16 @@ class CelebritySlider {
       console.log("🛑 Stopped current video for slide change");
     }
 
+    // Move to previous slide (only one slide at a time)
     this.currentSlide =
       (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
     this.updateSlidePosition();
     this.resetAutoSlide();
+
+    // Reset transition flag after animation completes
+    setTimeout(() => {
+      this.isTransitioning = false;
+    }, 500); // Match the CSS transition duration
 
     console.log("✅ Moved to previous slide, new slide:", this.currentSlide);
   }
@@ -448,20 +475,46 @@ class CelebritySlider {
 
   makeNavigationGlobal() {
     // Make functions globally accessible
-    window.nextbutton = () => this.nextSlide();
-    window.prevbutton = () => this.previousSlide();
+    window.nextbutton = () => {
+      console.log("🔄 Global nextbutton called");
+      this.nextSlide();
+    };
+    window.prevbutton = () => {
+      console.log("🔄 Global prevbutton called");
+      this.previousSlide();
+    };
 
-    // Also add event listeners to the buttons as a fallback
+    // Remove any existing event listeners first to prevent duplicates
     const leftArrow = document.getElementById("left-arrow");
     const rightArrow = document.getElementById("right-arrow");
 
     if (leftArrow) {
-      leftArrow.addEventListener("click", () => this.previousSlide());
+      // Clone the button to remove all event listeners
+      const newLeftArrow = leftArrow.cloneNode(true);
+      leftArrow.parentNode.replaceChild(newLeftArrow, leftArrow);
+      
+      // Add single event listener
+      newLeftArrow.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("🔄 Left arrow clicked");
+        this.previousSlide();
+      });
       console.log("✅ Left arrow button event listener added");
     }
 
     if (rightArrow) {
-      rightArrow.addEventListener("click", () => this.nextSlide());
+      // Clone the button to remove all event listeners
+      const newRightArrow = rightArrow.cloneNode(true);
+      rightArrow.parentNode.replaceChild(newRightArrow, rightArrow);
+      
+      // Add single event listener
+      newRightArrow.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("🔄 Right arrow clicked");
+        this.nextSlide();
+      });
       console.log("✅ Right arrow button event listener added");
     }
 

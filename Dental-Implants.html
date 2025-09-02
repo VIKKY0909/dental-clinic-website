@@ -16,6 +16,195 @@
     <link rel="stylesheet" href="fixed-element.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="before-after.css">
+   <style>
+    /* KDC Testimonials Section Styles */
+    .kdc-testimonials-section {
+        padding: 80px 20px;
+        background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+        position: relative;
+    }
+    
+    .kdc-testimonials-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .kdc-testimonials-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    
+    .kdc-testimonials-slider {
+        position: relative;
+        padding: 20px 10px 60px;
+    }
+    
+    .kdc-testimonial-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .kdc-testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+    
+    .kdc-video-container {
+        position: relative;
+        width: 100%;
+        background: #000;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+    .kdc-testimonial-video {
+        width: 100%;
+        height: auto;
+        display: block;
+        aspect-ratio: 16/9;
+    }
+    
+    .kdc-video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    .kdc-video-overlay.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .kdc-play-icon {
+        font-size: 60px;
+        color: rgba(255, 255, 255, 0.9);
+        transition: transform 0.2s ease;
+    }
+    
+    .kdc-video-container:hover .kdc-play-icon {
+        transform: scale(1.1);
+    }
+    
+    .kdc-testimonial-content {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .kdc-patient-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .kdc-patient-name {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #2c3e50;
+    }
+    
+    .kdc-swiper-button-prev,
+    .kdc-swiper-button-next {
+        background: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        color: #3498db;
+        transition: all 0.3s ease;
+    }
+    
+    .kdc-swiper-button-prev:after,
+    .kdc-swiper-button-next:after {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .kdc-swiper-button-prev:hover,
+    .kdc-swiper-button-next:hover {
+        background: #3498db;
+        color: white;
+    }
+    
+    .kdc-swiper-pagination .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: #bdc3c7;
+        opacity: 1;
+    }
+    
+    .kdc-swiper-pagination .swiper-pagination-bullet-active {
+        background: #3498db;
+    }
+    
+    /* Active video indicator */
+    .kdc-active-video {
+        box-shadow: 0 0 0 3px #3498db, 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .kdc-testimonials-title {
+            font-size: 2rem;
+        }
+        
+        .kdc-testimonial-card {
+            margin: 0 5px;
+        }
+        
+        .kdc-play-icon {
+            font-size: 50px;
+        }
+        
+        .kdc-swiper-button-prev,
+        .kdc-swiper-button-next {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .kdc-swiper-button-prev:after,
+        .kdc-swiper-button-next:after {
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .kdc-testimonials-section {
+            padding: 60px 15px;
+        }
+        
+        .kdc-testimonials-title {
+            font-size: 1.8rem;
+        }
+        
+        .kdc-testimonial-content {
+            padding: 15px;
+        }
+        
+        .kdc-patient-name {
+            font-size: 1rem;
+        }
+    }
+</style>
 </head>
 <body>
      <!-- -------------------------------------------------------------------navbar----------------------------------------------------------------------------------- -->
@@ -146,119 +335,246 @@
 
      <!-- -------------------------------------------------------------------------------------2.9----------------------------------------------------------------------- -->
 
-           <section class="dental-makeover-testimonials-section">
-       <div class="dental-makeover-testimonials-container">
-         <h2 class="dentalmakeover-section-title">What our Patients say ??</h2>
-         <div class="makeover-dentalsection-content">
-           <div class="makeover-slider-dentalcontainer swiper">
-             <div class="makeover-dentalslider-wrapper swiper-wrapper">
-               <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="Mushtaq-Khan.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="di-vid.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="video2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-impvid-1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-imp-video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-imp-video3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="video5.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-impvid-7.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-impvid-3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-impvid-4.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-impvid-5.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-impvid-2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-imp-video2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
+    <!-- Replace the entire dental-makeover-testimonials-section with this code -->
+<section class="kdc-testimonials-section">
+    <div class="kdc-testimonials-container">
+        <h2 class="kdc-testimonials-title">What Our Patients Say</h2>
+        
+        <div class="kdc-testimonials-slider swiper">
+            <div class="swiper-wrapper">
+                <!-- Testimonial 1 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="Mushtaq-Khan.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="makeover-dentaltestimonial swiper-slide">
-                  <video class="dentaluser-video" controls>
-                    <source src="den-impvid-6.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
+                <!-- Testimonial 2 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="di-vid.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-               </div>
-
-               <!-- If we need pagination -->
-               <div class="swiper-pagination"></div>
-
-   <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-             </div>
-           </div>
-         </div>
-       </div>
-
-     </section>
+                
+                <!-- Testimonial 3 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="video2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-impvid-1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-imp-video1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-imp-video3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 7 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="video5.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 8 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-impvid-7.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 9 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-impvid-3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 10 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-impvid-4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 11 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-impvid-5.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 12 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-impvid-2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 13 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-imp-video2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Testimonial 14 -->
+                <div class="swiper-slide">
+                    <div class="kdc-testimonial-card">
+                        <div class="kdc-video-container">
+                            <video class="kdc-testimonial-video">
+                                <source src="den-impvid-6.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="kdc-video-overlay">
+                                <i class="fas fa-play kdc-play-icon"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev kdc-swiper-button-prev"></div>
+            <div class="swiper-button-next kdc-swiper-button-next"></div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination kdc-swiper-pagination"></div>
+        </div>
+    </div>
+</section>
 
 
      <!-- ----------------------------------------------------------------------------3rd page------------------------------------------------------------------------- -->
@@ -607,18 +923,10 @@
                 <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
                 <a href="Teeth-Whitening.html">Teeth Whitening</a>
                 <a href="Dental-Implants.html">Dental Implants</a>
-                <a href="Services.html">Services</a>
-                <a href="location-map.html">Locations</a>
-                <a href="dental-tourism.html">Tourism</a>
-                <a href="General-Dentistry.html">General Dentistry</a>
-                <a href="Testimonials.html">Testimonials</a>
-                <a href="Smile-Makeover.html">Smile Makeover</a>
-                <a href="one-sitting-root-canal.html">Painless Root Canal</a>
-                <a href="Orthodontic-Braces.html">Braces & Aligners</a>
-                <a href="Gum-Treatment.html">Gum Treatment</a>
-                <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
                 <a href="before-after.html">Before & After</a>
+                <a href="dental-tourism.html">Dental Tourism</a>
                 <a href="faq.html">FAQ</a>
+                <a href="contact-us.html">Contact</a>
             </div>
 
             <!-- Social Media Links -->
@@ -654,7 +962,7 @@
                 Phone: +91 981 920 1882<br><br>
                 
                 <strong>Operating Hours:</strong><br>
-                Mon - Fri: 10:00 am to 5:00 pm  <br>
+                Mon - Fri: 10:00 am to 5:00 pm, Sat - Sun: 10:00 am to 2:00 pm ( By Appointment )<br>
                 
             </div>
 
@@ -668,7 +976,6 @@
         </div>
     </div>
 </footer>
-
 
 <!-- Fixed Contact Elements -->
 <a href="tel:+919819201882" class="fixed-phone-btn">
@@ -688,5 +995,123 @@
     <script src="script.js"></script>
     <script src="before-after.js"></script>
     <script src="dental-implants.js"></script>
+    <script>
+    // KDC Testimonials Script
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Swiper
+        var kdcTestimonialSwiper = new Swiper('.kdc-testimonials-slider', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true,
+            },
+            pagination: {
+                el: '.kdc-swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.kdc-swiper-button-next',
+                prevEl: '.kdc-swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            }
+        });
+        
+        // Video control functionality
+        const kdcVideoContainers = document.querySelectorAll('.kdc-video-container');
+        const kdcVideos = document.querySelectorAll('.kdc-testimonial-video');
+        const kdcPlayOverlays = document.querySelectorAll('.kdc-video-overlay');
+        let kdcCurrentlyPlaying = null;
+        
+        // Function to pause all videos
+        function kdcPauseAllVideos() {
+            kdcVideos.forEach(video => {
+                video.pause();
+            });
+            kdcPlayOverlays.forEach(overlay => {
+                overlay.classList.remove('hidden');
+            });
+            kdcVideoContainers.forEach(container => {
+                container.classList.remove('kdc-active-video');
+            });
+            kdcCurrentlyPlaying = null;
+            // Resume autoplay when all videos are paused
+            kdcTestimonialSwiper.autoplay.start();
+        }
+        
+        // Add click event to each video container
+        kdcVideoContainers.forEach((container, index) => {
+            const video = container.querySelector('.kdc-testimonial-video');
+            const overlay = container.querySelector('.kdc-video-overlay');
+            
+            container.addEventListener('click', function(e) {
+                // Prevent this click from being captured by Swiper
+                e.stopPropagation();
+                
+                // If this video is already playing, pause it
+                if (kdcCurrentlyPlaying === video) {
+                    video.pause();
+                    overlay.classList.remove('hidden');
+                    container.classList.remove('kdc-active-video');
+                    kdcCurrentlyPlaying = null;
+                    // Resume autoplay when video is paused
+                    kdcTestimonialSwiper.autoplay.start();
+                    return;
+                }
+                
+                // Pause all other videos
+                kdcPauseAllVideos();
+                
+                // Stop autoplay when video starts playing
+                kdcTestimonialSwiper.autoplay.stop();
+                
+                // Play the clicked video
+                video.play();
+                overlay.classList.add('hidden');
+                container.classList.add('kdc-active-video');
+                kdcCurrentlyPlaying = video;
+            });
+            
+            // When video ends, show the play overlay again
+            video.addEventListener('ended', function() {
+                overlay.classList.remove('hidden');
+                container.classList.remove('kdc-active-video');
+                kdcCurrentlyPlaying = null;
+                // Resume autoplay when video ends
+                kdcTestimonialSwiper.autoplay.start();
+            });
+            
+            // Handle video pause event
+            video.addEventListener('pause', function() {
+                if (kdcCurrentlyPlaying === video) {
+                    overlay.classList.remove('hidden');
+                    container.classList.remove('kdc-active-video');
+                    kdcCurrentlyPlaying = null;
+                    // Resume autoplay when video is paused
+                    kdcTestimonialSwiper.autoplay.start();
+                }
+            });
+        });
+        
+        // Pause videos when changing slides
+        kdcTestimonialSwiper.on('slideChange', function() {
+            kdcPauseAllVideos();
+        });
+    });
+</script>
 </body>
 </html>
