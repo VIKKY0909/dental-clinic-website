@@ -60,10 +60,19 @@
             enabled: true,
         },
         
-        // Mouse wheel control
+        // Mouse wheel control - DISABLED to allow page scrolling
         mousewheel: {
-            invert: false,
-        }
+            enabled: false,
+        },
+        
+        // Prevent interference with page scrolling
+        allowTouchMove: true,
+        touchRatio: 1,
+        touchAngle: 45,
+        simulateTouch: true,
+        
+        // Disable grab cursor to avoid confusion
+        grabCursor: false
     });
 
     // Function to pause all videos
@@ -141,11 +150,7 @@
         console.log('Touch started - all videos paused');
     });
 
-    // Pause all videos when mouse wheel is used
-    swiper.on('mousewheel', function () {
-        pauseAllVideos();
-        console.log('Mouse wheel used - all videos paused');
-    });
+
 
     // Pause all videos when keyboard navigation is used
     swiper.on('keyPress', function () {
