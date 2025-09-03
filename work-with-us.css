@@ -201,6 +201,7 @@ html, body {
 
 @media (max-width: 480px) {
     .work-with-us-main-section {
+        margin-top: 5rem;
         padding: clamp(50px, 7vw, 70px) clamp(0.6rem, 1.5vw, 1rem) clamp(1rem, 3vw, 2rem);
     }
     

@@ -460,9 +460,9 @@ body{
     gap: 0.8rem;
   }
   
-  .celeb-slider .celeb-img-vid-container {
-    touch-action: none;
-  }
+  /* .celeb-slider .celeb-img-vid-container {
+    touch-action: none; - Removed to allow mobile scrolling
+  } */
 }
 
 @media (max-width: 480px) {

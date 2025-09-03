@@ -315,25 +315,52 @@ class CelebritySlider {
 
   setupTouchSupport() {
     let startX = 0;
+    let startY = 0;
     let isDragging = false;
+    let isHorizontalSwipe = false;
 
     this.slides.forEach((slide) => {
       // Touch events
       slide.addEventListener("touchstart", (e) => {
         startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
         isDragging = true;
+        isHorizontalSwipe = false;
         this.stopAutoSlide();
       });
 
       slide.addEventListener("touchmove", (e) => {
-        if (isDragging) e.preventDefault();
+        if (!isDragging) return;
+        
+        const currentX = e.touches[0].clientX;
+        const currentY = e.touches[0].clientY;
+        const deltaX = Math.abs(currentX - startX);
+        const deltaY = Math.abs(currentY - startY);
+        
+        // Only prevent default if it's clearly a horizontal swipe
+        if (deltaX > deltaY && deltaX > 10) {
+          isHorizontalSwipe = true;
+          e.preventDefault();
+        }
+        // Allow vertical scrolling if it's clearly vertical movement
+        else if (deltaY > deltaX && deltaY > 10) {
+          isHorizontalSwipe = false;
+          // Don't prevent default - allow scrolling
+        }
       });
 
       slide.addEventListener("touchend", (e) => {
         if (!isDragging) return;
         const endX = e.changedTouches[0].clientX;
-        this.handleSwipe(startX, endX);
+        const endY = e.changedTouches[0].clientY;
+        
+        // Only handle swipe if it was a horizontal gesture
+        if (isHorizontalSwipe) {
+          this.handleSwipe(startX, endX);
+        }
+        
         isDragging = false;
+        isHorizontalSwipe = false;
         this.startAutoSlide();
       });
 

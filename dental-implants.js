@@ -212,6 +212,107 @@ class VideoSlider {
   }
 }
 
+// Initialize people slider independently
+function initializePeopleSlider() {
+  const peopleSlider = document.querySelector(".people-slider-container");
+  if (!peopleSlider) {
+    console.log("People slider container not found");
+    return;
+  }
+  
+  // Destroy any existing swiper instance
+  
+  if (peopleSlider.swiper) {
+    peopleSlider.swiper.destroy(true, true);
+  }
+  
+  const peopleSwiper = new Swiper(".people-slider-container", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 25,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+      reverseDirection: false,
+      stopOnLastSlide: false,
+    },
+    speed: 1000,
+    effect: 'slide',
+    slidesPerView: 1,
+    centeredSlides: false,
+    pagination: {
+      el: ".people-slider-container .swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".people-slider-container .swiper-button-next",
+      prevEl: ".people-slider-container .swiper-button-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+    },
+    preventClicks: true,
+    preventClicksPropagation: true,
+    allowTouchMove: true,
+    touchRatio: 1,
+    touchAngle: 45,
+    simulateTouch: true,
+    on: {
+      init: function () {
+        console.log('People slider initialized successfully');
+        setTimeout(() => {
+          this.autoplay.start();
+        }, 100);
+      },
+      slideChange: function () {
+        console.log('Slide changed to:', this.activeIndex);
+      }
+    }
+  });
+  
+  // Force autoplay to start
+  setTimeout(() => {
+    peopleSwiper.autoplay.start();
+  }, 500);
+  
+  // Fallback autoplay mechanism
+  let autoplayInterval;
+  const startFallbackAutoplay = () => {
+    autoplayInterval = setInterval(() => {
+      if (peopleSwiper && !peopleSwiper.autoplay.running) {
+        peopleSwiper.slideNext();
+      }
+    }, 5000);
+  };
+  
+  setTimeout(startFallbackAutoplay, 1000);
+  
+  peopleSwiper.on('touchStart', () => {
+    clearInterval(autoplayInterval);
+  });
+  
+  peopleSwiper.on('touchEnd', () => {
+    setTimeout(startFallbackAutoplay, 2000);
+  });
+}
+
 // Initialize all Swiper sliders
 function initializeSwipers() {
   // Wait for Swiper to be available
@@ -220,6 +321,9 @@ function initializeSwipers() {
     setTimeout(initializeSwipers, 100);
     return;
   }
+  
+  // Initialize people slider first and independently
+  initializePeopleSlider();
 
   try {
     // Dental testimonials slider
@@ -306,11 +410,7 @@ function initializeSwipers() {
       });
     }
 
-    // People slider
-    const peopleSlider = document.querySelector(".people-slider-container");
-    if (peopleSlider) {
-      new VideoSlider(".people-slider-container");
-    }
+
   } catch (error) {
     console.error("Error initializing Swiper sliders:", error);
   }

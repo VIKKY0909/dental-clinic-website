@@ -1,406 +1,679 @@
-/* ===================================================cosmetic-dentistry-section============================================= */
+/* ===================================================COSMETIC DENTISTRY - FULLY RESPONSIVE============================================= */
 
-body{
+/* CSS Variables for consistent theming */
+:root {
+  --primary-bg: #f5f5f5;
+  --secondary-bg: #e1d8d1;
+  --accent-bg: #c0b9b2;
+  --text-dark: #333;
+  --text-light: #555;
+  --accent-color: #8B4513;
+  --white: #ffffff;
+  --border-color: #f9f2e8;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  font-family: 'SangBleuKingdom', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: var(--primary-bg);
+  line-height: 1.6;
 }
 
-/* ----------------------------------------------------1st page- intro------------------------------------------------------- */
+/* ===================================================INTRO SECTION - ORIGINAL LAYOUT============================================= */
 
-.cosmetic-dentistry-intro-section{
-    height: 100vh;
-    width: 100%;
-    background-color: #ebe3da;
-  }
-  
-  .cosmetic-dentistry-intro-section .cosmetic-dentistry-intro-container{
-    height: 95vh;
-    width: 100%;
-    margin-top: 10vh;
-    /* border: 2px solid black; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .cosmetic-dentistry-wrapper{
-    width: 100%;
-    height: 110%;
-    top:-10%;
-    background: linear-gradient(rgba(0,0,0.7), rgba(0,0,0,0.5)), url(StockCake-Professional\ Dental\ Care_1735884050.jpg) center no-repeat;
-    background-size: cover;
-    /* box-shadow: 0.1rem 5rem rgba(0, 0, 0, 0.6); */
-    position: relative;
-  }
-  
-  /* .cosmetic-dentistry-intro-container .cosmetic-dentistry-intro-img-container{
-    height: 100%;
-    width: 50%;
-    border: 2px solid blueviolet;
-  }
-  
-  .cosmetic-dentistry-intro-img-container  .cosmetic-dentistry-intro-img-sub-container{
-    height: 70vh;
-    width: 70%;
-    margin-left: 15%;
-    margin-top: 15%;
-    border: 2px solid red;
-  }
-  
-  .cosmetic-dentistry-intro-img-sub-container img{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-  } */
-  
-  .cosmetic-dentistry-intro-container .cosmetic-dentistry-intro-texts-container{
-    height: 100%;
-    width: 50%;
-    /* border: 2px solid blueviolet; */
-  }
-  
-  .cosmetic-dentistry-intro-texts-container  .cosmetic-dentistry-intro-texts-sub-container{
-    height: 70vh;
-    width: 160%;
-    margin-left: 5%;
-    margin-top: 10%;
-    /* border: 2px solid blue; */
-  }
-  
-  .cosmetic-dentistry-intro-texts-sub-container .cosmetic-dentistry-section-heading{
-    /* border: 2px solid blueviolet; */
-    margin-top: 28%;
-  }
-  
-   .cosmetic-dentistry-section-heading h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: normal;
-    letter-spacing: 0.2rem;
-    margin-left: 40%;
-    margin-top: 10%;
-    color: white;
-    font-size: 2rem !important;
-    /* border: 2px solid black; */
-  }
-  
-  
-  .cosmetic-dentistry-intro-texts-sub-container .cosmetic-dentistry-section-paragraph{
-    /* border: 2px solid blueviolet; */
-    margin-top: 3%;
-  }
-  
-  .cosmetic-dentistry-section-paragraph p{
-    font-size: 1.3rem !important;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: lighter;
-    letter-spacing: 0.1rem;
-    width: 90%;
-    color: white;
-    text-align: center;
-    margin-left: 10%;
-    margin-top: 5%;
-  }
-  
-  .cosmetic-dentistry-intro-texts-sub-container .contact-btn{
-    margin-top: 8%;
-    height: 2.5rem;
-    width: 9.5rem;
-    margin-left: 57% !important;
-    /* border-radius: 20px; */
-    border: 1px solid white;
-    background-color: white;
-  }
-  
-  .cosmetic-dentistry-intro-texts-sub-container .contact-btn a{
-    text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 0.2rem;
-    color: black;
-  }
-  
-  .cosmetic-dentistry-intro-texts-sub-container .contact-btn:hover{
-    background-color: black;
-    cursor: pointer;
-    border: 1px solid black;
-  }
-  
-  .cosmetic-dentistry-intro-texts-sub-container .contact-btn:hover a{
-    color: white;
-  }
-  
-  
-  @media(max-width: 1286px){
-  .cosmetic-dentistry-intro-texts-sub-container .cosmetic-dentistry-section-heading h1{
+.cosmetic-dentistry-intro-section {
+  height: 100vh;
+  width: 100%;
+  background-color: #ebe3da;
+}
+
+.cosmetic-dentistry-intro-section .cosmetic-dentistry-intro-container {
+  height: 95vh;
+  width: 100%;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cosmetic-dentistry-wrapper {
+  width: 100%;
+  height: 110%;
+  top: -10%;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
+              url('StockCake-Professional\ Dental\ Care_1735884050.jpg') center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.cosmetic-dentistry-intro-container .cosmetic-dentistry-intro-texts-container {
+  height: 100%;
+  width: 50%;
+}
+
+.cosmetic-dentistry-intro-texts-container .cosmetic-dentistry-intro-texts-sub-container {
+  height: 70vh;
+  width: 160%;
+  margin-left: 5%;
+  margin-top: 22%;
+}
+
+.cosmetic-dentistry-intro-texts-sub-container .cosmetic-dentistry-section-heading {
+  margin-top: 25%;
+}
+
+.cosmetic-dentistry-section-heading h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  margin-left: 40%;
+  margin-top: 10%;
+  color: white;
+  font-size: 2rem !important;
+}
+
+.cosmetic-dentistry-intro-texts-sub-container .cosmetic-dentistry-section-paragraph {
+  margin-top: 3%;
+  margin-left: -3rem;
+  margin-right: -4rem;
+}
+
+.cosmetic-dentistry-section-paragraph p {
+  font-size: 1.3rem !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
+  width: 90%;
+  color: white;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.cosmetic-dentistry-intro-texts-sub-container .contact-btn {
+  margin-top: 8%;
+  height: 2.5rem;
+  width: 9.5rem;
+  margin-left: 50% !important;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.cosmetic-dentistry-intro-texts-sub-container .contact-btn a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  color: black;
+}
+
+.cosmetic-dentistry-intro-texts-sub-container .contact-btn:hover {
+  background-color: black;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.cosmetic-dentistry-intro-texts-sub-container .contact-btn:hover a {
+  color: white;
+}
+
+/* Responsive adjustments for hero section only */
+@media (max-width: 1286px) {
+  .cosmetic-dentistry-intro-texts-sub-container .cosmetic-dentistry-section-heading h1 {
     font-size: 2.5rem;
     margin-left: 50%;
     margin-top: 15%;
   }
   
-  .cosmetic-dentistry-section-paragraph p{
+  .cosmetic-dentistry-section-paragraph p {
     font-size: 1.5rem;
     margin-left: 20%;
     margin-top: 2%;
   }
   
-  .cosmetic-dentistry-intro-texts-sub-container .contact-btn{
+  .cosmetic-dentistry-intro-texts-sub-container .contact-btn {
     margin-top: 5%;
     margin-left: 58.5%;
   }
-  
-  }
-  
-  /* ---------------------------------------------------------------------2nd-page-smile-pictures------------------------------------------------- */
-  
-  .cosmetic-dentistry-smile-gallery{
+}
+
+@media (max-width: 768px) {
+  .cosmetic-dentistry-intro-section {
     height: 100vh;
-    width: 100%;
-    background-color: #ebe3da;
+    margin-top: 70px;
   }
   
-  .cosmetic-dentistry-smile-gallery .cosmetic-dentistry-smile-gallery-container{
-    height: 95vh;
-    width: 100%;
-    margin-top: -2%;
-    /* margin-top: 10vh; */
-    /* border: 2px solid black; */
+  .cosmetic-dentistry-intro-texts-sub-container .cosmetic-dentistry-section-heading h1 {
+    font-size: 1.8rem;
+    margin-left: 30%;
+    margin-top: 20%;
   }
   
-  .cosmetic-dentistry-smile-gallery-container .Cosmetic-dentistry-smile-gallery-section-heading{
-    height: 10vh;
-    width: 100%;
-    /* margin-left: 5%; */
-    /* margin-top: 10%; */
-    /* border: 2px solid blue; */
+  .cosmetic-dentistry-section-paragraph p {
+    font-size: 1.1rem;
+    margin-left: 15%;
+    margin-top: 3%;
   }
   
-  .Cosmetic-dentistry-smile-gallery-section-heading h2{
-    font-size: 2.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: normal;
-    letter-spacing: 0.1rem;
-    margin-left: 40%;
-    margin-top: 2%;
+  .cosmetic-dentistry-intro-texts-sub-container .contact-btn {
+    margin-top: 8%;
+    margin-left: 45%;
+    width: 8rem;
+    height: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cosmetic-dentistry-intro-texts-sub-container .cosmetic-dentistry-section-heading h1 {
+    font-size: 1.5rem;
+    margin-left: 36%;
+    margin-top: 25%;
+  }
+  .cosmetic-dentistry-intro-container .cosmetic-dentistry-intro-texts-container{
+    margin-top: 50%;
   }
   
-  .cosmetic-dentistry-smile-gallery-container .basal-image-sub-container{
-    /* border: 2px solid blue; */
-    height: 80vh;
-  }
-  
-  .cosmetic-dentistry-smile-gallery-container .basal-image-sub-container .basal-patient-images{
-    /* border: 2px solid blue; */
-    margin-top: 0%;
-  }
-  
-  
-  .cosmetic-dentistry-smile-gallery-container .basal-image-sub-container .basal-buttons .prev-btn, 
-  .cosmetic-dentistry-smile-gallery-container .basal-image-sub-container .basal-buttons .next-btn{
-    margin-top: 0%;
-    height: 2.5rem;
-    width: 7rem;
-    /* border-radius: 10px; */
-    /* border: 1px solid black; */
-    background-color: transparent;
-    margin-left: 0%;
-    text-decoration: none;
+  .cosmetic-dentistry-section-paragraph p {
     font-size: 1rem;
-    letter-spacing: 0.2rem;
-    color: black;
-  }
-  
-  .cosmetic-dentistry-smile-gallery-container .basal-image-sub-container .basal-buttons .next-btn{
     margin-left: 10%;
+    margin-top: 4%;
   }
   
-  .cosmetic-dentistry-smile-gallery-container .basal-image-sub-container .prev-btn:hover,
-  .cosmetic-dentistry-smile-gallery-container .basal-image-sub-container .next-btn:hover{
-    background-color: black;
-    cursor: pointer;
+  .cosmetic-dentistry-intro-texts-sub-container .contact-btn {
+    margin-top: 10%;
+    margin-left: 40%;
+    width: 7rem;
+    height: 2rem;
   }
   
-  .cosmetic-dentistry-smile-gallery-container .basal-image-sub-container .prev-btn:hover p, 
-  .cosmetic-dentistry-smile-gallery-container .basal-image-sub-container .next-btn:hover p{
-    color: white;
+  .cosmetic-dentistry-intro-texts-sub-container .contact-btn a {
+    font-size: 0.8rem;
+  }
+}
+
+/* ===================================================TYPES SECTION============================================= */
+
+.cosmetic-dentistry-types {
+  width: 100%;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 3vw, 2rem);
+  background-color: var(--secondary-bg);
+}
+
+.cosmetic-dentistry-types h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  color: var(--text-dark);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.cosmetic-dentistry-types-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 4rem);
+}
+
+.cosmetic-dentistry-types-sub-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+  background-color: var(--white);
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cosmetic-dentistry-types-sub-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px var(--shadow-hover);
+}
+
+.cosmetic-dentistry-types-sub-container:nth-child(even) {
+  direction: rtl;
+}
+
+.cosmetic-dentistry-types-sub-container:nth-child(even) > * {
+  direction: ltr;
+}
+
+.cosmetic-dentistry-types-text {
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.cosmetic-dentistry-types-text h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--accent-color);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+.cosmetic-dentistry-types-text p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-light);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.cosmetic-dentistry-types-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cd-img {
+    width: 100%;
+  /* max-width: 400px; */
+  height: clamp(250px, 40vw, 350px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.cd-img:hover {
+  transform: scale(1.02);
+}
+
+.cd-img img {
+  width: 100%;
+    height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cd-img:hover img {
+  transform: scale(1.05);
+}
+
+/* ===================================================BENEFITS SECTION============================================= */
+
+.cosmetic-dentistry-benefits {
+  width: 100%;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 3vw, 2rem);
+  background-color: var(--accent-bg);
+}
+
+.cosmetic-dentistry-benefits h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  color: var(--text-dark);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.cosmetic-dentistry-benefits-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cosmetic-dentistry-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.Benefit-cos-den {
+  background-color: var(--white);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Benefit-cos-den:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px var(--shadow-hover);
+}
+
+.Benefit-cos-den li {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--text-dark);
+  line-height: 1.6;
+  list-style: none;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.Benefit-cos-den li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* ===================================================PEOPLE SECTION============================================= */
+
+.people-main-section {
+  width: 100%;
+  min-height: 60vh;
+  background-color: var(--accent-bg);
+  padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem);
+  position: relative;
+}
+
+.people-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.people-slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.people-slider-wrapper {
+  overflow: hidden;
+}
+
+.people-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.people-images {
+  width: clamp(280px, 55vw, 380px);
+  height: clamp(200px, 35vw, 280px);
+  object-fit: cover;
+  border: clamp(6px, 1.5vw, 12px) solid var(--border-color);
+  border-radius: 15px;
+  margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
+  box-shadow: 0 10px 25px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.people-images:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--shadow-hover);
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  width: clamp(12px, 2vw, 16px);
+  height: clamp(12px, 2vw, 16px);
+  opacity: 1;
+  background-color: rgba(139, 69, 19, 0.3);
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+/* Swiper Navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.9);
+  width: clamp(35px, 6vw, 50px);
+  height: clamp(35px, 6vw, 50px);
+  border-radius: 50%;
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: clamp(14px, 3vw, 20px);
+  font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--accent-color);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+/* ===================================================RESPONSIVE DESIGN============================================= */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .cosmetic-dentistry-types-sub-container {
+    grid-template-columns: 1fr;
+    gap: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
   }
   
+  .cosmetic-dentistry-types-sub-container:nth-child(even) {
+    direction: ltr;
+  }
   
-  /* --------------------------------------------------------------------------3rd page-------------------------------------------------------------------------------- */
+  /* Ensure proper order on tablet and mobile */
+  .cosmetic-dentistry-types-sub-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cosmetic-dentistry-types-text {
+    order: 1;
+  }
+  
+  .cosmetic-dentistry-types-image {
+    order: 2;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Ensure proper order on mobile - text always above image */
+  .cosmetic-dentistry-types-sub-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cosmetic-dentistry-types-text {
+    order: 1;
+  }
+  
+  .cosmetic-dentistry-types-image {
+    order: 2;
+  }
   
   .cosmetic-dentistry-types {
-    height: 480vh;
-    padding: 20px;
-    width: 100%;
-    /* border: 2px solid black; */
-    background-color: #ebe3da;
+    padding: clamp(2rem, 4vw, 3rem) clamp(0.5rem, 2vw, 1rem);
   }
   
   .cosmetic-dentistry-types h2 {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 20px;
-    /* border: 2px solid black; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
   }
   
-  .cosmetic-dentistry-types .cosmetic-dentistry-types-container{
-    height: 470vh;
-    /* border: 2px solid green; */
+  .cosmetic-dentistry-types-container {
+    gap: clamp(2rem, 4vw, 3rem);
   }
   
-  .cosmetic-dentistry-types-container .cosmetic-dentistry-types-sub-container{
-    height: 50vh;
-    /* border: 2px solid blue; */
+  .cosmetic-dentistry-types-sub-container {
+    padding: clamp(1.5rem, 3vw, 2rem);
+    border-radius: 15px;
+  }
+  
+  .cosmetic-dentistry-types-text h3 {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+  }
+  
+  .cosmetic-dentistry-types-text p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+  
+  .cd-img {
+    height: clamp(200px, 50vw, 280px);
+    border-radius: 10px;
+  }
+  
+  .cosmetic-dentistry-benefits {
+    padding: clamp(2rem, 4vw, 3rem) clamp(0.5rem, 2vw, 1rem);
+  }
+  
+  .cosmetic-dentistry-benefits h2 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+  
+  .Benefit-cos-den {
+    padding: clamp(1rem, 3vw, 1.5rem);
+    border-radius: 10px;
+  }
+  
+  .Benefit-cos-den li {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    padding-left: 1.5rem;
+  }
+  
+  .people-main-section {
+    padding: clamp(2rem, 4vw, 3rem) clamp(0.5rem, 2vw, 1rem);
+    min-height: 50vh;
+  }
+  
+  .people-images {
+    width: clamp(250px, 70vw, 320px);
+    height: clamp(180px, 45vw, 240px);
+    border-radius: 10px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  /* Ensure proper order on small mobile - text always above image */
+  .cosmetic-dentistry-types-sub-container {
     display: flex;
-    justify-content: center;
-    margin-top: 8vh;
-    /* align-items: center; */
+    flex-direction: column;
   }
   
-  .cosmetic-dentistry-types-sub-container .cosmetic-dentistry-types-text{
-    width: 50%;
-    height: 30vh;
-    /* border: 2px solid red; */
-    padding-top: 6%;
+  .cosmetic-dentistry-types-text {
+    order: 1;
   }
   
-  .cosmetic-dentistry-types-text h3{
-    height: 5vh;
-    width: 80%;
-    /* border: 2px solid black; */
-    text-align: left;
-    font-size: 1.5rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 300;
-    margin-left: 10%;
+  .cosmetic-dentistry-types-image {
+    order: 2;
   }
   
-  .cosmetic-dentistry-types-text p{
-    height: 12vh;
-    width: 80%;
-    /* border: 2px solid black; */
-    text-align: left;
-    font-size: 1rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    font-weight: 300;
-    margin-top: 1%;
-    margin-left: 10%;
+  .cosmetic-dentistry-types {
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(0.3rem, 1vw, 0.5rem);
   }
   
-  .cosmetic-dentistry-types-sub-container .cosmetic-dentistry-types-image{
-    width: 50%;
-    height: 50vh;
-    /* border: 2px solid purple; */
+  .cosmetic-dentistry-types h2 {
+    font-size: clamp(1.6rem, 8vw, 2rem);
   }
   
-  .cosmetic-dentistry-types-image .cd-img{
-    height: 45vh;
-    width: 80%;
-    margin-top: 1vh;
-    margin-left: 10%;
-    /* border: 2px solid blue; */
+  .cosmetic-dentistry-types-container {
+    gap: clamp(1.5rem, 3vw, 2rem);
   }
   
-  .cd-img img{
-    height: 100%;
-    width: 100%;
-    background-size: cover;
+  .cosmetic-dentistry-types-sub-container {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    border-radius: 10px;
   }
   
-  /* ------------------------------------------------------------------------------------4TH-PAGE--------------------------------------------------------------------- */
-  
-  .cosmetic-dentistry-benefits{
-    height: 70vh;
-    width: 100%;
-    background-color: #ebe3da;
-    /* border: 2px solid black; */
+  .cosmetic-dentistry-types-text h3 {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    margin-bottom: clamp(0.8rem, 2vw, 1rem);
   }
   
-  .cosmetic-dentistry-benefits h2{
-    font-size: 2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    text-align: center;
+  .cosmetic-dentistry-types-text p {
+    font-size: clamp(0.8rem, 3vw, 1rem);
   }
   
-  .cosmetic-dentistry-benefits-container{
-    height: 50vh;
-    width: 100%;
-    /* border: 2px solid blue; */
+  .cd-img {
+    height: clamp(180px, 60vw, 220px);
+    border-radius: 8px;
   }
   
-  .cosmetic-dentistry-benefits-container .cosmetic-dentistry-benefits{
-    height: auto;
-    width: 100%;
-    margin-top: 3%;
-    /* border : 2px solid blue; */
-    margin-left: 5%;
+  .cosmetic-dentistry-benefits {
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(0.3rem, 1vw, 0.5rem);
   }
   
-  .cosmetic-dentistry-benefits .Benefit-cos-den{
-    /* border : 2px solid blue; */
-    margin-top: 1.5%;
+  .cosmetic-dentistry-benefits h2 {
+    font-size: clamp(1.6rem, 8vw, 2rem);
   }
   
-  .Benefit-cos-den li{
-    font-size: 1.2rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.1rem;
-    /* text-align: left; */
+  .Benefit-cos-den {
+    padding: clamp(0.8rem, 2vw, 1.2rem);
+    border-radius: 8px;
   }
   
-   /* ------------------------------------------------------------------------------------dentist-client------------------------------------ */
+  .Benefit-cos-den li {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    padding-left: 1.2rem;
+  }
   
-.people-main-section{
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; */
-  /* background-color: #BEB2A6; */
-  background-color:  #c0b9b2;
-  border: 2px solid transparent;
+  .people-main-section {
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(0.3rem, 1vw, 0.5rem);
+    min-height: 40vh;
+  }
+  
+  .people-images {
+    width: clamp(220px, 80vw, 280px);
+    height: clamp(160px, 50vw, 200px);
+    border-radius: 8px;
+  }
 }
 
+/* ===================================================ANIMATIONS============================================= */
 
-.people-main-section .people-slider-wrapper{
-  overflow: hidden;
-  margin: 0 60x 50px;
-}
-
-
-.people-main-section .people-item {
-  display: flex;
-  /* padding: 35px; */
-  padding-top: 15px;
-  padding-bottom: 50px;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 4%;
-  /* border: 2px solid black; */
-}
-
-.people-main-section .people-item .people-images{
-  width: 350px;
-  height: 250px;
-  background-size: cover;
-  /* border-radius: 50%; */
-  margin-bottom: 50px;
-  border: 10px solid #f9f2e8;
-}
-
-.people-main-section .swiper-pagination-bullet{
-  width: 15px;
-  height: 15px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
   opacity: 1;
-  margin-bottom: 5%;
-  /* border: 2px solid black; */
+    transform: translateY(0);
+  }
+}
+
+.cosmetic-dentistry-types-sub-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.Benefit-cos-den {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===================================================ACCESSIBILITY============================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.contact-btn:focus,
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-hover: rgba(0, 0, 0, 0.4);
+  }
 }

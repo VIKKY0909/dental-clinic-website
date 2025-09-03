@@ -66,20 +66,113 @@
         }
     });
 
+    // Function to pause all videos
+    function pauseAllVideos() {
+        const videos = document.querySelectorAll('.video-testimonial-main-section-user-video');
+        videos.forEach(video => {
+            if (!video.paused) {
+                video.pause();
+                console.log('Video paused due to slide change');
+            }
+        });
+    }
+
+    // Function to reset all videos to beginning
+    function resetAllVideos() {
+        const videos = document.querySelectorAll('.video-testimonial-main-section-user-video');
+        videos.forEach(video => {
+            video.currentTime = 0;
+            video.pause();
+        });
+    }
+
     // Pause autoplay when video is playing
     const videos = document.querySelectorAll('.video-testimonial-main-section-user-video');
     videos.forEach(video => {
         video.addEventListener('play', () => {
             swiper.autoplay.stop();
+            console.log('Autoplay stopped - video playing');
         });
         
         video.addEventListener('pause', () => {
             swiper.autoplay.start();
+            console.log('Autoplay started - video paused');
         });
         
         video.addEventListener('ended', () => {
             swiper.autoplay.start();
+            console.log('Autoplay started - video ended');
         });
+    });
+
+    // Pause all videos when slide changes
+    swiper.on('slideChange', function () {
+        pauseAllVideos();
+        console.log('Slide changed - all videos paused');
+    });
+
+    // Pause and reset all videos when slide change transition starts
+    swiper.on('slideChangeTransitionStart', function () {
+        pauseAllVideos();
+        resetAllVideos();
+        console.log('Slide transition started - all videos paused and reset');
+    });
+
+    // Pause all videos when using navigation buttons
+    swiper.on('navigationNext', function () {
+        pauseAllVideos();
+        console.log('Next button clicked - all videos paused');
+    });
+
+    swiper.on('navigationPrev', function () {
+        pauseAllVideos();
+        console.log('Previous button clicked - all videos paused');
+    });
+
+    // Pause all videos when using pagination
+    swiper.on('paginationClick', function () {
+        pauseAllVideos();
+        console.log('Pagination clicked - all videos paused');
+    });
+
+    // Pause all videos when touch/swipe starts
+    swiper.on('touchStart', function () {
+        pauseAllVideos();
+        console.log('Touch started - all videos paused');
+    });
+
+    // Pause all videos when mouse wheel is used
+    swiper.on('mousewheel', function () {
+        pauseAllVideos();
+        console.log('Mouse wheel used - all videos paused');
+    });
+
+    // Pause all videos when keyboard navigation is used
+    swiper.on('keyPress', function () {
+        pauseAllVideos();
+        console.log('Keyboard navigation used - all videos paused');
+    });
+
+    // Global event listener for any slide container interactions
+    const slideContainer = document.querySelector('.video-testimonial-main-section-slider-container');
+    if (slideContainer) {
+        slideContainer.addEventListener('click', function(e) {
+            // If clicking on navigation buttons or pagination, pause videos
+            if (e.target.closest('.swiper-button-next') || 
+                e.target.closest('.swiper-button-prev') || 
+                e.target.closest('.swiper-pagination-bullet')) {
+                pauseAllVideos();
+                console.log('Container interaction - all videos paused');
+            }
+        });
+    }
+
+    // Pause videos when page becomes hidden (tab switch, minimize, etc.)
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            pauseAllVideos();
+            console.log('Page hidden - all videos paused');
+        }
     });
 });
 
