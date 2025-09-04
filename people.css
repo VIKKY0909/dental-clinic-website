@@ -1,10 +1,9 @@
 .people-main-section {
     width: 100%;
-    min-height: 60vh;
+    min-height: 39vh;
     background-color: #c0b9b2;
     padding: clamp(3rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem);
     box-sizing: border-box;
-    position: relative;
 }
 
 .people-item {
@@ -29,22 +28,6 @@
 .people-images:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-/* People slider container improvements */
-.people-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.people-slider-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.people-slider-wrapper {
-    overflow: hidden;
 }
 
 .swiper-pagination-bullet {
