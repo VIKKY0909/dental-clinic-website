@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kadali Dental Care</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sweet+Gothic&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -12,7 +15,7 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="fixed-element.css">
     <link rel="stylesheet" href="footer.css">
-    
+
     <!-- <link rel="stylesheet" href="dentists.css"> -->
 
     <style>
@@ -81,7 +84,8 @@
             line-height: 1.6;
             overflow-x: hidden;
             font-size: 3rem;
-            padding-top: 80px; /* Account for fixed navbar */
+            padding-top: 80px;
+            /* Account for fixed navbar */
         }
 
         /* Navbar Sizing Fixes for Dentists Page */
@@ -94,9 +98,11 @@
             min-width: 200px !important;
             max-width: 200px !important;
         }
-        .nav-logo p{
+
+        .nav-logo p {
             color: #ffffff !important;
         }
+
         .logo {
             height: 70px !important;
             width: 180px !important;
@@ -115,7 +121,7 @@
             font-size: 18px !important;
             padding: 8px 12px !important;
         }
-        
+
         /* Phone Button Positioning Fixes */
         .fixed-phone-btn {
             position: fixed !important;
@@ -383,18 +389,20 @@
         }
 
         .dental-clinic-images-content {
-    display: flex;
-    animation: scroll 20s linear infinite;
-    width: 200%; /* This ensures enough width for seamless loop */
-}
+            display: flex;
+            animation: scroll 20s linear infinite;
+            width: 200%;
+            /* This ensures enough width for seamless loop */
+        }
 
-.dental-clinic-images-content img {
-    width: 100%;
-    height: clamp(220px, 35vw, 320px);
-    object-fit: cover;
-    flex-shrink: 0;
-    min-width: 100%; /* Ensure each image takes full container width */
-}
+        .dental-clinic-images-content img {
+            width: 100%;
+            height: clamp(220px, 35vw, 320px);
+            object-fit: cover;
+            flex-shrink: 0;
+            min-width: 100%;
+            /* Ensure each image takes full container width */
+        }
 
         .dental-clinic-images-content img {
             width: 100%;
@@ -404,8 +412,13 @@
         }
 
         @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         .dentists-clinic-intro-container li {
@@ -645,6 +658,7 @@
 
         /* Responsive Design */
         @media (max-width: 1200px) {
+
             .dentists-main-section,
             .dentists-clinic-main-section,
             .dentists-clinic-second-main-section {
@@ -680,6 +694,7 @@
         }
 
         @media (max-width: 1024px) {
+
             .dentists-main-container,
             .dentists-clinic-main-container {
                 flex-direction: column;
@@ -742,6 +757,7 @@
         }
 
         @media (max-width: 768px) {
+
             .dentists-main-section,
             .dentists-clinic-main-section,
             .dentists-clinic-second-main-section {
@@ -843,13 +859,13 @@
                 margin-left: 2px;
                 gap: clamp(1.2rem, 4vw, 2rem);
             }
-            
-            .dentists-clinic-intro-container{
+
+            .dentists-clinic-intro-container {
                 width: 20rem;
                 margin-left: 1rem;
             }
-            
-            .dental-clinic-images-content{
+
+            .dental-clinic-images-content {
                 margin-right: 3px;
             }
 
@@ -922,6 +938,7 @@
         }
 
         @media (max-width: 360px) {
+
             .dentists-main-section,
             .dentists-clinic-main-section,
             .dentists-clinic-second-main-section {
@@ -1007,8 +1024,9 @@
             }
         }
     </style>
-    
+
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -1019,8 +1037,8 @@
                 <div class="clinic-centers">
                     <p>Andheri | Colaba</p>
                 </div>
-            </a>  
-    
+            </a>
+
             <div class="menu-icon" id="menu-icon">
                 <i class="fa fa-bars"></i>
             </div>
@@ -1051,14 +1069,16 @@
         </nav>
     </header>
 
-    
-    <!-- WhatsApp Logo - Speech Bubble Style -->
-    
 
-    <a href="tel:+919819201882" class="fixed-phone-btn"><button class="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button></a>
+    <!-- WhatsApp Logo - Speech Bubble Style -->
+
+
+    <a href="tel:+919819201882" class="fixed-phone-btn"><button class="phn-no"><i class="fa-solid fa-phone-volume"></i>
+            981-920-1882</button></a>
     <!-- WhatsApp Logo - Speech Bubble Style -->
     <div class="whatsapp-no">
-        <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer"
+            aria-label="Contact us on WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
@@ -1073,17 +1093,19 @@
                 </div>
             </div>
             <div class="dentists-intro-container">
-               <ul>
-                <li>Husband Wife Duo - <span>Dr Saurabh</span> and <span>Dr Shalaka S Kadali</span></li>
-                <li>Dentists to numerous Television and Film Personalities</li>
-                <li>Masters Degree (MDS) in <span>Restorative, Esthetic Dentistry and Endodontics.</span></li>
-                <li>Member (AACD)<span> American Academy of Cosmetic Dentistry</span></li>
-                <li>Undergone Extensive Training in Advanced Endodontics and Esthetic Dentistry (Eastman Dental Institute) in UK.</li>
-                <li>Ex-faculty in Dept of<span> Conservative Dentistry and Endodontics D.Y. Patil Dental College.</span></li>
-                <li>Fellows in Implant Dentistry</li>
-                <li>Conduct Hands-On Workshops in Endodontics and Aesthetics </li>
-                <li>Extensive experience and specialization in <span>cosmetic dentistry</span></li>
-              </ul>
+                <ul>
+                    <li>Husband Wife Duo - <span>Dr Saurabh Kadali</span> and <span>Dr Shalaka S Kadali</span></li>
+                    <li>Dentists to numerous Television and Film Personalities</li>
+                    <li>Masters Degree (MDS) in <span>Restorative, Esthetic Dentistry and Endodontics.</span></li>
+                    <li>Member (AACD)<span> American Academy of Cosmetic Dentistry</span></li>
+                    <li>Undergone Extensive Training in Advanced Endodontics and Esthetic Dentistry (Eastman Dental
+                        Institute) in UK.</li>
+                    <li>Ex-faculty in Dept of<span> Conservative Dentistry and Endodontics D.Y. Patil Dental
+                            College.</span></li>
+                    <li>Fellows in Implant Dentistry</li>
+                    <li>Conduct Hands-On Workshops in Endodontics and Aesthetics </li>
+                    <li>Extensive experience and specialization in <span>cosmetic dentistry</span></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1091,28 +1113,38 @@
     <section class="dentists-clinic-main-section">
         <div class="dentists-clinic-main-container">
             <div class="dentists-clinic-intro-container">
-               <ul>
-                <li>Kadali dental has <span>2 dental centres</span> in Mumbai with the necessary support staff and visiting specialists as and when required. This is optimum for us to provide the standard of care and service we aspire to, while still keeping the personal touch.</li>
-                <li>Drs Shalaka and Saurabh Kadali have built a reputation for excellent standards in dental care and the sheer number of patients who have traveled internationally to experience their skill and expertise testify to this fact. They believe in the principle of<span> 'Minimally Invasive Dentistry'</span> which reflects how the dentists can provide the highest level of service to the teeth with the least invasiveness.</li>
-                <li>The doctors graduated from <span>NAIR HOSPITAL DENTAL COLLEGE</span> Mumbai which is one of the best institution not just in India but the whole of Asia. Dr Saurabh has obtained his Master's degree (MDS), as <span>Specialist in Endodontic</span> and <span>Aesthetic Dentistry </span>and is a <span>Certified Implantologist.</span> Dr Shalaka is a <span>Certified Implantologist</span> and <span>Aesthetic Dentist.</span></li>
-              </ul>
+                <ul>
+                    <li>Kadali dental has <span>2 dental centres</span> in Mumbai with the necessary support staff and
+                        visiting specialists as and when required. This is optimum for us to provide the standard of
+                        care and service we aspire to, while still keeping the personal touch.</li>
+                    <li>Dr. Shalaka S Kadali and Dr. Saurabh Kadali have built a reputation for excellent standards in
+                        dental care and the sheer number of patients who have traveled internationally to experience
+                        their skill and expertise testify to this fact. They believe in the principle of<span>
+                            'Minimally Invasive Dentistry'</span> which reflects how the dentists can provide the
+                        highest level of service to the teeth with the least invasiveness.</li>
+                    <li>The doctors graduated from <span>NAIR HOSPITAL DENTAL COLLEGE</span> Mumbai which is one of the
+                        best institution not just in India but the whole of Asia. Dr Saurabh has obtained his Master's
+                        degree (MDS), as <span>Specialist in Endodontic</span> and <span>Aesthetic Dentistry </span>and
+                        is a <span>Certified Implantologist.</span> Dr Shalaka is a <span>Certified
+                            Implantologist</span> and <span>Aesthetic Dentist.</span></li>
+                </ul>
             </div>
             <div class="dentists-clinic-images-container">
                 <div class="den-clinic-img">
                     <div class="dental-images-list">
                         <div class="clinic-images-list">
-                          <div class="dental-clinic-images-content">
-                            <img src="assets/IMG_9632.jpg" alt="Clinic Image 1" class="cli-den-img active">
-                            <img src="assets/IMG_9637.jpeg" alt="Clinic Image 2" class="cli-den-img">
-                            <img src="assets/IMG_9627.jpeg" alt="Clinic Image 3" class="cli-den-img">
-                            <img src="assets/IMG_9633.jpeg" alt="Clinic Image 4" class="cli-den-img">
-                            <img src="assets/IMG_9636.jpeg" alt="Clinic Image 5" class="cli-den-img">
-                            <img src="assets/IMG_9638.jpeg" alt="Clinic Image 6" class="cli-den-img">
-                            <img src="assets/IMG_9642.jpeg" alt="Clinic Image 7" class="cli-den-img">
-                            <img src="assets/IMG_9639-zoom.jpeg" alt="Clinic Image 8" class="cli-den-img">
-                          </div>
+                            <div class="dental-clinic-images-content">
+                                <img src="assets/IMG_9632.jpg" alt="Clinic Image 1" class="cli-den-img active">
+                                <img src="assets/IMG_9637.jpeg" alt="Clinic Image 2" class="cli-den-img">
+                                <img src="assets/IMG_9627.jpeg" alt="Clinic Image 3" class="cli-den-img">
+                                <img src="assets/IMG_9633.jpeg" alt="Clinic Image 4" class="cli-den-img">
+                                <img src="assets/IMG_9636.jpeg" alt="Clinic Image 5" class="cli-den-img">
+                                <img src="assets/IMG_9638.jpeg" alt="Clinic Image 6" class="cli-den-img">
+                                <img src="assets/IMG_9642.jpeg" alt="Clinic Image 7" class="cli-den-img">
+                                <img src="assets/IMG_9639-zoom.jpeg" alt="Clinic Image 8" class="cli-den-img">
+                            </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1121,175 +1153,215 @@
     <section class="dentists-clinic-second-main-section">
         <div class="dentists-clinic-second-main-container">
             <ul>
-                <li>They commenced practicing in India shortly thereafter by designing, building and running their dental practice in Mumbai.</li>
-                <li>The doctors' goal has been to develop a comprehensive restorative practice to help people have and keep beautiful smiles. Excellent oral hygiene is an integral part of dental success and forms the foundation of any treatment in their practice. It is their priority to stay up to date technically and technologically with constant continuing education to ensure that their patients receive the best possible dental care available.</li>
-                <li>Along with personalised care from both Doctors, we have an entire team with the correct specialist training for your dental procedures.</li>
-                <li>This means your dental implants are placed by an <b>Implantologist</b>, your dental crowns and dental veneers by a <b>Cosmetic dentist / Prosthodontist</b>, your impacted third molars are extracted by a <b>Maxillo Facial Surgeon</b>, and your gum surgeries by <b>Periodontist</b>, and your root canal is done by a <b>Endodontist.</b></li>
+                <li>They commenced practicing in India shortly thereafter by designing, building and running their
+                    dental practice in Mumbai.</li>
+                <li>The doctors' goal has been to develop a comprehensive restorative practice to help people have and
+                    keep beautiful smiles. Excellent oral hygiene is an integral part of dental success and forms the
+                    foundation of any treatment in their practice. It is their priority to stay up to date technically
+                    and technologically with constant continuing education to ensure that their patients receive the
+                    best possible dental care available.</li>
+                <li>Along with personalised care from both Doctors, we have an entire team with the correct specialist
+                    training for your dental procedures.</li>
+                <li>This means your dental implants are placed by an <b>Implantologist</b>, your dental crowns and
+                    dental veneers by a <b>Cosmetic dentist / Prosthodontist</b>, your impacted third molars are
+                    extracted by a <b>Maxillo Facial Surgeon</b>, and your gum surgeries by <b>Periodontist</b>, and
+                    your root canal is done by a <b>Endodontist.</b></li>
             </ul>
             <h2>Our Professional associations include:</h2>
             <div class="places-of-clinic">
-                <div class="proff-assc"><li>American Academy of Cosmetic Dentistry [AACD]</li></div>
-                <div class="proff-assc"><li>Indian Dental Association</li></div>
-                <div class="proff-assc"><li>Indian Endodontic Society</li></div>
-                <div class="proff-assc"><li>Federation Of Operative Dentistry in India</li></div>
+                <div class="proff-assc">
+                    <li>American Academy of Cosmetic Dentistry [AACD]</li>
+                </div>
+                <div class="proff-assc">
+                    <li>Indian Dental Association</li>
+                </div>
+                <div class="proff-assc">
+                    <li>Indian Endodontic Society</li>
+                </div>
+                <div class="proff-assc">
+                    <li>Federation Of Operative Dentistry in India</li>
+                </div>
             </div>
             <h2 id="our-mission">Our Mission:</h2>
             <div class="mission-containers">
-                <div class="mission-content"><li>It is our mission to provide the best quality dental care experience for our patients.</li></div>
-                <div class="mission-content"><li>We are a top-performing, thoroughly professional and genuinely caring organization, ready to address your every dental need.</li></div>
-                <div class="mission-content"><li>We believe in a healthy work environment that fosters continuous improvement for us to better serve you.</li></div>
+                <div class="mission-content">
+                    <li>It is our mission to provide the best quality dental care experience for our patients.</li>
+                </div>
+                <div class="mission-content">
+                    <li>We are a top-performing, thoroughly professional and genuinely caring organization, ready to
+                        address your every dental need.</li>
+                </div>
+                <div class="mission-content">
+                    <li>We believe in a healthy work environment that fosters continuous improvement for us to better
+                        serve you.</li>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="people-main-section">
         <div class="people-content">
-          <div class="people-slider-container swiper">
-              <div class="people-slider-wrapper">
-                  <ul class="people-list swiper-wrapper">
-                      <li class="people-item swiper-slide">
-                          <img src="img13.png" alt="Happy Patient" class="people-images">
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Dental_Treatment-at-Kadali-Dental-300x225.jpg" alt="Happy Patient" class="people-images">
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="img14.png" alt="Happy Patient" class="people-images">
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Kadali_Dental_Satisfied_patients-300x169.jpg" alt="Happy Patient" class="people-images">
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Patients_review_of_Kadali_Dental-300x169.jpg" alt="Happy Patient" class="people-images">
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Dental_Patient-300x169.jpg" alt="Happy Patient" class="people-images">
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Cosmetic-Dentistry-Happy-Patient.jpg" alt="Happy Patient" class="people-images">
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Picture_with_a_patient-e1517107400187-300x221.jpg" alt="Happy Patient" class="people-images">
-                      </li>  
-                      <li class="people-item swiper-slide">
-                          <img src="Picture_with_happy_patient-300x225.jpg" alt="Happy Patient" class="people-images">
-                      </li> 
-                  </ul>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <footer>
-    <div class="last-container">
-        <!-- Contact Information Section -->
-        <div class="first-footer-section">
-            <p>
-                <i class="fa-regular fa-envelope"></i> 
-                <a href="mailto:info@kadalidental.com" style="color: inherit; text-decoration: none;">
-                    info@kadalidental.com
-                </a>
-            </p>
-            <p>
-                <i class="fa-solid fa-phone-volume"></i> 
-                <a href="tel:+919819201882" style="color: inherit; text-decoration: none;">
-                    +91 981 920 1882
-                </a>
-            </p>
-            <p>
-                <i class="fa-solid fa-map-marker-alt"></i> 
-                <a href="location-map.html" style="color: inherit; text-decoration: none;">
-                    Find Our Clinics
-                </a>
-            </p>
+            <div class="people-slider-container swiper">
+                <div class="people-slider-wrapper">
+                    <ul class="people-list swiper-wrapper">
+                        <li class="people-item swiper-slide">
+                            <img src="img13.png" alt="Happy Patient" class="people-images">
+                        </li>
+                        <li class="people-item swiper-slide">
+                            <img src="Dental_Treatment-at-Kadali-Dental-300x225.jpg" alt="Happy Patient"
+                                class="people-images">
+                        </li>
+                        <li class="people-item swiper-slide">
+                            <img src="img14.png" alt="Happy Patient" class="people-images">
+                        </li>
+                        <li class="people-item swiper-slide">
+                            <img src="Kadali_Dental_Satisfied_patients-300x169.jpg" alt="Happy Patient"
+                                class="people-images">
+                        </li>
+                        <li class="people-item swiper-slide">
+                            <img src="Patients_review_of_Kadali_Dental-300x169.jpg" alt="Happy Patient"
+                                class="people-images">
+                        </li>
+                        <li class="people-item swiper-slide">
+                            <img src="Dental_Patient-300x169.jpg" alt="Happy Patient" class="people-images">
+                        </li>
+                        <li class="people-item swiper-slide">
+                            <img src="Cosmetic-Dentistry-Happy-Patient.jpg" alt="Happy Patient" class="people-images">
+                        </li>
+                        <li class="people-item swiper-slide">
+                            <img src="Picture_with_a_patient-e1517107400187-300x221.jpg" alt="Happy Patient"
+                                class="people-images">
+                        </li>
+                        <li class="people-item swiper-slide">
+                            <img src="Picture_with_happy_patient-300x225.jpg" alt="Happy Patient" class="people-images">
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Main Footer Content -->
-        <div class="second-footer-section">
-            <!-- Navigation Links -->
-            <div class="footer-nav-links">
-                <a href="index.html">Home</a>
-                <a href="Facilities-clinic.html">Facilities</a>
-                <a href="Dentists.html">Our Team</a>
-                <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
-                <a href="Teeth-Whitening.html">Teeth Whitening</a>
-                <a href="Dental-Implants.html">Dental Implants</a>
-                <a href="Services.html">Services</a>
-                <a href="location-map.html">Locations</a>
-                <a href="dental-tourism.html">Tourism</a>
-                <a href="General-Dentistry.html">General Dentistry</a>
-                <a href="Testimonials.html">Testimonials</a>
-                <a href="Smile-Makeover.html">Smile Makeover</a>
-                <a href="one-sitting-root-canal.html">Painless Root Canal</a>
-                <a href="Orthodontic-Braces.html">Braces & Aligners</a>
-                <a href="Gum-Treatment.html">Gum Treatment</a>
-                <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
-                <a href="before-after.html">Before & After</a>
-                <a href="faq.html">FAQ</a>
+    <footer>
+        <div class="last-container">
+            <!-- Contact Information Section -->
+            <div class="first-footer-section">
+                <p>
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:info@kadalidental.com" style="color: inherit; text-decoration: none;">
+                        info@kadalidental.com
+                    </a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <a href="tel:+919819201882" style="color: inherit; text-decoration: none;">
+                        +91 981 920 1882
+                    </a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-map-marker-alt"></i>
+                    <a href="location-map.html" style="color: inherit; text-decoration: none;">
+                        Find Our Clinics
+                    </a>
+                </p>
+            </div>
+
+            <!-- Main Footer Content -->
+            <div class="second-footer-section">
+                <!-- Navigation Links -->
+                <div class="footer-nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="Facilities-clinic.html">Facilities</a>
+                    <a href="Dentists.html">Our Team</a>
+                    <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
+                    <a href="Teeth-Whitening.html">Teeth Whitening</a>
+                    <a href="Dental-Implants.html">Dental Implants</a>
+                    <a href="Services.html">Services</a>
+                    <a href="location-map.html">Locations</a>
+                    <a href="dental-tourism.html">Tourism</a>
+                    <a href="General-Dentistry.html">General Dentistry</a>
+                    <a href="Testimonials.html">Testimonials</a>
+                    <a href="Smile-Makeover.html">Smile Makeover</a>
+                    <a href="one-sitting-root-canal.html">Painless Root Canal</a>
+                    <a href="Orthodontic-Braces.html">Braces & Aligners</a>
+                    <a href="Gum-Treatment.html">Gum Treatment</a>
+                    <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
+                    <a href="before-after.html">Before & After</a>
+                    <a href="faq.html">FAQ</a>
                 </div>
 
-            <!-- Social Media Links -->
-            <div class="footer-social">
-                <a href="https://www.facebook.com/drkadalicarecentre" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@Kadalidentalclinic" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
+                <!-- Social Media Links -->
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/drkadalicarecentre" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kadalidental" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Kadalidentalclinic" target="_blank" rel="noopener noreferrer"
+                        aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/kadalidental" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
 
-            <!-- Address and Clinic Information -->
-            <div id="address">
-                <span>Kadali Dental - Advanced Dental Care</span>
-                <br><br>
-                <strong>Andheri Clinic:</strong><br>
-                40/102, 1st Floor, Sargam Society, Mhada Complex,<br>
-                Oshiwara Link Road, Andheri West, Mumbai, Maharashtra 400102<br>
-                Phone: +91 22 2635 9490<br><br>
-                
-                <strong>Colaba Clinic:</strong><br>
-                Available for appointments<br>
-                Phone: +91 981 920 1882<br><br>
-                
-                <strong>Operating Hours:</strong><br>
-                 Mon - Fri: 10:00 am to 5:00 pm  <br>
-                
-            </div>
+                <!-- Address and Clinic Information -->
+                <div id="address">
+                    <span>Kadali Dental - Advanced Dental Care</span>
+                    <br><br>
+                    <strong>Andheri Clinic:</strong><br>
+40/102, 1st Floor, Sargam Society, Mhada Complex,<br>
+Oshiwara Link Road, Andheri West, Mumbai, Maharashtra 400102<br>
+<br>
+<h3>Operating Hours </h3><br>
+<strong>Andheri:</strong><br>
+By Appointments<br>
+Mon - Fri: 10:00 am to 4:00 pm & 6:00 pm to 8:00 pm<br>
+Sat - Sun: 10:00 am to 2:00 pm<br>
+Phone: +91 981 9201 882<br><br>
 
-            <!-- Copyright Section -->
-            <div class="footer-copyright">
-                © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India. 
-                All Rights Reserved. | 
-                <a href="privacy-policy.html" style="color: #d4a373; text-decoration: none;">Privacy Policy</a> | 
-                <a href="terms-conditions.html" style="color: #d4a373; text-decoration: none;">Terms & Conditions</a>
+<strong>Colaba Clinic:</strong><br>
+By Appointments<br>
+Mon - Sat: 10:00 am to 3:00 pm<br>
+Phone: +91 981 920 1882<br>
+
+
+                </div>
+
+                <!-- Copyright Section -->
+                <div class="footer-copyright">
+                    © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India.
+                    All Rights Reserved. |
+                    <a href="privacy-policy.html" style="color: #d4a373; text-decoration: none;">Privacy Policy</a> |
+                    <a href="terms-conditions.html" style="color: #d4a373; text-decoration: none;">Terms &
+                        Conditions</a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="dentists.js"></script>
     <script src="dt.js"></script>
-    
+
     <script>
         // Ensure mobile menu works - fallback implementation
         document.addEventListener("DOMContentLoaded", function () {
             console.log("🔧 Dentists page: Setting up mobile menu fallback");
-            
+
             const menuIcon = document.getElementById("menu-icon");
             const navList = document.querySelector(".nav-list");
             const icon = menuIcon ? menuIcon.querySelector("i") : null;
@@ -1302,7 +1374,7 @@
 
             if (menuIcon && navList && icon) {
                 console.log("✅ Setting up mobile menu click handler");
-                
+
                 menuIcon.addEventListener("click", function (e) {
                     console.log("🔄 Mobile menu clicked");
                     navList.classList.toggle("active");
@@ -1319,9 +1391,9 @@
 
                 // Close menu when clicking outside
                 document.addEventListener("click", function (e) {
-                    if (navList.classList.contains("active") && 
-                        !navList.contains(e.target) && 
-                        e.target !== menuIcon && 
+                    if (navList.classList.contains("active") &&
+                        !navList.contains(e.target) &&
+                        e.target !== menuIcon &&
                         !menuIcon.contains(e.target)) {
                         navList.classList.remove("active");
                         icon.classList.replace("fa-times", "fa-bars");
@@ -1388,7 +1460,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
@@ -1406,5 +1478,7 @@
         });
     </script>
 </body>
+
 </html>
+
 </html>

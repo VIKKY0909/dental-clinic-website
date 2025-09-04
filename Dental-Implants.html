@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dental Implants - Kadali Dental Care</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- linking swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -16,1110 +19,1211 @@
     <link rel="stylesheet" href="fixed-element.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="before-after.css">
-   <style>
-    /* KDC Testimonials Section Styles */
-    .kdc-testimonials-section {
-        padding: 80px 20px;
-        background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-        position: relative;
-    }
-    
-    .kdc-testimonials-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .kdc-testimonials-title {
-        text-align: center;
-        font-size: 2.5rem;
-        color: #2c3e50;
-        margin-bottom: 15px;
-        font-weight: 700;
-    }
-    
-    .kdc-testimonials-slider {
-        position: relative;
-        padding: 20px 10px 60px;
-    }
-    
-    .kdc-testimonial-card {
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .kdc-testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    }
-    
-    .kdc-video-container {
-        position: relative;
-        width: 100%;
-        background: #000;
-        cursor: pointer;
-        overflow: hidden;
-    }
-    
-    .kdc-testimonial-video {
-        width: 100%;
-        height: auto;
-        display: block;
-        aspect-ratio: 16/9;
-    }
-    
-    .kdc-video-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 1;
-        transition: opacity 0.3s ease;
-    }
-    
-    .kdc-video-overlay.hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
-    
-    .kdc-play-icon {
-        font-size: 60px;
-        color: rgba(255, 255, 255, 0.9);
-        transition: transform 0.2s ease;
-    }
-    
-    .kdc-video-container:hover .kdc-play-icon {
-        transform: scale(1.1);
-    }
-    
-    .kdc-testimonial-content {
-        padding: 20px;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .kdc-patient-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .kdc-patient-name {
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: #2c3e50;
-    }
-    
-    .kdc-swiper-button-prev,
-    .kdc-swiper-button-next {
-        background: white;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        color: #3498db;
-        transition: all 0.3s ease;
-    }
-    
-    .kdc-swiper-button-prev:after,
-    .kdc-swiper-button-next:after {
-        font-size: 20px;
-        font-weight: bold;
-    }
-    
-    .kdc-swiper-button-prev:hover,
-    .kdc-swiper-button-next:hover {
-        background: #3498db;
-        color: white;
-    }
-    
-    .kdc-swiper-pagination .swiper-pagination-bullet {
-        width: 12px;
-        height: 12px;
-        background: #bdc3c7;
-        opacity: 1;
-    }
-    
-    .kdc-swiper-pagination .swiper-pagination-bullet-active {
-        background: #3498db;
-    }
-    
-    /* Active video indicator */
-    .kdc-active-video {
-        box-shadow: 0 0 0 3px #3498db, 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
-    
-    /* Responsive styles */
-    @media (max-width: 768px) {
+    <style>
+        /* KDC Testimonials Section Styles */
+        .kdc-testimonials-section {
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            position: relative;
+        }
+
+        .kdc-testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .kdc-testimonials-title {
-            font-size: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
-        
+
+        .kdc-testimonials-slider {
+            position: relative;
+            padding: 20px 10px 60px;
+        }
+
         .kdc-testimonial-card {
-            margin: 0 5px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: auto;
+            display: flex;
+            flex-direction: column;
         }
-        
+
+        .kdc-testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .kdc-video-container {
+            position: relative;
+            width: 100%;
+            background: #000;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .kdc-testimonial-video {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16/9;
+        }
+
+        .kdc-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .kdc-video-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
         .kdc-play-icon {
-            font-size: 50px;
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.9);
+            transition: transform 0.2s ease;
         }
-        
+
+        .kdc-video-container:hover .kdc-play-icon {
+            transform: scale(1.1);
+        }
+
+        .kdc-testimonial-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .kdc-patient-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .kdc-patient-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
         .kdc-swiper-button-prev,
         .kdc-swiper-button-next {
-            width: 40px;
-            height: 40px;
+            background: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            color: #3498db;
+            transition: all 0.3s ease;
         }
-        
+
         .kdc-swiper-button-prev:after,
         .kdc-swiper-button-next:after {
-            font-size: 16px;
+            font-size: 20px;
+            font-weight: bold;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .kdc-testimonials-section {
-            padding: 60px 15px;
+
+        .kdc-swiper-button-prev:hover,
+        .kdc-swiper-button-next:hover {
+            background: #3498db;
+            color: white;
         }
-        
-        .kdc-testimonials-title {
-            font-size: 1.8rem;
+
+        .kdc-swiper-pagination .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: #bdc3c7;
+            opacity: 1;
         }
-        
-        .kdc-testimonial-content {
-            padding: 15px;
+
+        .kdc-swiper-pagination .swiper-pagination-bullet-active {
+            background: #3498db;
         }
-        
-        .kdc-patient-name {
-            font-size: 1rem;
+
+        /* Active video indicator */
+        .kdc-active-video {
+            box-shadow: 0 0 0 3px #3498db, 0 10px 30px rgba(0, 0, 0, 0.15);
         }
-    }
-</style>
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .kdc-testimonials-title {
+                font-size: 2rem;
+            }
+
+            .kdc-testimonial-card {
+                margin: 0 5px;
+            }
+
+            .kdc-play-icon {
+                font-size: 50px;
+            }
+
+            .kdc-swiper-button-prev,
+            .kdc-swiper-button-next {
+                width: 40px;
+                height: 40px;
+            }
+
+            .kdc-swiper-button-prev:after,
+            .kdc-swiper-button-next:after {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .kdc-testimonials-section {
+                padding: 60px 15px;
+            }
+
+            .kdc-testimonials-title {
+                font-size: 1.8rem;
+            }
+
+            .kdc-testimonial-content {
+                padding: 15px;
+            }
+
+            .kdc-patient-name {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-     <!-- -------------------------------------------------------------------navbar----------------------------------------------------------------------------------- -->
-     
-     <header>
-      <nav class="navbar">
-                      <!-- Logo Section -->
+    <!-- -------------------------------------------------------------------navbar----------------------------------------------------------------------------------- -->
+
+    <header>
+        <nav class="navbar">
+            <!-- Logo Section -->
             <a href="index.html" class="nav-logo">
                 <div class="logo"></div>
                 <div class="clinic-centers">
                     <p>Andheri | Colaba</p>
                 </div>
-            </a>  
-  
-          <!-- Menu Icon for Mobile -->
-          <div class="menu-icon" id="menu-icon">
-              <i class="fa fa-bars"></i>
-          </div>
+            </a>
 
-  
-          <!-- Navigation Links -->
-          <ul class="nav-list" id="nav-list">
-              <li class="contents"><a href="index.html">Home</a></li>
-              <li class="contents"><a href="Dentists.html">Team</a></li>
-              <li class="contents dropdown">
-                  <a href="#" id="treatments-link">Treatments</a>
-                  <!-- Dropdown Menu -->
-                  <ul class="dropdown-menu">
-                      <li><a href="Dental-Implants.html">Dental Implants</a></li>
-                      <li><a href="Smile-Makeover.html">Smile Makeover</a></li>
-                      <li><a href="one-sitting-root-canal.html">Painless Root Canal</a></li>
-                      <li><a href="Teeth-Whitening.html">Teeth Whitening</a></li>
-                      <li><a href="smile-in-hour.html">Smile in an Hour</a></li>
-                      <li><a href="Orthodontic-Braces.html">Braces & Aligners</a></li>
-                      <li><a href="Gum-Treatment.html">Gum Treatment</a></li>
-                      <li><a href="General-Dentistry.html">General Dentistry</a></li>
+            <!-- Menu Icon for Mobile -->
+            <div class="menu-icon" id="menu-icon">
+                <i class="fa fa-bars"></i>
+            </div>
 
-                  </ul>
-              </li>
-              <li class="contents"><a href="Testimonials.html">Testimonials</a></li>
-              <li class="contents"><a href="before-after.html">Smile-Gallery</a></li>
-              <li class="contents"><a href="location-map.html">Locations</a></li>
-              <li class="contents"><a href="dental-tourism.html">Tourism</a></li>
-              <li class="contents"><a href="Services.html">Services</a></li>
-              <li class="contents"><a href="contact-us.html">Contact</a></li>
-          </ul>
-          
-      </nav>
-  </header>
-  <a href="tel:+919819201882" class="fixed-phone-btn"><button class="phn-no"><i class="fa-solid fa-phone-volume"></i> 981-920-1882</button></a>
-      <!-- WhatsApp Logo - Speech Bubble Style -->
+
+            <!-- Navigation Links -->
+            <ul class="nav-list" id="nav-list">
+                <li class="contents"><a href="index.html">Home</a></li>
+                <li class="contents"><a href="Dentists.html">Team</a></li>
+                <li class="contents dropdown">
+                    <a href="#" id="treatments-link">Treatments</a>
+                    <!-- Dropdown Menu -->
+                    <ul class="dropdown-menu">
+                        <li><a href="Dental-Implants.html">Dental Implants</a></li>
+                        <li><a href="Smile-Makeover.html">Smile Makeover</a></li>
+                        <li><a href="one-sitting-root-canal.html">Painless Root Canal</a></li>
+                        <li><a href="Teeth-Whitening.html">Teeth Whitening</a></li>
+                        <li><a href="smile-in-hour.html">Smile in an Hour</a></li>
+                        <li><a href="Orthodontic-Braces.html">Braces & Aligners</a></li>
+                        <li><a href="Gum-Treatment.html">Gum Treatment</a></li>
+                        <li><a href="General-Dentistry.html">General Dentistry</a></li>
+
+                    </ul>
+                </li>
+                <li class="contents"><a href="Testimonials.html">Testimonials</a></li>
+                <li class="contents"><a href="before-after.html">Smile-Gallery</a></li>
+                <li class="contents"><a href="location-map.html">Locations</a></li>
+                <li class="contents"><a href="dental-tourism.html">Tourism</a></li>
+                <li class="contents"><a href="Services.html">Services</a></li>
+                <li class="contents"><a href="contact-us.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <a href="tel:+919819201882" class="fixed-phone-btn"><button class="phn-no"><i class="fa-solid fa-phone-volume"></i>
+            981-920-1882</button></a>
+    <!-- WhatsApp Logo - Speech Bubble Style -->
     <div class="whatsapp-no">
-        <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer"
+            aria-label="Contact us on WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
 
-     <!-- ---------------------------------------------------------------------1st-page-------------------------------------------------------------------------------- -->
-     <section class="dental-implants-section">
+    <!-- ---------------------------------------------------------------------1st-page-------------------------------------------------------------------------------- -->
+    <section class="dental-implants-section">
         <div class="dental-implants-main-container">
-          <div class="dental-implants-wrapper">
-            <div class="dental-implants-text-part">
-                <div class="dental-implants-heading"><h3>Dental Implants...</h3></div>
-                <div class="dental-implants-sub-heading"><p>"Eat, smile, and live confidently with our dental implant solutions."</p></div>
-                <a href="contact-us.html"><button class="contact-btn">Contact Us</button></a>
+            <div class="dental-implants-wrapper">
+                <div class="dental-implants-text-part">
+                    <div class="dental-implants-heading">
+                        <h3>Dental Implants...</h3>
+                    </div>
+                    <div class="dental-implants-sub-heading">
+                        <p>"Eat, smile, and live confidently with our dental implant solutions."</p>
+                    </div>
+                    <a href="contact-us.html"><button class="contact-btn">Contact Us</button></a>
+                </div>
             </div>
-          </div>
         </div>
-     </section>
+    </section>
 
-     <!-- ----------------------------------------------------------------------2nd-page---------------------------------------------------------------------------== -->
+    <!-- ----------------------------------------------------------------------2nd-page---------------------------------------------------------------------------== -->
 
-     <section class="implants-second-section">
+    <section class="implants-second-section">
         <div class="second-section-main-container">
-            <div class="image-part"><img src="dental-implants2.webp" alt="Dental Implants in Mumbai" class="img-dental-implant2"></div>
+            <div class="image-part"><img src="dental-implants2.webp" alt="Dental Implants in Mumbai"
+                    class="img-dental-implant2"></div>
             <div class="text-part">
-                <div class="second-section-heading"><h3>Dental Implants in India, Mumbai</h3></div>
-                <div class="second-section-sub-heading"><p>Dental implants are today's best replacement alternative to missing teeth in terms of form, function, and aesthetics. Implants are now used as routine treatment for an entire range of problems from replacing a single tooth to full oral rehabilitation and even for reliable denture retention. <br> <br> A dental implant is a titanium screw which is used to replace the root of a missing tooth. After it fuses with the jaw bone, it is used to give support to the tooth crown. Thus a new, artificial tooth is made which improves the smile, speech, and chewing functions. <br> <br> At Kadali Dental Care , we use only the best dental implant systems from the world over <b> e.g. Nobel Biocare, Bio Horizon, gen-XT, Strauman Neodent, Noris etc.</b> to suit each patient's dental requirements.</p></div>
+                <div class="second-section-heading">
+                    <h3>Dental Implants in India, Mumbai</h3>
+                </div>
+                <div class="second-section-sub-heading">
+                    <p>Dental implants are today's best replacement alternative to missing teeth in terms of form,
+                        function, and aesthetics. Implants are now used as routine treatment for an entire range of
+                        problems from replacing a single tooth to full oral rehabilitation and even for reliable denture
+                        retention. <br> <br> A dental implant is a titanium screw which is used to replace the root of a
+                        missing tooth. After it fuses with the jaw bone, it is used to give support to the tooth crown.
+                        Thus a new, artificial tooth is made which improves the smile, speech, and chewing functions.
+                        <br> <br> At Kadali Dental Care , we use only the best dental implant systems from the world
+                        over <b> e.g. Nobel Biocare, Bio Horizon, gen-XT, Strauman Neodent, Noris etc.</b> to suit each
+                        patient's dental requirements.</p>
+                </div>
             </div>
         </div>
-     </section>
+    </section>
 
-     <!-- ----------------------------------------------------------------------------2.5 page------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------------2.5 page------------------------------------------------------------------------- -->
 
-<section class="before-after-main-section">
-  <h2>Before & After</h2>
-  <h3>Before and after dental treatment at Kadali Dental Clinic Mumbai India</h3>
-  <div class="before-after-image-container">
+    <section class="before-after-main-section">
+        <h2>Before & After</h2>
+        <h3>Before and after dental treatment at Kadali Dental Clinic Mumbai India</h3>
+        <div class="before-after-image-container">
 
-    <!-- BEFORE -->
-    <div class="before-after-before-container">
-      <div class="before-after-b-img-sub-container">
-        <div class="before-after-before-images-content" id="before-slideshow">
-          <img src="./assets/dental/b1.jpeg" alt="Before treatment" class="before-b-img before-slide active">
-          <img src="./assets/dental/b2.jpeg" alt="Before treatment" class="before-b-img before-slide">
-          <img src="./assets/dental/b3.jpeg" alt="Before treatment" class="before-b-img before-slide">
-          <img src="./assets/dental/b4.jpeg" alt="Before treatment" class="before-b-img before-slide">
-          <img src="./assets/dental/b5.jpeg" alt="Before treatment" class="before-b-img before-slide">
-          <img src="./assets/dental/b6.jpeg" alt="Before treatment" class="before-b-img before-slide">
-          <img src="./assets/dental/b7.jpeg" alt="Before treatment" class="before-b-img before-slide">
-          <img src="./assets/dental/b8.jpeg" alt="Before treatment" class="before-b-img before-slide">
+            <!-- BEFORE -->
+            <div class="before-after-before-container">
+                <div class="before-after-b-img-sub-container">
+                    <div class="before-after-before-images-content" id="before-slideshow">
+                        <img src="./assets/dental/b1.jpeg" alt="Before treatment"
+                            class="before-b-img before-slide active">
+                        <img src="./assets/dental/b2.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                        <img src="./assets/dental/b3.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                        <img src="./assets/dental/b4.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                        <img src="./assets/dental/b5.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                        <img src="./assets/dental/b6.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                        <img src="./assets/dental/b7.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                        <img src="./assets/dental/b8.jpeg" alt="Before treatment" class="before-b-img before-slide">
+                    </div>
+                </div>
+                <div class="dentallabel">BEFORE</div>
+            </div>
+
+            <!-- AFTER -->
+            <div class="before-after-after-container">
+                <div class="before-after-a-img-sub-container">
+                    <div class="before-after-after-images-content" id="after-slideshow">
+                        <img src="./assets/dental/a1.jpeg" alt="After treatment" class="after-a-img after-slide active">
+                        <img src="./assets/dental/a2.jpeg" alt="After treatment" class="after-a-img after-slide">
+                        <img src="./assets/dental/a3.jpeg" alt="After treatment" class="after-a-img after-slide">
+                        <img src="./assets/dental/a4.jpeg" alt="After treatment" class="after-a-img after-slide">
+                        <img src="./assets/dental/a5.jpeg" alt="After treatment" class="after-a-img after-slide">
+                        <img src="./assets/dental/a6.jpeg" alt="After treatment" class="after-a-img after-slide">
+                        <img src="./assets/dental/a7.jpeg" alt="After treatment" class="after-a-img after-slide">
+                        <img src="./assets/dental/a8.jpeg" alt="After treatment" class="after-a-img after-slide">
+                    </div>
+                </div>
+                <div class="dentallabel">AFTER</div>
+            </div>
+
         </div>
-      </div>
-      <div class="dentallabel">BEFORE</div>
-    </div>
-
-    <!-- AFTER -->
-    <div class="before-after-after-container">
-      <div class="before-after-a-img-sub-container">
-        <div class="before-after-after-images-content" id="after-slideshow">
-          <img src="./assets/dental/a1.jpeg" alt="After treatment" class="after-a-img after-slide active">
-          <img src="./assets/dental/a2.jpeg" alt="After treatment" class="after-a-img after-slide">
-          <img src="./assets/dental/a3.jpeg" alt="After treatment" class="after-a-img after-slide">
-          <img src="./assets/dental/a4.jpeg" alt="After treatment" class="after-a-img after-slide">
-          <img src="./assets/dental/a5.jpeg" alt="After treatment" class="after-a-img after-slide">
-          <img src="./assets/dental/a6.jpeg" alt="After treatment" class="after-a-img after-slide">
-          <img src="./assets/dental/a7.jpeg" alt="After treatment" class="after-a-img after-slide">
-          <img src="./assets/dental/a8.jpeg" alt="After treatment" class="after-a-img after-slide">
-        </div>
-      </div>
-      <div class="dentallabel">AFTER</div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
 
-     <!-- -------------------------------------------------------------------------------------2.9----------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------2.9----------------------------------------------------------------------- -->
 
     <!-- Replace the entire dental-makeover-testimonials-section with this code -->
-<section class="kdc-testimonials-section">
-    <div class="kdc-testimonials-container">
-        <h2 class="kdc-testimonials-title">What Our Patients Say</h2>
-        
-        <div class="kdc-testimonials-slider swiper">
-            <div class="swiper-wrapper">
-                <!-- Testimonial 1 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="Mushtaq-Khan.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
+    <section class="kdc-testimonials-section">
+        <div class="kdc-testimonials-container">
+            <h2 class="kdc-testimonials-title">What Our Patients Say</h2>
+
+            <div class="kdc-testimonials-slider swiper">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="Mushtaq-Khan.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="di-vid.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="di-vid.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
                             </div>
+
                         </div>
-                        
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="video2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-impvid-1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-imp-video1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-imp-video3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 7 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="video5.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 8 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-impvid-7.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 9 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-impvid-3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 10 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-impvid-4.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 11 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-impvid-5.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 12 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-impvid-2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 13 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-imp-video2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 14 -->
+                    <div class="swiper-slide">
+                        <div class="kdc-testimonial-card">
+                            <div class="kdc-video-container">
+                                <video class="kdc-testimonial-video">
+                                    <source src="den-impvid-6.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="kdc-video-overlay">
+                                    <i class="fas fa-play kdc-play-icon"></i>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="video2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 4 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-impvid-1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 5 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-imp-video1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 6 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-imp-video3.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 7 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="video5.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 8 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-impvid-7.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 9 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-impvid-3.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 10 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-impvid-4.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 11 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-impvid-5.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 12 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-impvid-2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 13 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-imp-video2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- Testimonial 14 -->
-                <div class="swiper-slide">
-                    <div class="kdc-testimonial-card">
-                        <div class="kdc-video-container">
-                            <video class="kdc-testimonial-video">
-                                <source src="den-impvid-6.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="kdc-video-overlay">
-                                <i class="fas fa-play kdc-play-icon"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-prev kdc-swiper-button-prev"></div>
+                <div class="swiper-button-next kdc-swiper-button-next"></div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination kdc-swiper-pagination"></div>
             </div>
-            
-            <!-- Navigation buttons -->
-            <div class="swiper-button-prev kdc-swiper-button-prev"></div>
-            <div class="swiper-button-next kdc-swiper-button-next"></div>
-            
-            <!-- Pagination -->
-            <div class="swiper-pagination kdc-swiper-pagination"></div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-     <!-- ----------------------------------------------------------------------------3rd page------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------------3rd page------------------------------------------------------------------------- -->
 
-     <section class="features-section">
+    <section class="features-section">
         <h3>Depending on the technology and time frame involved, implants can be of different types:-</h3>
         <div class="immediate-implants-container">
-          <div class="imm-imp-img"><img src="Immediate-Implant-Placement-in-Duxbury-Massachusetts.png" alt="Immediate Implants"></div>
-          <div class="immediate-implants-texts">
-            <h4>Immediate Implants</h4>
-            <p>In this procedure, the dental implants are placed at the same time after the teeth are extracted. The top crowns/fixed teeth may or may not be placed in the same trip depending on the bone condition.</p>
-          </div>
-        </div>
-      </section>
-      <!-- ********************************* -->
-
-      <section class="features-section">
-        <div class="single-stage-container">
-          <div class="single-stage-texts">
-            <h4>Single stage or Immediate loaded dental implants</h4>
-            <p>Immediate dental implants technology can be used by almost 99% of the patients. This technology provides an immediate solution to tooth loss, whether it is a single tooth missing, few teeth missing, all teeth missing or any number of teeth to be removed and replaced. The salient feature of immediate dental implants is that it ossifies immediately. The restorations (crowns, bridges) are completed within few days time. Restorative options are flexible depending on patient requirements.</p>
-          </div>
-          <div class="sin-stg-img"><img src="singlestageimplants.jpeg" alt="Single Stage Implants"></div>
-        </div>
-      </section>
-
-      <!-- *********************************** -->
-
-      <section class="features-section">
-        <div class="conventional-container">
-          <div class="con-con-img"><img src="conventional.jpg" alt="Conventional Implants"></div>
-          <div class="con-con-texts">
-            <h4>Conventional Two Stage Implants</h4>
-            <p>Usually two visits of 7 to 10 days each. The implant treatment usually consists of two stages with a time interval of approx 3 months between the two stages. In the First stage, the dental implant is placed. Time needed is one to two sittings. (total 7 days). In the Second stage, The artificial tooth ( crown) is placed. Time needed is three to four sittings. (total 8-10 days)</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ************************************* -->
-
-      <section class="features-section">
-        <div class="all-on-4-6-container">
-          <div class="all-on-4-6-texts">
-            <h4>All-on-4 & All-on-6 Dental Implants</h4>
-            <p>These are best options when patients do not want a full mouth of implants, don't want to use removable dentures but still get fixed teeth.</p>
-          </div>
-          <div class="all-on-4-6-img"><img src="all-on4,6.webp" alt="All-on-4 and All-on-6 Implants"></div>
-        </div>
-      </section>
-      
-        
-
-      <!-- ----------------------------------------------------------------------------------4th page--------------------------------------------------------------------------- -->
-
-      <section class="basal-section">
-        <div class="basal-main-container">
-          <div class="basal-features">
-            <h3>Basal Implants</h3>
-          <p>With this Swiss-based revolutionary technology,  patients with insufficient bone can also easily opt for implant treatment without the need for bone grafts, sinus lift procedures etc. It has made implant treatment possible for one and all. Basal implants are a revolutionary and completely new method for dental implantation, And the entire treatment with fixed teeth can be completed within 3 to 5 days.</p>
-          </div>
-          <div class="basal-image-sub-container">
-            <img src="b6(edited).jpeg" alt="Basal implants before" id="third-basal-img">
-            <img src="a6(edited).jpeg" alt="Basal implants after" id="fourth-basal-img"> 
-          </div>
-          <!-- ============================================= -->
-          <div class="basal-text-sub-container">
-            <div class="basal-texts">
-              <ul>
-                <li>Basal implants are placed in one visit thus this method is less traumatic.</li>
-                <li>No substitute bone (bone augmentation) and sinus lift are necessary before placing the implants.</li>
-                <li>Basal implants can be placed in smokers and patients with diabetes.</li>
-              </ul>
+            <div class="imm-imp-img"><img src="Immediate-Implant-Placement-in-Duxbury-Massachusetts.png"
+                    alt="Immediate Implants"></div>
+            <div class="immediate-implants-texts">
+                <h4>Immediate Implants</h4>
+                <p>In this procedure, the dental implants are placed at the same time after the teeth are extracted. The
+                    top crowns/fixed teeth may or may not be placed in the same trip depending on the bone condition.
+                </p>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
+    <!-- ********************************* -->
 
-      <!-- ---------------------------------------------------------------basal-video-testimonials------------------------------------------------------------------ -->
+    <section class="features-section">
+        <div class="single-stage-container">
+            <div class="single-stage-texts">
+                <h4>Single stage or Immediate loaded dental implants</h4>
+                <p>Immediate dental implants technology can be used by almost 99% of the patients. This technology
+                    provides an immediate solution to tooth loss, whether it is a single tooth missing, few teeth
+                    missing, all teeth missing or any number of teeth to be removed and replaced. The salient feature of
+                    immediate dental implants is that it ossifies immediately. The restorations (crowns, bridges) are
+                    completed within few days time. Restorative options are flexible depending on patient requirements.
+                </p>
+            </div>
+            <div class="sin-stg-img"><img src="singlestageimplants.jpeg" alt="Single Stage Implants"></div>
+        </div>
+    </section>
 
-      <section class="basal-video-testimonials">
+    <!-- *********************************** -->
+
+    <section class="features-section">
+        <div class="conventional-container">
+            <div class="con-con-img"><img src="conventional.jpg" alt="Conventional Implants"></div>
+            <div class="con-con-texts">
+                <h4>Conventional Two Stage Implants</h4>
+                <p>Usually two visits of 7 to 10 days each. The implant treatment usually consists of two stages with a
+                    time interval of approx 3 months between the two stages. In the First stage, the dental implant is
+                    placed. Time needed is one to two sittings. (total 7 days). In the Second stage, The artificial
+                    tooth ( crown) is placed. Time needed is three to four sittings. (total 8-10 days)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************************* -->
+
+    <section class="features-section">
+        <div class="all-on-4-6-container">
+            <div class="all-on-4-6-texts">
+                <h4>All-on-4 & All-on-6 Dental Implants</h4>
+                <p>These are best options when patients do not want a full mouth of implants, don't want to use
+                    removable dentures but still get fixed teeth.</p>
+            </div>
+            <div class="all-on-4-6-img"><img src="all-on4,6.webp" alt="All-on-4 and All-on-6 Implants"></div>
+        </div>
+    </section>
+
+
+
+    <!-- ----------------------------------------------------------------------------------4th page--------------------------------------------------------------------------- -->
+
+    <section class="basal-section">
+        <div class="basal-main-container">
+            <div class="basal-features">
+                <h3>Basal Implants</h3>
+                <p>With this Swiss-based revolutionary technology, patients with insufficient bone can also easily opt
+                    for implant treatment without the need for bone grafts, sinus lift procedures etc. It has made
+                    implant treatment possible for one and all. Basal implants are a revolutionary and completely new
+                    method for dental implantation, And the entire treatment with fixed teeth can be completed within 3
+                    to 5 days.</p>
+            </div>
+            <div class="basal-image-sub-container">
+                <img src="b6(edited).jpeg" alt="Basal implants before" id="third-basal-img">
+                <img src="a6(edited).jpeg" alt="Basal implants after" id="fourth-basal-img">
+            </div>
+            <!-- ============================================= -->
+            <div class="basal-text-sub-container">
+                <div class="basal-texts">
+                    <ul>
+                        <li>Basal implants are placed in one visit thus this method is less traumatic.</li>
+                        <li>No substitute bone (bone augmentation) and sinus lift are necessary before placing the
+                            implants.</li>
+                        <li>Basal implants can be placed in smokers and patients with diabetes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------basal-video-testimonials------------------------------------------------------------------ -->
+
+    <section class="basal-video-testimonials">
         <h2 class="basal-section-title">Our Basal Video Testimonials</h2>
         <div class="basal-section-content">
-          <div class="basal-slider-container swiper">
-            <div class="basal-slider-wrapper swiper-wrapper">
-              <div class="basal-testimonials swiper-slide">
-                <div class="video-placeholder" data-video-id="bvYcvgpWoQ8" data-video-title="Basal Video Testimonial 1">
-                  <div class="play-button">▶</div>
-                  <img src="https://img.youtube.com/vi/bvYcvgpWoQ8/mqdefault.jpg" alt="Video thumbnail" class="video-thumbnail">
+            <div class="basal-slider-container swiper">
+                <div class="basal-slider-wrapper swiper-wrapper">
+                    <div class="basal-testimonials swiper-slide">
+                        <div class="video-placeholder" data-video-id="bvYcvgpWoQ8"
+                            data-video-title="Basal Video Testimonial 1">
+                            <div class="play-button">▶</div>
+                            <img src="https://img.youtube.com/vi/bvYcvgpWoQ8/mqdefault.jpg" alt="Video thumbnail"
+                                class="video-thumbnail">
+                        </div>
+                    </div>
+                    <div class="basal-testimonials swiper-slide">
+                        <div class="video-placeholder" data-video-id="7dURpxD3PLo"
+                            data-video-title="Basal Video Testimonial 2">
+                            <div class="play-button">▶</div>
+                            <img src="https://img.youtube.com/vi/7dURpxD3PLo/mqdefault.jpg" alt="Video thumbnail"
+                                class="video-thumbnail">
+                        </div>
+                    </div>
+                    <div class="basal-testimonials swiper-slide">
+                        <div class="video-placeholder" data-video-id="rJzHF_EbKCA"
+                            data-video-title="Basal Video Testimonial 3">
+                            <div class="play-button">▶</div>
+                            <img src="https://img.youtube.com/vi/rJzHF_EbKCA/mqdefault.jpg" alt="Video thumbnail"
+                                class="video-thumbnail">
+                        </div>
+                    </div>
+                    <div class="basal-testimonials swiper-slide">
+                        <div class="video-placeholder" data-video-id="9yTNG6OpD6A"
+                            data-video-title="Basal Video Testimonial 4">
+                            <div class="play-button">▶</div>
+                            <img src="https://img.youtube.com/vi/9yTNG6OpD6A/mqdefault.jpg" alt="Video thumbnail"
+                                class="video-thumbnail">
+                        </div>
+                    </div>
+                    <div class="basal-testimonials swiper-slide">
+                        <div class="video-placeholder" data-video-id="ownG_-qIKDQ"
+                            data-video-title="Basal Video Testimonial 5">
+                            <div class="play-button">▶</div>
+                            <img src="https://img.youtube.com/vi/ownG_-qIKDQ/mqdefault.jpg" alt="Video thumbnail"
+                                class="video-thumbnail">
+                        </div>
+                    </div>
+                    <div class="basal-testimonials swiper-slide">
+                        <div class="video-placeholder" data-video-id="xcMUukqNmk4"
+                            data-video-title="Basal Video Testimonial 6">
+                            <div class="play-button">▶</div>
+                            <img src="https://img.youtube.com/vi/xcMUukqNmk4/mqdefault.jpg" alt="Video thumbnail"
+                                class="video-thumbnail">
+                        </div>
+                    </div>
+                    <div class="basal-testimonials swiper-slide">
+                        <div class="video-placeholder" data-video-id="M-C5jTx9QPw"
+                            data-video-title="Basal Video Testimonial 7">
+                            <div class="play-button">▶</div>
+                            <img src="https://img.youtube.com/vi/M-C5jTx9QPw/mqdefault.jpg" alt="Video thumbnail"
+                                class="video-thumbnail">
+                        </div>
+                    </div>
+                    <div class="basal-testimonials swiper-slide">
+                        <div class="video-placeholder" data-video-id="ujgAtcFOOzw"
+                            data-video-title="Basal Video Testimonial 8">
+                            <div class="play-button">▶</div>
+                            <img src="https://img.youtube.com/vi/ujgAtcFOOzw/mqdefault.jpg" alt="Video thumbnail"
+                                class="video-thumbnail">
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="basal-testimonials swiper-slide">
-                <div class="video-placeholder" data-video-id="7dURpxD3PLo" data-video-title="Basal Video Testimonial 2">
-                  <div class="play-button">▶</div>
-                  <img src="https://img.youtube.com/vi/7dURpxD3PLo/mqdefault.jpg" alt="Video thumbnail" class="video-thumbnail">
-                </div>
-              </div>
-              <div class="basal-testimonials swiper-slide">
-                <div class="video-placeholder" data-video-id="rJzHF_EbKCA" data-video-title="Basal Video Testimonial 3">
-                  <div class="play-button">▶</div>
-                  <img src="https://img.youtube.com/vi/rJzHF_EbKCA/mqdefault.jpg" alt="Video thumbnail" class="video-thumbnail">
-                </div>
-              </div>
-              <div class="basal-testimonials swiper-slide">
-                <div class="video-placeholder" data-video-id="9yTNG6OpD6A" data-video-title="Basal Video Testimonial 4">
-                  <div class="play-button">▶</div>
-                  <img src="https://img.youtube.com/vi/9yTNG6OpD6A/mqdefault.jpg" alt="Video thumbnail" class="video-thumbnail">
-                </div>
-              </div>
-              <div class="basal-testimonials swiper-slide">
-                <div class="video-placeholder" data-video-id="ownG_-qIKDQ" data-video-title="Basal Video Testimonial 5">
-                  <div class="play-button">▶</div>
-                  <img src="https://img.youtube.com/vi/ownG_-qIKDQ/mqdefault.jpg" alt="Video thumbnail" class="video-thumbnail">
-                </div>
-              </div>
-              <div class="basal-testimonials swiper-slide">
-                <div class="video-placeholder" data-video-id="xcMUukqNmk4" data-video-title="Basal Video Testimonial 6">
-                  <div class="play-button">▶</div>
-                  <img src="https://img.youtube.com/vi/xcMUukqNmk4/mqdefault.jpg" alt="Video thumbnail" class="video-thumbnail">
-                </div>
-              </div>
-              <div class="basal-testimonials swiper-slide">
-                <div class="video-placeholder" data-video-id="M-C5jTx9QPw" data-video-title="Basal Video Testimonial 7">
-                  <div class="play-button">▶</div>
-                  <img src="https://img.youtube.com/vi/M-C5jTx9QPw/mqdefault.jpg" alt="Video thumbnail" class="video-thumbnail">
-                </div>
-              </div>
-              <div class="basal-testimonials swiper-slide">
-                <div class="video-placeholder" data-video-id="ujgAtcFOOzw" data-video-title="Basal Video Testimonial 8">
-                  <div class="play-button">▶</div>
-                  <img src="https://img.youtube.com/vi/ujgAtcFOOzw/mqdefault.jpg" alt="Video thumbnail" class="video-thumbnail">
-                </div>
-              </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- ---------------------------------------------------------advantages------------------------------------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------advantages------------------------------------------------------------------------------------------------- -->
 
-      <section class="dental-implants-advantages-section">
+    <section class="dental-implants-advantages-section">
         <div class="dental-implants-advantages-container">
-          
+
             <div class="advantage-title">
                 <p>Rediscover Your Smile: Unveiling the Life-Changing Benefits of Dental Implants</p>
             </div>
             <div class="advantages-dental-implants">
                 <div class="advantage">
                     <h2>Enhanced appearance</h2>
-                    <p>Dental implants give new, natural looking teeth thus enhancing the smile, speech, and chewing functions. They reverse the negative impact of missing teeth by preventing bone loss and gum recession.</p>
+                    <p>Dental implants give new, natural looking teeth thus enhancing the smile, speech, and chewing
+                        functions. They reverse the negative impact of missing teeth by preventing bone loss and gum
+                        recession.</p>
                 </div>
                 <div class="advantage">
                     <h2>Improved self-esteem and confidence</h2>
-                    <p>Dental implants are very secure. There is no slipping, wobbling or movement. They feel more comfortable and natural compared to removable dentures and bridges.</p>
+                    <p>Dental implants are very secure. There is no slipping, wobbling or movement. They feel more
+                        comfortable and natural compared to removable dentures and bridges.</p>
                 </div>
                 <div class="advantage">
                     <h2>Tooth-saving</h2>
-                    <p>As there is no need to file down the adjacent teeth, dental implants help to maintain and protect them.</p>
+                    <p>As there is no need to file down the adjacent teeth, dental implants help to maintain and protect
+                        them.</p>
                 </div>
                 <div class="advantage">
                     <h2>Reliability</h2>
-                    <p>Dental implant treatment has a very good success rate. It is one of the best and long lasting replacements for missing teeth. Good oral hygiene, healthy gums, and adequate bone structure all contribute to implant success.</p>
+                    <p>Dental implant treatment has a very good success rate. It is one of the best and long lasting
+                        replacements for missing teeth. Good oral hygiene, healthy gums, and adequate bone structure all
+                        contribute to implant success.</p>
                 </div>
             </div>
         </div>
-      </section>
+    </section>
 
-      <!-- ---------------------------------------------------------------------------------------------------------------------------------teeth-page----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------teeth-page----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-      <section class="teeths-replacement-section">
+    <section class="teeths-replacement-section">
         <div class="teeths-replacement-container">
-          <div class="single-tooth-container">
-            <div class="single-tooth-img">
-              <img src="single-tooth.webp" alt="Single Tooth Replacement" class="one-tooth-img">
+            <div class="single-tooth-container">
+                <div class="single-tooth-img">
+                    <img src="single-tooth.webp" alt="Single Tooth Replacement" class="one-tooth-img">
+                </div>
+                <div class="single-tooth-name">
+                    <h4>Single Tooth Replacement</h4>
+                </div>
+                <div class="single-tooth-info">
+                    <p>A single implant and its crown ( top tooth) are placed in the area of the missing tooth.</p>
+                </div>
             </div>
-            <div class="single-tooth-name">
-              <h4>Single Tooth Replacement</h4>
+            <div class="multiple-teeth-container">
+                <div class="multiple-teeth-img">
+                    <img src="multiple-teeth.webp" alt="Multiple Teeth Replacement" class="more-teeth-img">
+                </div>
+                <div class="multiple-teeth-name">
+                    <h4>Multiple Teeth Replacement</h4>
+                </div>
+                <div class="multiple-teeth-info">
+                    <p>If the missing teeth are in different areas, several single implants with crowns can be placed.
+                        If the missing teeth are in the same area, a fewer number of implants with fixed bridges can be
+                        done.</p>
+                </div>
             </div>
-            <div class="single-tooth-info">
-              <p>A single implant and its crown ( top tooth) are placed in the area of the missing tooth.</p>
+            <div class="all-mouth-container">
+                <div class="all-mouth-img">
+                    <img src="all-mouth1.webp" alt="All Teeth Replacement" class="all-teeth-image">
+                </div>
+                <div class="all-mouth-name">
+                    <h4>All Teeth Replacement</h4>
+                </div>
+                <div class="all-mouth-info">
+                    <p>If all teeth are missing, full mouth rehabilitation can be done using implants with fixed
+                        dentures or bridges.</p>
+                </div>
             </div>
-          </div>
-          <div class="multiple-teeth-container">
-            <div class="multiple-teeth-img">
-              <img src="multiple-teeth.webp" alt="Multiple Teeth Replacement" class="more-teeth-img">
-            </div>
-            <div class="multiple-teeth-name">
-              <h4>Multiple Teeth Replacement</h4>
-            </div>
-            <div class="multiple-teeth-info">
-              <p>If the missing teeth are in different areas, several single implants with crowns can be placed. If the missing teeth are in the same area, a fewer number of implants with fixed bridges can be done.</p>
-            </div>
-          </div>
-          <div class="all-mouth-container">
-            <div class="all-mouth-img">
-              <img src="all-mouth1.webp" alt="All Teeth Replacement" class="all-teeth-image">
-            </div>
-            <div class="all-mouth-name">
-              <h4>All Teeth Replacement</h4>
-            </div>
-            <div class="all-mouth-info">
-              <p>If all teeth are missing, full mouth rehabilitation can be done using implants with fixed dentures or bridges.</p>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- --------------------------------------------------------------------------------2-paragraph-page--------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------2-paragraph-page--------------------------------------------------------------------------- -->
 
-      <section class="dental-implants-paragraph-section">
+    <section class="dental-implants-paragraph-section">
         <div class="dental-implants-paragraph-container">
-          <div class="dental-clinic-img-container">
-            <div class="dental-clinic-img-sub-container">
-              <img src="StockCake-Dentist holding samples_1734987105.jpg" alt="Dentist with samples" class="dentist-sample">
+            <div class="dental-clinic-img-container">
+                <div class="dental-clinic-img-sub-container">
+                    <img src="StockCake-Dentist holding samples_1734987105.jpg" alt="Dentist with samples"
+                        class="dentist-sample">
+                </div>
             </div>
-          </div>
-          <div class="dental-clinic-text-container">
-            <div class="accordion">
-              <div class="accordion-item">
-                  <div class="accordion-header">
-                      <span>Can you opt for dental implant treatment?</span>
-                      <button class="toggle-btn">+</button>
-                  </div>
-                  <div class="accordion-content">
-                      <p>
-                        Yes, if you have good general and oral health. Also required is good bone structure, healthy gums and good oral hygiene. Bone grafting may be needed in some cases. Dental implants can be used to replace all teeth, some teeth or even a single tooth.
-                      </p>
-                  </div>
-              </div>
-              <div class="accordion-item">
-                  <div class="accordion-header">
-                      <span>What can you expect after dental implant treatment ?</span>
-                      <button class="toggle-btn">+</button>
-                  </div>
-                  <div class="accordion-content">
-                      <p>
-                        The placement of the dental implants is a painless procedure carried out under local anesthesia. Following the surgery, slight pain and/or a minor swelling may be expected. In most cases, simple medication is prescribed for some days. Like natural teeth, dental implants can be easily maintained with regular brushing, flossing and periodic follow-ups with the dentist. Because of the advances in implant dentistry, today there are numerous treatment options possible. A clinical examination, x-rays and CT scan evaluations coupled with patient expectations, budget, time frame etc , enables us to give a customized treatment option to each patient. With an initial comprehensive consultation including clinical diagnosis, X-rays, and CT scans evaluations, Kadali's dental care is now able to do 99 percent of implant cases in a single visit of 7 working days. This is a revolutionary Swiss-based technology wherein no bone grafts, sinus lifts, and complicated surgeries are not required. Plus fixed teeth can be given in the same visit.
-                      </p>
-                  </div>
-              </div>
-              <div class="accordion-item">
-                  <div class="accordion-header">
-                      <span>What are Key Benefits at Kadali's?</span>
-                      <button class="toggle-btn">+</button>
-                  </div>
-                  <div class="accordion-content">
-                      <p>
-                        Various world renowned dental implant systems are available thus suiting different budgets.
-                        Gentle and painless procedures using the most advanced techniques.
-                        Implant surgery is performed by our team of internationally trained oral implantologists.
-                        Aesthetic dentists perform the top teeth ( crown ) restorations thus assuring best esthetics.
-                      </p>
-                  </div>
-              </div>
-              <div class="accordion-item">
-                  <div class="accordion-header">
-                      <span>Comprehensive After Care</span>
-                      <button class="toggle-btn">+</button>
-                  </div>
-                  <div class="accordion-content">
-                      <p>
-                          Comprehensive aftercare is provided to ensure long-term success and patient satisfaction.
-                      </p>
-                  </div>
-              </div>
-          </div>
-          </div>
+            <div class="dental-clinic-text-container">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Can you opt for dental implant treatment?</span>
+                            <button class="toggle-btn">+</button>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Yes, if you have good general and oral health. Also required is good bone structure,
+                                healthy gums and good oral hygiene. Bone grafting may be needed in some cases. Dental
+                                implants can be used to replace all teeth, some teeth or even a single tooth.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>What can you expect after dental implant treatment ?</span>
+                            <button class="toggle-btn">+</button>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                The placement of the dental implants is a painless procedure carried out under local
+                                anesthesia. Following the surgery, slight pain and/or a minor swelling may be expected.
+                                In most cases, simple medication is prescribed for some days. Like natural teeth, dental
+                                implants can be easily maintained with regular brushing, flossing and periodic
+                                follow-ups with the dentist. Because of the advances in implant dentistry, today there
+                                are numerous treatment options possible. A clinical examination, x-rays and CT scan
+                                evaluations coupled with patient expectations, budget, time frame etc , enables us to
+                                give a customized treatment option to each patient. With an initial comprehensive
+                                consultation including clinical diagnosis, X-rays, and CT scans evaluations, Kadali's
+                                dental care is now able to do 99 percent of implant cases in a single visit of 7 working
+                                days. This is a revolutionary Swiss-based technology wherein no bone grafts, sinus
+                                lifts, and complicated surgeries are not required. Plus fixed teeth can be given in the
+                                same visit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>What are Key Benefits at Kadali's?</span>
+                            <button class="toggle-btn">+</button>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Various world renowned dental implant systems are available thus suiting different
+                                budgets.
+                                Gentle and painless procedures using the most advanced techniques.
+                                Implant surgery is performed by our team of internationally trained oral
+                                implantologists.
+                                Aesthetic dentists perform the top teeth ( crown ) restorations thus assuring best
+                                esthetics.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Comprehensive After Care</span>
+                            <button class="toggle-btn">+</button>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Comprehensive aftercare is provided to ensure long-term success and patient
+                                satisfaction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      
+
         <!-- ----------------------------------------------------------------------------dentists-client------------------------------------------------------------------------------ -->
 
-     <section class="people-main-section">
-      <div class="people-content">
-        <div class="people-slider-container swiper">
-            <div class="people-slider-wrapper swiper-wrapper">
-                <div class="people-item swiper-slide">
-                    <img src="img13.png" alt="Happy Patient 1" class="people-images">
-                </div>  
-                <div class="people-item swiper-slide">
-                    <img src="Dental_Treatment-at-Kadali-Dental-300x225.jpg" alt="Happy Patient 2" class="people-images">
-                </div>  
-                <div class="people-item swiper-slide">
-                    <img src="img14.png" alt="Happy Patient 3" class="people-images">
-                </div>  
-                <div class="people-item swiper-slide">
-                    <img src="Kadali_Dental_Satisfied_patients-300x169.jpg" alt="Happy Patient 4" class="people-images">
-                </div>  
-                <div class="people-item swiper-slide">
-                    <img src="Patients_review_of_Kadali_Dental-300x169.jpg" alt="Happy Patient 5" class="people-images">
-                </div>  
-                <div class="people-item swiper-slide">
-                    <img src="Dental_Patient-300x169.jpg" alt="Happy Patient 6" class="people-images">
-                </div>  
-                <div class="people-item swiper-slide">
-                    <img src="Cosmetic-Dentistry-Happy-Patient.jpg" alt="Happy Patient 7" class="people-images">
-                </div>  
-                <div class="people-item swiper-slide">
-                    <img src="Picture_with_a_patient-e1517107400187-300x221.jpg" alt="Happy Patient 8" class="people-images">
-                </div>  
-                <div class="people-item swiper-slide">
-                    <img src="Picture_with_happy_patient-300x225.jpg" alt="Happy Patient 9" class="people-images">
-                </div> 
+        <section class="people-main-section">
+            <div class="people-content">
+                <div class="people-slider-container swiper">
+                    <div class="people-slider-wrapper swiper-wrapper">
+                        <div class="people-item swiper-slide">
+                            <img src="img13.png" alt="Happy Patient 1" class="people-images">
+                        </div>
+                        <div class="people-item swiper-slide">
+                            <img src="Dental_Treatment-at-Kadali-Dental-300x225.jpg" alt="Happy Patient 2"
+                                class="people-images">
+                        </div>
+                        <div class="people-item swiper-slide">
+                            <img src="img14.png" alt="Happy Patient 3" class="people-images">
+                        </div>
+                        <div class="people-item swiper-slide">
+                            <img src="Kadali_Dental_Satisfied_patients-300x169.jpg" alt="Happy Patient 4"
+                                class="people-images">
+                        </div>
+                        <div class="people-item swiper-slide">
+                            <img src="Patients_review_of_Kadali_Dental-300x169.jpg" alt="Happy Patient 5"
+                                class="people-images">
+                        </div>
+                        <div class="people-item swiper-slide">
+                            <img src="Dental_Patient-300x169.jpg" alt="Happy Patient 6" class="people-images">
+                        </div>
+                        <div class="people-item swiper-slide">
+                            <img src="Cosmetic-Dentistry-Happy-Patient.jpg" alt="Happy Patient 7" class="people-images">
+                        </div>
+                        <div class="people-item swiper-slide">
+                            <img src="Picture_with_a_patient-e1517107400187-300x221.jpg" alt="Happy Patient 8"
+                                class="people-images">
+                        </div>
+                        <div class="people-item swiper-slide">
+                            <img src="Picture_with_happy_patient-300x225.jpg" alt="Happy Patient 9"
+                                class="people-images">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- -----------------------------------------------------------------------------------footer - contact-------------------------------------------------------- -->
-<!-- Footer Section -->
-<footer>
-    <div class="last-container">
-        <!-- Contact Information Section -->
-        <div class="first-footer-section">
-            <p>
-                <i class="fa-regular fa-envelope"></i> 
-                <a href="mailto:info@kadalidental.com" style="color: inherit; text-decoration: none;">
-                    info@kadalidental.com
-                </a>
-            </p>
-            <p>
-                <i class="fa-solid fa-phone-volume"></i> 
-                <a href="tel:+919819201882" style="color: inherit; text-decoration: none;">
-                    +91 981 920 1882
-                </a>
-            </p>
-            <p>
-                <i class="fa-solid fa-map-marker-alt"></i> 
-                <a href="location-map.html" style="color: inherit; text-decoration: none;">
-                    Find Our Clinics
-                </a>
-            </p>
-        </div>
-
-        <!-- Main Footer Content -->
-        <div class="second-footer-section">
-            <!-- Navigation Links -->
-            <div class="footer-nav-links">
-                <a href="index.html">Home</a>
-                <a href="Facilities-clinic.html">Facilities</a>
-                <a href="Dentists.html">Our Team</a>
-                <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
-                <a href="Teeth-Whitening.html">Teeth Whitening</a>
-                <a href="Dental-Implants.html">Dental Implants</a>
-                <a href="Services.html">Services</a>
-                <a href="location-map.html">Locations</a>
-                <a href="dental-tourism.html">Tourism</a>
-                <a href="General-Dentistry.html">General Dentistry</a>
-                <a href="Testimonials.html">Testimonials</a>
-                <a href="Smile-Makeover.html">Smile Makeover</a>
-                <a href="one-sitting-root-canal.html">Painless Root Canal</a>
-                <a href="Orthodontic-Braces.html">Braces & Aligners</a>
-                <a href="Gum-Treatment.html">Gum Treatment</a>
-                <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
-                <a href="before-after.html">Before & After</a>
-                <a href="faq.html">FAQ</a>
+        <!-- -----------------------------------------------------------------------------------footer - contact-------------------------------------------------------- -->
+        <!-- Footer Section -->
+        <footer>
+            <div class="last-container">
+                <!-- Contact Information Section -->
+                <div class="first-footer-section">
+                    <p>
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:info@kadalidental.com" style="color: inherit; text-decoration: none;">
+                            info@kadalidental.com
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <a href="tel:+919819201882" style="color: inherit; text-decoration: none;">
+                            +91 981 920 1882
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                        <a href="location-map.html" style="color: inherit; text-decoration: none;">
+                            Find Our Clinics
+                        </a>
+                    </p>
                 </div>
 
-            <!-- Social Media Links -->
-            <div class="footer-social">
-                <a href="https://www.facebook.com/drkadalicarecentre" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@Kadalidentalclinic" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/kadalidental" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
+                <!-- Main Footer Content -->
+                <div class="second-footer-section">
+                    <!-- Navigation Links -->
+                    <div class="footer-nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="Facilities-clinic.html">Facilities</a>
+                        <a href="Dentists.html">Our Team</a>
+                        <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
+                        <a href="Teeth-Whitening.html">Teeth Whitening</a>
+                        <a href="Dental-Implants.html">Dental Implants</a>
+                        <a href="Services.html">Services</a>
+                        <a href="location-map.html">Locations</a>
+                        <a href="dental-tourism.html">Tourism</a>
+                        <a href="General-Dentistry.html">General Dentistry</a>
+                        <a href="Testimonials.html">Testimonials</a>
+                        <a href="Smile-Makeover.html">Smile Makeover</a>
+                        <a href="one-sitting-root-canal.html">Painless Root Canal</a>
+                        <a href="Orthodontic-Braces.html">Braces & Aligners</a>
+                        <a href="Gum-Treatment.html">Gum Treatment</a>
+                        <a href="Cosmetic-Dentistry.html">Cosmetic Dentistry</a>
+                        <a href="before-after.html">Before & After</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
 
-            <!-- Address and Clinic Information -->
-            <div id="address">
-                <span>Kadali Dental - Advanced Dental Care</span>
-                <br><br>
-                <strong>Andheri Clinic:</strong><br>
-                40/102, 1st Floor, Sargam Society, Mhada Complex,<br>
-                Oshiwara Link Road, Andheri West, Mumbai, Maharashtra 400102<br>
-                Phone:  +91 981 9201 882<br><br>
-                
-                <strong>Colaba Clinic:</strong><br>
-                Available for appointments<br>
-                Phone: +91 981 920 1882<br><br>
-                
-                <strong>Operating Hours:</strong><br>
-                 Mon - Fri: 10:00 am to 5:00 pm  <br>
-                
-            </div>
+                    <!-- Social Media Links -->
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/drkadalicarecentre" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kadalidental" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Kadalidentalclinic" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/kadalidental" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
 
-            <!-- Copyright Section -->
-            <div class="footer-copyright">
-                © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India. 
-                All Rights Reserved. | 
-                <a href="privacy-policy.html" style="color: #d4a373; text-decoration: none;">Privacy Policy</a> | 
-                <a href="terms-conditions.html" style="color: #d4a373; text-decoration: none;">Terms & Conditions</a>
+                    <!-- Address and Clinic Information -->
+                    <div id="address">
+                        <span>Kadali Dental - Advanced Dental Care</span>
+                        <br><br>
+                        <strong>Andheri Clinic:</strong><br>
+40/102, 1st Floor, Sargam Society, Mhada Complex,<br>
+Oshiwara Link Road, Andheri West, Mumbai, Maharashtra 400102<br>
+<br>
+<h3>Operating Hours </h3><br>
+<strong>Andheri:</strong><br>
+By Appointments<br>
+Mon - Fri: 10:00 am to 4:00 pm & 6:00 pm to 8:00 pm<br>
+Sat - Sun: 10:00 am to 2:00 pm<br>
+Phone: +91 981 9201 882<br><br>
+
+<strong>Colaba Clinic:</strong><br>
+By Appointments<br>
+Mon - Sat: 10:00 am to 3:00 pm<br>
+Phone: +91 981 920 1882<br>
+
+
+                    </div>
+
+                    <!-- Copyright Section -->
+                    <div class="footer-copyright">
+                        © 2024-25 Kadali's Advanced Dental Care & Centre for Cosmetic Dentistry, Mumbai, India.
+                        All Rights Reserved. |
+                        <a href="privacy-policy.html" style="color: #d4a373; text-decoration: none;">Privacy Policy</a>
+                        |
+                        <a href="terms-conditions.html" style="color: #d4a373; text-decoration: none;">Terms &
+                            Conditions</a>
+                    </div>
+                </div>
             </div>
+        </footer>
+
+        <!-- Fixed Contact Elements -->
+        <a href="tel:+919819201882" class="fixed-phone-btn">
+            <button class="phn-no">
+                <i class="fa-solid fa-phone-volume"></i> 981-920-1882
+            </button>
+        </a>
+
+        <div class="whatsapp-no">
+            <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer"
+                aria-label="Contact us on WhatsApp">
+                <i class="fa fa-whatsapp"></i>
+            </a>
         </div>
-    </div>
-</footer>
 
-<!-- Fixed Contact Elements -->
-<a href="tel:+919819201882" class="fixed-phone-btn">
-    <button class="phn-no">
-        <i class="fa-solid fa-phone-volume"></i> 981-920-1882
-    </button>
-</a>
-
-<div class="whatsapp-no">
-    <a href="https://wa.me/919819201882" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-        <i class="fa fa-whatsapp"></i>
-    </a>
-</div>
-      
-    <!-- linking swiper script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script src="before-after.js"></script>
-    <script src="dental-implants.js"></script>
-    <script>
-    // KDC Testimonials Script
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize Swiper
-        var kdcTestimonialSwiper = new Swiper('.kdc-testimonials-slider', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: true,
-            },
-            pagination: {
-                el: '.kdc-swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.kdc-swiper-button-next',
-                prevEl: '.kdc-swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
+        <!-- linking swiper script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+        <script src="before-after.js"></script>
+        <script src="dental-implants.js"></script>
+        <script>
+            // KDC Testimonials Script
+            document.addEventListener('DOMContentLoaded', function () {
+                // Initialize Swiper
+                var kdcTestimonialSwiper = new Swiper('.kdc-testimonials-slider', {
+                    loop: true,
                     slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 25,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-            }
-        });
-        
-        // Video control functionality
-        const kdcVideoContainers = document.querySelectorAll('.kdc-video-container');
-        const kdcVideos = document.querySelectorAll('.kdc-testimonial-video');
-        const kdcPlayOverlays = document.querySelectorAll('.kdc-video-overlay');
-        let kdcCurrentlyPlaying = null;
-        
-        // Function to pause all videos
-        function kdcPauseAllVideos() {
-            kdcVideos.forEach(video => {
-                video.pause();
-            });
-            kdcPlayOverlays.forEach(overlay => {
-                overlay.classList.remove('hidden');
-            });
-            kdcVideoContainers.forEach(container => {
-                container.classList.remove('kdc-active-video');
-            });
-            kdcCurrentlyPlaying = null;
-            // Resume autoplay when all videos are paused
-            kdcTestimonialSwiper.autoplay.start();
-        }
-        
-        // Add click event to each video container
-        kdcVideoContainers.forEach((container, index) => {
-            const video = container.querySelector('.kdc-testimonial-video');
-            const overlay = container.querySelector('.kdc-video-overlay');
-            
-            container.addEventListener('click', function(e) {
-                // Prevent this click from being captured by Swiper
-                e.stopPropagation();
-                
-                // If this video is already playing, pause it
-                if (kdcCurrentlyPlaying === video) {
-                    video.pause();
-                    overlay.classList.remove('hidden');
-                    container.classList.remove('kdc-active-video');
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: true,
+                    },
+                    pagination: {
+                        el: '.kdc-swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.kdc-swiper-button-next',
+                        prevEl: '.kdc-swiper-button-prev',
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                    }
+                });
+
+                // Video control functionality
+                const kdcVideoContainers = document.querySelectorAll('.kdc-video-container');
+                const kdcVideos = document.querySelectorAll('.kdc-testimonial-video');
+                const kdcPlayOverlays = document.querySelectorAll('.kdc-video-overlay');
+                let kdcCurrentlyPlaying = null;
+
+                // Function to pause all videos
+                function kdcPauseAllVideos() {
+                    kdcVideos.forEach(video => {
+                        video.pause();
+                    });
+                    kdcPlayOverlays.forEach(overlay => {
+                        overlay.classList.remove('hidden');
+                    });
+                    kdcVideoContainers.forEach(container => {
+                        container.classList.remove('kdc-active-video');
+                    });
                     kdcCurrentlyPlaying = null;
-                    // Resume autoplay when video is paused
-                    kdcTestimonialSwiper.autoplay.start();
-                    return;
-                }
-                
-                // Pause all other videos
-                kdcPauseAllVideos();
-                
-                // Stop autoplay when video starts playing
-                kdcTestimonialSwiper.autoplay.stop();
-                
-                // Play the clicked video
-                video.play();
-                overlay.classList.add('hidden');
-                container.classList.add('kdc-active-video');
-                kdcCurrentlyPlaying = video;
-            });
-            
-            // When video ends, show the play overlay again
-            video.addEventListener('ended', function() {
-                overlay.classList.remove('hidden');
-                container.classList.remove('kdc-active-video');
-                kdcCurrentlyPlaying = null;
-                // Resume autoplay when video ends
-                kdcTestimonialSwiper.autoplay.start();
-            });
-            
-            // Handle video pause event
-            video.addEventListener('pause', function() {
-                if (kdcCurrentlyPlaying === video) {
-                    overlay.classList.remove('hidden');
-                    container.classList.remove('kdc-active-video');
-                    kdcCurrentlyPlaying = null;
-                    // Resume autoplay when video is paused
+                    // Resume autoplay when all videos are paused
                     kdcTestimonialSwiper.autoplay.start();
                 }
+
+                // Add click event to each video container
+                kdcVideoContainers.forEach((container, index) => {
+                    const video = container.querySelector('.kdc-testimonial-video');
+                    const overlay = container.querySelector('.kdc-video-overlay');
+
+                    container.addEventListener('click', function (e) {
+                        // Prevent this click from being captured by Swiper
+                        e.stopPropagation();
+
+                        // If this video is already playing, pause it
+                        if (kdcCurrentlyPlaying === video) {
+                            video.pause();
+                            overlay.classList.remove('hidden');
+                            container.classList.remove('kdc-active-video');
+                            kdcCurrentlyPlaying = null;
+                            // Resume autoplay when video is paused
+                            kdcTestimonialSwiper.autoplay.start();
+                            return;
+                        }
+
+                        // Pause all other videos
+                        kdcPauseAllVideos();
+
+                        // Stop autoplay when video starts playing
+                        kdcTestimonialSwiper.autoplay.stop();
+
+                        // Play the clicked video
+                        video.play();
+                        overlay.classList.add('hidden');
+                        container.classList.add('kdc-active-video');
+                        kdcCurrentlyPlaying = video;
+                    });
+
+                    // When video ends, show the play overlay again
+                    video.addEventListener('ended', function () {
+                        overlay.classList.remove('hidden');
+                        container.classList.remove('kdc-active-video');
+                        kdcCurrentlyPlaying = null;
+                        // Resume autoplay when video ends
+                        kdcTestimonialSwiper.autoplay.start();
+                    });
+
+                    // Handle video pause event
+                    video.addEventListener('pause', function () {
+                        if (kdcCurrentlyPlaying === video) {
+                            overlay.classList.remove('hidden');
+                            container.classList.remove('kdc-active-video');
+                            kdcCurrentlyPlaying = null;
+                            // Resume autoplay when video is paused
+                            kdcTestimonialSwiper.autoplay.start();
+                        }
+                    });
+                });
+
+                // Pause videos when changing slides
+                kdcTestimonialSwiper.on('slideChange', function () {
+                    kdcPauseAllVideos();
+                });
             });
-        });
-        
-        // Pause videos when changing slides
-        kdcTestimonialSwiper.on('slideChange', function() {
-            kdcPauseAllVideos();
-        });
-    });
-</script>
+        </script>
 </body>
+
 </html>
