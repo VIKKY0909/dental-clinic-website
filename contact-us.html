@@ -111,7 +111,9 @@
             <div class="form-division-2">
                 <div class="form-group">
                     <label for="upload">Upload Photos (Optional):</label>
-                    <input type="file" id="upload" name="upload">
+                    <input type="file" id="upload" name="upload" accept="image/*" multiple>
+                    <small style="color: #666; font-size: 12px;">Supported formats: JPEG, PNG, GIF, WebP (Max 32MB each)</small>
+                    <div class="image-preview-container" style="margin-top: 10px;"></div>
                 </div>
         
                 <div class="form-group">
@@ -120,9 +122,12 @@
                 </div>
         
                 <div class="form-group">
-                    <label>I am not a robot</label>
-                    <label class="captcha">4VAS6</label>
-                    <input type="text" id="captcha" name="captcha" required>
+                    <label>I am not a robot (Enter the code below):</label>
+                    <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                        <label class="captcha" style="background: #f0f0f0; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-weight: bold; letter-spacing: 2px; user-select: none;">4VAS6</label>
+                        <button type="button" onclick="refreshCaptcha()" style="padding: 8px 12px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Refresh</button>
+                    </div>
+                    <input type="text" id="captcha" name="captcha" placeholder="Enter the code above" required style="width: 200px;">
                 </div>
         
                 <div class="form-group">
@@ -243,6 +248,19 @@ Phone: +91 981 920 1882<br>
 
     <!-- linking swiper script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="config.js"></script>
+    <script src="image-upload-handler.js"></script>
+    <script src="form-handler.js"></script>
     <script src="script.js"></script>
+    
+    <!-- CAPTCHA refresh function -->
+    <script>
+        function refreshCaptcha() {
+            const captchaElement = document.querySelector('.captcha');
+            if (captchaElement && typeof formHandler !== 'undefined') {
+                captchaElement.textContent = formHandler.generateCaptcha();
+            }
+        }
+    </script>
 </body>
 </html>

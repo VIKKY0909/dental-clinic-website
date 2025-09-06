@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Testing - Kadali Dental Care</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .captcha {
+            background: #f0f0f0;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: bold;
+            letter-spacing: 2px;
+            user-select: none;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .captcha-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .success {
+            color: green;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .error {
+            color: red;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Testing - Kadali Dental Care</h1>
+    <p>This page is for testing the Web3Forms integration. Use this to verify that forms are working correctly before deployment.</p>
+
+    <div class="test-section">
+        <h2>Contact Form Test</h2>
+        <form id="testContactForm">
+            <div class="form-group">
+                <label for="testName">Name (Required):</label>
+                <input type="text" id="testName" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="testEmail">Email (Required):</label>
+                <input type="email" id="testEmail" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="testPhone">Phone (Optional):</label>
+                <input type="text" id="testPhone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="testMessage">Message (Required):</label>
+                <textarea id="testMessage" name="message" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="testUpload">Upload Photos (Optional):</label>
+                <input type="file" id="testUpload" name="upload" accept="image/*" multiple>
+                <small style="color: #666; font-size: 12px;">Supported formats: JPEG, PNG, GIF, WebP (Max 32MB each)</small>
+                <div class="image-preview-container" style="margin-top: 10px;"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>I am not a robot (Enter the code below):</label>
+                <div class="captcha-container">
+                    <span class="captcha">4VAS6</span>
+                    <button type="button" onclick="refreshTestCaptcha()">Refresh</button>
+                </div>
+                <input type="text" id="testCaptcha" name="captcha" placeholder="Enter the code above" required style="width: 200px;">
+            </div>
+            
+            <button type="submit">Test Contact Form</button>
+        </form>
+        <div id="testContactResponse"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Work With Us Form Test</h2>
+        <form id="testWorkForm">
+            <div class="form-group">
+                <label for="testWorkName">Name (Required):</label>
+                <input type="text" id="testWorkName" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="testWorkEmail">Email (Required):</label>
+                <input type="email" id="testWorkEmail" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="testWorkPhone">Phone (Required):</label>
+                <input type="text" id="testWorkPhone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="testWorkGender">Gender (Required):</label>
+                <select id="testWorkGender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="testWorkExperience">Work Experience (Required):</label>
+                <textarea id="testWorkExperience" name="experience" rows="3" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="testWorkSalary">Salary Expectations (Required):</label>
+                <textarea id="testWorkSalary" name="salary" rows="2" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="testWorkPhoto">Current Photograph (Required):</label>
+                <input type="file" id="testWorkPhoto" name="photo" accept="image/*" required>
+                <small style="color: #666; font-size: 12px;">Supported formats: JPEG, PNG, GIF, WebP (Max 32MB)</small>
+                <div class="image-preview-container" style="margin-top: 10px;"></div>
+            </div>
+            
+            <div class="form-group">
+                <label>I am not a robot (Enter the code below):</label>
+                <div class="captcha-container">
+                    <span class="captcha">4VAS6</span>
+                    <button type="button" onclick="refreshTestCaptcha()">Refresh</button>
+                </div>
+                <input type="text" id="testWorkCaptcha" name="captcha" placeholder="Enter the code above" required style="width: 200px;">
+            </div>
+            
+            <button type="submit">Test Work With Us Form</button>
+        </form>
+        <div id="testWorkResponse"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Results</h2>
+        <div id="testResults">
+            <p>Submit the forms above to see test results here.</p>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="image-upload-handler.js"></script>
+    <script src="form-handler.js"></script>
+    
+    <script>
+        // Test form handlers
+        let testFormHandler;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize test form handler
+            testFormHandler = new FormHandler();
+            
+            // Test contact form
+            const testContactForm = document.getElementById('testContactForm');
+            if (testContactForm) {
+                testContactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    await handleTestSubmission(e, 'contact', 'testContactResponse');
+                });
+
+                // Initialize image upload for test contact form
+                const testUploadInput = testContactForm.querySelector('input[name="upload"]');
+                const testUploadPreview = testContactForm.querySelector('.image-preview-container');
+                if (testUploadInput && testUploadPreview && testFormHandler.imageUploadHandler) {
+                    testFormHandler.imageUploadHandler.initializeImageUpload(testUploadInput, testUploadPreview);
+                }
+            }
+            
+            // Test work form
+            const testWorkForm = document.getElementById('testWorkForm');
+            if (testWorkForm) {
+                testWorkForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    await handleTestSubmission(e, 'work-with-us', 'testWorkResponse');
+                });
+
+                // Initialize image upload for test work form
+                const testPhotoInput = testWorkForm.querySelector('input[name="photo"]');
+                const testPhotoPreview = testWorkForm.querySelector('.image-preview-container');
+                if (testPhotoInput && testPhotoPreview && testFormHandler.imageUploadHandler) {
+                    testFormHandler.imageUploadHandler.initializeImageUpload(testPhotoInput, testPhotoPreview);
+                }
+            }
+        });
+        
+        async function handleTestSubmission(event, formType, responseElementId) {
+            const form = event.target;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const responseElement = document.getElementById(responseElementId);
+            const resultsElement = document.getElementById('testResults');
+            
+            // Disable submit button
+            submitButton.disabled = true;
+            submitButton.textContent = 'Testing...';
+            
+            try {
+                // Validate form
+                const formData = new FormData(form);
+                const validationErrors = testFormHandler.validateFormData(formData);
+                
+                if (validationErrors.length > 0) {
+                    throw new Error(validationErrors.join(', '));
+                }
+                
+                // Submit form
+                const result = await testFormHandler.submitForm(formData, formType);
+                
+                if (result.success) {
+                    responseElement.innerHTML = `<div class="success">✅ ${result.message}</div>`;
+                    resultsElement.innerHTML += `<div class="success">✅ ${formType} form test passed!</div>`;
+                    
+                    // Clear all form fields including images
+                    testFormHandler.clearForm(form);
+                } else {
+                    throw new Error(result.message);
+                }
+                
+            } catch (error) {
+                responseElement.innerHTML = `<div class="error">❌ ${error.message}</div>`;
+                resultsElement.innerHTML += `<div class="error">❌ ${formType} form test failed: ${error.message}</div>`;
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = formType === 'contact' ? 'Test Contact Form' : 'Test Work With Us Form';
+            }
+        }
+        
+        function refreshTestCaptcha() {
+            const captchaElements = document.querySelectorAll('.captcha');
+            if (captchaElements.length > 0 && typeof testFormHandler !== 'undefined') {
+                const newCaptcha = testFormHandler.generateCaptcha();
+                captchaElements.forEach(element => {
+                    element.textContent = newCaptcha;
+                });
+            }
+        }
+    </script>
+</body>
+</html>

@@ -813,13 +813,8 @@ class FormManager {
   }
 
   initWorkForm() {
-    const workForm = document.getElementById("work-with-us-form");
-    if (workForm) {
-      workForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        alert("Form submitted successfully!");
-      });
-    }
+    // Form handling is now managed by form-handler.js
+    // This function is kept for compatibility but does nothing
   }
 }
 

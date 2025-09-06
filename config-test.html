@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Test - Dental Clinic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .warning { background-color: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .test-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        .test-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Configuration Test</h1>
+        <p>This page helps you verify that your API keys are properly configured for production deployment.</p>
+        
+        <div id="configStatus"></div>
+        <div id="testResults"></div>
+        
+        <button class="test-button" onclick="testConfiguration()">Test Configuration</button>
+        <button class="test-button" onclick="testFormSubmission()">Test Form Submission</button>
+        <button class="test-button" onclick="showInstructions()">Show Instructions</button>
+        
+        <div id="instructions" style="display: none; margin-top: 20px;">
+            <h3>📋 Configuration Instructions</h3>
+            <ol>
+                <li><strong>Web3Forms Setup:</strong>
+                    <ul>
+                        <li>Go to <a href="https://web3forms.com" target="_blank">web3forms.com</a></li>
+                        <li>Sign up and get your access key</li>
+                        <li>Replace <code>YOUR_WEB3FORMS_ACCESS_KEY</code> in config.js</li>
+                    </ul>
+                </li>
+                <li><strong>ImgBB Setup (Optional):</strong>
+                    <ul>
+                        <li>Go to <a href="https://api.imgbb.com" target="_blank">api.imgbb.com</a></li>
+                        <li>Get your free API key</li>
+                        <li>Replace <code>YOUR_IMGBB_API_KEY</code> in config.js</li>
+                        <li>Set <code>ENABLED: true</code> for image uploads</li>
+                    </ul>
+                </li>
+                <li><strong>Deployment:</strong>
+                    <ul>
+                        <li>For Vercel/Netlify: Use environment variables</li>
+                        <li>For other hosts: Replace config.js with real keys</li>
+                        <li>Never commit real keys to version control</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Load configuration -->
+    <script src="config.js"></script>
+    <script src="form-handler.js"></script>
+    <script src="image-upload-handler.js"></script>
+
+    <script>
+        function testConfiguration() {
+            const statusDiv = document.getElementById('configStatus');
+            const resultsDiv = document.getElementById('testResults');
+            
+            resultsDiv.innerHTML = '<h3>🔍 Configuration Test Results</h3>';
+            
+            // Test Web3Forms configuration
+            const web3formsKey = typeof WEB3FORMS_CONFIG !== 'undefined' ? WEB3FORMS_CONFIG.ACCESS_KEY : 'Not loaded';
+            const web3formsValid = web3formsKey && web3formsKey !== 'YOUR_WEB3FORMS_ACCESS_KEY';
+            
+            resultsDiv.innerHTML += `
+                <div class="status ${web3formsValid ? 'success' : 'error'}">
+                    Web3Forms: ${web3formsValid ? '✅ Configured' : '❌ Not configured'}
+                </div>
+            `;
+            
+            // Test ImgBB configuration
+            const imgbbKey = typeof WEB3FORMS_CONFIG !== 'undefined' ? WEB3FORMS_CONFIG.IMAGE_UPLOAD.API_KEY : 'Not loaded';
+            const imgbbEnabled = typeof WEB3FORMS_CONFIG !== 'undefined' ? WEB3FORMS_CONFIG.IMAGE_UPLOAD.ENABLED : false;
+            const imgbbValid = imgbbKey && imgbbKey !== 'YOUR_IMGBB_API_KEY';
+            
+            resultsDiv.innerHTML += `
+                <div class="status ${imgbbValid ? 'success' : 'warning'}">
+                    ImgBB: ${imgbbValid ? '✅ Configured' : '⚠️ Not configured'} ${imgbbEnabled ? '(Enabled)' : '(Disabled)'}
+                </div>
+            `;
+            
+            // Show current configuration
+            resultsDiv.innerHTML += `
+                <h4>Current Configuration:</h4>
+                <pre>${JSON.stringify(WEB3FORMS_CONFIG, null, 2)}</pre>
+            `;
+            
+            // Overall status
+            if (web3formsValid) {
+                statusDiv.innerHTML = '<div class="status success">✅ Configuration looks good! Ready for deployment.</div>';
+            } else {
+                statusDiv.innerHTML = '<div class="status error">❌ Configuration needs attention. Please update your API keys.</div>';
+            }
+        }
+        
+        function testFormSubmission() {
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.innerHTML = '<h3>🧪 Form Submission Test</h3>';
+            
+            if (typeof formHandler === 'undefined') {
+                resultsDiv.innerHTML += '<div class="status error">❌ Form handler not loaded</div>';
+                return;
+            }
+            
+            // Test form validation
+            const testFormData = new FormData();
+            testFormData.append('name', 'Test User');
+            testFormData.append('email', 'test@example.com');
+            testFormData.append('message', 'This is a test message');
+            
+            const validationErrors = formHandler.validateFormData(testFormData);
+            
+            if (validationErrors.length === 0) {
+                resultsDiv.innerHTML += '<div class="status success">✅ Form validation working</div>';
+            } else {
+                resultsDiv.innerHTML += `<div class="status error">❌ Form validation errors: ${validationErrors.join(', ')}</div>`;
+            }
+            
+            // Test configuration validation
+            const configValidation = formHandler.validateConfiguration();
+            if (configValidation) {
+                resultsDiv.innerHTML += '<div class="status info">ℹ️ Configuration validation completed (check console for details)</div>';
+            }
+        }
+        
+        function showInstructions() {
+            const instructionsDiv = document.getElementById('instructions');
+            instructionsDiv.style.display = instructionsDiv.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        // Auto-run configuration test on page load
+        window.addEventListener('load', function() {
+            setTimeout(testConfiguration, 1000);
+        });
+    </script>
+</body>
+</html>
